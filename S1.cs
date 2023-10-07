@@ -23,17 +23,40 @@ namespace NurseCalling
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
         private BackgroundWorker worker;
+        StopWatchCshartp stopWatchCshartp1;
+        StopWatchCshartp stopWatchCshartp2;
+        StopWatchCshartp stopWatchCshartp3;
+        StopWatchCshartp stopWatchCshartp4;
+        StopWatchCshartp stopWatchCshartp5;
+        StopWatchCshartp stopWatchCshartp6;
+        StopWatchCshartp stopWatchCshartp7;
+        StopWatchCshartp stopWatchCshartp8;
+        StopWatchCshartp stopWatchCshartp9;
+        StopWatchCshartp stopWatchCshartp10;
+        StopWatchCshartp stopWatchCshartp11;
+        StopWatchCshartp stopWatchCshartp12;
+        StopWatchCshartp stopWatchCshartp13;
+        StopWatchCshartp stopWatchCshartp14;
+        StopWatchCshartp stopWatchCshartp15;
+        StopWatchCshartp stopWatchCshartp16;
+
+        SystemClockTimer systemClockTimer1;
 
         public S1()
         {
          
             InitializeComponent();
 
+          
+
             this.Controls.Add(s2.panel1);
             this.Controls.Add(s3.panel1);
             this.Controls.Add(s4.panel1);
 
-            blinkLabel();
+            this.panel1.Show();
+            systemClockTimer1 =  new SystemClockTimer(this);
+
+           //  blinkLabel();
 
 
             System.Timers.Timer timer = new System.Timers.Timer();
@@ -50,7 +73,17 @@ namespace NurseCalling
             System.Timers.Timer timer1 = new System.Timers.Timer(500);
            // timer1.Elapsed += timer_Elapsed;
             timer1.Start(); 
-            connect1(); 
+            connect1();
+
+
+            try
+            {
+                stopWatchCshartp1 = new StopWatchCshartp(this);
+            
+            }
+            catch (Exception ex) { }
+
+
         }
 
 
@@ -134,7 +167,7 @@ namespace NurseCalling
                     // label1.Visible = !label1.Visible;
                     Debug.WriteLine("my_visible 1");
                     this.panel1.Show(); 
-                    s2.panel1.Hide() ;
+                    s2.panel1.Hide();
                     s3.panel1.Hide();
                     s4.panel1.Hide();
                     blink_times--;
@@ -197,6 +230,53 @@ namespace NurseCalling
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundPanelWithoutTitle1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                stopWatchCshartp1.StopWatchTimer();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            
+            stopWatchCshartp1.btnStart_Click();
+        }
+
+        private void rjButton50_Click(object sender, EventArgs e)
+        {
+            stopWatchCshartp1.btnStart2_Click();
         }
 
         public void connect1()

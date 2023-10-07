@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\HorizontalLineSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RJButton2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\RoundPanel.cs">
@@ -87,6 +93,11 @@
     <Compile Include="S4.Designer.cs">
       <DependentUpon>S4.cs</DependentUpon>
     </Compile>
+    <Compile Include="StopWatchCshartp.cs" />
+    <Compile Include="StopWatchCshartp2.cs" />
+    <Compile Include="StopWatchCshartp3.cs" />
+    <Compile Include="StopWatchCshartp4.cs" />
+    <Compile Include="SystemClockTimer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="S1.resx">
       <DependentUpon>S1.cs</DependentUpon>
@@ -123,6 +135,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\2101722.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\pngtree-medical-hospital-vector-icon-with-patient-bed-10-png-image_8582080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\transfusion-patient-bed-with-ecg-machine-icon-in-blue-and-gray-color-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\png-clipart-computer-icons-patient-hospital-bed-health-care-hospital-room-angle-white-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\wardimage2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

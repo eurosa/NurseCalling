@@ -24,5 +24,10 @@ namespace NurseCalling
             s4.Show();
             this.Hide();
         }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

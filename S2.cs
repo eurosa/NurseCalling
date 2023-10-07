@@ -16,5 +16,10 @@ namespace NurseCalling
         {
             InitializeComponent();
         }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
