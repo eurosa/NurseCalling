@@ -51,7 +51,6 @@ namespace NurseCalling
         S1 form1;
         public StopWatchCshartp(S1 form)
         {
-
             objStopWatch = new Stopwatch();
             objStopWatch2 = new Stopwatch();
             objStopWatch3 = new Stopwatch();
