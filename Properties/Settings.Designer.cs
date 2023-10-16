@@ -25,7 +25,7 @@ namespace NurseCalling.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("COM10")]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM1")]
         public string portName {
             get {
                 return ((string)(this["portName"]));

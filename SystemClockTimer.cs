@@ -64,7 +64,7 @@ namespace NurseCalling
 
             // form.rjButton5.Font = new Font("Arial", 90, FontStyle.Bold);
 
-            form1.rjButton5.Text = time;
+            form1.rjButtonTime1.Text = time;
 
             // x.Text = "Hello | World";
             // form1.dateShow.Text = DateTime.Now.ToString("dddd , MMM dd yyyy,hh:mm:ss");

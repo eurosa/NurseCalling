@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasyModbus;
+using Modbus.Device;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace NurseCalling
 {
     public partial class S1 : Form
     {
+
         //S21 s2 = new S21();
         S2 s2 = new S2();
         S3 s3 = new S3();
@@ -41,14 +44,16 @@ namespace NurseCalling
         StopWatchCshartp stopWatchCshartp16;
 
         SystemClockTimer systemClockTimer1;
-
+        IModbusSerialMaster master;
+        ModbusClient modbusClient;
         public S1()
         {
          
             InitializeComponent();
 
-          
 
+            modbusClient = new ModbusClient("COM1");
+          
             this.Controls.Add(s2.panel1);
             this.Controls.Add(s3.panel1);
             this.Controls.Add(s4.panel1);
@@ -56,9 +61,9 @@ namespace NurseCalling
             this.panel1.Show();
             systemClockTimer1 =  new SystemClockTimer(this);
 
-           //  blinkLabel();
+            //  blinkLabel();
 
-
+            connect1();
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += timer_Elapsed1;
@@ -73,7 +78,7 @@ namespace NurseCalling
             System.Timers.Timer timer1 = new System.Timers.Timer(500);
            // timer1.Elapsed += timer_Elapsed;
             timer1.Start(); 
-            connect1();
+       
 
 
             try
@@ -81,7 +86,7 @@ namespace NurseCalling
                 stopWatchCshartp1 = new StopWatchCshartp(this);
             
             }
-            catch (Exception ex) { }
+            catch(Exception ex) { }
 
 
         }
@@ -105,21 +110,94 @@ namespace NurseCalling
                     if (ComPort1.IsOpen == true)
                     {
 
-                        //  MessageBox.Show("098908");
-                        //   if (ComPort1.BytesToRead > 18)
-                        //   {
+                        ushort startRef, noOfRefs;
+                        // Discrete Outputs or Coils: Read/write single bit references
+                        // Read
+                        startRef = 0; // Discrete output to start reading from
+                        noOfRefs = 5; // Number of registers to read
 
-                       // ComPort1.Read(Rxbuf, 0, 18);
-                        ComPort1.DiscardInBuffer();
+                        // IModbusSerialMaster master = ModbusSerialMaster.CreateRtu(ComPort1);
+
+                        byte slaveId = 1;
+
+                        string hex_add ="0x0001";// "0x00A4";
+                        ushort dec_add = Convert.ToUInt16(hex_add, 16);
+                        ushort startAddress = dec_add;
+                        ushort numRegisters = 16;
+                        ushort[] data =  {0x01,0x02,0x03,0x04 };
+                        ushort value = 12345;
+                        // read five registers
+                           ushort[] registers = master.ReadHoldingRegisters(1, 1, numRegisters);
+
+                         for (int i = 0; i < numRegisters; i++)
+                              Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
+                          // master.Transport.ReadTimeout = 1000; // Set your desired timeout
+
+                        try
+                        {
+
+                            // Input Registers (Input Data): Read only single 16 bit references
+                            // Read
+                            //ushort[] inputRegisterData = master.ReadInputRegisters(slaveId,startRef, noOfRefs);
+                            //string registerStr = String.Join(" | ", inputRegisterData);
+                            //Console.WriteLine("Input Registers -- " + registerStr);
+
+                            // Modbus operations
+                            // ushort [] response = master.ReadHoldingRegisters(slaveId, startAddress, numRegisters);
+                            // Console.WriteLine("Raw Response: " +  response);
+
+                            // byte[] message = new byte[] { slaveId, 1, 2, 2, 3, 4 }; // Adjust based on your message
+                           //  ushort crc = CalculateCRC(message);
+                           //  byte[] crcBytes = BitConverter.GetBytes(crc);
+                           //  Array.Reverse(crcBytes);
+
+                           // Append the CRC bytes to your message
+                           // byte[] completeMessage = message.Concat(crcBytes).ToArray();
+
+                           // Send the complete message to the serial port
+                           // ComPort1.Write(completeMessage, 0, completeMessage.Length);
+                           // Replace 'ushortData' with the data you want to send
+
+                            byte slaveAddress = 0x0001; // Replace with your slave address
+                            byte functionCode = 1; // Replace with your desired function code (e.g., 3 for reading registers)
+                            ushort startAddress1 = 0001; // Replace with your starting address
+                            ushort numberOfRegisters = 10; // Replace with the number of registers to read
+
+                           // Calculate the CRC (Cyclic Redundancy Check)
+                            ushort crc = CalculateCRC(new byte[] { slaveAddress, functionCode, (byte)(startAddress1 >> 8), (byte)startAddress1, (byte)(numberOfRegisters >> 8), (byte)numberOfRegisters });
+
+                           // Construct the Modbus RTU message
+                            byte[] message = new byte[] { slaveAddress, functionCode, (byte)(startAddress1 >> 8), (byte)startAddress1, (byte)(numberOfRegisters >> 8), (byte)numberOfRegisters, (byte)(crc >> 8), (byte)crc };
+
+                           // Send the message via your serial port
+                           // ComPort1.Write(message, 0, message.Length);
+
+
+                            ushort[] ushortData = new ushort[] { 1,2,3};
+
+                           // Send data to Modbus registers
+                           // master.WriteMultipleRegisters(slaveId, 0001, ushortData);
+
+                           // master.WriteMultipleCoils(slaveAddress, 1, new bool[6] { false, false, false, false, false, false });
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Exception: " + ex.Message);
+                        }
+
+                        // Replace 'ushortData' with the data you want to send
+                        // ushort[] ushortData = new ushort[] { 100, 200, 300 };
+
+                        // Send data to Modbus registers
+                        // master.WriteMultipleRegisters(slaveId, 1, ushortData);
+                        // write three coils
+                      //  master.WriteMultipleRegisters(slaveId, startAddress, data);
+                        // master.WriteMultipleCoils(slaveId, startAddress, new bool[] { true, false, true });
+
+                        // ComPort1.DiscardInBuffer();
                         // Debug.WriteLine(Rxbuf[0] + " " + Rxbuf[1] + " " + Rxbuf[2] + " " + Rxbuf[3] + " " + Rxbuf[4] + " " + Rxbuf[5] + " " + Rxbuf[6] + " " + Rxbuf[7] + " " + Rxbuf[8] + " " + Rxbuf[9] + " " + Rxbuf[10] + " " + Rxbuf[11] + " " + Rxbuf[12] + " " + Rxbuf[13] + " " + Rxbuf[14] + " " + Rxbuf[15] + " " + Rxbuf[16] + " " + Rxbuf[17] + " " + Rxbuf[18]);
-                        int milliseconds = 2000;
-                        //  Thread.Sleep(milliseconds);
-                        //  processserialport1();
+                        // int milliseconds = 2000;
 
-
-
-
-                        //  }
                     }
 
 
@@ -144,6 +222,23 @@ namespace NurseCalling
                 }
             }
             else { connect1(); }
+        }
+
+        private static ushort CalculateCRC(byte[] message)
+        {
+            ushort crc = 0xFFFF;
+            foreach (byte b in message)
+            {
+                crc ^= (ushort)b;
+                for (int i = 0; i < 8; i++)
+                {
+                    if ((crc & 1) != 0)
+                        crc = (ushort)((crc >> 1) ^ 0xA001); // 0xA001 is the CRC-16 polynomial
+                    else
+                        crc >>= 1;
+                }
+            }
+            return crc;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -279,6 +374,18 @@ namespace NurseCalling
             stopWatchCshartp1.btnStart2_Click();
         }
 
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            try { 
+            int[] data = { 1, 2 };
+            modbusClient.Connect();
+            modbusClient.WriteMultipleRegisters(1, data);
+            }catch(Exception ex) {
+                Console.WriteLine("Console1: "+ex.Message);
+            }
+            modbusClient.Disconnect();
+        }
+
         public void connect1()
         {
 
@@ -309,7 +416,7 @@ namespace NurseCalling
             }
 
 
-            Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString());
+           
 
             // ComPort1.PortName = SerialPortName;
             ComPort1.DataBits = 8;
@@ -333,15 +440,21 @@ namespace NurseCalling
                     if (ComPort1.IsOpen == false)
 
                     {
+                        Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString() + " dsd " + SerialPortName);
+
                         ComPort1.Open();
-                            /*this.Invoke((MethodInvoker)delegate
-                        {
-                            //  Globals.logWriter.LogWrite("Open Comport 1: " + ComPort1.IsOpen);
-                            connectionStatus.Text = "Connected";
-                            connectionStatus.ForeColor = Color.White;
-                            //connectionStatus.BackColor = Color.White;
-                            connectionPanel.BackColor = Color.Green;
-                        });*/
+
+                        master = ModbusSerialMaster.CreateRtu(ComPort1);
+
+                        Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString() + " dsd " + SerialPortName+" is "+ ComPort1.IsOpen);
+                        /*this.Invoke((MethodInvoker)delegate
+                    {
+                        //  Globals.logWriter.LogWrite("Open Comport 1: " + ComPort1.IsOpen);
+                        connectionStatus.Text = "Connected";
+                        connectionStatus.ForeColor = Color.White;
+                        //connectionStatus.BackColor = Color.White;
+                        connectionPanel.BackColor = Color.Green;
+                    });*/
                     }
 
                 }
