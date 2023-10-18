@@ -34,5 +34,17 @@ namespace NurseCalling.Properties {
                 this["portName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int FirstCallTime {
+            get {
+                return ((int)(this["FirstCallTime"]));
+            }
+            set {
+                this["FirstCallTime"] = value;
+            }
+        }
     }
 }

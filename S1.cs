@@ -11,10 +11,12 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace NurseCalling
 {
+ 
     public partial class S1 : Form
     {
 
@@ -22,6 +24,8 @@ namespace NurseCalling
         S2 s2 = new S2();
         S3 s3 = new S3();
         S4 s4 = new S4();
+
+       
 
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
@@ -46,6 +50,7 @@ namespace NurseCalling
         SystemClockTimer systemClockTimer1;
         IModbusSerialMaster master;
         ModbusClient modbusClient;
+        ushort[] registers;
         public S1()
         {
          
@@ -66,17 +71,17 @@ namespace NurseCalling
             connect1();
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 1000;
-            timer.Elapsed += timer_Elapsed1;
-            timer.Start();
+           // timer.Elapsed += timer_Elapsed1;
+           // timer.Start();
 
             worker = new BackgroundWorker();
-            //  worker.DoWork += worker_DoWork;
-            //     worker.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;  //Tell the user how the process went
-            // worker.ProgressChanged += backgroundWorker1_ProgressChanged;
+            worker.DoWork += worker_DoWork;
+            worker.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;  //Tell the user how the process went
+            worker.ProgressChanged += backgroundWorker1_ProgressChanged;
             worker.RunWorkerAsync();
             worker.WorkerReportsProgress = true;
-            System.Timers.Timer timer1 = new System.Timers.Timer(500);
-           // timer1.Elapsed += timer_Elapsed;
+            System.Timers.Timer timer1 = new System.Timers.Timer(1000);
+            timer1.Elapsed += timer_Elapsed;
             timer1.Start(); 
        
 
@@ -97,6 +102,73 @@ namespace NurseCalling
             BytesToRead();
         }
 
+
+        void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            try
+            {
+                if (!worker.IsBusy)
+                    worker.RunWorkerAsync();
+            }
+            catch (Exception ex) { }
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Debug.WriteLine("background interval running every 1 second");
+            //whatever You want the background thread to do...
+            try
+            {
+                BytesToRead();
+
+            }
+            catch (Exception ex) { }
+        }
+
+
+        private void backgroundWorker1_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+
+            this.Invoke((MethodInvoker)delegate {
+
+                byte slaveId = 1;
+
+                string hex_add = "0x0001";// "0x00A4";
+                ushort dec_add = Convert.ToUInt16(hex_add, 16);
+                ushort startAddress = dec_add;
+                ushort numRegisters = 16;
+
+                for (int i = 0; i < numRegisters; i++)
+                {
+
+                    Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
+
+                    if ((startAddress + i) == 1)
+                    {
+                        if (Properties.Settings.Default.FirstCallTime == 1)
+                        {
+                            rjButton3.Text = "Welcome New User";
+                            //Change the value since the program has run once now
+                            Properties.Settings.Default.FirstCallTime = 0;
+                            Properties.Settings.Default.Save();
+                        }
+                        else
+                        {
+                            rjButton3.Text = "Welcome Back User"; 
+                        }
+                        rjButton1.Text = registers[i].ToString();
+                    }
+                }
+
+            });
+        }
+
+
         public void BytesToRead()
         {
 
@@ -110,13 +182,7 @@ namespace NurseCalling
                     if (ComPort1.IsOpen == true)
                     {
 
-                        ushort startRef, noOfRefs;
-                        // Discrete Outputs or Coils: Read/write single bit references
-                        // Read
-                        startRef = 0; // Discrete output to start reading from
-                        noOfRefs = 5; // Number of registers to read
-
-                        // IModbusSerialMaster master = ModbusSerialMaster.CreateRtu(ComPort1);
+                 
 
                         byte slaveId = 1;
 
@@ -124,39 +190,38 @@ namespace NurseCalling
                         ushort dec_add = Convert.ToUInt16(hex_add, 16);
                         ushort startAddress = dec_add;
                         ushort numRegisters = 16;
-                        ushort[] data =  {0x01,0x02,0x03,0x04 };
-                        ushort value = 12345;
-                        // read five registers
-                           ushort[] registers = master.ReadHoldingRegisters(1, 1, numRegisters);
+                 
+                        
+                         // read five registers
+                             registers = master.ReadHoldingRegisters(slaveId, 0, numRegisters);
 
-                         for (int i = 0; i < numRegisters; i++)
-                              Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
-                          // master.Transport.ReadTimeout = 1000; // Set your desired timeout
+                      
+                        // master.Transport.ReadTimeout = 1000; // Set your desired timeout
 
                         try
                         {
 
                             // Input Registers (Input Data): Read only single 16 bit references
                             // Read
-                            //ushort[] inputRegisterData = master.ReadInputRegisters(slaveId,startRef, noOfRefs);
-                            //string registerStr = String.Join(" | ", inputRegisterData);
-                            //Console.WriteLine("Input Registers -- " + registerStr);
+                            // ushort[] inputRegisterData = master.ReadInputRegisters(slaveId,startRef, noOfRefs);
+                            // string registerStr = String.Join(" | ", inputRegisterData);
+                            // Console.WriteLine("Input Registers -- " + registerStr);
 
                             // Modbus operations
                             // ushort [] response = master.ReadHoldingRegisters(slaveId, startAddress, numRegisters);
                             // Console.WriteLine("Raw Response: " +  response);
 
                             // byte[] message = new byte[] { slaveId, 1, 2, 2, 3, 4 }; // Adjust based on your message
-                           //  ushort crc = CalculateCRC(message);
-                           //  byte[] crcBytes = BitConverter.GetBytes(crc);
-                           //  Array.Reverse(crcBytes);
+                            // ushort crc = CalculateCRC(message);
+                            // byte[] crcBytes = BitConverter.GetBytes(crc);
+                            // Array.Reverse(crcBytes);
 
-                           // Append the CRC bytes to your message
-                           // byte[] completeMessage = message.Concat(crcBytes).ToArray();
+                            // Append the CRC bytes to your message
+                            // byte[] completeMessage = message.Concat(crcBytes).ToArray();
 
-                           // Send the complete message to the serial port
-                           // ComPort1.Write(completeMessage, 0, completeMessage.Length);
-                           // Replace 'ushortData' with the data you want to send
+                            // Send the complete message to the serial port
+                            // ComPort1.Write(completeMessage, 0, completeMessage.Length);
+                            // Replace 'ushortData' with the data you want to send
 
                             byte slaveAddress = 0x0001; // Replace with your slave address
                             byte functionCode = 1; // Replace with your desired function code (e.g., 3 for reading registers)
@@ -191,7 +256,7 @@ namespace NurseCalling
                         // Send data to Modbus registers
                         // master.WriteMultipleRegisters(slaveId, 1, ushortData);
                         // write three coils
-                      //  master.WriteMultipleRegisters(slaveId, startAddress, data);
+                        // master.WriteMultipleRegisters(slaveId, startAddress, data);
                         // master.WriteMultipleCoils(slaveId, startAddress, new bool[] { true, false, true });
 
                         // ComPort1.DiscardInBuffer();
