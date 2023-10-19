@@ -150,10 +150,8 @@ namespace NurseCalling
         private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
 
-            this.Invoke((MethodInvoker)delegate {
-
-                byte slaveId = 1;
-
+            this.Invoke((MethodInvoker)delegate { 
+              
                 string hex_add = "0x0001";// "0x00A4";
                 ushort dec_add = Convert.ToUInt16(hex_add, 16);
                 ushort startAddress = dec_add;

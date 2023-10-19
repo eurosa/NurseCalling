@@ -39,7 +39,6 @@ namespace NurseCalling
 
                     }
                     
-
                     dbConnection.Close();
 
                 }
