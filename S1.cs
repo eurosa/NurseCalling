@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SQLite;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO.Ports;
@@ -16,16 +18,17 @@ using System.Windows.Forms;
 
 namespace NurseCalling
 {
- 
+    
     public partial class S1 : Form
     {
-
+        SQLiteConnection m_dbConnection;
         //S21 s2 = new S21();
         S2 s2 = new S2();
         S3 s3 = new S3();
         S4 s4 = new S4();
 
-       
+        dbHandler dbHandlr;
+        DataModel dataModel;
 
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
@@ -51,13 +54,15 @@ namespace NurseCalling
         IModbusSerialMaster master;
         ModbusClient modbusClient;
         ushort[] registers;
+
         public S1()
         {
          
             InitializeComponent();
 
-
             modbusClient = new ModbusClient("COM1");
+
+            dataModel = new DataModel();
           
             this.Controls.Add(s2.panel1);
             this.Controls.Add(s3.panel1);
@@ -69,10 +74,11 @@ namespace NurseCalling
             //  blinkLabel();
 
             connect1();
+
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 1000;
-           // timer.Elapsed += timer_Elapsed1;
-           // timer.Start();
+            // timer.Elapsed += timer_Elapsed1;
+            // timer.Start();
 
             worker = new BackgroundWorker();
             worker.DoWork += worker_DoWork;
@@ -93,7 +99,17 @@ namespace NurseCalling
             }
             catch(Exception ex) { }
 
+            try
+            {
+                m_dbConnection = new SQLiteConnection("Data Source=dscp.sqlite;Version=3;");
+            }
+            catch (Exception ex)
+            {
 
+            }
+
+            dbHandlr = new dbHandler();
+            dbHandlr.createDB(dataModel);
         }
 
 
@@ -147,13 +163,14 @@ namespace NurseCalling
                 {
 
                     Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
-
+                    Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
                     if ((startAddress + i) == 1)
                     {
                         if (Properties.Settings.Default.FirstCallTime == 1)
                         {
                             rjButton3.Text = "Welcome New User";
-                            //Change the value since the program has run once now
+                            
+                            // Change the value since the program has run once now
                             Properties.Settings.Default.FirstCallTime = 0;
                             Properties.Settings.Default.Save();
                         }
