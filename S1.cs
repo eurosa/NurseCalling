@@ -88,10 +88,11 @@ namespace NurseCalling
             worker.WorkerReportsProgress = true;
             System.Timers.Timer timer1 = new System.Timers.Timer(1000);
             timer1.Elapsed += timer_Elapsed;
-            timer1.Start(); 
-       
+            timer1.Start();
 
 
+            dbHandlr = new dbHandler();
+            dbHandlr.createDB(dataModel);
             try
             {
                 stopWatchCshartp1 = new StopWatchCshartp(this);
@@ -102,14 +103,16 @@ namespace NurseCalling
             try
             {
                 m_dbConnection = new SQLiteConnection("Data Source=dscp.sqlite;Version=3;");
+                m_dbConnection.Open();
             }
             catch (Exception ex)
             {
 
             }
 
-            dbHandlr = new dbHandler();
-            dbHandlr.createDB(dataModel);
+            
+
+            dbHandlr.getGeneralData(m_dbConnection,dataModel);
         }
 
 
@@ -164,13 +167,15 @@ namespace NurseCalling
                     Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
                     if ((startAddress + i) == 1)
                     {
-                        if (Properties.Settings.Default.FirstCallTime == 1)
+                        if (dataModel.firstcall_status == "1")
                         {
                             rjButton3.Text = "Welcome New User";
-                            
+
                             // Change the value since the program has run once now
-                            Properties.Settings.Default.FirstCallTime = 0;
-                            Properties.Settings.Default.Save();
+                            // Properties.Settings.Default.FirstCallTime = 0;
+                            //Properties.Settings.Default.Save();
+
+                            dataModel.firstcall_status = "0";
                         }
                         else
                         {
@@ -525,6 +530,8 @@ namespace NurseCalling
                         ComPort1.Open();
 
                         master = ModbusSerialMaster.CreateRtu(ComPort1);
+                        dataModel.comport_name = SerialPortName;
+                        //dbHandlr.updatComport(m_dbConnection, dataModel);
 
                         Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString() + " dsd " + SerialPortName+" is "+ ComPort1.IsOpen);
                         /*this.Invoke((MethodInvoker)delegate

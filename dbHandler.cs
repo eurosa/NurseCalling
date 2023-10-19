@@ -33,6 +33,7 @@ namespace NurseCalling
                     try
                     {
                         insert_general_data(dbConnection);
+
                     }
                     catch (Exception Ex)
                     {
@@ -86,23 +87,42 @@ namespace NurseCalling
 
         }
 
-         
-       
 
-        public void updateGeneralTable(SQLiteConnection m_dbConnection, DataModel modelData)
+        public void updatComport(SQLiteConnection m_dbConnection, DataModel modelData)
         {
             
-            string sql_update = "UPDATE general_table SET comport_name = @comport_name, firstcall_status = @firstcall_status Where ID = @ID";
+            string sql_update = "UPDATE general_table SET comport_name = @comport_name Where ID = @ID";
 
             SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
 
             command.Parameters.AddWithValue("@comport_name", modelData.comport_name);
-            command.Parameters.AddWithValue("@firstcall_status", modelData.firstcall_status); 
+         
             command.Parameters.AddWithValue("@ID", 1);
 
             try
             {
                 command.ExecuteNonQuery(); 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public void updateFirstCall(SQLiteConnection m_dbConnection, DataModel modelData)
+        {
+
+            string sql_update = "UPDATE general_table SET  firstcall_status = @firstcall_status Where ID = @ID";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+ 
+            command.Parameters.AddWithValue("@firstcall_status", modelData.firstcall_status);
+            command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+                command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
