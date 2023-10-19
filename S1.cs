@@ -173,13 +173,14 @@ namespace NurseCalling
 
                             // Change the value since the program has run once now
                             // Properties.Settings.Default.FirstCallTime = 0;
-                            //Properties.Settings.Default.Save();
+                            // Properties.Settings.Default.Save();
 
                             dataModel.firstcall_status = "0";
                         }
                         else
                         {
-                            rjButton3.Text = "Welcome Back User"; 
+                            rjButton3.Text = "Welcome Back User";
+                            dataModel.firstcall_status = "1";
                         }
                         rjButton1.Text = registers[i].ToString();
                     }
