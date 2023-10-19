@@ -164,16 +164,13 @@ namespace NurseCalling
                 {
 
                     Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
-                    Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
+                   // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
                     if ((startAddress + i) == 1)
                     {
                         if (dataModel.firstcall_status == "1")
                         {
                             rjButton3.Text = "Welcome New User";
-
-                            // Change the value since the program has run once now
-                            // Properties.Settings.Default.FirstCallTime = 0;
-                            // Properties.Settings.Default.Save();
+ 
 
                             dataModel.firstcall_status = "0";
                         }
