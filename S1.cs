@@ -30,6 +30,16 @@ namespace NurseCalling
         dbHandler dbHandlr;
         DataModel dataModel;
 
+        public int valueCheck;
+
+
+        private int _age;
+
+        //#1
+        public event System.EventHandler AgeChanged;
+
+
+
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
         private BackgroundWorker worker;
@@ -54,6 +64,7 @@ namespace NurseCalling
         IModbusSerialMaster master;
         ModbusClient modbusClient;
         ushort[] registers;
+        Wrapped<int> iVal;
 
         public S1()
         {
@@ -63,13 +74,43 @@ namespace NurseCalling
             modbusClient = new ModbusClient("COM1");
 
             dataModel = new DataModel();
+
+            iVal = new Wrapped<int>();
+
+            iVal.WillChange += () => { Console.WriteLine("will be changed!"); 
+            
+
+            };
+            iVal.DidChange += () => { Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime1.Text = time;
+
+                if (iVal.Value == 261)
+                {
+                    stopWatchCshartp1.btnStop_Click();
+                    stopWatchCshartp1.lnkReset_LinkClicked();
+                }
+                else
+                {
+                    stopWatchCshartp1.btnStop_Click();
+                    stopWatchCshartp1.lnkReset_LinkClicked();
+                    stopWatchCshartp1.btnStart_Click();
+                }
+               
+            };
           
+
             this.Controls.Add(s2.panel1);
             this.Controls.Add(s3.panel1);
             this.Controls.Add(s4.panel1);
 
             this.panel1.Show();
-            systemClockTimer1 =  new SystemClockTimer(this);
+
+
+
+            //  systemClockTimer1 =  new SystemClockTimer(this);
 
             //  blinkLabel();
 
@@ -116,9 +157,32 @@ namespace NurseCalling
         }
 
 
+        //#2
+        protected virtual void OnAgeChanged()
+        {
+          //  if (AgeChanged != null) AgeChanged(this, EventArgs.Empty);
+            Console.WriteLine("myage", (Age));
+        }
+
+        public int Age
+        {
+            get
+            {
+                return _age;
+            }
+
+            set
+            {
+                //#3
+                _age = value;
+                OnAgeChanged();
+            }
+        }
+
         void timer_Elapsed1(object sender, System.Timers.ElapsedEventArgs e)
         {
             BytesToRead();
+             
         }
 
 
@@ -164,21 +228,29 @@ namespace NurseCalling
                 {
 
                     Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
-                   // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
+
+                    // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
+
                     if ((startAddress + i) == 1)
                     {
+                        //Age = (int)registers[i];
+
+                        iVal.Value = (int)registers[i];
+
                         if (dataModel.firstcall_status == "1")
                         {
                             rjButton3.Text = "Welcome New User";
- 
 
                             dataModel.firstcall_status = "0";
+
+                            
                         }
                         else
                         {
                             rjButton3.Text = "Welcome Back User";
-                            dataModel.firstcall_status = "1";
+                        
                         }
+
                         rjButton1.Text = registers[i].ToString();
                     }
                 }

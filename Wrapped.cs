@@ -18,16 +18,21 @@ namespace NurseCalling
 
         set
         {
-            //if (_value != value)
-           // {
-            //    OnWillChange();
-           //     _value = value;
-           //     OnDidChange();
-           // }
+            if (!_value.Equals(value))
+           {
+                OnWillChange();
+               _value = value;
+                OnDidChange();
+            }
         }
     }
 
     protected virtual void OnWillChange() => WillChange?.Invoke();
     protected virtual void OnDidChange() => DidChange?.Invoke();
-}
+
+        public static implicit operator Wrapped<T>(ushort v)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

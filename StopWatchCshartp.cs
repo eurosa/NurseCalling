@@ -192,7 +192,7 @@ namespace NurseCalling
 
         public void lnkReset_LinkClicked()
         {
-            form1.myRjButton1.Text = "00:00:00"; 
+            form1.myRjButton1.Text = "00:00"; 
             objStopWatch.Reset();
         }
 
@@ -281,7 +281,8 @@ namespace NurseCalling
 
         public void lnkReset_LinkClicked16()
         {
-            form1.myRjButton16.Text = "00:00:00";
+            // form1.myRjButton16.Text = "00:00:00";
+            form1.myRjButton16.Text = "00:00";
             objStopWatch16.Reset();
         }
 
