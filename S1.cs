@@ -1,5 +1,6 @@
 ﻿using EasyModbus;
 using Modbus.Device;
+using NurseCalling.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,8 @@ namespace NurseCalling
         S2 s2 = new S2();
         S3 s3 = new S3();
         S4 s4 = new S4();
+        int sec=0;
+        bool toggle = true;
 
         dbHandler dbHandlr;
         DataModel dataModel;
@@ -255,6 +258,16 @@ namespace NurseCalling
                     }
                 }
 
+                sec++;
+                if (sec >= 1)
+                {
+                    sec = 0;
+                    if (toggle == true) toggle = false;          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
+                    else toggle = true;                          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
+                    checkdigitalinputs();                      // GAS ALARM FUNCTION AFTER EVERY 500 MSEC
+
+                }
+
             });
         }
 
@@ -377,9 +390,22 @@ namespace NurseCalling
                 }
             }
             else { connect1(); }
+
+          
         }
 
-        private static ushort CalculateCRC(byte[] message)
+        void checkdigitalinputs()
+        {
+          
+
+
+          
+                    if (toggle == true) rjButton1.Visible = true;
+                    else rjButton1.Visible = false;
+            Console.WriteLine("toggle " + toggle);
+        }
+
+            private static ushort CalculateCRC(byte[] message)
         {
             ushort crc = 0xFFFF;
             foreach (byte b in message)

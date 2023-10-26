@@ -198,90 +198,89 @@ namespace NurseCalling
 
         public void lnkReset_LinkClicked2()
         {
-            form1.myRjButton2.Text = "00:00:00";
+            form1.myRjButton2.Text = "00:00";
             objStopWatch2.Reset();
         }
 
         public void lnkReset_LinkClicked3()
         {
-            form1.myRjButton3.Text = "00:00:00";
+            form1.myRjButton3.Text = "00:00";
             objStopWatch3.Reset();
         }
 
         public void lnkReset_LinkClicked4()
         {
-            form1.myRjButton4.Text = "00:00:00";
+            form1.myRjButton4.Text = "00:00";
             objStopWatch4.Reset();
         }
 
         public void lnkReset_LinkClicked5()
         {
-            form1.myRjButton2.Text = "00:00:00";
+            form1.myRjButton2.Text = "00:00";
             objStopWatch5.Reset();
         }
         public void lnkReset_LinkClicked6()
         {
-            form1.myRjButton6.Text = "00:00:00";
+            form1.myRjButton6.Text = "00:00";
             objStopWatch6.Reset();
         }
 
         public void lnkReset_LinkClicked7()
         {
-            form1.myRjButton7.Text = "00:00:00";
+            form1.myRjButton7.Text = "00:00";
             objStopWatch7.Reset();
         }
 
         public void lnkReset_LinkClicked8()
         {
-            form1.myRjButton8.Text = "00:00:00";
+            form1.myRjButton8.Text = "00:00";
             objStopWatch8.Reset();
         }
 
         public void lnkReset_LinkClicked9()
         {
-            form1.myRjButton9.Text = "00:00:00";
+            form1.myRjButton9.Text = "00:00";
             objStopWatch9.Reset();
         }
 
         public void lnkReset_LinkClicked10()
         {
-            form1.myRjButton10.Text = "00:00:00";
+            form1.myRjButton10.Text = "00:00";
             objStopWatch10.Reset();
         }
 
         public void lnkReset_LinkClicked11()
         {
-            form1.myRjButton11.Text = "00:00:00";
+            form1.myRjButton11.Text = "00:00";
             objStopWatch11.Reset();
         }
 
         public void lnkReset_LinkClicked12()
         {
-            form1.myRjButton12.Text = "00:00:00";
+            form1.myRjButton12.Text = "00:00";
             objStopWatch12.Reset();
         }
 
         public void lnkReset_LinkClicked13()
         {
-            form1.myRjButton13.Text = "00:00:00";
+            form1.myRjButton13.Text = "00:00";
             objStopWatch13.Reset();
         }
 
         public void lnkReset_LinkClicked14()
         {
-            form1.myRjButton14.Text = "00:00:00";
+            form1.myRjButton14.Text = "00:00";
             objStopWatch14.Reset();
         }
 
         public void lnkReset_LinkClicked15()
         {
-            form1.myRjButton15.Text = "00:00:00";
+            form1.myRjButton15.Text = "00:00";
             objStopWatch15.Reset();
         }
 
         public void lnkReset_LinkClicked16()
-        {
-            // form1.myRjButton16.Text = "00:00:00";
+        { 
             form1.myRjButton16.Text = "00:00";
             objStopWatch16.Reset();
         }
