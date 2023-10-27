@@ -92,6 +92,7 @@ namespace NurseCalling
 
                 if (iVal.Value == 261)
                 {
+                   
                     stopWatchCshartp1.btnStop_Click();
                     stopWatchCshartp1.lnkReset_LinkClicked();
                 }
@@ -100,6 +101,13 @@ namespace NurseCalling
                     stopWatchCshartp1.btnStop_Click();
                     stopWatchCshartp1.lnkReset_LinkClicked();
                     stopWatchCshartp1.btnStart_Click();
+                }
+                if (iVal.Value == 258) {
+                    rjButton1.BackColor = Color.Red;
+                } else if (iVal.Value == 262) {
+                    rjButton1.BackColor = Color.Orange;
+                } else if (iVal.Value == 261) {
+                    rjButton1.BackColor = Color.DarkGreen;
                 }
                
             };
@@ -396,12 +404,13 @@ namespace NurseCalling
 
         void checkdigitalinputs()
         {
-          
+            if (iVal.Value == 261)
+            {
+                toggle = false;
+            }
+            if (toggle == true) rjButton1.Visible = true;
+            else rjButton1.Visible = false;
 
-
-          
-                    if (toggle == true) rjButton1.Visible = true;
-                    else rjButton1.Visible = false;
             Console.WriteLine("toggle " + toggle);
         }
 
