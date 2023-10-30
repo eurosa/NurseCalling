@@ -46,7 +46,7 @@ namespace NurseCalling
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
         private BackgroundWorker worker;
-        StopWatchCshartp stopWatchCshartp1;
+     
         StopWatchCshartp stopWatchCshartp2;
         StopWatchCshartp stopWatchCshartp3;
         StopWatchCshartp stopWatchCshartp4;
@@ -67,7 +67,12 @@ namespace NurseCalling
         IModbusSerialMaster master;
         ModbusClient modbusClient;
         ushort[] registers;
-        Wrapped<int> iVal;
+      //  Wrapped<int> iVal;
+
+        Wrapped<int>[] myObjects;
+       // StopWatchCshartp[] myStopWatchObjects;
+
+        Stopwatch[] myStopWatchObjects;
 
         public S1()
         {
@@ -78,40 +83,36 @@ namespace NurseCalling
 
             dataModel = new DataModel();
 
-            iVal = new Wrapped<int>();
+            int objectsToCreate = 64;
 
-            iVal.WillChange += () => { Console.WriteLine("will be changed!"); 
-            
+            // Create an array to hold all your objects
+            myObjects = new Wrapped<int>[objectsToCreate];
 
-            };
-            iVal.DidChange += () => { Console.WriteLine("changed!");
+           // myStopWatchObjects = new StopWatchCshartp[objectsToCreate];
 
-                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime1.Text = time;
+            for (int i = 0; i < objectsToCreate; i++)
+            {
+                // Instantiate a new object, set it's number and
+                // some other properties
+                myObjects[i] = new Wrapped<int>();
 
-                if (iVal.Value == 261)
-                {
-                   
-                    stopWatchCshartp1.btnStop_Click();
-                    stopWatchCshartp1.lnkReset_LinkClicked();
-                }
-                else
-                {
-                    stopWatchCshartp1.btnStop_Click();
-                    stopWatchCshartp1.lnkReset_LinkClicked();
-                    stopWatchCshartp1.btnStart_Click();
-                }
-                if (iVal.Value == 258) {
-                    rjButton1.BackColor = Color.Red;
-                } else if (iVal.Value == 262) {
-                    rjButton1.BackColor = Color.Orange;
-                } else if (iVal.Value == 261) {
-                    rjButton1.BackColor = Color.DarkGreen;
-                }
-               
-            };
-          
+
+            }
+
+            for (int i = 0; i < objectsToCreate; i++)
+            {
+                // Instantiate a new object, set it's number and
+                // some other properties
+              //  myStopWatchObjects[i] = new StopWatchCshartp(this);
+
+
+            }
+
+
+            checkStatus();
+
+
+
 
             this.Controls.Add(s2.panel1);
             this.Controls.Add(s3.panel1);
@@ -147,7 +148,7 @@ namespace NurseCalling
             dbHandlr.createDB(dataModel);
             try
             {
-                stopWatchCshartp1 = new StopWatchCshartp(this);
+             //   stopWatchCshartp1 = new StopWatchCshartp(this);
             
             }
             catch(Exception ex) { }
@@ -165,6 +166,20 @@ namespace NurseCalling
             
 
             dbHandlr.getGeneralData(m_dbConnection,dataModel);
+
+
+
+
+            myStopWatchObjects = new Stopwatch[objectsToCreate];
+
+            for (int i = 0; i < objectsToCreate; i++)
+            {
+                // Instantiate a new object, set it's number and
+                // some other properties
+                myStopWatchObjects[i] = new Stopwatch();
+
+
+            }
         }
 
 
@@ -246,24 +261,34 @@ namespace NurseCalling
                     {
                         //Age = (int)registers[i];
 
-                        iVal.Value = (int)registers[i];
-
-                        if (dataModel.firstcall_status == "1")
-                        {
-                            rjButton3.Text = "Welcome New User";
-
-                            dataModel.firstcall_status = "0";
-
-                            
-                        }
-                        else
-                        {
-                            rjButton3.Text = "Welcome Back User";
-                        
-                        }
-
+                        myObjects[0].Value = (int)registers[i];
                         rjButton1.Text = registers[i].ToString();
+
+                        /* if (dataModel.firstcall_status == "1")
+                         {
+                             rjButton3.Text = "Welcome New User";
+
+                             dataModel.firstcall_status = "0";
+
+
+                         }
+                         else
+                         {
+                             rjButton3.Text = "Welcome Back User";
+
+                         }*/
+
+
                     }
+                    if ((startAddress + i) == 2)
+                    {
+                        // Age = (int)registers[i]; 
+                        myObjects[1].Value = (int)registers[i];
+                        rjButton2.Text = registers[i].ToString(); 
+
+                    }
+
+
                 }
 
                 sec++;
@@ -404,7 +429,7 @@ namespace NurseCalling
 
         void checkdigitalinputs()
         {
-            if (iVal.Value == 261)
+            if (myObjects[0].Value == 261)
             {
                 toggle = false;
             }
@@ -546,7 +571,7 @@ namespace NurseCalling
         {
             try
             {
-                stopWatchCshartp1.StopWatchTimer();
+                StopWatchTimer();
             }
             catch (Exception ex)
             {
@@ -555,13 +580,13 @@ namespace NurseCalling
 
         private void rjButton5_Click(object sender, EventArgs e)
         {
+
             
-            stopWatchCshartp1.btnStart_Click();
         }
 
         private void rjButton50_Click(object sender, EventArgs e)
         {
-            stopWatchCshartp1.btnStart2_Click();
+            //myStopWatchObjects[0].btnStart2_Click();
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -678,6 +703,221 @@ namespace NurseCalling
             {
 
                 MessageBox.Show("COM1 Serial Port does not exist", "Serial Port Interface", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+
+        }
+
+        private void rjButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        public void checkStatus() 
+        {
+
+            myObjects[0].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[0].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime1.Text = time;
+
+                if (myObjects[0].Value == 261)
+                {
+
+                    myStopWatchObjects[0].Stop();
+                    myStopWatchObjects[0].Reset();
+                    myRjButton1.Text = "00:00";
+                }
+                else
+                {
+                    myStopWatchObjects[0].Stop();
+                    myStopWatchObjects[0].Reset();
+                    myRjButton1.Text = "00:00";
+                    myStopWatchObjects[0].Start();
+                }
+                if (myObjects[0].Value == 258)
+                {
+                    rjButton1.BackColor = Color.Red;
+                }
+                else if (myObjects[0].Value == 262)
+                {
+                    rjButton1.BackColor = Color.Orange;
+                }
+                else if (myObjects[0].Value == 261)
+                {
+                    rjButton1.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[0].Value == 264)
+                {
+                    rjButton1.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[1].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[1].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime2.Text = time;
+
+                if (myObjects[1].Value == 261)
+                {
+
+                    myStopWatchObjects[1].Start();
+                    myRjButton2.Text = "00:00";
+                    myStopWatchObjects[1].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[1].Stop();
+                    myRjButton2.Text = "00:00";
+                    myStopWatchObjects[1].Reset();
+                    myStopWatchObjects[1].Start();
+                }
+                if (myObjects[1].Value == 258)
+                {
+                    rjButton2.BackColor = Color.Red;
+                }
+                else if (myObjects[1].Value == 262)
+                {
+                    rjButton2.BackColor = Color.Orange;
+                }
+                else if (myObjects[1].Value == 261)
+                {
+                    rjButton2.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[1].Value == 264)
+                {
+                    rjButton2.BackColor = Color.Blue;
+                }
+
+            };
+
+
+        }
+
+
+        public void StopWatchTimer()
+        {
+            if (myStopWatchObjects[0].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[0].ElapsedMilliseconds);
+                myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+                // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
+              //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
+
+            }
+            if (myStopWatchObjects[1].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[1].ElapsedMilliseconds);
+                myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
+
+              //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
+                // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[2].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[2].ElapsedMilliseconds);
+                myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[3].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[3].ElapsedMilliseconds);
+                myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[4].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[4].ElapsedMilliseconds);
+                myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[5].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[5].ElapsedMilliseconds);
+                myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[6].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[6].ElapsedMilliseconds);
+                myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[7].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[7].ElapsedMilliseconds);
+                myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[8].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[8].ElapsedMilliseconds);
+                myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[9].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[9].ElapsedMilliseconds);
+                myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[10].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[10].ElapsedMilliseconds);
+                myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[11].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[11].ElapsedMilliseconds);
+                myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[12].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[12].ElapsedMilliseconds);
+                myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[13].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[13].ElapsedMilliseconds);
+                myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[14].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[14].ElapsedMilliseconds);
+                myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[15].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[15].ElapsedMilliseconds);
+                myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
 
