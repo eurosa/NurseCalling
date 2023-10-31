@@ -2045,6 +2045,7 @@
             this.rjButtonTime1.Text = "00:00:00";
             this.rjButtonTime1.TextColor = System.Drawing.Color.White;
             this.rjButtonTime1.UseVisualStyleBackColor = false;
+            this.rjButtonTime1.Click += new System.EventHandler(this.rjButtonTime1_Click);
             // 
             // bButton1
             // 

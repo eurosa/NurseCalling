@@ -21,5 +21,10 @@ namespace NurseCalling
         {
 
         }
+
+        private void rjButtonTime1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

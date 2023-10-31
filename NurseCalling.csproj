@@ -89,6 +89,7 @@
     <Compile Include="DataModel.cs" />
     <Compile Include="dbHandler.cs" />
     <Compile Include="ModbusRTU.cs" />
+    <Compile Include="MyToggle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S1.cs">

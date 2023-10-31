@@ -46,31 +46,17 @@ namespace NurseCalling
         public SerialPort ComPort1, ComPort2;
         public String SerialPortName;
         private BackgroundWorker worker;
-     
-        StopWatchCshartp stopWatchCshartp2;
-        StopWatchCshartp stopWatchCshartp3;
-        StopWatchCshartp stopWatchCshartp4;
-        StopWatchCshartp stopWatchCshartp5;
-        StopWatchCshartp stopWatchCshartp6;
-        StopWatchCshartp stopWatchCshartp7;
-        StopWatchCshartp stopWatchCshartp8;
-        StopWatchCshartp stopWatchCshartp9;
-        StopWatchCshartp stopWatchCshartp10;
-        StopWatchCshartp stopWatchCshartp11;
-        StopWatchCshartp stopWatchCshartp12;
-        StopWatchCshartp stopWatchCshartp13;
-        StopWatchCshartp stopWatchCshartp14;
-        StopWatchCshartp stopWatchCshartp15;
-        StopWatchCshartp stopWatchCshartp16;
+
+        MyToggle[] myToggle;
 
         SystemClockTimer systemClockTimer1;
         IModbusSerialMaster master;
         ModbusClient modbusClient;
         ushort[] registers;
-      //  Wrapped<int> iVal;
+        //  Wrapped<int> iVal;
 
         Wrapped<int>[] myObjects;
-       // StopWatchCshartp[] myStopWatchObjects;
+        // StopWatchCshartp[] myStopWatchObjects;
 
         Stopwatch[] myStopWatchObjects;
 
@@ -98,6 +84,16 @@ namespace NurseCalling
 
 
             }
+
+            for (int i = 0; i < objectsToCreate; i++)
+            {
+                // Instantiate a new object, set it's number and
+                // some other properties
+              //  myToggle[i] = new MyToggle();
+
+
+            }
+
 
             for (int i = 0; i < objectsToCreate; i++)
             {
@@ -231,7 +227,7 @@ namespace NurseCalling
                 BytesToRead();
 
             }
-            catch (Exception ex) { }
+            catch (Exception Ex) { }
         }
 
 
@@ -257,27 +253,13 @@ namespace NurseCalling
 
                     // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
 
-                    if ((startAddress + i) == 1)
+                   /* if ((startAddress + i) == 1)
                     {
                         //Age = (int)registers[i];
 
                         myObjects[0].Value = (int)registers[i];
                         rjButton1.Text = registers[i].ToString();
-
-                        /* if (dataModel.firstcall_status == "1")
-                         {
-                             rjButton3.Text = "Welcome New User";
-
-                             dataModel.firstcall_status = "0";
-
-
-                         }
-                         else
-                         {
-                             rjButton3.Text = "Welcome Back User";
-
-                         }*/
-
+                         
 
                     }
                     if ((startAddress + i) == 2)
@@ -286,7 +268,77 @@ namespace NurseCalling
                         myObjects[1].Value = (int)registers[i];
                         rjButton2.Text = registers[i].ToString(); 
 
+                    }*/
+
+
+                    switch ((startAddress + i))
+                    {
+                        case 1:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton1.Text = registers[i].ToString();
+                            break;
+                        case 2:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton2.Text = registers[i].ToString();
+                            break;
+                        case 3:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton3.Text = registers[i].ToString();
+                            break;
+                        case 4:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton4.Text = registers[i].ToString();
+                            break;
+                        case 5:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton5.Text = registers[i].ToString();
+                            break;
+                        case 6:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton6.Text = registers[i].ToString();
+                            break;
+                        case 7:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton7.Text = registers[i].ToString();
+                            break;
+                        case 8:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton8.Text = registers[i].ToString();
+                            break;
+                        case 9:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton9.Text = registers[i].ToString();
+                            break;
+                        case 10:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton10.Text = registers[i].ToString();
+                            break;
+                        case 11:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton11.Text = registers[i].ToString();
+                            break;
+                        case 12:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton12.Text = registers[i].ToString();
+                            break;
+                        case 13:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton13.Text = registers[i].ToString();
+                            break;
+                        case 14:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton14.Text = registers[i].ToString();
+                            break;
+                        case 15:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton15.Text = registers[i].ToString();
+                            break;
+                        case 16:
+                            myObjects[i].Value = (int)registers[i];
+                            rjButton16.Text = registers[i].ToString();
+                            break;
                     }
+
 
 
                 }
@@ -429,12 +481,104 @@ namespace NurseCalling
 
         void checkdigitalinputs()
         {
-            if (myObjects[0].Value == 261)
+            if (myObjects[0].Value != 261)
             {
-                toggle = false;
+                if (toggle == true) rjButton1.Visible = true;
+                else rjButton1.Visible = false;
+            } 
+            
+            if (myObjects[1].Value != 261) {
+
+                if (toggle == true) rjButton2.Visible = true;
+                else rjButton2.Visible = false;
             }
-            if (toggle == true) rjButton1.Visible = true;
-            else rjButton1.Visible = false;
+
+            if (myObjects[2].Value != 261)
+            {
+
+                if (toggle == true) rjButton3.Visible = true;
+                else rjButton3.Visible = false;
+            }
+            if (myObjects[3].Value != 261)
+            {
+
+                if (toggle == true) rjButton4.Visible = true;
+                else rjButton4.Visible = false;
+            }
+            if (myObjects[4].Value != 261)
+            {
+
+                if (toggle == true) rjButton5.Visible = true;
+                else rjButton5.Visible = false;
+            }
+            if (myObjects[5].Value != 261)
+            {
+
+                if (toggle == true) rjButton6.Visible = true;
+                else rjButton6.Visible = false;
+            }
+            if (myObjects[6].Value != 261)
+            {
+
+                if (toggle == true) rjButton7.Visible = true;
+                else rjButton7.Visible = false;
+            }
+            if (myObjects[7].Value != 261)
+            {
+
+                if (toggle == true) rjButton8.Visible = true;
+                else rjButton8.Visible = false;
+            }
+            if (myObjects[8].Value != 261)
+            {
+
+                if (toggle == true) rjButton9.Visible = true;
+                else rjButton9.Visible = false;
+            }
+            if (myObjects[9].Value != 261)
+            {
+
+                if (toggle == true) rjButton10.Visible = true;
+                else rjButton10.Visible = false;
+            }
+            if (myObjects[10].Value != 261)
+            {
+
+                if (toggle == true) rjButton11.Visible = true;
+                else rjButton11.Visible = false;
+            }
+            if (myObjects[11].Value != 261)
+            {
+
+                if (toggle == true) rjButton12.Visible = true;
+                else rjButton12.Visible = false;
+            }
+            if (myObjects[12].Value != 261)
+            {
+
+                if (toggle == true) rjButton13.Visible = true;
+                else rjButton13.Visible = false;
+            }
+            if (myObjects[13].Value != 261)
+            {
+
+                if (toggle == true) rjButton14.Visible = true;
+                else rjButton14.Visible = false;
+            }
+            if (myObjects[14].Value != 261)
+            {
+
+                if (toggle == true) rjButton15.Visible = true;
+                else rjButton15.Visible = false;
+            }
+            if (myObjects[15].Value != 261)
+            {
+
+                if (toggle == true) rjButton16.Visible = true;
+                else rjButton16.Visible = false;
+            }
+           
+
 
             Console.WriteLine("toggle " + toggle);
         }
@@ -662,16 +806,19 @@ namespace NurseCalling
                         master = ModbusSerialMaster.CreateRtu(ComPort1);
                         dataModel.comport_name = SerialPortName;
                         //dbHandlr.updatComport(m_dbConnection, dataModel);
-
-                        Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString() + " dsd " + SerialPortName+" is "+ ComPort1.IsOpen);
-                        /*this.Invoke((MethodInvoker)delegate
-                    {
-                        //  Globals.logWriter.LogWrite("Open Comport 1: " + ComPort1.IsOpen);
+                    
+                     Console.WriteLine("SERIAL PORT:" + Properties.Settings.Default["portName"].ToString() + " dsd " + SerialPortName+" is "+ ComPort1.IsOpen);
+                     /*this.Invoke((MethodInvoker)delegate
+                     {
+                        //Globals.logWriter.LogWrite("Open Comport 1: " + ComPort1.IsOpen);
                         connectionStatus.Text = "Connected";
                         connectionStatus.ForeColor = Color.White;
                         //connectionStatus.BackColor = Color.White;
                         connectionPanel.BackColor = Color.Green;
-                    });*/
+                    
+                     });
+                     */
+                    
                     }
 
                 }
@@ -779,6 +926,7 @@ namespace NurseCalling
                     myStopWatchObjects[1].Reset();
                     myStopWatchObjects[1].Start();
                 }
+
                 if (myObjects[1].Value == 258)
                 {
                     rjButton2.BackColor = Color.Red;
@@ -799,8 +947,592 @@ namespace NurseCalling
             };
 
 
+            myObjects[2].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[2].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime3.Text = time;
+
+                if (myObjects[2].Value == 261)
+                {
+
+                    myStopWatchObjects[2].Start();
+                    myRjButton3.Text = "00:00";
+                    myStopWatchObjects[2].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[2].Stop();
+                    myRjButton3.Text = "00:00";
+                    myStopWatchObjects[2].Reset();
+                    myStopWatchObjects[2].Start();
+                }
+
+                if (myObjects[2].Value == 258)
+                {
+                    rjButton3.BackColor = Color.Red;
+                }
+                else if (myObjects[2].Value == 262)
+                {
+                    rjButton3.BackColor = Color.Orange;
+                }
+                else if (myObjects[2].Value == 261)
+                {
+                    rjButton3.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[2].Value == 264)
+                {
+                    rjButton3.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[3].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[3].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime4.Text = time;
+
+                if (myObjects[3].Value == 261)
+                {
+
+                    myStopWatchObjects[3].Start();
+                    myRjButton4.Text = "00:00";
+                    myStopWatchObjects[3].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[3].Stop();
+                    myRjButton4.Text = "00:00";
+                    myStopWatchObjects[3].Reset();
+                    myStopWatchObjects[3].Start();
+                }
+
+                if (myObjects[3].Value == 258)
+                {
+                    rjButton4.BackColor = Color.Red;
+                }
+                else if (myObjects[3].Value == 262)
+                {
+                    rjButton4.BackColor = Color.Orange;
+                }
+                else if (myObjects[3].Value == 261)
+                {
+                    rjButton4.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[3].Value == 264)
+                {
+                    rjButton4.BackColor = Color.Blue;
+                }
+
+            };
+
+
+            myObjects[4].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[4].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime5.Text = time;
+
+                if (myObjects[4].Value == 261)
+                {
+
+                    myStopWatchObjects[4].Start();
+                    myRjButton5.Text = "00:00";
+                    myStopWatchObjects[4].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[4].Stop();
+                    myRjButton5.Text = "00:00";
+                    myStopWatchObjects[4].Reset();
+                    myStopWatchObjects[4].Start();
+                }
+
+                if (myObjects[4].Value == 258)
+                {
+                    rjButton5.BackColor = Color.Red;
+                }
+                else if (myObjects[4].Value == 262)
+                {
+                    rjButton5.BackColor = Color.Orange;
+                }
+                else if (myObjects[4].Value == 261)
+                {
+                    rjButton5.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[4].Value == 264)
+                {
+                    rjButton5.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[5].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[5].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime6.Text = time;
+
+                if (myObjects[5].Value == 261)
+                {
+
+                    myStopWatchObjects[5].Start();
+                    myRjButton6.Text = "00:00";
+                    myStopWatchObjects[5].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[5].Stop();
+                    myRjButton6.Text = "00:00";
+                    myStopWatchObjects[5].Start();
+                }
+
+                if (myObjects[5].Value == 258)
+                {
+                    rjButton6.BackColor = Color.Red;
+                }
+                else if (myObjects[5].Value == 262)
+                {
+                    rjButton6.BackColor = Color.Orange;
+                }
+                else if (myObjects[5].Value == 261)
+                {
+                    rjButton6.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[5].Value == 264)
+                {
+                    rjButton6.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[6].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[6].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime7.Text = time;
+
+                if (myObjects[6].Value == 261)
+                {
+
+                    myStopWatchObjects[6].Start();
+                    myRjButton7.Text = "00:00";
+                    myStopWatchObjects[6].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[6].Stop();
+                    myRjButton7.Text = "00:00";
+                    myStopWatchObjects[6].Start();
+                }
+
+                if (myObjects[6].Value == 258)
+                {
+                    rjButton7.BackColor = Color.Red;
+                }
+                else if (myObjects[6].Value == 262)
+                {
+                    rjButton7.BackColor = Color.Orange;
+                }
+                else if (myObjects[6].Value == 261)
+                {
+                    rjButton7.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[6].Value == 264)
+                {
+                    rjButton7.BackColor = Color.Blue;
+                }
+
+            };
+
+
+            myObjects[7].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[7].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime8.Text = time;
+
+                if (myObjects[7].Value == 261)
+                {
+
+                    myStopWatchObjects[7].Start();
+                    myRjButton8.Text = "00:00";
+                    myStopWatchObjects[7].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[7].Stop();
+                    myRjButton8.Text = "00:00";
+                    myStopWatchObjects[7].Start();
+                }
+
+                if (myObjects[7].Value == 258)
+                {
+                    rjButton8.BackColor = Color.Red;
+                }
+                else if (myObjects[7].Value == 262)
+                {
+                    rjButton8.BackColor = Color.Orange;
+                }
+                else if (myObjects[7].Value == 261)
+                {
+                    rjButton8.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[7].Value == 264)
+                {
+                    rjButton8.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[8].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[8].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime9.Text = time;
+
+                if (myObjects[8].Value == 261)
+                {
+
+                    myStopWatchObjects[8].Start();
+                    myRjButton9.Text = "00:00";
+                    myStopWatchObjects[8].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[8].Stop();
+                    myRjButton9.Text = "00:00";
+                    myStopWatchObjects[8].Start();
+                }
+
+                if (myObjects[8].Value == 258)
+                {
+                    rjButton9.BackColor = Color.Red;
+                }
+                else if (myObjects[8].Value == 262)
+                {
+                    rjButton9.BackColor = Color.Orange;
+                }
+                else if (myObjects[8].Value == 261)
+                {
+                    rjButton9.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[8].Value == 264)
+                {
+                    rjButton9.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[9].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[9].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime10.Text = time;
+
+                if (myObjects[9].Value == 261)
+                {
+
+                    myStopWatchObjects[9].Start();
+                    myRjButton10.Text = "00:00";
+                    myStopWatchObjects[9].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[9].Stop();
+                    myRjButton10.Text = "00:00";
+                    myStopWatchObjects[9].Start();
+                }
+
+                if (myObjects[9].Value == 258)
+                {
+                    rjButton10.BackColor = Color.Red;
+                }
+                else if (myObjects[9].Value == 262)
+                {
+                    rjButton10.BackColor = Color.Orange;
+                }
+                else if (myObjects[9].Value == 261)
+                {
+                    rjButton10.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[9].Value == 264)
+                {
+                    rjButton10.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[10].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[10].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime11.Text = time;
+
+                if (myObjects[10].Value == 261)
+                {
+
+                    myStopWatchObjects[10].Start();
+                    myRjButton11.Text = "00:00";
+                    myStopWatchObjects[10].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[10].Stop();
+                    myRjButton11.Text = "00:00";
+                    myStopWatchObjects[10].Start();
+                }
+
+                if (myObjects[10].Value == 258)
+                {
+                    rjButton11.BackColor = Color.Red;
+                }
+                else if (myObjects[10].Value == 262)
+                {
+                    rjButton11.BackColor = Color.Orange;
+                }
+                else if (myObjects[10].Value == 261)
+                {
+                    rjButton11.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[10].Value == 264)
+                {
+                    rjButton11.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[11].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[11].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime12.Text = time;
+
+                if (myObjects[11].Value == 261)
+                {
+
+                    myStopWatchObjects[11].Start();
+                    myRjButton12.Text = "00:00";
+                    myStopWatchObjects[11].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[11].Stop();
+                    myRjButton12.Text = "00:00";
+                    myStopWatchObjects[11].Start();
+                }
+
+                if (myObjects[11].Value == 258)
+                {
+                    rjButton12.BackColor = Color.Red;
+                }
+                else if (myObjects[11].Value == 262)
+                {
+                    rjButton12.BackColor = Color.Orange;
+                }
+                else if (myObjects[11].Value == 261)
+                {
+                    rjButton12.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[11].Value == 264)
+                {
+                    rjButton12.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[12].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[12].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime13.Text = time;
+
+                if (myObjects[12].Value == 261)
+                {
+
+                    myStopWatchObjects[12].Start();
+                    myRjButton13.Text = "00:00";
+                    myStopWatchObjects[12].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[12].Stop();
+                    myRjButton13.Text = "00:00";
+                    myStopWatchObjects[12].Start();
+                }
+
+                if (myObjects[12].Value == 258)
+                {
+                    rjButton13.BackColor = Color.Red;
+                }
+                else if (myObjects[12].Value == 262)
+                {
+                    rjButton13.BackColor = Color.Orange;
+                }
+                else if (myObjects[12].Value == 261)
+                {
+                    rjButton13.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[12].Value == 264)
+                {
+                    rjButton13.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[13].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[13].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime14.Text = time;
+
+                if (myObjects[13].Value == 261)
+                {
+
+                    myStopWatchObjects[13].Start();
+                    myRjButton14.Text = "00:00";
+                    myStopWatchObjects[13].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[13].Stop();
+                    myRjButton14.Text = "00:00";
+                    myStopWatchObjects[13].Start();
+                }
+
+                if (myObjects[13].Value == 258)
+                {
+                    rjButton14.BackColor = Color.Red;
+                }
+                else if (myObjects[13].Value == 262)
+                {
+                    rjButton14.BackColor = Color.Orange;
+                }
+                else if (myObjects[13].Value == 261)
+                {
+                    rjButton14.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[13].Value == 264)
+                {
+                    rjButton14.BackColor = Color.Blue;
+                }
+
+            };
+
+
+            myObjects[14].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[14].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime15.Text = time;
+
+                if (myObjects[14].Value == 261)
+                {
+
+                    myStopWatchObjects[14].Start();
+                    myRjButton15.Text = "00:00";
+                    myStopWatchObjects[14].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[14].Stop();
+                    myRjButton15.Text = "00:00";
+                    myStopWatchObjects[13].Start();
+                }
+
+                if (myObjects[14].Value == 258)
+                {
+                    rjButton15.BackColor = Color.Red;
+                }
+                else if (myObjects[14].Value == 262)
+                {
+                    rjButton15.BackColor = Color.Orange;
+                }
+                else if (myObjects[14].Value == 261)
+                {
+                    rjButton15.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[14].Value == 264)
+                {
+                    rjButton15.BackColor = Color.Blue;
+                }
+
+            };
+
+            myObjects[15].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[15].DidChange += () => {
+                Console.WriteLine("changed!");
+
+                string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                rjButtonTime16.Text = time;
+
+                if (myObjects[15].Value == 261)
+                { 
+                    myStopWatchObjects[15].Start();
+                    myRjButton16.Text = "00:00";
+                    myStopWatchObjects[15].Reset();
+                }
+                else
+                {
+                    myStopWatchObjects[15].Stop();
+                    myRjButton16.Text = "00:00";
+                    myStopWatchObjects[15].Start();
+                }
+
+                if (myObjects[15].Value == 258)
+                {
+                    rjButton16.BackColor = Color.Red;
+                }
+                else if (myObjects[15].Value == 262)
+                {
+                    rjButton16.BackColor = Color.Orange;
+                }
+                else if (myObjects[15].Value == 261)
+                {
+                    rjButton16.BackColor = Color.DarkGreen;
+                }
+                else if (myObjects[15].Value == 264)
+                {
+                    rjButton16.BackColor = Color.Blue;
+                }
+                 
+            };
+
+
         }
 
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public void StopWatchTimer()
         {
