@@ -1,4 +1,4 @@
-﻿using EasyModbus;
+﻿//using EasyModbus;
 using Modbus.Device;
 using NurseCalling.Properties;
 using System;
@@ -51,7 +51,7 @@ namespace NurseCalling
 
         SystemClockTimer systemClockTimer1;
         IModbusSerialMaster master;
-        ModbusClient modbusClient;
+       // ModbusClient modbusClient;
         ushort[] registers;
         //  Wrapped<int> iVal;
 
@@ -65,7 +65,7 @@ namespace NurseCalling
          
             InitializeComponent();
 
-            modbusClient = new ModbusClient("COM1");
+           // modbusClient = new ModbusClient("COM1");
 
             dataModel = new DataModel();
 
@@ -1038,12 +1038,12 @@ namespace NurseCalling
         {
             try { 
             int[] data = { 1, 2 };
-            modbusClient.Connect();
-            modbusClient.WriteMultipleRegisters(1, data);
+           // modbusClient.Connect();
+           //  modbusClient.WriteMultipleRegisters(1, data);
             }catch(Exception ex) {
                 Console.WriteLine("Console1: "+ex.Message);
             }
-            modbusClient.Disconnect();
+           //  modbusClient.Disconnect();
         }
 
         public void connect1()
@@ -3944,6 +3944,363 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[15].ElapsedMilliseconds);
                 myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            if (myStopWatchObjects[16].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[16].ElapsedMilliseconds);
+                s2.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+                // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
+                //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
+
+            }
+            if (myStopWatchObjects[17].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[17].ElapsedMilliseconds);
+                s2.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
+
+                //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
+                // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[18].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[18].ElapsedMilliseconds);
+                s2.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[19].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[19].ElapsedMilliseconds);
+                s2.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[20].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[20].ElapsedMilliseconds);
+                s2.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[21].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[21].ElapsedMilliseconds);
+                s2.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[22].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[22].ElapsedMilliseconds);
+                s2.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[23].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[23].ElapsedMilliseconds);
+                s2.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[24].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[24].ElapsedMilliseconds);
+                s2.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[25].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[25].ElapsedMilliseconds);
+                s2.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[26].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[26].ElapsedMilliseconds);
+                s2.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[27].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[27].ElapsedMilliseconds);
+                s2.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[28].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[28].ElapsedMilliseconds);
+                s2.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[29].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[29].ElapsedMilliseconds);
+                s2.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[30].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[30].ElapsedMilliseconds);
+                s2.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[31].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[31].ElapsedMilliseconds);
+                s2.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            if (myStopWatchObjects[32].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[32].ElapsedMilliseconds);
+                s3.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+                // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
+                //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
+
+            }
+            if (myStopWatchObjects[33].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[33].ElapsedMilliseconds);
+                s3.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
+
+                // Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
+                // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[34].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[34].ElapsedMilliseconds);
+                s3.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[35].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[35].ElapsedMilliseconds);
+                s3.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[36].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[36].ElapsedMilliseconds);
+                s3.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[37].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[37].ElapsedMilliseconds);
+                s3.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[38].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[38].ElapsedMilliseconds);
+                s3.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[39].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[39].ElapsedMilliseconds);
+                s3.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[40].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[40].ElapsedMilliseconds);
+                s3.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[41].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[41].ElapsedMilliseconds);
+                s3.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[42].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[42].ElapsedMilliseconds);
+                s3.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[43].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[43].ElapsedMilliseconds);
+                s3.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[44].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[44].ElapsedMilliseconds);
+                s3.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[45].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[45].ElapsedMilliseconds);
+                s3.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[46].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[46].ElapsedMilliseconds);
+                s3.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[47].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[47].ElapsedMilliseconds);
+                s3.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            if (myStopWatchObjects[48].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[48].ElapsedMilliseconds);
+                s4.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+                // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
+                //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
+
+            }
+            if (myStopWatchObjects[49].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[49].ElapsedMilliseconds);
+                s4.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
+
+                //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
+                // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[50].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[50].ElapsedMilliseconds);
+                s4.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[51].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[51].ElapsedMilliseconds);
+                s4.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[52].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[52].ElapsedMilliseconds);
+                s4.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[53].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[53].ElapsedMilliseconds);
+                s4.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[54].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[54].ElapsedMilliseconds);
+                s4.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[55].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[55].ElapsedMilliseconds);
+                s4.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[56].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[56].ElapsedMilliseconds);
+                s4.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[57].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[57].ElapsedMilliseconds);
+                s4.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[58].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[58].ElapsedMilliseconds);
+                s4.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[59].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[59].ElapsedMilliseconds);
+                s4.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[60].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[60].ElapsedMilliseconds);
+                s4.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[61].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[61].ElapsedMilliseconds);
+                s4.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[62].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[62].ElapsedMilliseconds);
+                s4.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+
+            }
+            if (myStopWatchObjects[63].IsRunning)
+            {
+                TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[63].ElapsedMilliseconds);
+                s4.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
