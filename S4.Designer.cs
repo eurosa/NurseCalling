@@ -2227,7 +2227,6 @@
         public Controls.RJButton bButton3;
         private Controls.RoundPanelWithoutTitle roundPanelWithoutTitle2;
         public Controls.RJButton myRjButton2;
-        private Controls.RJButton rjButtonTime2;
         private Controls.HorizontalLineSeparator horizontalLineSeparator3;
         private Controls.HorizontalLineSeparator horizontalLineSeparator4;
         public Controls.RJButton rjButton2;
@@ -2241,5 +2240,6 @@
         public Controls.RJButton bButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        public Controls.RJButton rjButtonTime2;
     }
 }
