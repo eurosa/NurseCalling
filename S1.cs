@@ -238,37 +238,35 @@ namespace NurseCalling
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-
+                   
             this.Invoke((MethodInvoker)delegate { 
-              
+                   
                 string hex_add = "0x0001";// "0x00A4";
                 ushort dec_add = Convert.ToUInt16(hex_add, 16);
                 ushort startAddress = dec_add;
                 ushort numRegisters = 16;
-
+                   
                 for (int i = 0; i < numRegisters; i++)
-                {
-
-                    Console.WriteLine("Register {0}={1}", startAddress + i, registers[i]);
-
-                    // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
-
+                {  
+                   Console.WriteLine("Register{0}={1}", startAddress + 1, registers[1]); 
+                      
+                   // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime);
+                      
                    /* if ((startAddress + i) == 1)
-                    {
+                   { 
                         //Age = (int)registers[i];
-
                         myObjects[0].Value = (int)registers[i];
                         rjButton1.Text = registers[i].ToString();
-                         
-
-                    }
-                    if ((startAddress + i) == 2)
-                    {
+                      
+                   } 
+                      
+                   if ((startAddress + i) == 2)
+                   { 
                         // Age = (int)registers[i]; 
-                        myObjects[1].Value = (int)registers[i];
-                        rjButton2.Text = registers[i].ToString(); 
-
-                    }*/
+                           myObjects[1].Value = (int)registers[i];
+                           rjButton2.Text = registers[i].ToString(); 
+                      
+                   }*/
 
 
                     switch ((startAddress + i))
