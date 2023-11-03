@@ -182,7 +182,7 @@ namespace NurseCalling
         //#2
         protected virtual void OnAgeChanged()
         {
-          //  if (AgeChanged != null) AgeChanged(this, EventArgs.Empty);
+            //  if (AgeChanged != null) AgeChanged(this, EventArgs.Empty);
             Console.WriteLine("myage", (Age));
         }
 
