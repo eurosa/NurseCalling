@@ -195,7 +195,7 @@ namespace NurseCalling
 
             set
             {
-                // #3
+                //#3
                 _age = value;
                 OnAgeChanged();
             }
@@ -337,6 +337,208 @@ namespace NurseCalling
                             myObjects[i].Value = (int)registers[i];
                             rjButton16.Text = registers[i].ToString();
                             break;
+
+                        // ++++++++++++++++++++++++++++++++++++ s2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                        case 17:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton1.Text = registers[i].ToString();
+                            break;
+                        case 18:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton2.Text = registers[i].ToString();
+                            break;
+                        case 19:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton3.Text = registers[i].ToString();
+                            break;
+                        case 20:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton4.Text = registers[i].ToString();
+                            break;
+                        case 21:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton5.Text = registers[i].ToString();
+                            break;
+                        case 22:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton6.Text = registers[i].ToString();
+                            break;
+                        case 23:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton7.Text = registers[i].ToString();
+                            break;
+                        case 24:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton8.Text = registers[i].ToString();
+                            break;
+                        case 25:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton9.Text = registers[i].ToString();
+                            break;
+                        case 26:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton10.Text = registers[i].ToString();
+                            break;
+                        case 27:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton11.Text = registers[i].ToString();
+                            break;
+                        case 28:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton12.Text = registers[i].ToString();
+                            break;
+                        case 29:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton13.Text = registers[i].ToString();
+                            break;
+                        case 30:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton14.Text = registers[i].ToString();
+                            break;
+                        case 31:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton15.Text = registers[i].ToString();
+                            break;
+                        case 32:
+                            myObjects[i].Value = (int)registers[i];
+                            s2.rjButton16.Text = registers[i].ToString();
+                            break;
+
+                        // ++++++++++++++++++++++++++++++++++++ s3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                        case 33:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton1.Text = registers[i].ToString();
+                            break;
+                        case 34:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton2.Text = registers[i].ToString();
+                            break;
+                        case 35:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton3.Text = registers[i].ToString();
+                            break;
+                        case 36:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton4.Text = registers[i].ToString();
+                            break;
+                        case 37:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton5.Text = registers[i].ToString();
+                            break;
+                        case 38:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton6.Text = registers[i].ToString();
+                            break;
+                        case 39:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton7.Text = registers[i].ToString();
+                            break;
+                        case 40:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton8.Text = registers[i].ToString();
+                            break;
+                        case 41:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton9.Text = registers[i].ToString();
+                            break;
+                        case 42:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton10.Text = registers[i].ToString();
+                            break;
+                        case 43:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton11.Text = registers[i].ToString();
+                            break;
+                        case 44:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton12.Text = registers[i].ToString();
+                            break;
+                        case 45:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton13.Text = registers[i].ToString();
+                            break;
+                        case 46:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton14.Text = registers[i].ToString();
+                            break;
+                        case 47:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton15.Text = registers[i].ToString();
+                            break;
+                        case 48:
+                            myObjects[i].Value = (int)registers[i];
+                            s3.rjButton16.Text = registers[i].ToString();
+                            break;
+
+                        // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                        case 49:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton1.Text = registers[i].ToString();
+                            break;
+                        case 50:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton2.Text = registers[i].ToString();
+                            break;
+                        case 51:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton3.Text = registers[i].ToString();
+                            break;
+                        case 52:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton4.Text = registers[i].ToString();
+                            break;
+                        case 53:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton5.Text = registers[i].ToString();
+                            break;
+                        case 54:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton6.Text = registers[i].ToString();
+                            break;
+                        case 55:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton7.Text = registers[i].ToString();
+                            break;
+                        case 56:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton8.Text = registers[i].ToString();
+                            break;
+                        case 57:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton9.Text = registers[i].ToString();
+                            break;
+                        case 58:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton10.Text = registers[i].ToString();
+                            break;
+                        case 59:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton11.Text = registers[i].ToString();
+                            break;
+                        case 60:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton12.Text = registers[i].ToString();
+                            break;
+                        case 61:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton13.Text = registers[i].ToString();
+                            break;
+                        case 62:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton14.Text = registers[i].ToString();
+                            break;
+                        case 63:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton15.Text = registers[i].ToString();
+                            break;
+                        case 64:
+                            myObjects[i].Value = (int)registers[i];
+                            s4.rjButton16.Text = registers[i].ToString();
+                            break;
+
                     }
 
 
