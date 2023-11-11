@@ -51,9 +51,9 @@ namespace NurseCalling
 
         SystemClockTimer systemClockTimer1;
         IModbusSerialMaster master;
-       // ModbusClient modbusClient;
+        // ModbusClient modbusClient;
         ushort[] registers;
-        //  Wrapped<int> iVal;
+        // Wrapped<int> iVal;
 
         Wrapped<int>[] myObjects;
         // StopWatchCshartp[] myStopWatchObjects;
