@@ -92,6 +92,12 @@
     <Compile Include="MyToggle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rough.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rough.Designer.cs">
+      <DependentUpon>Rough.cs</DependentUpon>
+    </Compile>
     <Compile Include="S1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rough.resx">
+      <DependentUpon>Rough.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S1.resx">
       <DependentUpon>S1.cs</DependentUpon>
     </EmbeddedResource>

@@ -59,16 +59,19 @@ namespace NurseCalling
         // StopWatchCshartp[] myStopWatchObjects;
 
         Stopwatch[] myStopWatchObjects;
-
+        Rough rough;
         public S1()
         {
          
             InitializeComponent();
 
-           // modbusClient = new ModbusClient("COM1");
+     
+            rough = new Rough();
+            flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+            // modbusClient = new ModbusClient("COM1");
 
             dataModel = new DataModel();
-           // roundPanelWithoutTitle1.Show();
+            roundPanelWithoutTitle1.Hide();
             int objectsToCreate = 64;
 
             // Create an array to hold all your objects
