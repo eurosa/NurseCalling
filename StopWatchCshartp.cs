@@ -48,7 +48,7 @@ namespace NurseCalling
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myObjects[0].ElapsedMilliseconds);
                 form1.myRjButton1.Text = objTimeSpan.ToString("mm':'ss"); 
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
-               // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
+                // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
                 Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
 
             }
