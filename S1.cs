@@ -67,11 +67,31 @@ namespace NurseCalling
 
      
             rough = new Rough();
-            flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+            
+
             // modbusClient = new ModbusClient("COM1");
 
             dataModel = new DataModel();
             roundPanelWithoutTitle1.Hide();
+            roundPanelWithoutTitle2.Hide();
+
+            roundPanelWithoutTitle3.Hide();
+            roundPanelWithoutTitle4.Hide();
+            roundPanelWithoutTitle5.Hide();
+            roundPanelWithoutTitle6.Hide();
+            roundPanelWithoutTitle7.Hide();
+            roundPanelWithoutTitle8.Hide();
+
+            roundPanelWithoutTitle9.Hide();
+            roundPanelWithoutTitle10.Hide();
+
+            roundPanelWithoutTitle11.Hide();
+            roundPanelWithoutTitle12.Hide();
+            roundPanelWithoutTitle13.Hide();
+            roundPanelWithoutTitle14.Hide();
+            roundPanelWithoutTitle15.Hide();
+            roundPanelWithoutTitle16.Hide();
+
             int objectsToCreate = 64;
 
             // Create an array to hold all your objects
@@ -129,7 +149,7 @@ namespace NurseCalling
 
             //  systemClockTimer1 =  new SystemClockTimer(this);
 
-            blinkLabel();
+           // blinkLabel();
 
             connect1();
 
@@ -271,7 +291,7 @@ namespace NurseCalling
                             // Age = (int)registers[i];
                             roundPanelWithoutTitle1.Location = new System.Drawing.Point(this.roundPanelWithoutTitle1.Location.X, this.roundPanelWithoutTitle1.Location.Y);
                             myObjects[i].Value = (int)registers[i];
-                            rjButton1.Text = registers[i].ToString();
+                            rough.rjButton1.Text = registers[i].ToString();
 
                          
                          }
@@ -279,7 +299,7 @@ namespace NurseCalling
                          {
                              // Age = (int)registers[i];
                              myObjects[i].Value = (int)registers[i];
-                             rjButton2.Text = registers[i].ToString();
+                             rough.rjButton2.Text = registers[i].ToString();
                              
                          }
 
@@ -288,67 +308,67 @@ namespace NurseCalling
                         {
                             case 1:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton1.Text = registers[i].ToString();
+                                rough.rjButton1.Text = registers[i].ToString();
                                 break;
                             case 2:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton2.Text = registers[i].ToString();
+                                rough.rjButton2.Text = registers[i].ToString();
                                 break;
                             case 3:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton3.Text = registers[i].ToString();
+                                rough.rjButton3.Text = registers[i].ToString();
                                 break;
                             case 4:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton4.Text = registers[i].ToString();
+                                rough.rjButton4.Text = registers[i].ToString();
                                 break;
                             case 5:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton5.Text = registers[i].ToString();
+                                rough.rjButton5.Text = registers[i].ToString();
                                 break;
                             case 6:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton6.Text = registers[i].ToString();
+                                rough.rjButton6.Text = registers[i].ToString();
                                 break;
                             case 7:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton7.Text = registers[i].ToString();
+                                rough.rjButton7.Text = registers[i].ToString();
                                 break;
                             case 8:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton8.Text = registers[i].ToString();
+                                rough.rjButton8.Text = registers[i].ToString();
                                 break;
                             case 9:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton9.Text = registers[i].ToString();
+                                rough.rjButton9.Text = registers[i].ToString();
                                 break;
                             case 10:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton10.Text = registers[i].ToString();
+                                rough.rjButton10.Text = registers[i].ToString();
                                 break;
                             case 11:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton11.Text = registers[i].ToString();
+                                rough.rjButton11.Text = registers[i].ToString();
                                 break;
                             case 12:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton12.Text = registers[i].ToString();
+                                rough.rjButton12.Text = registers[i].ToString();
                                 break;
                             case 13:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton13.Text = registers[i].ToString();
+                                rough.rjButton13.Text = registers[i].ToString();
                                 break;
                             case 14:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton14.Text = registers[i].ToString();
+                                rough.rjButton14.Text = registers[i].ToString();
                                 break;
                             case 15:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton15.Text = registers[i].ToString();
+                                rough.rjButton15.Text = registers[i].ToString();
                                 break;
                             case 16:
                                 myObjects[i].Value = (int)registers[i];
-                                rjButton16.Text = registers[i].ToString();
+                                rough.rjButton16.Text = registers[i].ToString();
                                 break;
 
                             // ++++++++++++++++++++++++++++++++++++ s2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -705,99 +725,99 @@ namespace NurseCalling
         {
             if (myObjects[0].Value != 261)
             {
-                if (toggle == true) rjButton1.Visible = true;
-                else rjButton1.Visible = false;
+                if (toggle == true) rough.rjButton1.Visible = true;
+                else rough.rjButton1.Visible = false;
             } 
             
             if (myObjects[1].Value != 261) {
 
-                if (toggle == true) rjButton2.Visible = true;
-                else rjButton2.Visible = false;
+                if (toggle == true) rough.rjButton2.Visible = true;
+                else rough.rjButton2.Visible = false;
             }
 
             if (myObjects[2].Value != 261)
             {
 
-                if (toggle == true) rjButton3.Visible = true;
-                else rjButton3.Visible = false;
+                if (toggle == true) rough.rjButton3.Visible = true;
+                else rough.rjButton3.Visible = false;
             }
             if (myObjects[3].Value != 261)
             {
 
-                if (toggle == true) rjButton4.Visible = true;
-                else rjButton4.Visible = false;
+                if (toggle == true) rough.rjButton4.Visible = true;
+                else rough.rjButton4.Visible = false;
             }
             if (myObjects[4].Value != 261)
             {
 
-                if (toggle == true) rjButton5.Visible = true;
-                else rjButton5.Visible = false;
+                if (toggle == true) rough.rjButton5.Visible = true;
+                else rough.rjButton5.Visible = false;
             }
             if (myObjects[5].Value != 261)
             {
 
-                if (toggle == true) rjButton6.Visible = true;
-                else rjButton6.Visible = false;
+                if (toggle == true) rough.rjButton6.Visible = true;
+                else rough.rjButton6.Visible = false;
             }
             if (myObjects[6].Value != 261)
             {
 
-                if (toggle == true) rjButton7.Visible = true;
-                else rjButton7.Visible = false;
+                if (toggle == true) rough.rjButton7.Visible = true;
+                else rough.rjButton7.Visible = false;
             }
             if (myObjects[7].Value != 261)
             {
 
-                if (toggle == true) rjButton8.Visible = true;
-                else rjButton8.Visible = false;
+                if (toggle == true) rough.rjButton8.Visible = true;
+                else rough.rjButton8.Visible = false;
             }
             if (myObjects[8].Value != 261)
             {
 
-                if (toggle == true) rjButton9.Visible = true;
-                else rjButton9.Visible = false;
+                if (toggle == true) rough.rjButton9.Visible = true;
+                else rough.rjButton9.Visible = false;
             }
             if (myObjects[9].Value != 261)
             {
 
-                if (toggle == true) rjButton10.Visible = true;
-                else rjButton10.Visible = false;
+                if (toggle == true) rough.rjButton10.Visible = true;
+                else rough.rjButton10.Visible = false;
             }
             if (myObjects[10].Value != 261)
             {
 
-                if (toggle == true) rjButton11.Visible = true;
-                else rjButton11.Visible = false;
+                if (toggle == true) rough.rjButton11.Visible = true;
+                else rough.rjButton11.Visible = false;
             }
             if (myObjects[11].Value != 261)
             {
 
-                if (toggle == true) rjButton12.Visible = true;
-                else rjButton12.Visible = false;
+                if (toggle == true) rough.rjButton12.Visible = true;
+                else rough.rjButton12.Visible = false;
             }
             if (myObjects[12].Value != 261)
             {
 
-                if (toggle == true) rjButton13.Visible = true;
-                else rjButton13.Visible = false;
+                if (toggle == true) rough.rjButton13.Visible = true;
+                else rough.rjButton13.Visible = false;
             }
             if (myObjects[13].Value != 261)
             {
 
-                if (toggle == true) rjButton14.Visible = true;
-                else rjButton14.Visible = false;
+                if (toggle == true) rough.rjButton14.Visible = true;
+                else rough.rjButton14.Visible = false;
             }
             if (myObjects[14].Value != 261)
             {
 
-                if (toggle == true) rjButton15.Visible = true;
-                else rjButton15.Visible = false;
+                if (toggle == true) rough.rjButton15.Visible = true;
+                else rough.rjButton15.Visible = false;
             }
             if (myObjects[15].Value != 261)
             {
 
-                if (toggle == true) rjButton16.Visible = true;
-                else rjButton16.Visible = false;
+                if (toggle == true) rough.rjButton16.Visible = true;
+                else rough.rjButton16.Visible = false;
             }
 
 
@@ -1398,37 +1418,41 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime1.Text = time;
+                rough.rjButtonTime1.Text = time;
 
                 if (myObjects[0].Value == 261)
                 {
 
                     myStopWatchObjects[0].Stop();
                     myStopWatchObjects[0].Reset();
-                    myRjButton1.Text = "00:00";
+                    rough.myRjButton1.Text = "00:00";
                 }
                 else
                 {
                     myStopWatchObjects[0].Stop();
                     myStopWatchObjects[0].Reset();
-                    myRjButton1.Text = "00:00";
+                    rough.myRjButton1.Text = "00:00";
                     myStopWatchObjects[0].Start();
                 }
                 if (myObjects[0].Value == 258)
                 {
-                    rjButton1.BackColor = Color.Red;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+                  
+                    rough.rjButton1.BackColor = Color.Red;
                 }
                 else if (myObjects[0].Value == 262)
                 {
-                    rjButton1.BackColor = Color.Orange;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+                    rough.rjButton1.BackColor = Color.Orange;
                 }
                 else if (myObjects[0].Value == 261)
                 {
-                    rjButton1.BackColor = Color.DarkGreen;
+                    rough.rjButton1.BackColor = Color.DarkGreen;
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle1);
                 }
                 else if (myObjects[0].Value == 264)
                 {
-                    rjButton1.BackColor = Color.Blue;
+                    rough.rjButton1.BackColor = Color.Blue;
                 }
 
             };
@@ -1439,38 +1463,41 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime2.Text = time;
+                rough.rjButtonTime2.Text = time;
 
                 if (myObjects[1].Value == 261)
                 {
 
                     myStopWatchObjects[1].Start();
-                    myRjButton2.Text = "00:00";
+                    rough.myRjButton2.Text = "00:00";
                     myStopWatchObjects[1].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[1].Stop();
-                    myRjButton2.Text = "00:00";
+                    rough.myRjButton2.Text = "00:00";
                     myStopWatchObjects[1].Reset();
                     myStopWatchObjects[1].Start();
                 }
 
                 if (myObjects[1].Value == 258)
                 {
-                    rjButton2.BackColor = Color.Red;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
+                    rough.rjButton2.BackColor = Color.Red;
                 }
                 else if (myObjects[1].Value == 262)
                 {
-                    rjButton2.BackColor = Color.Orange;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
+                    rough.rjButton2.BackColor = Color.Orange;
                 }
                 else if (myObjects[1].Value == 261)
                 {
-                    rjButton2.BackColor = Color.DarkGreen;
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle2);
+                    rough.rjButton2.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[1].Value == 264)
                 {
-                    rjButton2.BackColor = Color.Blue;
+                    rough.rjButton2.BackColor = Color.Blue;
                 }
 
             };
@@ -1482,38 +1509,41 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime3.Text = time;
+                rough.rjButtonTime3.Text = time;
 
                 if (myObjects[2].Value == 261)
                 {
 
                     myStopWatchObjects[2].Start();
-                    myRjButton3.Text = "00:00";
+                    rough.myRjButton3.Text = "00:00";
                     myStopWatchObjects[2].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[2].Stop();
-                    myRjButton3.Text = "00:00";
+                    rough.myRjButton3.Text = "00:00";
                     myStopWatchObjects[2].Reset();
                     myStopWatchObjects[2].Start();
                 }
 
                 if (myObjects[2].Value == 258)
                 {
-                    rjButton3.BackColor = Color.Red;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
+                    rough.rjButton3.BackColor = Color.Red;
                 }
                 else if (myObjects[2].Value == 262)
                 {
-                    rjButton3.BackColor = Color.Orange;
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
+                    rough.rjButton3.BackColor = Color.Orange;
                 }
                 else if (myObjects[2].Value == 261)
                 {
-                    rjButton3.BackColor = Color.DarkGreen;
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle3);
+                    rough.rjButton3.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[2].Value == 264)
                 {
-                    rjButton3.BackColor = Color.Blue;
+                    rough.rjButton3.BackColor = Color.Blue;
                 }
 
             };
@@ -1530,32 +1560,32 @@ namespace NurseCalling
                 {
 
                     myStopWatchObjects[3].Start();
-                    myRjButton4.Text = "00:00";
+                    rough.myRjButton4.Text = "00:00";
                     myStopWatchObjects[3].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[3].Stop();
-                    myRjButton4.Text = "00:00";
+                    rough.myRjButton4.Text = "00:00";
                     myStopWatchObjects[3].Reset();
                     myStopWatchObjects[3].Start();
                 }
 
                 if (myObjects[3].Value == 258)
                 {
-                    rjButton4.BackColor = Color.Red;
+                    rough.rjButton4.BackColor = Color.Red;
                 }
                 else if (myObjects[3].Value == 262)
                 {
-                    rjButton4.BackColor = Color.Orange;
+                    rough.rjButton4.BackColor = Color.Orange;
                 }
                 else if (myObjects[3].Value == 261)
                 {
-                    rjButton4.BackColor = Color.DarkGreen;
+                    rough.rjButton4.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[3].Value == 264)
                 {
-                    rjButton4.BackColor = Color.Blue;
+                    rough.rjButton4.BackColor = Color.Blue;
                 }
 
             };
@@ -1567,38 +1597,38 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime5.Text = time;
+                rough.rjButtonTime5.Text = time;
 
                 if (myObjects[4].Value == 261)
                 {
 
                     myStopWatchObjects[4].Start();
-                    myRjButton5.Text = "00:00";
+                    rough.myRjButton5.Text = "00:00";
                     myStopWatchObjects[4].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[4].Stop();
-                    myRjButton5.Text = "00:00";
+                    rough.myRjButton5.Text = "00:00";
                     myStopWatchObjects[4].Reset();
                     myStopWatchObjects[4].Start();
                 }
 
                 if (myObjects[4].Value == 258)
                 {
-                    rjButton5.BackColor = Color.Red;
+                    rough.rjButton5.BackColor = Color.Red;
                 }
                 else if (myObjects[4].Value == 262)
                 {
-                    rjButton5.BackColor = Color.Orange;
+                    rough.rjButton5.BackColor = Color.Orange;
                 }
                 else if (myObjects[4].Value == 261)
                 {
-                    rjButton5.BackColor = Color.DarkGreen;
+                    rough.rjButton5.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[4].Value == 264)
                 {
-                    rjButton5.BackColor = Color.Blue;
+                    rough.rjButton5.BackColor = Color.Blue;
                 }
 
             };
@@ -1609,37 +1639,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime6.Text = time;
+                rough.rjButtonTime6.Text = time;
 
                 if (myObjects[5].Value == 261)
                 {
 
                     myStopWatchObjects[5].Start();
-                    myRjButton6.Text = "00:00";
+                    rough.myRjButton6.Text = "00:00";
                     myStopWatchObjects[5].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[5].Stop();
-                    myRjButton6.Text = "00:00";
+                    rough.myRjButton6.Text = "00:00";
                     myStopWatchObjects[5].Start();
                 }
 
                 if (myObjects[5].Value == 258)
                 {
-                    rjButton6.BackColor = Color.Red;
+                    rough.rjButton6.BackColor = Color.Red;
                 }
                 else if (myObjects[5].Value == 262)
                 {
-                    rjButton6.BackColor = Color.Orange;
+                    rough.rjButton6.BackColor = Color.Orange;
                 }
                 else if (myObjects[5].Value == 261)
                 {
-                    rjButton6.BackColor = Color.DarkGreen;
+                    rough.rjButton6.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[5].Value == 264)
                 {
-                    rjButton6.BackColor = Color.Blue;
+                    rough.rjButton6.BackColor = Color.Blue;
                 }
 
             };
@@ -1650,37 +1680,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime7.Text = time;
+                rough.rjButtonTime7.Text = time;
 
                 if (myObjects[6].Value == 261)
                 {
 
                     myStopWatchObjects[6].Start();
-                    myRjButton7.Text = "00:00";
+                    rough.myRjButton7.Text = "00:00";
                     myStopWatchObjects[6].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[6].Stop();
-                    myRjButton7.Text = "00:00";
+                    rough.myRjButton7.Text = "00:00";
                     myStopWatchObjects[6].Start();
                 }
 
                 if (myObjects[6].Value == 258)
                 {
-                    rjButton7.BackColor = Color.Red;
+                    rough.rjButton7.BackColor = Color.Red;
                 }
                 else if (myObjects[6].Value == 262)
                 {
-                    rjButton7.BackColor = Color.Orange;
+                    rough.rjButton7.BackColor = Color.Orange;
                 }
                 else if (myObjects[6].Value == 261)
                 {
-                    rjButton7.BackColor = Color.DarkGreen;
+                    rough.rjButton7.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[6].Value == 264)
                 {
-                    rjButton7.BackColor = Color.Blue;
+                    rough.rjButton7.BackColor = Color.Blue;
                 }
 
             };
@@ -1698,31 +1728,31 @@ namespace NurseCalling
                 {
 
                     myStopWatchObjects[7].Start();
-                    myRjButton8.Text = "00:00";
+                    rough.myRjButton8.Text = "00:00";
                     myStopWatchObjects[7].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[7].Stop();
-                    myRjButton8.Text = "00:00";
+                    rough.myRjButton8.Text = "00:00";
                     myStopWatchObjects[7].Start();
                 }
 
                 if (myObjects[7].Value == 258)
                 {
-                    rjButton8.BackColor = Color.Red;
+                    rough.rjButton8.BackColor = Color.Red;
                 }
                 else if (myObjects[7].Value == 262)
                 {
-                    rjButton8.BackColor = Color.Orange;
+                    rough.rjButton8.BackColor = Color.Orange;
                 }
                 else if (myObjects[7].Value == 261)
                 {
-                    rjButton8.BackColor = Color.DarkGreen;
+                    rough.rjButton8.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[7].Value == 264)
                 {
-                    rjButton8.BackColor = Color.Blue;
+                    rough.rjButton8.BackColor = Color.Blue;
                 }
 
             };
@@ -1733,37 +1763,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime9.Text = time;
+                rough.rjButtonTime9.Text = time;
 
                 if (myObjects[8].Value == 261)
                 {
 
                     myStopWatchObjects[8].Start();
-                    myRjButton9.Text = "00:00";
+                    rough.myRjButton9.Text = "00:00";
                     myStopWatchObjects[8].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[8].Stop();
-                    myRjButton9.Text = "00:00";
+                    rough.myRjButton9.Text = "00:00";
                     myStopWatchObjects[8].Start();
                 }
 
                 if (myObjects[8].Value == 258)
                 {
-                    rjButton9.BackColor = Color.Red;
+                    rough.rjButton9.BackColor = Color.Red;
                 }
                 else if (myObjects[8].Value == 262)
                 {
-                    rjButton9.BackColor = Color.Orange;
+                    rough.rjButton9.BackColor = Color.Orange;
                 }
                 else if (myObjects[8].Value == 261)
                 {
-                    rjButton9.BackColor = Color.DarkGreen;
+                    rough.rjButton9.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[8].Value == 264)
                 {
-                    rjButton9.BackColor = Color.Blue;
+                    rough.rjButton9.BackColor = Color.Blue;
                 }
 
             };
@@ -1780,31 +1810,31 @@ namespace NurseCalling
                 {
 
                     myStopWatchObjects[9].Start();
-                    myRjButton10.Text = "00:00";
+                    rough.myRjButton10.Text = "00:00";
                     myStopWatchObjects[9].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[9].Stop();
-                    myRjButton10.Text = "00:00";
+                    rough.myRjButton10.Text = "00:00";
                     myStopWatchObjects[9].Start();
                 }
 
                 if (myObjects[9].Value == 258)
                 {
-                    rjButton10.BackColor = Color.Red;
+                    rough.rjButton10.BackColor = Color.Red;
                 }
                 else if (myObjects[9].Value == 262)
                 {
-                    rjButton10.BackColor = Color.Orange;
+                    rough.rjButton10.BackColor = Color.Orange;
                 }
                 else if (myObjects[9].Value == 261)
                 {
-                    rjButton10.BackColor = Color.DarkGreen;
+                    rough.rjButton10.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[9].Value == 264)
                 {
-                    rjButton10.BackColor = Color.Blue;
+                    rough.rjButton10.BackColor = Color.Blue;
                 }
 
             };
@@ -1815,37 +1845,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime11.Text = time;
+                rough.rjButtonTime11.Text = time;
 
                 if (myObjects[10].Value == 261)
                 {
 
                     myStopWatchObjects[10].Start();
-                    myRjButton11.Text = "00:00";
+                    rough.myRjButton11.Text = "00:00";
                     myStopWatchObjects[10].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[10].Stop();
-                    myRjButton11.Text = "00:00";
+                    rough.myRjButton11.Text = "00:00";
                     myStopWatchObjects[10].Start();
                 }
 
                 if (myObjects[10].Value == 258)
                 {
-                    rjButton11.BackColor = Color.Red;
+                    rough.rjButton11.BackColor = Color.Red;
                 }
                 else if (myObjects[10].Value == 262)
                 {
-                    rjButton11.BackColor = Color.Orange;
+                    rough.rjButton11.BackColor = Color.Orange;
                 }
                 else if (myObjects[10].Value == 261)
                 {
-                    rjButton11.BackColor = Color.DarkGreen;
+                    rough.rjButton11.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[10].Value == 264)
                 {
-                    rjButton11.BackColor = Color.Blue;
+                    rough.rjButton11.BackColor = Color.Blue;
                 }
 
             };
@@ -1856,37 +1886,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime12.Text = time;
+                rough.rjButtonTime12.Text = time;
 
                 if (myObjects[11].Value == 261)
                 {
 
                     myStopWatchObjects[11].Start();
-                    myRjButton12.Text = "00:00";
+                    rough.myRjButton12.Text = "00:00";
                     myStopWatchObjects[11].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[11].Stop();
-                    myRjButton12.Text = "00:00";
+                    rough.myRjButton12.Text = "00:00";
                     myStopWatchObjects[11].Start();
                 }
 
                 if (myObjects[11].Value == 258)
                 {
-                    rjButton12.BackColor = Color.Red;
+                    rough.rjButton12.BackColor = Color.Red;
                 }
                 else if (myObjects[11].Value == 262)
                 {
-                    rjButton12.BackColor = Color.Orange;
+                    rough.rjButton12.BackColor = Color.Orange;
                 }
                 else if (myObjects[11].Value == 261)
                 {
-                    rjButton12.BackColor = Color.DarkGreen;
+                    rough.rjButton12.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[11].Value == 264)
                 {
-                    rjButton12.BackColor = Color.Blue;
+                    rough.rjButton12.BackColor = Color.Blue;
                 }
 
             };
@@ -1897,37 +1927,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime13.Text = time;
+                rough.rjButtonTime13.Text = time;
 
                 if (myObjects[12].Value == 261)
                 {
 
                     myStopWatchObjects[12].Start();
-                    myRjButton13.Text = "00:00";
+                    rough.myRjButton13.Text = "00:00";
                     myStopWatchObjects[12].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[12].Stop();
-                    myRjButton13.Text = "00:00";
+                    rough.myRjButton13.Text = "00:00";
                     myStopWatchObjects[12].Start();
                 }
 
                 if (myObjects[12].Value == 258)
                 {
-                    rjButton13.BackColor = Color.Red;
+                    rough.rjButton13.BackColor = Color.Red;
                 }
                 else if (myObjects[12].Value == 262)
                 {
-                    rjButton13.BackColor = Color.Orange;
+                    rough.rjButton13.BackColor = Color.Orange;
                 }
                 else if (myObjects[12].Value == 261)
                 {
-                    rjButton13.BackColor = Color.DarkGreen;
+                    rough.rjButton13.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[12].Value == 264)
                 {
-                    rjButton13.BackColor = Color.Blue;
+                    rough.rjButton13.BackColor = Color.Blue;
                 }
 
             };
@@ -1938,37 +1968,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime14.Text = time;
+                rough.rjButtonTime14.Text = time;
 
                 if (myObjects[13].Value == 261)
                 {
 
                     myStopWatchObjects[13].Start();
-                    myRjButton14.Text = "00:00";
+                    rough.myRjButton14.Text = "00:00";
                     myStopWatchObjects[13].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[13].Stop();
-                    myRjButton14.Text = "00:00";
+                    rough.myRjButton14.Text = "00:00";
                     myStopWatchObjects[13].Start();
                 }
 
                 if (myObjects[13].Value == 258)
                 {
-                    rjButton14.BackColor = Color.Red;
+                    rough.rjButton14.BackColor = Color.Red;
                 }
                 else if (myObjects[13].Value == 262)
                 {
-                    rjButton14.BackColor = Color.Orange;
+                    rough.rjButton14.BackColor = Color.Orange;
                 }
                 else if (myObjects[13].Value == 261)
                 {
-                    rjButton14.BackColor = Color.DarkGreen;
+                    rough.rjButton14.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[13].Value == 264)
                 {
-                    rjButton14.BackColor = Color.Blue;
+                    rough.rjButton14.BackColor = Color.Blue;
                 }
 
             };
@@ -1980,37 +2010,37 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime15.Text = time;
+                rough.rjButtonTime15.Text = time;
 
                 if (myObjects[14].Value == 261)
                 {
 
                     myStopWatchObjects[14].Start();
-                    myRjButton15.Text = "00:00";
+                    rough.myRjButton15.Text = "00:00";
                     myStopWatchObjects[14].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[14].Stop();
-                    myRjButton15.Text = "00:00";
+                    rough.myRjButton15.Text = "00:00";
                     myStopWatchObjects[13].Start();
                 }
 
                 if (myObjects[14].Value == 258)
                 {
-                    rjButton15.BackColor = Color.Red;
+                    rough.rjButton15.BackColor = Color.Red;
                 }
                 else if (myObjects[14].Value == 262)
                 {
-                    rjButton15.BackColor = Color.Orange;
+                    rough.rjButton15.BackColor = Color.Orange;
                 }
                 else if (myObjects[14].Value == 261)
                 {
-                    rjButton15.BackColor = Color.DarkGreen;
+                    rough.rjButton15.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[14].Value == 264)
                 {
-                    rjButton15.BackColor = Color.Blue;
+                    rough.rjButton15.BackColor = Color.Blue;
                 }
 
             };
@@ -2021,36 +2051,36 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
-                rjButtonTime16.Text = time;
+                rough.rjButtonTime16.Text = time;
 
                 if (myObjects[15].Value == 261)
                 { 
                     myStopWatchObjects[15].Start();
-                    myRjButton16.Text = "00:00";
+                    rough.myRjButton16.Text = "00:00";
                     myStopWatchObjects[15].Reset();
                 }
                 else
                 {
                     myStopWatchObjects[15].Stop();
-                    myRjButton16.Text = "00:00";
+                    rough.myRjButton16.Text = "00:00";
                     myStopWatchObjects[15].Start();
                 }
 
                 if (myObjects[15].Value == 258)
                 {
-                    rjButton16.BackColor = Color.Red;
+                    rough.rjButton16.BackColor = Color.Red;
                 }
                 else if (myObjects[15].Value == 262)
                 {
-                    rjButton16.BackColor = Color.Orange;
+                    rough.rjButton16.BackColor = Color.Orange;
                 }
                 else if (myObjects[15].Value == 261)
                 {
-                    rjButton16.BackColor = Color.DarkGreen;
+                    rough.rjButton16.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[15].Value == 264)
                 {
-                    rjButton16.BackColor = Color.Blue;
+                    rough.rjButton16.BackColor = Color.Blue;
                 }
                  
             };
@@ -4062,7 +4092,7 @@ namespace NurseCalling
             if (myStopWatchObjects[0].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[0].ElapsedMilliseconds);
-                myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
                 // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
               //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
@@ -4071,7 +4101,7 @@ namespace NurseCalling
             if (myStopWatchObjects[1].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[1].ElapsedMilliseconds);
-                myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
 
               //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
                 // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
@@ -4080,98 +4110,98 @@ namespace NurseCalling
             if (myStopWatchObjects[2].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[2].ElapsedMilliseconds);
-                myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[3].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[3].ElapsedMilliseconds);
-                myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[4].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[4].ElapsedMilliseconds);
-                myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[5].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[5].ElapsedMilliseconds);
-                myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[6].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[6].ElapsedMilliseconds);
-                myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[7].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[7].ElapsedMilliseconds);
-                myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[8].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[8].ElapsedMilliseconds);
-                myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[9].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[9].ElapsedMilliseconds);
-                myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[10].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[10].ElapsedMilliseconds);
-                myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[11].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[11].ElapsedMilliseconds);
-                myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[12].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[12].ElapsedMilliseconds);
-                myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[13].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[13].ElapsedMilliseconds);
-                myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[14].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[14].ElapsedMilliseconds);
-                myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[15].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[15].ElapsedMilliseconds);
-                myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                rough.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }

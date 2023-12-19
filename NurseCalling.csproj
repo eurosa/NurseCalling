@@ -98,6 +98,24 @@
     <Compile Include="Rough.Designer.cs">
       <DependentUpon>Rough.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rough1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rough1.Designer.cs">
+      <DependentUpon>Rough1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rough2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rough2.Designer.cs">
+      <DependentUpon>Rough2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rough3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rough3.Designer.cs">
+      <DependentUpon>Rough3.cs</DependentUpon>
+    </Compile>
     <Compile Include="S1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +164,15 @@
     </Compile>
     <EmbeddedResource Include="Rough.resx">
       <DependentUpon>Rough.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rough1.resx">
+      <DependentUpon>Rough1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rough2.resx">
+      <DependentUpon>Rough2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rough3.resx">
+      <DependentUpon>Rough3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S1.resx">
       <DependentUpon>S1.cs</DependentUpon>
