@@ -60,6 +60,9 @@ namespace NurseCalling
 
         Stopwatch[] myStopWatchObjects;
         Rough rough;
+        Rough1 rough1;
+        Rough2 rough2;
+        Rough3 rough3;
         public S1()
         {
          
@@ -67,7 +70,9 @@ namespace NurseCalling
 
      
             rough = new Rough();
-            
+            rough1 = new Rough1();
+            rough2 = new Rough2();
+            rough3 = new Rough3();
 
             // modbusClient = new ModbusClient("COM1");
 
@@ -375,201 +380,201 @@ namespace NurseCalling
 
                             case 17:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton1.Text = registers[i].ToString();
+                                rough1.rjButton1.Text = registers[i].ToString();
                                 break;
                             case 18:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton2.Text = registers[i].ToString();
+                                rough1.rjButton2.Text = registers[i].ToString();
                                 break;
                             case 19:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton3.Text = registers[i].ToString();
+                                rough1.rjButton3.Text = registers[i].ToString();
                                 break;
                             case 20:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton4.Text = registers[i].ToString();
+                                rough1.rjButton4.Text = registers[i].ToString();
                                 break;
                             case 21:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton5.Text = registers[i].ToString();
+                                rough1.rjButton5.Text = registers[i].ToString();
                                 break;
                             case 22:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton6.Text = registers[i].ToString();
+                                rough1.rjButton6.Text = registers[i].ToString();
                                 break;
                             case 23:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton7.Text = registers[i].ToString();
+                                rough1.rjButton7.Text = registers[i].ToString();
                                 break;
                             case 24:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton8.Text = registers[i].ToString();
+                                rough1.rjButton8.Text = registers[i].ToString();
                                 break;
                             case 25:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton9.Text = registers[i].ToString();
+                                rough1.rjButton9.Text = registers[i].ToString();
                                 break;
                             case 26:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton10.Text = registers[i].ToString();
+                                rough1.rjButton10.Text = registers[i].ToString();
                                 break;
                             case 27:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton11.Text = registers[i].ToString();
+                                rough1.rjButton11.Text = registers[i].ToString();
                                 break;
                             case 28:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton12.Text = registers[i].ToString();
+                                rough1.rjButton12.Text = registers[i].ToString();
                                 break;
                             case 29:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton13.Text = registers[i].ToString();
+                                rough1.rjButton13.Text = registers[i].ToString();
                                 break;
                             case 30:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton14.Text = registers[i].ToString();
+                                rough1.rjButton14.Text = registers[i].ToString();
                                 break;
                             case 31:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton15.Text = registers[i].ToString();
+                                rough1.rjButton15.Text = registers[i].ToString();
                                 break;
                             case 32:
                                 myObjects[i].Value = (int)registers[i];
-                                s2.rjButton16.Text = registers[i].ToString();
+                                rough1.rjButton16.Text = registers[i].ToString();
                                 break;
 
                             // ++++++++++++++++++++++++++++++++++++ s3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
                             case 33:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton1.Text = registers[i].ToString();
+                                rough2.rjButton1.Text = registers[i].ToString();
                                 break;
                             case 34:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton2.Text = registers[i].ToString();
+                                rough2.rjButton2.Text = registers[i].ToString();
                                 break;
                             case 35:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton3.Text = registers[i].ToString();
+                                rough2.rjButton3.Text = registers[i].ToString();
                                 break;
                             case 36:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton4.Text = registers[i].ToString();
+                                rough2.rjButton4.Text = registers[i].ToString();
                                 break;
                             case 37:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton5.Text = registers[i].ToString();
+                                rough2.rjButton5.Text = registers[i].ToString();
                                 break;
                             case 38:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton6.Text = registers[i].ToString();
+                                rough2.rjButton6.Text = registers[i].ToString();
                                 break;
                             case 39:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton7.Text = registers[i].ToString();
+                                rough2.rjButton7.Text = registers[i].ToString();
                                 break;
                             case 40:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton8.Text = registers[i].ToString();
+                                rough2.rjButton8.Text = registers[i].ToString();
                                 break;
                             case 41:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton9.Text = registers[i].ToString();
+                                rough2.rjButton9.Text = registers[i].ToString();
                                 break;
                             case 42:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton10.Text = registers[i].ToString();
+                                rough2.rjButton10.Text = registers[i].ToString();
                                 break;
                             case 43:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton11.Text = registers[i].ToString();
+                                rough2.rjButton11.Text = registers[i].ToString();
                                 break;
                             case 44:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton12.Text = registers[i].ToString();
+                                rough2.rjButton12.Text = registers[i].ToString();
                                 break;
                             case 45:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton13.Text = registers[i].ToString();
+                                rough2.rjButton13.Text = registers[i].ToString();
                                 break;
                             case 46:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton14.Text = registers[i].ToString();
+                                rough2.rjButton14.Text = registers[i].ToString();
                                 break;
                             case 47:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton15.Text = registers[i].ToString();
+                                rough2.rjButton15.Text = registers[i].ToString();
                                 break;
                             case 48:
                                 myObjects[i].Value = (int)registers[i];
-                                s3.rjButton16.Text = registers[i].ToString();
+                                rough2.rjButton16.Text = registers[i].ToString();
                                 break;
 
                             // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
                             case 49:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton1.Text = registers[i].ToString();
+                                rough3.rjButton1.Text = registers[i].ToString();
                                 break;
                             case 50:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton2.Text = registers[i].ToString();
+                                rough3.rjButton2.Text = registers[i].ToString();
                                 break;
                             case 51:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton3.Text = registers[i].ToString();
+                                rough3.rjButton3.Text = registers[i].ToString();
                                 break;
                             case 52:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton4.Text = registers[i].ToString();
+                                rough3.rjButton4.Text = registers[i].ToString();
                                 break;
                             case 53:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton5.Text = registers[i].ToString();
+                                rough3.rjButton5.Text = registers[i].ToString();
                                 break;
                             case 54:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton6.Text = registers[i].ToString();
+                                rough3.rjButton6.Text = registers[i].ToString();
                                 break;
                             case 55:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton7.Text = registers[i].ToString();
+                                rough3.rjButton7.Text = registers[i].ToString();
                                 break;
                             case 56:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton8.Text = registers[i].ToString();
+                                rough3.rjButton8.Text = registers[i].ToString();
                                 break;
                             case 57:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton9.Text = registers[i].ToString();
+                                rough3.rjButton9.Text = registers[i].ToString();
                                 break;
                             case 58:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton10.Text = registers[i].ToString();
+                                rough3.rjButton10.Text = registers[i].ToString();
                                 break;
                             case 59:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton11.Text = registers[i].ToString();
+                                rough3.rjButton11.Text = registers[i].ToString();
                                 break;
                             case 60:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton12.Text = registers[i].ToString();
+                                rough3.rjButton12.Text = registers[i].ToString();
                                 break;
                             case 61:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton13.Text = registers[i].ToString();
+                                rough3.rjButton13.Text = registers[i].ToString();
                                 break;
                             case 62:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton14.Text = registers[i].ToString();
+                                rough3.rjButton14.Text = registers[i].ToString();
                                 break;
                             case 63:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton15.Text = registers[i].ToString();
+                                rough3.rjButton15.Text = registers[i].ToString();
                                 break;
                             case 64:
                                 myObjects[i].Value = (int)registers[i];
-                                s4.rjButton16.Text = registers[i].ToString();
+                                rough3.rjButton16.Text = registers[i].ToString();
                                 break;
 
                         }
@@ -825,302 +830,302 @@ namespace NurseCalling
 
             if (myObjects[16].Value != 261)
             {
-                if (toggle == true) s2.rjButton1.Visible = true;
-                else s2.rjButton1.Visible = false;
+                if (toggle == true) rough1.rjButton1.Visible = true;
+                else rough1.rjButton1.Visible = false;
             }
 
             if (myObjects[17].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton2.Visible = true;
-                else s2.rjButton2.Visible = false;
+                if (toggle == true) rough1.rjButton2.Visible = true;
+                else rough1.rjButton2.Visible = false;
             }
 
             if (myObjects[18].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton3.Visible = true;
-                else s2.rjButton3.Visible = false;
+                if (toggle == true) rough1.rjButton3.Visible = true;
+                else rough1.rjButton3.Visible = false;
             }
             if (myObjects[19].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton4.Visible = true;
-                else s2.rjButton4.Visible = false;
+                if (toggle == true) rough1.rjButton4.Visible = true;
+                else rough1.rjButton4.Visible = false;
             }
             if (myObjects[20].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton5.Visible = true;
-                else s2.rjButton5.Visible = false;
+                if (toggle == true) rough1.rjButton5.Visible = true;
+                else rough1.rjButton5.Visible = false;
             }
             if (myObjects[21].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton6.Visible = true;
-                else s2.rjButton6.Visible = false;
+                if (toggle == true) rough1.rjButton6.Visible = true;
+                else rough1.rjButton6.Visible = false;
             }
             if (myObjects[22].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton7.Visible = true;
-                else s2.rjButton7.Visible = false;
+                if (toggle == true) rough1.rjButton7.Visible = true;
+                else rough1.rjButton7.Visible = false;
             }
             if (myObjects[23].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton8.Visible = true;
-                else s2.rjButton8.Visible = false;
+                if (toggle == true) rough1.rjButton8.Visible = true;
+                else rough1.rjButton8.Visible = false;
             }
             if (myObjects[24].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton9.Visible = true;
-                else s2.rjButton9.Visible = false;
+                if (toggle == true) rough1.rjButton9.Visible = true;
+                else rough1.rjButton9.Visible = false;
             }
             if (myObjects[25].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton10.Visible = true;
-                else s2.rjButton10.Visible = false;
+                if (toggle == true) rough1.rjButton10.Visible = true;
+                else rough1.rjButton10.Visible = false;
             }
             if (myObjects[26].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton11.Visible = true;
-                else s2.rjButton11.Visible = false;
+                if (toggle == true) rough1.rjButton11.Visible = true;
+                else rough1.rjButton11.Visible = false;
             }
             if (myObjects[27].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton12.Visible = true;
-                else s2.rjButton12.Visible = false;
+                if (toggle == true) rough1.rjButton12.Visible = true;
+                else rough1.rjButton12.Visible = false;
             }
             if (myObjects[28].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton13.Visible = true;
-                else s2.rjButton13.Visible = false;
+                if (toggle == true) rough1.rjButton13.Visible = true;
+                else rough1.rjButton13.Visible = false;
             }
             if (myObjects[29].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton14.Visible = true;
-                else s2.rjButton14.Visible = false;
+                if (toggle == true) rough1.rjButton14.Visible = true;
+                else rough1.rjButton14.Visible = false;
             }
             if (myObjects[30].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton15.Visible = true;
-                else s2.rjButton15.Visible = false;
+                if (toggle == true) rough1.rjButton15.Visible = true;
+                else rough1.rjButton15.Visible = false;
             }
             if (myObjects[31].Value != 261)
             {
 
-                if (toggle == true) s2.rjButton16.Visible = true;
-                else s2.rjButton16.Visible = false;
+                if (toggle == true) rough1.rjButton16.Visible = true;
+                else rough1.rjButton16.Visible = false;
             }
 
             // ++++++++++++++++++++++++++++++++++++S3++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             if (myObjects[32].Value != 261)
             {
-                if (toggle == true) s3.rjButton1.Visible = true;
-                else s3.rjButton1.Visible = false;
+                if (toggle == true) rough2.rjButton1.Visible = true;
+                else rough2.rjButton1.Visible = false;
             }
 
             if (myObjects[33].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton2.Visible = true;
-                else s3.rjButton2.Visible = false;
+                if (toggle == true) rough2.rjButton2.Visible = true;
+                else rough2.rjButton2.Visible = false;
             }
 
             if (myObjects[34].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton3.Visible = true;
-                else s3.rjButton3.Visible = false;
+                if (toggle == true) rough2.rjButton3.Visible = true;
+                else rough2.rjButton3.Visible = false;
             }
             if (myObjects[35].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton4.Visible = true;
-                else s3.rjButton4.Visible = false;
+                if (toggle == true) rough2.rjButton4.Visible = true;
+                else rough2.rjButton4.Visible = false;
             }
             if (myObjects[36].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton5.Visible = true;
-                else s3.rjButton5.Visible = false;
+                if (toggle == true) rough2.rjButton5.Visible = true;
+                else rough2.rjButton5.Visible = false;
             }
             if (myObjects[37].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton6.Visible = true;
-                else s3.rjButton6.Visible = false;
+                if (toggle == true) rough2.rjButton6.Visible = true;
+                else rough2.rjButton6.Visible = false;
             }
             if (myObjects[38].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton7.Visible = true;
-                else s3.rjButton7.Visible = false;
+                if (toggle == true) rough2.rjButton7.Visible = true;
+                else rough2.rjButton7.Visible = false;
             }
             if (myObjects[39].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton8.Visible = true;
-                else s3.rjButton8.Visible = false;
+                if (toggle == true) rough2.rjButton8.Visible = true;
+                else rough2.rjButton8.Visible = false;
             }
             if (myObjects[40].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton9.Visible = true;
-                else s3.rjButton9.Visible = false;
+                if (toggle == true) rough2.rjButton9.Visible = true;
+                else rough2.rjButton9.Visible = false;
             }
             if (myObjects[41].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton10.Visible = true;
-                else s3.rjButton10.Visible = false;
+                if (toggle == true) rough2.rjButton10.Visible = true;
+                else rough2.rjButton10.Visible = false;
             }
             if (myObjects[42].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton11.Visible = true;
-                else s3.rjButton11.Visible = false;
+                if (toggle == true) rough2.rjButton11.Visible = true;
+                else rough2.rjButton11.Visible = false;
             }
             if (myObjects[43].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton12.Visible = true;
-                else s3.rjButton12.Visible = false;
+                if (toggle == true) rough2.rjButton12.Visible = true;
+                else rough2.rjButton12.Visible = false;
             }
             if (myObjects[44].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton13.Visible = true;
-                else s3.rjButton13.Visible = false;
+                if (toggle == true) rough2.rjButton13.Visible = true;
+                else rough2.rjButton13.Visible = false;
             }
             if (myObjects[45].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton14.Visible = true;
-                else s3.rjButton14.Visible = false;
+                if (toggle == true) rough2.rjButton14.Visible = true;
+                else rough2.rjButton14.Visible = false;
             }
             if (myObjects[46].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton15.Visible = true;
-                else s3.rjButton15.Visible = false;
+                if (toggle == true) rough2.rjButton15.Visible = true;
+                else rough2.rjButton15.Visible = false;
             }
 
             if (myObjects[47].Value != 261)
             {
 
-                if (toggle == true) s3.rjButton16.Visible = true;
-                else s3.rjButton16.Visible = false;
+                if (toggle == true) rough2.rjButton16.Visible = true;
+                else rough2.rjButton16.Visible = false;
             }
 
             // ++++++++++++++++++++++++++++++++++++S4++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             if (myObjects[48].Value != 261)
             {
-                if (toggle == true) s4.rjButton1.Visible = true;
-                else s4.rjButton1.Visible = false;
+                if (toggle == true) rough3.rjButton1.Visible = true;
+                else rough3.rjButton1.Visible = false;
             }
 
             if (myObjects[49].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton2.Visible = true;
-                else s4.rjButton2.Visible = false;
+                if (toggle == true) rough3.rjButton2.Visible = true;
+                else rough3.rjButton2.Visible = false;
             }
 
             if (myObjects[50].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton3.Visible = true;
-                else s4.rjButton3.Visible = false;
+                if (toggle == true) rough3.rjButton3.Visible = true;
+                else rough3.rjButton3.Visible = false;
             }
             if (myObjects[51].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton4.Visible = true;
+                if (toggle == true) rough3.rjButton4.Visible = true;
                 else s4.rjButton4.Visible = false;
             }
             if (myObjects[52].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton5.Visible = true;
-                else s4.rjButton5.Visible = false;
+                if (toggle == true) rough3.rjButton5.Visible = true;
+                else rough3.rjButton5.Visible = false;
             }
             if (myObjects[53].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton6.Visible = true;
-                else s4.rjButton6.Visible = false;
+                if (toggle == true) rough3.rjButton6.Visible = true;
+                else rough3.rjButton6.Visible = false;
             }
             if (myObjects[54].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton7.Visible = true;
-                else s4.rjButton7.Visible = false;
+                if (toggle == true) rough3.rjButton7.Visible = true;
+                else rough3.rjButton7.Visible = false;
             }
             if (myObjects[55].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton8.Visible = true;
-                else s4.rjButton8.Visible = false;
+                if (toggle == true) rough3.rjButton8.Visible = true;
+                else rough3.rjButton8.Visible = false;
             }
             if (myObjects[56].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton9.Visible = true;
-                else s4.rjButton9.Visible = false;
+                if (toggle == true) rough3.rjButton9.Visible = true;
+                else rough3.rjButton9.Visible = false;
             }
             if (myObjects[57].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton10.Visible = true;
-                else s4.rjButton10.Visible = false;
+                if (toggle == true) rough3.rjButton10.Visible = true;
+                else rough3.rjButton10.Visible = false;
             }
             if (myObjects[58].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton11.Visible = true;
-                else s4.rjButton11.Visible = false;
+                if (toggle == true) rough3.rjButton11.Visible = true;
+                else rough3.rjButton11.Visible = false;
             }
             if (myObjects[59].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton12.Visible = true;
-                else s4.rjButton12.Visible = false;
+                if (toggle == true) rough3.rjButton12.Visible = true;
+                else rough3.rjButton12.Visible = false;
             }
             if (myObjects[60].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton13.Visible = true;
-                else s4.rjButton13.Visible = false;
+                if (toggle == true) rough3.rjButton13.Visible = true;
+                else rough3.rjButton13.Visible = false;
             }
             if (myObjects[61].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton14.Visible = true;
-                else s4.rjButton14.Visible = false;
+                if (toggle == true) rough3.rjButton14.Visible = true;
+                else rough3.rjButton14.Visible = false;
             }
             if (myObjects[62].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton15.Visible = true;
-                else s4.rjButton15.Visible = false;
+                if (toggle == true) rough3.rjButton15.Visible = true;
+                else rough3.rjButton15.Visible = false;
             }
 
             if (myObjects[63].Value != 261)
             {
 
-                if (toggle == true) s4.rjButton16.Visible = true;
-                else s4.rjButton16.Visible = false;
+                if (toggle == true) rough3.rjButton16.Visible = true;
+                else rough3.rjButton16.Visible = false;
             }
 
             Console.WriteLine("toggle " + toggle);
