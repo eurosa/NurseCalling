@@ -97,6 +97,57 @@ namespace NurseCalling
             roundPanelWithoutTitle15.Hide();
             roundPanelWithoutTitle16.Hide();
 
+            s2.roundPanelWithoutTitle1.Hide();
+            s2.roundPanelWithoutTitle2.Hide(); 
+            s2.roundPanelWithoutTitle3.Hide();
+            s2.roundPanelWithoutTitle4.Hide();
+            s2.roundPanelWithoutTitle5.Hide();
+            s2.roundPanelWithoutTitle6.Hide();
+            s2.roundPanelWithoutTitle7.Hide();
+            s2.roundPanelWithoutTitle8.Hide(); 
+            s2.roundPanelWithoutTitle9.Hide();
+            s2.roundPanelWithoutTitle10.Hide(); 
+            s2.roundPanelWithoutTitle11.Hide();
+            s2.roundPanelWithoutTitle12.Hide();
+            s2.roundPanelWithoutTitle13.Hide();
+            s2.roundPanelWithoutTitle14.Hide();
+            s2.roundPanelWithoutTitle15.Hide();
+            s2.roundPanelWithoutTitle16.Hide();
+
+            s3.roundPanelWithoutTitle1.Hide();
+            s3.roundPanelWithoutTitle2.Hide(); 
+            s3.roundPanelWithoutTitle3.Hide();
+            s3.roundPanelWithoutTitle4.Hide();
+            s3.roundPanelWithoutTitle5.Hide();
+            s3.roundPanelWithoutTitle6.Hide();
+            s3.roundPanelWithoutTitle7.Hide();
+            s3.roundPanelWithoutTitle8.Hide(); 
+            s3.roundPanelWithoutTitle9.Hide();
+            s3.roundPanelWithoutTitle10.Hide(); 
+            s3.roundPanelWithoutTitle11.Hide();
+            s3.roundPanelWithoutTitle12.Hide();
+            s3.roundPanelWithoutTitle13.Hide();
+            s3.roundPanelWithoutTitle14.Hide();
+            s3.roundPanelWithoutTitle15.Hide();
+            s3.roundPanelWithoutTitle16.Hide();
+
+            s4.roundPanelWithoutTitle1.Hide();
+            s4.roundPanelWithoutTitle2.Hide();
+            s4.roundPanelWithoutTitle3.Hide();
+            s4.roundPanelWithoutTitle4.Hide();
+            s4.roundPanelWithoutTitle5.Hide();
+            s4.roundPanelWithoutTitle6.Hide();
+            s4.roundPanelWithoutTitle7.Hide();
+            s4.roundPanelWithoutTitle8.Hide();
+            s4.roundPanelWithoutTitle9.Hide();
+            s4.roundPanelWithoutTitle10.Hide();
+            s4.roundPanelWithoutTitle11.Hide();
+            s4.roundPanelWithoutTitle12.Hide();
+            s4.roundPanelWithoutTitle13.Hide();
+            s4.roundPanelWithoutTitle14.Hide();
+            s4.roundPanelWithoutTitle15.Hide();
+            s4.roundPanelWithoutTitle16.Hide();
+
 
             /*roundPanelWithoutTitle1.Hide();
             roundPanelWithoutTitle2.Hide();
@@ -176,7 +227,7 @@ namespace NurseCalling
 
             //  systemClockTimer1 =  new SystemClockTimer(this);
 
-           // blinkLabel();
+          // blinkLabel();
 
             connect1();
 
@@ -316,7 +367,7 @@ namespace NurseCalling
                          if ((startAddress + i) == 1)
                          {
                             // Age = (int)registers[i];
-                            roundPanelWithoutTitle1.Location = new System.Drawing.Point(this.roundPanelWithoutTitle1.Location.X, this.roundPanelWithoutTitle1.Location.Y);
+                          //  roundPanelWithoutTitle1.Location = new System.Drawing.Point(this.roundPanelWithoutTitle1.Location.X, this.roundPanelWithoutTitle1.Location.Y);
                             myObjects[i].Value = (int)registers[i];
                             rough.rjButton1.Text = registers[i].ToString();
 
@@ -531,7 +582,7 @@ namespace NurseCalling
                                 myObjects[i].Value = (int)registers[i];
                                 rough2.rjButton16.Text = registers[i].ToString();
                                 break;
-
+                            
                             // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
                             case 49:
@@ -1600,14 +1651,17 @@ namespace NurseCalling
 
                 if (myObjects[3].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Red;
                 }
                 else if (myObjects[3].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Orange;
                 }
                 else if (myObjects[3].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[3].Value == 264)
@@ -1643,14 +1697,17 @@ namespace NurseCalling
 
                 if (myObjects[4].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Red;
                 }
                 else if (myObjects[4].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Orange;
                 }
                 else if (myObjects[4].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[4].Value == 264)
@@ -1684,14 +1741,17 @@ namespace NurseCalling
 
                 if (myObjects[5].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Red;
                 }
                 else if (myObjects[5].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Orange;
                 }
                 else if (myObjects[5].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[5].Value == 264)
@@ -1725,14 +1785,17 @@ namespace NurseCalling
 
                 if (myObjects[6].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Red;
                 }
                 else if (myObjects[6].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Orange;
                 }
                 else if (myObjects[6].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[6].Value == 264)
@@ -1767,14 +1830,17 @@ namespace NurseCalling
 
                 if (myObjects[7].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Red;
                 }
                 else if (myObjects[7].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Orange;
                 }
                 else if (myObjects[7].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[7].Value == 264)
@@ -1808,14 +1874,17 @@ namespace NurseCalling
 
                 if (myObjects[8].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Red;
                 }
                 else if (myObjects[8].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Orange;
                 }
                 else if (myObjects[8].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[8].Value == 264)
@@ -1849,14 +1918,17 @@ namespace NurseCalling
 
                 if (myObjects[9].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Red;
                 }
                 else if (myObjects[9].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Orange;
                 }
                 else if (myObjects[9].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[9].Value == 264)
@@ -1890,14 +1962,17 @@ namespace NurseCalling
 
                 if (myObjects[10].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Red;
                 }
                 else if (myObjects[10].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Orange;
                 }
                 else if (myObjects[10].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[10].Value == 264)
@@ -1931,14 +2006,17 @@ namespace NurseCalling
 
                 if (myObjects[11].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Red;
                 }
                 else if (myObjects[11].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Orange;
                 }
                 else if (myObjects[11].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[11].Value == 264)
@@ -1972,14 +2050,17 @@ namespace NurseCalling
 
                 if (myObjects[12].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Red;
                 }
                 else if (myObjects[12].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Orange;
                 }
                 else if (myObjects[12].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[12].Value == 264)
@@ -2013,14 +2094,17 @@ namespace NurseCalling
 
                 if (myObjects[13].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Red;
                 }
                 else if (myObjects[13].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Orange;
                 }
                 else if (myObjects[13].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[13].Value == 264)
@@ -2050,19 +2134,22 @@ namespace NurseCalling
                 {
                     myStopWatchObjects[14].Stop();
                     rough.myRjButton15.Text = "00:00";
-                    myStopWatchObjects[13].Start();
+                    myStopWatchObjects[14].Start();
                 }
 
                 if (myObjects[14].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Red;
                 }
                 else if (myObjects[14].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Orange;
                 }
                 else if (myObjects[14].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[14].Value == 264)
@@ -2095,14 +2182,17 @@ namespace NurseCalling
 
                 if (myObjects[15].Value == 258)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Red;
                 }
                 else if (myObjects[15].Value == 262)
                 {
+                    flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Orange;
                 }
                 else if (myObjects[15].Value == 261)
                 {
+                    flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[15].Value == 264)
@@ -2139,14 +2229,17 @@ namespace NurseCalling
                 }
                 if (myObjects[16].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Red;
                 }
                 else if (myObjects[16].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Orange;
                 }
                 else if (myObjects[16].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[16].Value == 264)
@@ -2181,14 +2274,17 @@ namespace NurseCalling
 
                 if (myObjects[17].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Red;
                 }
                 else if (myObjects[17].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Orange;
                 }
                 else if (myObjects[17].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[17].Value == 264)
@@ -2224,14 +2320,17 @@ namespace NurseCalling
 
                 if (myObjects[18].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Red;
                 }
                 else if (myObjects[18].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Orange;
                 }
                 else if (myObjects[18].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[18].Value == 264)
@@ -2266,14 +2365,17 @@ namespace NurseCalling
 
                 if (myObjects[19].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Red;
                 }
                 else if (myObjects[19].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Orange;
                 }
                 else if (myObjects[19].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[19].Value == 264)
@@ -2309,14 +2411,17 @@ namespace NurseCalling
 
                 if (myObjects[20].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle5);
                     rough1.rjButton5.BackColor = Color.Red;
                 }
                 else if (myObjects[20].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle5);
                     rough1.rjButton5.BackColor = Color.Orange;
                 }
                 else if (myObjects[20].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle5);
                     rough1.rjButton5.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[20].Value == 264)
@@ -2350,14 +2455,17 @@ namespace NurseCalling
 
                 if (myObjects[21].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.Red;
                 }
                 else if (myObjects[21].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.Orange;
                 }
                 else if (myObjects[21].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[21].Value == 264)
@@ -2391,14 +2499,17 @@ namespace NurseCalling
 
                 if (myObjects[22].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle7);
                     rough1.rjButton7.BackColor = Color.Red;
                 }
                 else if (myObjects[22].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle7);
                     rough1.rjButton7.BackColor = Color.Orange;
                 }
                 else if (myObjects[22].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle7);
                     rough1.rjButton7.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[22].Value == 264)
@@ -2433,14 +2544,17 @@ namespace NurseCalling
 
                 if (myObjects[23].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle8);
                     rough1.rjButton8.BackColor = Color.Red;
                 }
                 else if (myObjects[23].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle8);
                     rough1.rjButton8.BackColor = Color.Orange;
                 }
                 else if (myObjects[23].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle8);
                     rough1.rjButton8.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[23].Value == 264)
@@ -2474,14 +2588,17 @@ namespace NurseCalling
 
                 if (myObjects[24].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle9);
                     rough1.rjButton9.BackColor = Color.Red;
                 }
                 else if (myObjects[24].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle9);
                     rough1.rjButton9.BackColor = Color.Orange;
                 }
                 else if (myObjects[24].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle9);
                     rough1.rjButton9.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[24].Value == 264)
@@ -2515,14 +2632,17 @@ namespace NurseCalling
 
                 if (myObjects[25].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.Red;
                 }
                 else if (myObjects[25].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.Orange;
                 }
                 else if (myObjects[25].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[25].Value == 264)
@@ -2542,7 +2662,7 @@ namespace NurseCalling
 
                 if (myObjects[26].Value == 261)
                 {
-
+                    
                     myStopWatchObjects[26].Start();
                     rough1.myRjButton11.Text = "00:00";
                     myStopWatchObjects[26].Reset();
@@ -2556,14 +2676,17 @@ namespace NurseCalling
 
                 if (myObjects[26].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle11);
                     rough1.rjButton11.BackColor = Color.Red;
                 }
                 else if (myObjects[26].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle11);
                     rough1.rjButton11.BackColor = Color.Orange;
                 }
                 else if (myObjects[26].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle11);
                     rough1.rjButton11.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[26].Value == 264)
@@ -2597,14 +2720,17 @@ namespace NurseCalling
 
                 if (myObjects[27].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle12);
                     rough1.rjButton12.BackColor = Color.Red;
                 }
                 else if (myObjects[27].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle12);
                     rough1.rjButton12.BackColor = Color.Orange;
                 }
                 else if (myObjects[27].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle12);
                     rough1.rjButton12.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[27].Value == 264)
@@ -2638,14 +2764,17 @@ namespace NurseCalling
 
                 if (myObjects[28].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle13);
                     rough1.rjButton13.BackColor = Color.Red;
                 }
                 else if (myObjects[28].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle13);
                     rough1.rjButton13.BackColor = Color.Orange;
                 }
                 else if (myObjects[28].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle13);
                     rough1.rjButton13.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[28].Value == 264)
@@ -2679,14 +2808,17 @@ namespace NurseCalling
 
                 if (myObjects[29].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle14);
                     rough1.rjButton14.BackColor = Color.Red;
                 }
                 else if (myObjects[29].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle14);
                     rough1.rjButton14.BackColor = Color.Orange;
                 }
                 else if (myObjects[29].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle14);
                     rough1.rjButton14.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[29].Value == 264)
@@ -2721,14 +2853,17 @@ namespace NurseCalling
 
                 if (myObjects[30].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle15);
                     rough1.rjButton15.BackColor = Color.Red;
                 }
                 else if (myObjects[30].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle15);
                     rough1.rjButton15.BackColor = Color.Orange;
                 }
                 else if (myObjects[30].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle15);
                     rough1.rjButton15.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[30].Value == 264)
@@ -2761,14 +2896,17 @@ namespace NurseCalling
 
                 if (myObjects[31].Value == 258)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle16);
                     rough1.rjButton16.BackColor = Color.Red;
                 }
                 else if (myObjects[31].Value == 262)
                 {
+                    rough1.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle16);
                     rough1.rjButton16.BackColor = Color.Orange;
                 }
                 else if (myObjects[31].Value == 261)
                 {
+                    rough1.flowLayoutPanel1.Controls.Remove(rough1.roundPanelWithoutTitle16);
                     rough1.rjButton16.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[31].Value == 264)
@@ -2803,14 +2941,18 @@ namespace NurseCalling
                 }
                 if (myObjects[32].Value == 258)
                 {
+                    // This is the last one i have changed ------------------------
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle1);
                     rough2.rjButton1.BackColor = Color.Red;
                 }
                 else if (myObjects[32].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle1);
                     rough2.rjButton1.BackColor = Color.Orange;
                 }
                 else if (myObjects[32].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle1);
                     rough2.rjButton1.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[32].Value == 264)
@@ -2845,14 +2987,17 @@ namespace NurseCalling
 
                 if (myObjects[33].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle2);
                     rough2.rjButton2.BackColor = Color.Red;
                 }
                 else if (myObjects[33].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle2);
                     rough2.rjButton2.BackColor = Color.Orange;
                 }
                 else if (myObjects[33].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle2);
                     rough2.rjButton2.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[33].Value == 264)
@@ -2888,14 +3033,17 @@ namespace NurseCalling
 
                 if (myObjects[34].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle3);
                     rough2.rjButton3.BackColor = Color.Red;
                 }
                 else if (myObjects[34].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle3);
                     rough2.rjButton3.BackColor = Color.Orange;
                 }
                 else if (myObjects[34].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle3);
                     rough2.rjButton3.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[34].Value == 264)
@@ -2930,14 +3078,17 @@ namespace NurseCalling
 
                 if (myObjects[35].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle4);
                     rough2.rjButton4.BackColor = Color.Red;
                 }
                 else if (myObjects[35].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle4);
                     rough2.rjButton4.BackColor = Color.Orange;
                 }
                 else if (myObjects[35].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle4);
                     rough2.rjButton4.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[35].Value == 264)
@@ -2973,14 +3124,17 @@ namespace NurseCalling
 
                 if (myObjects[36].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle5);
                     rough2.rjButton5.BackColor = Color.Red;
                 }
                 else if (myObjects[36].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle5);
                     rough2.rjButton5.BackColor = Color.Orange;
                 }
                 else if (myObjects[36].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle5);
                     rough2.rjButton5.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[36].Value == 264)
@@ -3014,14 +3168,17 @@ namespace NurseCalling
 
                 if (myObjects[37].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle6);
                     rough2.rjButton6.BackColor = Color.Red;
                 }
                 else if (myObjects[37].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle6);
                     rough2.rjButton6.BackColor = Color.Orange;
                 }
                 else if (myObjects[37].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle6);
                     rough2.rjButton6.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[37].Value == 264)
@@ -3055,14 +3212,17 @@ namespace NurseCalling
 
                 if (myObjects[38].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle7);
                     rough2.rjButton7.BackColor = Color.Red;
                 }
                 else if (myObjects[38].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle7);
                     rough2.rjButton7.BackColor = Color.Orange;
                 }
                 else if (myObjects[38].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle7);
                     rough2.rjButton7.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[38].Value == 264)
@@ -3097,14 +3257,17 @@ namespace NurseCalling
 
                 if (myObjects[39].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton8.BackColor = Color.Red;
                 }
                 else if (myObjects[39].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton8.BackColor = Color.Orange;
                 }
                 else if (myObjects[39].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton8.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[39].Value == 264)
@@ -3138,14 +3301,17 @@ namespace NurseCalling
 
                 if (myObjects[40].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle9);
                     rough2.rjButton9.BackColor = Color.Red;
                 }
                 else if (myObjects[40].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle9);
                     rough2.rjButton9.BackColor = Color.Orange;
                 }
                 else if (myObjects[40].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton9.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[40].Value == 264)
@@ -3179,14 +3345,17 @@ namespace NurseCalling
 
                 if (myObjects[41].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle10);
                     rough2.rjButton10.BackColor = Color.Red;
                 }
                 else if (myObjects[41].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle10);
                     rough2.rjButton10.BackColor = Color.Orange;
                 }
                 else if (myObjects[41].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle10);
                     rough2.rjButton10.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[41].Value == 264)
@@ -3220,14 +3389,17 @@ namespace NurseCalling
 
                 if (myObjects[42].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle11);
                     rough2.rjButton11.BackColor = Color.Red;
                 }
                 else if (myObjects[42].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle11);
                     rough2.rjButton11.BackColor = Color.Orange;
                 }
                 else if (myObjects[42].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle11);
                     rough2.rjButton11.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[42].Value == 264)
@@ -3261,14 +3433,17 @@ namespace NurseCalling
 
                 if (myObjects[43].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle12);
                     rough2.rjButton12.BackColor = Color.Red;
                 }
                 else if (myObjects[43].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle12);
                     rough2.rjButton12.BackColor = Color.Orange;
                 }
                 else if (myObjects[43].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle12);
                     rough2.rjButton12.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[43].Value == 264)
@@ -3302,14 +3477,17 @@ namespace NurseCalling
 
                 if (myObjects[44].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle13);
                     rough2.rjButton13.BackColor = Color.Red;
                 }
                 else if (myObjects[44].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle13);
                     rough2.rjButton13.BackColor = Color.Orange;
                 }
                 else if (myObjects[44].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle13);
                     rough2.rjButton13.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[44].Value == 264)
@@ -3343,14 +3521,17 @@ namespace NurseCalling
 
                 if (myObjects[45].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle14);
                     rough2.rjButton14.BackColor = Color.Red;
                 }
                 else if (myObjects[45].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle14);
                     rough2.rjButton14.BackColor = Color.Orange;
                 }
                 else if (myObjects[45].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle14);
                     rough2.rjButton14.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[45].Value == 264)
@@ -3385,14 +3566,17 @@ namespace NurseCalling
 
                 if (myObjects[46].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle15);
                     rough2.rjButton15.BackColor = Color.Red;
                 }
                 else if (myObjects[46].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle15);
                     rough2.rjButton15.BackColor = Color.Orange;
                 }
                 else if (myObjects[46].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle15);
                     rough2.rjButton15.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[46].Value == 264)
@@ -3425,14 +3609,17 @@ namespace NurseCalling
 
                 if (myObjects[47].Value == 258)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle16);
                     rough2.rjButton16.BackColor = Color.Red;
                 }
                 else if (myObjects[47].Value == 262)
                 {
+                    rough2.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle16);
                     rough2.rjButton16.BackColor = Color.Orange;
                 }
                 else if (myObjects[47].Value == 261)
                 {
+                    rough2.flowLayoutPanel1.Controls.Remove(rough2.roundPanelWithoutTitle16);
                     rough2.rjButton16.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[47].Value == 264)
@@ -3468,14 +3655,17 @@ namespace NurseCalling
                 }
                 if (myObjects[48].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
                     rough3.rjButton1.BackColor = Color.Red;
                 }
                 else if (myObjects[48].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
                     rough3.rjButton1.BackColor = Color.Orange;
                 }
                 else if (myObjects[48].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle1);
                     rough3.rjButton1.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[48].Value == 264)
@@ -3510,14 +3700,17 @@ namespace NurseCalling
 
                 if (myObjects[49].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle2);
                     rough3.rjButton2.BackColor = Color.Red;
                 }
                 else if (myObjects[49].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle2);
                     rough3.rjButton2.BackColor = Color.Orange;
                 }
                 else if (myObjects[49].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle2);
                     rough3.rjButton2.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[49].Value == 264)
@@ -3553,14 +3746,17 @@ namespace NurseCalling
 
                 if (myObjects[50].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle3);
                     rough3.rjButton3.BackColor = Color.Red;
                 }
                 else if (myObjects[50].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle3);
                     rough3.rjButton3.BackColor = Color.Orange;
                 }
                 else if (myObjects[50].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle3);
                     rough3.rjButton3.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[50].Value == 264)
@@ -3595,14 +3791,17 @@ namespace NurseCalling
 
                 if (myObjects[51].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle4);
                     rough3.rjButton4.BackColor = Color.Red;
                 }
                 else if (myObjects[51].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle4);
                     rough3.rjButton4.BackColor = Color.Orange;
                 }
                 else if (myObjects[51].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle4);
                     rough3.rjButton4.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[51].Value == 264)
@@ -3638,14 +3837,17 @@ namespace NurseCalling
 
                 if (myObjects[52].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle5);
                     rough3.rjButton5.BackColor = Color.Red;
                 }
                 else if (myObjects[52].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle5);
                     rough3.rjButton5.BackColor = Color.Orange;
                 }
                 else if (myObjects[52].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle5);
                     rough3.rjButton5.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[52].Value == 264)
@@ -3679,14 +3881,17 @@ namespace NurseCalling
 
                 if (myObjects[53].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle6);
                     rough3.rjButton6.BackColor = Color.Red;
                 }
                 else if (myObjects[53].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle6);
                     rough3.rjButton6.BackColor = Color.Orange;
                 }
                 else if (myObjects[53].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle6);
                     rough3.rjButton6.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[53].Value == 264)
@@ -3720,14 +3925,17 @@ namespace NurseCalling
 
                 if (myObjects[55].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.Red;
                 }
                 else if (myObjects[55].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.Orange;
                 }
                 else if (myObjects[55].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[55].Value == 264)
@@ -3762,14 +3970,17 @@ namespace NurseCalling
 
                 if (myObjects[56].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.Red;
                 }
                 else if (myObjects[56].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.Orange;
                 }
                 else if (myObjects[56].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[56].Value == 264)
@@ -3803,14 +4014,17 @@ namespace NurseCalling
 
                 if (myObjects[57].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.Red;
                 }
                 else if (myObjects[57].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.Orange;
                 }
                 else if (myObjects[57].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[57].Value == 264)
@@ -3844,14 +4058,17 @@ namespace NurseCalling
 
                 if (myObjects[58].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.Red;
                 }
                 else if (myObjects[58].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.Orange;
                 }
                 else if (myObjects[58].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[58].Value == 264)
@@ -3885,14 +4102,17 @@ namespace NurseCalling
 
                 if (myObjects[59].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.Red;
                 }
                 else if (myObjects[59].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.Orange;
                 }
                 else if (myObjects[59].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[59].Value == 264)
@@ -3926,14 +4146,17 @@ namespace NurseCalling
 
                 if (myObjects[59].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle12);
                     rough3.rjButton12.BackColor = Color.Red;
                 }
                 else if (myObjects[59].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle12);
                     rough3.rjButton12.BackColor = Color.Orange;
                 }
                 else if (myObjects[59].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle12);
                     rough3.rjButton12.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[59].Value == 264)
@@ -3967,14 +4190,17 @@ namespace NurseCalling
 
                 if (myObjects[60].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle13);
                     rough3.rjButton13.BackColor = Color.Red;
                 }
                 else if (myObjects[60].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle13);
                     rough3.rjButton13.BackColor = Color.Orange;
                 }
                 else if (myObjects[60].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle13);
                     rough3.rjButton13.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[60].Value == 264)
@@ -4008,14 +4234,17 @@ namespace NurseCalling
 
                 if (myObjects[61].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle14);
                     rough3.rjButton14.BackColor = Color.Red;
                 }
                 else if (myObjects[61].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle14);
                     rough3.rjButton14.BackColor = Color.Orange;
                 }
                 else if (myObjects[61].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle14);
                     rough3.rjButton14.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[61].Value == 264)
@@ -4050,14 +4279,17 @@ namespace NurseCalling
 
                 if (myObjects[62].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle15);
                     rough3.rjButton15.BackColor = Color.Red;
                 }
                 else if (myObjects[62].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle15);
                     rough3.rjButton15.BackColor = Color.Orange;
                 }
                 else if (myObjects[62].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle15);
                     rough3.rjButton15.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[62].Value == 264)
@@ -4090,14 +4322,17 @@ namespace NurseCalling
 
                 if (myObjects[63].Value == 258)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle16);
                     rough3.rjButton16.BackColor = Color.Red;
                 }
                 else if (myObjects[63].Value == 262)
                 {
+                    rough3.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle16);
                     rough3.rjButton16.BackColor = Color.Orange;
                 }
                 else if (myObjects[63].Value == 261)
                 {
+                    rough3.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle16);
                     rough3.rjButton16.BackColor = Color.DarkGreen;
                 }
                 else if (myObjects[63].Value == 264)

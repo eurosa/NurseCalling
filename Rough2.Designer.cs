@@ -2096,6 +2096,7 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "NURSE CALL SYSTEM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // timer1
             // 
@@ -2212,7 +2213,6 @@
         public Controls.RJButton rjButton1;
         public Controls.RJButton rjButtonTime1;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Controls.RJButton myRjButton5;
         private Controls.HorizontalLineSeparator horizontalLineSeparator9;
         private Controls.HorizontalLineSeparator horizontalLineSeparator10;
@@ -2250,5 +2250,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle15;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle9;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
