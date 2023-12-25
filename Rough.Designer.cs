@@ -2211,7 +2211,6 @@
         private Controls.HorizontalLineSeparator horizontalLineSeparator2;
         private Controls.HorizontalLineSeparator horizontalLineSeparator1;
         public Controls.RJButton bButton1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Controls.RJButton myRjButton6;
         private Controls.HorizontalLineSeparator horizontalLineSeparator11;
         private Controls.HorizontalLineSeparator horizontalLineSeparator12;
@@ -2250,5 +2249,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle14;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle15;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

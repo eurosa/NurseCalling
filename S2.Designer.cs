@@ -2238,7 +2238,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public Controls.RJButton rjButtonTime2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle15;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle14;
@@ -2255,5 +2254,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle3;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle2;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

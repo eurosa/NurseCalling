@@ -32,138 +32,122 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.roundPanelWithoutTitle1 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle2 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle7 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle3 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle4 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle5 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle6 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle8 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle9 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle10 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle11 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle12 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle13 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle14 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle15 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.roundPanelWithoutTitle16 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myRjButton1 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator2 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator1 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton1 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime1 = new NurseCalling.Controls.RJButton();
             this.bButton1 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle2 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton2 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime2 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator3 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator4 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton2 = new NurseCalling.Controls.RJButton();
             this.bButton2 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle7 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton7 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator13 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator14 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton7 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime7 = new NurseCalling.Controls.RJButton();
             this.bButton7 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle3 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton3 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator5 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator6 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton3 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime3 = new NurseCalling.Controls.RJButton();
             this.bButton3 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle4 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton4 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator7 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator8 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton4 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime4 = new NurseCalling.Controls.RJButton();
             this.bButton4 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle5 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton5 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator9 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator10 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton5 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime5 = new NurseCalling.Controls.RJButton();
             this.bButton5 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle6 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton6 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator11 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator12 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton6 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime6 = new NurseCalling.Controls.RJButton();
             this.bButton6 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle8 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton8 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator15 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator16 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton8 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime8 = new NurseCalling.Controls.RJButton();
             this.bButton8 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle9 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton9 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator23 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator24 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton9 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime9 = new NurseCalling.Controls.RJButton();
             this.bButton9 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle10 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton10 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator25 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator26 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton10 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime10 = new NurseCalling.Controls.RJButton();
             this.bButton10 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle11 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton11 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator27 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator28 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton11 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime11 = new NurseCalling.Controls.RJButton();
             this.bButton11 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle12 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton12 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator17 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator18 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton12 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime12 = new NurseCalling.Controls.RJButton();
             this.bButton12 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle13 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton13 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator21 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator22 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton13 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime13 = new NurseCalling.Controls.RJButton();
             this.bButton13 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle14 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton14 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator31 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator32 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton14 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime14 = new NurseCalling.Controls.RJButton();
             this.bButton14 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle15 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton15 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator29 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator30 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton15 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime15 = new NurseCalling.Controls.RJButton();
             this.bButton15 = new NurseCalling.Controls.RJButton();
-            this.roundPanelWithoutTitle16 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton16 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator19 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator20 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton16 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime16 = new NurseCalling.Controls.RJButton();
             this.bButton16 = new NurseCalling.Controls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.roundPanelWithoutTitle1.SuspendLayout();
-            this.roundPanelWithoutTitle2.SuspendLayout();
-            this.roundPanelWithoutTitle7.SuspendLayout();
-            this.roundPanelWithoutTitle3.SuspendLayout();
-            this.roundPanelWithoutTitle4.SuspendLayout();
-            this.roundPanelWithoutTitle5.SuspendLayout();
-            this.roundPanelWithoutTitle6.SuspendLayout();
-            this.roundPanelWithoutTitle8.SuspendLayout();
-            this.roundPanelWithoutTitle9.SuspendLayout();
-            this.roundPanelWithoutTitle10.SuspendLayout();
-            this.roundPanelWithoutTitle11.SuspendLayout();
-            this.roundPanelWithoutTitle12.SuspendLayout();
-            this.roundPanelWithoutTitle13.SuspendLayout();
-            this.roundPanelWithoutTitle14.SuspendLayout();
-            this.roundPanelWithoutTitle15.SuspendLayout();
-            this.roundPanelWithoutTitle16.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -206,12 +190,6 @@
             // 
             this.roundPanelWithoutTitle1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.roundPanelWithoutTitle1.borderRadius = 1;
-            this.roundPanelWithoutTitle1.Controls.Add(this.myRjButton1);
-            this.roundPanelWithoutTitle1.Controls.Add(this.horizontalLineSeparator2);
-            this.roundPanelWithoutTitle1.Controls.Add(this.horizontalLineSeparator1);
-            this.roundPanelWithoutTitle1.Controls.Add(this.rjButton1);
-            this.roundPanelWithoutTitle1.Controls.Add(this.rjButtonTime1);
-            this.roundPanelWithoutTitle1.Controls.Add(this.bButton1);
             this.roundPanelWithoutTitle1.Location = new System.Drawing.Point(3, 3);
             this.roundPanelWithoutTitle1.Name = "roundPanelWithoutTitle1";
             this.roundPanelWithoutTitle1.Radious = 25;
@@ -224,6 +202,277 @@
             this.roundPanelWithoutTitle1.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle1.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             this.roundPanelWithoutTitle1.Enter += new System.EventHandler(this.roundPanelWithoutTitle1_Enter);
+            // 
+            // roundPanelWithoutTitle2
+            // 
+            this.roundPanelWithoutTitle2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle2.borderRadius = 1;
+            this.roundPanelWithoutTitle2.Location = new System.Drawing.Point(3, 224);
+            this.roundPanelWithoutTitle2.Name = "roundPanelWithoutTitle2";
+            this.roundPanelWithoutTitle2.Radious = 25;
+            this.roundPanelWithoutTitle2.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle2.TabIndex = 2;
+            this.roundPanelWithoutTitle2.TabStop = false;
+            this.roundPanelWithoutTitle2.Text = "roundPanelWithoutTitle2";
+            this.roundPanelWithoutTitle2.TitleBackColor = System.Drawing.Color.SteelBlue;
+            this.roundPanelWithoutTitle2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle2.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle2.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle7
+            // 
+            this.roundPanelWithoutTitle7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle7.borderRadius = 1;
+            this.roundPanelWithoutTitle7.Location = new System.Drawing.Point(3, 445);
+            this.roundPanelWithoutTitle7.Name = "roundPanelWithoutTitle7";
+            this.roundPanelWithoutTitle7.Radious = 25;
+            this.roundPanelWithoutTitle7.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle7.TabIndex = 7;
+            this.roundPanelWithoutTitle7.TabStop = false;
+            this.roundPanelWithoutTitle7.Text = "roundPanelWithoutTitle7";
+            this.roundPanelWithoutTitle7.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle7.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle7.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle7.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle3
+            // 
+            this.roundPanelWithoutTitle3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle3.borderRadius = 1;
+            this.roundPanelWithoutTitle3.Location = new System.Drawing.Point(3, 666);
+            this.roundPanelWithoutTitle3.Name = "roundPanelWithoutTitle3";
+            this.roundPanelWithoutTitle3.Radious = 25;
+            this.roundPanelWithoutTitle3.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle3.TabIndex = 3;
+            this.roundPanelWithoutTitle3.TabStop = false;
+            this.roundPanelWithoutTitle3.Text = "roundPanelWithoutTitle3";
+            this.roundPanelWithoutTitle3.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle3.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle3.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle4
+            // 
+            this.roundPanelWithoutTitle4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle4.borderRadius = 1;
+            this.roundPanelWithoutTitle4.Location = new System.Drawing.Point(479, 3);
+            this.roundPanelWithoutTitle4.Name = "roundPanelWithoutTitle4";
+            this.roundPanelWithoutTitle4.Radious = 25;
+            this.roundPanelWithoutTitle4.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle4.TabIndex = 4;
+            this.roundPanelWithoutTitle4.TabStop = false;
+            this.roundPanelWithoutTitle4.Text = "roundPanelWithoutTitle4";
+            this.roundPanelWithoutTitle4.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle4.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle4.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle4.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle5
+            // 
+            this.roundPanelWithoutTitle5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle5.borderRadius = 1;
+            this.roundPanelWithoutTitle5.Location = new System.Drawing.Point(479, 224);
+            this.roundPanelWithoutTitle5.Name = "roundPanelWithoutTitle5";
+            this.roundPanelWithoutTitle5.Radious = 25;
+            this.roundPanelWithoutTitle5.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle5.TabIndex = 5;
+            this.roundPanelWithoutTitle5.TabStop = false;
+            this.roundPanelWithoutTitle5.Text = "roundPanelWithoutTitle5";
+            this.roundPanelWithoutTitle5.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle5.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle5.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle6
+            // 
+            this.roundPanelWithoutTitle6.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle6.borderRadius = 1;
+            this.roundPanelWithoutTitle6.Location = new System.Drawing.Point(479, 445);
+            this.roundPanelWithoutTitle6.Name = "roundPanelWithoutTitle6";
+            this.roundPanelWithoutTitle6.Radious = 25;
+            this.roundPanelWithoutTitle6.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle6.TabIndex = 6;
+            this.roundPanelWithoutTitle6.TabStop = false;
+            this.roundPanelWithoutTitle6.Text = "roundPanelWithoutTitle6";
+            this.roundPanelWithoutTitle6.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle6.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle6.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle8
+            // 
+            this.roundPanelWithoutTitle8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle8.borderRadius = 1;
+            this.roundPanelWithoutTitle8.Location = new System.Drawing.Point(479, 666);
+            this.roundPanelWithoutTitle8.Name = "roundPanelWithoutTitle8";
+            this.roundPanelWithoutTitle8.Radious = 25;
+            this.roundPanelWithoutTitle8.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle8.TabIndex = 8;
+            this.roundPanelWithoutTitle8.TabStop = false;
+            this.roundPanelWithoutTitle8.Text = "roundPanelWithoutTitle8";
+            this.roundPanelWithoutTitle8.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle8.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle9
+            // 
+            this.roundPanelWithoutTitle9.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle9.borderRadius = 1;
+            this.roundPanelWithoutTitle9.Location = new System.Drawing.Point(955, 3);
+            this.roundPanelWithoutTitle9.Name = "roundPanelWithoutTitle9";
+            this.roundPanelWithoutTitle9.Radious = 25;
+            this.roundPanelWithoutTitle9.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle9.TabIndex = 9;
+            this.roundPanelWithoutTitle9.TabStop = false;
+            this.roundPanelWithoutTitle9.Text = "roundPanelWithoutTitle9";
+            this.roundPanelWithoutTitle9.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle9.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle10
+            // 
+            this.roundPanelWithoutTitle10.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle10.borderRadius = 1;
+            this.roundPanelWithoutTitle10.Location = new System.Drawing.Point(955, 224);
+            this.roundPanelWithoutTitle10.Name = "roundPanelWithoutTitle10";
+            this.roundPanelWithoutTitle10.Radious = 25;
+            this.roundPanelWithoutTitle10.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle10.TabIndex = 10;
+            this.roundPanelWithoutTitle10.TabStop = false;
+            this.roundPanelWithoutTitle10.Text = "roundPanelWithoutTitle10";
+            this.roundPanelWithoutTitle10.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle10.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle10.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle10.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle11
+            // 
+            this.roundPanelWithoutTitle11.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle11.borderRadius = 1;
+            this.roundPanelWithoutTitle11.Location = new System.Drawing.Point(955, 445);
+            this.roundPanelWithoutTitle11.Name = "roundPanelWithoutTitle11";
+            this.roundPanelWithoutTitle11.Radious = 25;
+            this.roundPanelWithoutTitle11.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle11.TabIndex = 11;
+            this.roundPanelWithoutTitle11.TabStop = false;
+            this.roundPanelWithoutTitle11.Text = "roundPanelWithoutTitle11";
+            this.roundPanelWithoutTitle11.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle11.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle11.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle11.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle12
+            // 
+            this.roundPanelWithoutTitle12.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle12.borderRadius = 1;
+            this.roundPanelWithoutTitle12.Location = new System.Drawing.Point(955, 666);
+            this.roundPanelWithoutTitle12.Name = "roundPanelWithoutTitle12";
+            this.roundPanelWithoutTitle12.Radious = 25;
+            this.roundPanelWithoutTitle12.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle12.TabIndex = 12;
+            this.roundPanelWithoutTitle12.TabStop = false;
+            this.roundPanelWithoutTitle12.Text = "roundPanelWithoutTitle12";
+            this.roundPanelWithoutTitle12.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle12.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle12.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle12.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle13
+            // 
+            this.roundPanelWithoutTitle13.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle13.borderRadius = 1;
+            this.roundPanelWithoutTitle13.Location = new System.Drawing.Point(1431, 3);
+            this.roundPanelWithoutTitle13.Name = "roundPanelWithoutTitle13";
+            this.roundPanelWithoutTitle13.Radious = 25;
+            this.roundPanelWithoutTitle13.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle13.TabIndex = 13;
+            this.roundPanelWithoutTitle13.TabStop = false;
+            this.roundPanelWithoutTitle13.Text = "roundPanelWithoutTitle13";
+            this.roundPanelWithoutTitle13.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle13.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle13.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle13.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle14
+            // 
+            this.roundPanelWithoutTitle14.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle14.borderRadius = 1;
+            this.roundPanelWithoutTitle14.Location = new System.Drawing.Point(1431, 224);
+            this.roundPanelWithoutTitle14.Name = "roundPanelWithoutTitle14";
+            this.roundPanelWithoutTitle14.Radious = 25;
+            this.roundPanelWithoutTitle14.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle14.TabIndex = 14;
+            this.roundPanelWithoutTitle14.TabStop = false;
+            this.roundPanelWithoutTitle14.Text = "roundPanelWithoutTitle14";
+            this.roundPanelWithoutTitle14.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle14.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle14.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle14.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle15
+            // 
+            this.roundPanelWithoutTitle15.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle15.borderRadius = 1;
+            this.roundPanelWithoutTitle15.Location = new System.Drawing.Point(1431, 445);
+            this.roundPanelWithoutTitle15.Name = "roundPanelWithoutTitle15";
+            this.roundPanelWithoutTitle15.Radious = 25;
+            this.roundPanelWithoutTitle15.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle15.TabIndex = 15;
+            this.roundPanelWithoutTitle15.TabStop = false;
+            this.roundPanelWithoutTitle15.Text = "roundPanelWithoutTitle15";
+            this.roundPanelWithoutTitle15.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle15.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle15.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle15.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // roundPanelWithoutTitle16
+            // 
+            this.roundPanelWithoutTitle16.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.roundPanelWithoutTitle16.borderRadius = 1;
+            this.roundPanelWithoutTitle16.Location = new System.Drawing.Point(1431, 666);
+            this.roundPanelWithoutTitle16.Name = "roundPanelWithoutTitle16";
+            this.roundPanelWithoutTitle16.Radious = 25;
+            this.roundPanelWithoutTitle16.Size = new System.Drawing.Size(470, 215);
+            this.roundPanelWithoutTitle16.TabIndex = 16;
+            this.roundPanelWithoutTitle16.TabStop = false;
+            this.roundPanelWithoutTitle16.Text = "roundPanelWithoutTitle16";
+            this.roundPanelWithoutTitle16.TitleBackColor = System.Drawing.Color.Chartreuse;
+            this.roundPanelWithoutTitle16.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.roundPanelWithoutTitle16.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1915, 78);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(2, 991);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(1918, 70);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Digiline System Pvt. Ltd.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // myRjButton1
             // 
@@ -322,28 +571,6 @@
             this.bButton1.TextColor = System.Drawing.Color.White;
             this.bButton1.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle2
-            // 
-            this.roundPanelWithoutTitle2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle2.borderRadius = 1;
-            this.roundPanelWithoutTitle2.Controls.Add(this.myRjButton2);
-            this.roundPanelWithoutTitle2.Controls.Add(this.rjButtonTime2);
-            this.roundPanelWithoutTitle2.Controls.Add(this.horizontalLineSeparator3);
-            this.roundPanelWithoutTitle2.Controls.Add(this.horizontalLineSeparator4);
-            this.roundPanelWithoutTitle2.Controls.Add(this.rjButton2);
-            this.roundPanelWithoutTitle2.Controls.Add(this.bButton2);
-            this.roundPanelWithoutTitle2.Location = new System.Drawing.Point(3, 224);
-            this.roundPanelWithoutTitle2.Name = "roundPanelWithoutTitle2";
-            this.roundPanelWithoutTitle2.Radious = 25;
-            this.roundPanelWithoutTitle2.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle2.TabIndex = 2;
-            this.roundPanelWithoutTitle2.TabStop = false;
-            this.roundPanelWithoutTitle2.Text = "roundPanelWithoutTitle2";
-            this.roundPanelWithoutTitle2.TitleBackColor = System.Drawing.Color.SteelBlue;
-            this.roundPanelWithoutTitle2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle2.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle2.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton2
             // 
             this.myRjButton2.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -441,28 +668,6 @@
             this.bButton2.TextColor = System.Drawing.Color.White;
             this.bButton2.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle7
-            // 
-            this.roundPanelWithoutTitle7.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle7.borderRadius = 1;
-            this.roundPanelWithoutTitle7.Controls.Add(this.myRjButton7);
-            this.roundPanelWithoutTitle7.Controls.Add(this.horizontalLineSeparator13);
-            this.roundPanelWithoutTitle7.Controls.Add(this.horizontalLineSeparator14);
-            this.roundPanelWithoutTitle7.Controls.Add(this.rjButton7);
-            this.roundPanelWithoutTitle7.Controls.Add(this.rjButtonTime7);
-            this.roundPanelWithoutTitle7.Controls.Add(this.bButton7);
-            this.roundPanelWithoutTitle7.Location = new System.Drawing.Point(3, 445);
-            this.roundPanelWithoutTitle7.Name = "roundPanelWithoutTitle7";
-            this.roundPanelWithoutTitle7.Radious = 25;
-            this.roundPanelWithoutTitle7.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle7.TabIndex = 7;
-            this.roundPanelWithoutTitle7.TabStop = false;
-            this.roundPanelWithoutTitle7.Text = "roundPanelWithoutTitle7";
-            this.roundPanelWithoutTitle7.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle7.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle7.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle7.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton7
             // 
             this.myRjButton7.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -557,28 +762,6 @@
             this.bButton7.TabIndex = 0;
             this.bButton7.TextColor = System.Drawing.Color.White;
             this.bButton7.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle3
-            // 
-            this.roundPanelWithoutTitle3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle3.borderRadius = 1;
-            this.roundPanelWithoutTitle3.Controls.Add(this.myRjButton3);
-            this.roundPanelWithoutTitle3.Controls.Add(this.horizontalLineSeparator5);
-            this.roundPanelWithoutTitle3.Controls.Add(this.horizontalLineSeparator6);
-            this.roundPanelWithoutTitle3.Controls.Add(this.rjButton3);
-            this.roundPanelWithoutTitle3.Controls.Add(this.rjButtonTime3);
-            this.roundPanelWithoutTitle3.Controls.Add(this.bButton3);
-            this.roundPanelWithoutTitle3.Location = new System.Drawing.Point(3, 666);
-            this.roundPanelWithoutTitle3.Name = "roundPanelWithoutTitle3";
-            this.roundPanelWithoutTitle3.Radious = 25;
-            this.roundPanelWithoutTitle3.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle3.TabIndex = 3;
-            this.roundPanelWithoutTitle3.TabStop = false;
-            this.roundPanelWithoutTitle3.Text = "roundPanelWithoutTitle3";
-            this.roundPanelWithoutTitle3.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle3.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle3.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton3
             // 
@@ -676,28 +859,6 @@
             this.bButton3.TextColor = System.Drawing.Color.White;
             this.bButton3.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle4
-            // 
-            this.roundPanelWithoutTitle4.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle4.borderRadius = 1;
-            this.roundPanelWithoutTitle4.Controls.Add(this.myRjButton4);
-            this.roundPanelWithoutTitle4.Controls.Add(this.horizontalLineSeparator7);
-            this.roundPanelWithoutTitle4.Controls.Add(this.horizontalLineSeparator8);
-            this.roundPanelWithoutTitle4.Controls.Add(this.rjButton4);
-            this.roundPanelWithoutTitle4.Controls.Add(this.rjButtonTime4);
-            this.roundPanelWithoutTitle4.Controls.Add(this.bButton4);
-            this.roundPanelWithoutTitle4.Location = new System.Drawing.Point(479, 3);
-            this.roundPanelWithoutTitle4.Name = "roundPanelWithoutTitle4";
-            this.roundPanelWithoutTitle4.Radious = 25;
-            this.roundPanelWithoutTitle4.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle4.TabIndex = 4;
-            this.roundPanelWithoutTitle4.TabStop = false;
-            this.roundPanelWithoutTitle4.Text = "roundPanelWithoutTitle4";
-            this.roundPanelWithoutTitle4.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle4.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle4.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle4.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton4
             // 
             this.myRjButton4.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -792,28 +953,6 @@
             this.bButton4.TabIndex = 0;
             this.bButton4.TextColor = System.Drawing.Color.White;
             this.bButton4.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle5
-            // 
-            this.roundPanelWithoutTitle5.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle5.borderRadius = 1;
-            this.roundPanelWithoutTitle5.Controls.Add(this.myRjButton5);
-            this.roundPanelWithoutTitle5.Controls.Add(this.horizontalLineSeparator9);
-            this.roundPanelWithoutTitle5.Controls.Add(this.horizontalLineSeparator10);
-            this.roundPanelWithoutTitle5.Controls.Add(this.rjButton5);
-            this.roundPanelWithoutTitle5.Controls.Add(this.rjButtonTime5);
-            this.roundPanelWithoutTitle5.Controls.Add(this.bButton5);
-            this.roundPanelWithoutTitle5.Location = new System.Drawing.Point(479, 224);
-            this.roundPanelWithoutTitle5.Name = "roundPanelWithoutTitle5";
-            this.roundPanelWithoutTitle5.Radious = 25;
-            this.roundPanelWithoutTitle5.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle5.TabIndex = 5;
-            this.roundPanelWithoutTitle5.TabStop = false;
-            this.roundPanelWithoutTitle5.Text = "roundPanelWithoutTitle5";
-            this.roundPanelWithoutTitle5.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle5.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle5.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton5
             // 
@@ -910,28 +1049,6 @@
             this.bButton5.TextColor = System.Drawing.Color.White;
             this.bButton5.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle6
-            // 
-            this.roundPanelWithoutTitle6.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle6.borderRadius = 1;
-            this.roundPanelWithoutTitle6.Controls.Add(this.myRjButton6);
-            this.roundPanelWithoutTitle6.Controls.Add(this.horizontalLineSeparator11);
-            this.roundPanelWithoutTitle6.Controls.Add(this.horizontalLineSeparator12);
-            this.roundPanelWithoutTitle6.Controls.Add(this.rjButton6);
-            this.roundPanelWithoutTitle6.Controls.Add(this.rjButtonTime6);
-            this.roundPanelWithoutTitle6.Controls.Add(this.bButton6);
-            this.roundPanelWithoutTitle6.Location = new System.Drawing.Point(479, 445);
-            this.roundPanelWithoutTitle6.Name = "roundPanelWithoutTitle6";
-            this.roundPanelWithoutTitle6.Radious = 25;
-            this.roundPanelWithoutTitle6.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle6.TabIndex = 6;
-            this.roundPanelWithoutTitle6.TabStop = false;
-            this.roundPanelWithoutTitle6.Text = "roundPanelWithoutTitle6";
-            this.roundPanelWithoutTitle6.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle6.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle6.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton6
             // 
             this.myRjButton6.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1026,28 +1143,6 @@
             this.bButton6.TabIndex = 0;
             this.bButton6.TextColor = System.Drawing.Color.White;
             this.bButton6.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle8
-            // 
-            this.roundPanelWithoutTitle8.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle8.borderRadius = 1;
-            this.roundPanelWithoutTitle8.Controls.Add(this.myRjButton8);
-            this.roundPanelWithoutTitle8.Controls.Add(this.horizontalLineSeparator15);
-            this.roundPanelWithoutTitle8.Controls.Add(this.horizontalLineSeparator16);
-            this.roundPanelWithoutTitle8.Controls.Add(this.rjButton8);
-            this.roundPanelWithoutTitle8.Controls.Add(this.rjButtonTime8);
-            this.roundPanelWithoutTitle8.Controls.Add(this.bButton8);
-            this.roundPanelWithoutTitle8.Location = new System.Drawing.Point(479, 666);
-            this.roundPanelWithoutTitle8.Name = "roundPanelWithoutTitle8";
-            this.roundPanelWithoutTitle8.Radious = 25;
-            this.roundPanelWithoutTitle8.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle8.TabIndex = 8;
-            this.roundPanelWithoutTitle8.TabStop = false;
-            this.roundPanelWithoutTitle8.Text = "roundPanelWithoutTitle8";
-            this.roundPanelWithoutTitle8.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle8.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton8
             // 
@@ -1144,28 +1239,6 @@
             this.bButton8.TextColor = System.Drawing.Color.White;
             this.bButton8.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle9
-            // 
-            this.roundPanelWithoutTitle9.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle9.borderRadius = 1;
-            this.roundPanelWithoutTitle9.Controls.Add(this.myRjButton9);
-            this.roundPanelWithoutTitle9.Controls.Add(this.horizontalLineSeparator23);
-            this.roundPanelWithoutTitle9.Controls.Add(this.horizontalLineSeparator24);
-            this.roundPanelWithoutTitle9.Controls.Add(this.rjButton9);
-            this.roundPanelWithoutTitle9.Controls.Add(this.rjButtonTime9);
-            this.roundPanelWithoutTitle9.Controls.Add(this.bButton9);
-            this.roundPanelWithoutTitle9.Location = new System.Drawing.Point(955, 3);
-            this.roundPanelWithoutTitle9.Name = "roundPanelWithoutTitle9";
-            this.roundPanelWithoutTitle9.Radious = 25;
-            this.roundPanelWithoutTitle9.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle9.TabIndex = 9;
-            this.roundPanelWithoutTitle9.TabStop = false;
-            this.roundPanelWithoutTitle9.Text = "roundPanelWithoutTitle9";
-            this.roundPanelWithoutTitle9.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle9.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton9
             // 
             this.myRjButton9.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1260,28 +1333,6 @@
             this.bButton9.TabIndex = 0;
             this.bButton9.TextColor = System.Drawing.Color.White;
             this.bButton9.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle10
-            // 
-            this.roundPanelWithoutTitle10.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle10.borderRadius = 1;
-            this.roundPanelWithoutTitle10.Controls.Add(this.myRjButton10);
-            this.roundPanelWithoutTitle10.Controls.Add(this.horizontalLineSeparator25);
-            this.roundPanelWithoutTitle10.Controls.Add(this.horizontalLineSeparator26);
-            this.roundPanelWithoutTitle10.Controls.Add(this.rjButton10);
-            this.roundPanelWithoutTitle10.Controls.Add(this.rjButtonTime10);
-            this.roundPanelWithoutTitle10.Controls.Add(this.bButton10);
-            this.roundPanelWithoutTitle10.Location = new System.Drawing.Point(955, 224);
-            this.roundPanelWithoutTitle10.Name = "roundPanelWithoutTitle10";
-            this.roundPanelWithoutTitle10.Radious = 25;
-            this.roundPanelWithoutTitle10.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle10.TabIndex = 10;
-            this.roundPanelWithoutTitle10.TabStop = false;
-            this.roundPanelWithoutTitle10.Text = "roundPanelWithoutTitle10";
-            this.roundPanelWithoutTitle10.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle10.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle10.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle10.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton10
             // 
@@ -1378,28 +1429,6 @@
             this.bButton10.TextColor = System.Drawing.Color.White;
             this.bButton10.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle11
-            // 
-            this.roundPanelWithoutTitle11.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle11.borderRadius = 1;
-            this.roundPanelWithoutTitle11.Controls.Add(this.myRjButton11);
-            this.roundPanelWithoutTitle11.Controls.Add(this.horizontalLineSeparator27);
-            this.roundPanelWithoutTitle11.Controls.Add(this.horizontalLineSeparator28);
-            this.roundPanelWithoutTitle11.Controls.Add(this.rjButton11);
-            this.roundPanelWithoutTitle11.Controls.Add(this.rjButtonTime11);
-            this.roundPanelWithoutTitle11.Controls.Add(this.bButton11);
-            this.roundPanelWithoutTitle11.Location = new System.Drawing.Point(955, 445);
-            this.roundPanelWithoutTitle11.Name = "roundPanelWithoutTitle11";
-            this.roundPanelWithoutTitle11.Radious = 25;
-            this.roundPanelWithoutTitle11.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle11.TabIndex = 11;
-            this.roundPanelWithoutTitle11.TabStop = false;
-            this.roundPanelWithoutTitle11.Text = "roundPanelWithoutTitle11";
-            this.roundPanelWithoutTitle11.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle11.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle11.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle11.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton11
             // 
             this.myRjButton11.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1494,28 +1523,6 @@
             this.bButton11.TabIndex = 0;
             this.bButton11.TextColor = System.Drawing.Color.White;
             this.bButton11.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle12
-            // 
-            this.roundPanelWithoutTitle12.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle12.borderRadius = 1;
-            this.roundPanelWithoutTitle12.Controls.Add(this.myRjButton12);
-            this.roundPanelWithoutTitle12.Controls.Add(this.horizontalLineSeparator17);
-            this.roundPanelWithoutTitle12.Controls.Add(this.horizontalLineSeparator18);
-            this.roundPanelWithoutTitle12.Controls.Add(this.rjButton12);
-            this.roundPanelWithoutTitle12.Controls.Add(this.rjButtonTime12);
-            this.roundPanelWithoutTitle12.Controls.Add(this.bButton12);
-            this.roundPanelWithoutTitle12.Location = new System.Drawing.Point(955, 666);
-            this.roundPanelWithoutTitle12.Name = "roundPanelWithoutTitle12";
-            this.roundPanelWithoutTitle12.Radious = 25;
-            this.roundPanelWithoutTitle12.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle12.TabIndex = 12;
-            this.roundPanelWithoutTitle12.TabStop = false;
-            this.roundPanelWithoutTitle12.Text = "roundPanelWithoutTitle12";
-            this.roundPanelWithoutTitle12.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle12.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle12.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle12.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton12
             // 
@@ -1612,28 +1619,6 @@
             this.bButton12.TextColor = System.Drawing.Color.White;
             this.bButton12.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle13
-            // 
-            this.roundPanelWithoutTitle13.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle13.borderRadius = 1;
-            this.roundPanelWithoutTitle13.Controls.Add(this.myRjButton13);
-            this.roundPanelWithoutTitle13.Controls.Add(this.horizontalLineSeparator21);
-            this.roundPanelWithoutTitle13.Controls.Add(this.horizontalLineSeparator22);
-            this.roundPanelWithoutTitle13.Controls.Add(this.rjButton13);
-            this.roundPanelWithoutTitle13.Controls.Add(this.rjButtonTime13);
-            this.roundPanelWithoutTitle13.Controls.Add(this.bButton13);
-            this.roundPanelWithoutTitle13.Location = new System.Drawing.Point(1431, 3);
-            this.roundPanelWithoutTitle13.Name = "roundPanelWithoutTitle13";
-            this.roundPanelWithoutTitle13.Radious = 25;
-            this.roundPanelWithoutTitle13.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle13.TabIndex = 13;
-            this.roundPanelWithoutTitle13.TabStop = false;
-            this.roundPanelWithoutTitle13.Text = "roundPanelWithoutTitle13";
-            this.roundPanelWithoutTitle13.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle13.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle13.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle13.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton13
             // 
             this.myRjButton13.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1728,28 +1713,6 @@
             this.bButton13.TabIndex = 0;
             this.bButton13.TextColor = System.Drawing.Color.White;
             this.bButton13.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle14
-            // 
-            this.roundPanelWithoutTitle14.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle14.borderRadius = 1;
-            this.roundPanelWithoutTitle14.Controls.Add(this.myRjButton14);
-            this.roundPanelWithoutTitle14.Controls.Add(this.horizontalLineSeparator31);
-            this.roundPanelWithoutTitle14.Controls.Add(this.horizontalLineSeparator32);
-            this.roundPanelWithoutTitle14.Controls.Add(this.rjButton14);
-            this.roundPanelWithoutTitle14.Controls.Add(this.rjButtonTime14);
-            this.roundPanelWithoutTitle14.Controls.Add(this.bButton14);
-            this.roundPanelWithoutTitle14.Location = new System.Drawing.Point(1431, 224);
-            this.roundPanelWithoutTitle14.Name = "roundPanelWithoutTitle14";
-            this.roundPanelWithoutTitle14.Radious = 25;
-            this.roundPanelWithoutTitle14.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle14.TabIndex = 14;
-            this.roundPanelWithoutTitle14.TabStop = false;
-            this.roundPanelWithoutTitle14.Text = "roundPanelWithoutTitle14";
-            this.roundPanelWithoutTitle14.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle14.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle14.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle14.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton14
             // 
@@ -1846,28 +1809,6 @@
             this.bButton14.TextColor = System.Drawing.Color.White;
             this.bButton14.UseVisualStyleBackColor = false;
             // 
-            // roundPanelWithoutTitle15
-            // 
-            this.roundPanelWithoutTitle15.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle15.borderRadius = 1;
-            this.roundPanelWithoutTitle15.Controls.Add(this.myRjButton15);
-            this.roundPanelWithoutTitle15.Controls.Add(this.horizontalLineSeparator29);
-            this.roundPanelWithoutTitle15.Controls.Add(this.horizontalLineSeparator30);
-            this.roundPanelWithoutTitle15.Controls.Add(this.rjButton15);
-            this.roundPanelWithoutTitle15.Controls.Add(this.rjButtonTime15);
-            this.roundPanelWithoutTitle15.Controls.Add(this.bButton15);
-            this.roundPanelWithoutTitle15.Location = new System.Drawing.Point(1431, 445);
-            this.roundPanelWithoutTitle15.Name = "roundPanelWithoutTitle15";
-            this.roundPanelWithoutTitle15.Radious = 25;
-            this.roundPanelWithoutTitle15.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle15.TabIndex = 15;
-            this.roundPanelWithoutTitle15.TabStop = false;
-            this.roundPanelWithoutTitle15.Text = "roundPanelWithoutTitle15";
-            this.roundPanelWithoutTitle15.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle15.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle15.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle15.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
             // myRjButton15
             // 
             this.myRjButton15.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1962,28 +1903,6 @@
             this.bButton15.TabIndex = 0;
             this.bButton15.TextColor = System.Drawing.Color.White;
             this.bButton15.UseVisualStyleBackColor = false;
-            // 
-            // roundPanelWithoutTitle16
-            // 
-            this.roundPanelWithoutTitle16.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.roundPanelWithoutTitle16.borderRadius = 1;
-            this.roundPanelWithoutTitle16.Controls.Add(this.myRjButton16);
-            this.roundPanelWithoutTitle16.Controls.Add(this.horizontalLineSeparator19);
-            this.roundPanelWithoutTitle16.Controls.Add(this.horizontalLineSeparator20);
-            this.roundPanelWithoutTitle16.Controls.Add(this.rjButton16);
-            this.roundPanelWithoutTitle16.Controls.Add(this.rjButtonTime16);
-            this.roundPanelWithoutTitle16.Controls.Add(this.bButton16);
-            this.roundPanelWithoutTitle16.Location = new System.Drawing.Point(1431, 666);
-            this.roundPanelWithoutTitle16.Name = "roundPanelWithoutTitle16";
-            this.roundPanelWithoutTitle16.Radious = 25;
-            this.roundPanelWithoutTitle16.Size = new System.Drawing.Size(470, 215);
-            this.roundPanelWithoutTitle16.TabIndex = 16;
-            this.roundPanelWithoutTitle16.TabStop = false;
-            this.roundPanelWithoutTitle16.Text = "roundPanelWithoutTitle16";
-            this.roundPanelWithoutTitle16.TitleBackColor = System.Drawing.Color.Chartreuse;
-            this.roundPanelWithoutTitle16.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.roundPanelWithoutTitle16.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             // 
             // myRjButton16
             // 
@@ -2080,37 +1999,6 @@
             this.bButton16.TextColor = System.Drawing.Color.White;
             this.bButton16.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1915, 78);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 991);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(1918, 70);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Digiline System Pvt. Ltd.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // S1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2127,22 +2015,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.roundPanelWithoutTitle1.ResumeLayout(false);
-            this.roundPanelWithoutTitle2.ResumeLayout(false);
-            this.roundPanelWithoutTitle7.ResumeLayout(false);
-            this.roundPanelWithoutTitle3.ResumeLayout(false);
-            this.roundPanelWithoutTitle4.ResumeLayout(false);
-            this.roundPanelWithoutTitle5.ResumeLayout(false);
-            this.roundPanelWithoutTitle6.ResumeLayout(false);
-            this.roundPanelWithoutTitle8.ResumeLayout(false);
-            this.roundPanelWithoutTitle9.ResumeLayout(false);
-            this.roundPanelWithoutTitle10.ResumeLayout(false);
-            this.roundPanelWithoutTitle11.ResumeLayout(false);
-            this.roundPanelWithoutTitle12.ResumeLayout(false);
-            this.roundPanelWithoutTitle13.ResumeLayout(false);
-            this.roundPanelWithoutTitle14.ResumeLayout(false);
-            this.roundPanelWithoutTitle15.ResumeLayout(false);
-            this.roundPanelWithoutTitle16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2248,7 +2120,6 @@
         public Controls.RJButton rjButton11;
         public Controls.RJButton rjButton16;
         public Controls.RJButton rjButton15;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle1;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle4;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle9;
@@ -2265,5 +2136,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle8;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle12;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
