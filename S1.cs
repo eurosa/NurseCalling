@@ -1399,10 +1399,10 @@ namespace NurseCalling
                   if((new[] { myObjects[16].Value, myObjects[17].Value, myObjects[18].Value, myObjects[19].Value, myObjects[20].Value, myObjects[21].Value, myObjects[22].Value, myObjects[23].Value, myObjects[24].Value, myObjects[25].Value, myObjects[26].Value, myObjects[27].Value, myObjects[28].Value, myObjects[29].Value, myObjects[30].Value, myObjects[31].Value }).Contains(256)|| (new[] { myObjects[16].Value, myObjects[17].Value, myObjects[18].Value, myObjects[19].Value, myObjects[20].Value, myObjects[21].Value, myObjects[22].Value, myObjects[23].Value, myObjects[24].Value, myObjects[25].Value, myObjects[26].Value, myObjects[27].Value, myObjects[28].Value, myObjects[29].Value, myObjects[30].Value, myObjects[31].Value }).Contains(261)|| (new[] { myObjects[16].Value, myObjects[17].Value, myObjects[18].Value, myObjects[19].Value, myObjects[20].Value, myObjects[21].Value, myObjects[22].Value, myObjects[23].Value, myObjects[24].Value, myObjects[25].Value, myObjects[26].Value, myObjects[27].Value, myObjects[28].Value, myObjects[29].Value, myObjects[30].Value, myObjects[31].Value }).Contains(262)|| (new[] { myObjects[16].Value, myObjects[17].Value, myObjects[18].Value, myObjects[19].Value, myObjects[20].Value, myObjects[21].Value, myObjects[22].Value, myObjects[23].Value, myObjects[24].Value, myObjects[25].Value, myObjects[26].Value, myObjects[27].Value, myObjects[28].Value, myObjects[29].Value, myObjects[30].Value, myObjects[31].Value }).Contains(258))
                   {
                     s2.panel1.Show();
-                        this.panel1.Hide();
-                        s3.panel1.Hide();
-                        s4.panel1.Hide();
-                    }
+                    this.panel1.Hide();
+                    s3.panel1.Hide();
+                    s4.panel1.Hide();
+                  }
                   
                   // timer1.Stop();
                   blink_times--;
