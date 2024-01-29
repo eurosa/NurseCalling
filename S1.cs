@@ -1646,6 +1646,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
+                // MessageBox.Show(DateTime.Now.ToString());
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 rough.rjButtonTime1.Text = time;
 
@@ -1666,22 +1668,49 @@ namespace NurseCalling
                 if (myObjects[0].Value == 258)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
-                  
+                    
                     rough.rjButton1.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[0].Value.ToString();
+
+                    //  flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+                    dataModel.lastCallStatus = "Call From 1";//258
+                    dataModel.registerId = "1";
+                    dataModel.dateTime = dateTime;
+                    // flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
+
+                    // rough.rjButton1.BackColor = Color.Orange;
+
+                    dbHandlr.insert_call_data(m_dbConnection,dataModel);
                 }
                 else if (myObjects[0].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
                     rough.rjButton1.BackColor = Color.Orange;
+
+                    dataModel.lastCallValue = myObjects[0].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 1";//262
+                    dataModel.registerId = "1";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
+
                 }
                 else if (myObjects[0].Value == 261)
                 {
                     rough.rjButton1.BackColor = Color.DarkGreen;
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle1);
+
+                    //dataModel.lastCallValue = myObjects[0].Value.ToString();
+                    //dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[0].Value == 264)
                 {
                     rough.rjButton1.BackColor = Color.Blue;
+
+                    dataModel.lastCallValue = myObjects[0].Value.ToString();
+
+                    dataModel.registerId = "1";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1692,6 +1721,7 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime2.Text = time;
 
                 if (myObjects[1].Value == 261)
@@ -1713,20 +1743,38 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.Red;
+
+                    dataModel.lastCallValue = myObjects[1].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 2";//258
+                    dataModel.registerId = "2";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[1].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.Orange;
+                    dataModel.lastCallStatus = "Care From 2";//262
+                    dataModel.registerId = "2";
+                    dataModel.lastCallValue = myObjects[1].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[1].Value == 261)
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.DarkGreen;
+                    dataModel.registerId = "2";
+                    dataModel.lastCallValue = myObjects[1].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[1].Value == 264)
                 {
                     rough.rjButton2.BackColor = Color.Blue;
+
+                    dataModel.lastCallValue = myObjects[1].Value.ToString();
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1738,6 +1786,7 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime3.Text = time;
 
                 if (myObjects[2].Value == 261)
@@ -1759,20 +1808,38 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.Red;
+                    dataModel.lastCallStatus = "Call From 3";//258
+                    dataModel.registerId = "3";
+                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[2].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.Orange;
+                    dataModel.lastCallStatus = "Care From 3";//262
+                    dataModel.registerId = "3";
+                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[2].Value == 261)
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.DarkGreen;
+                    dataModel.registerId = "3";
+                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[2].Value == 264)
                 {
                     rough.rjButton3.BackColor = Color.Blue;
+                    dataModel.registerId = "3";
+                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1783,6 +1850,7 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                string dateTime = DateTime.Now.ToString();
                 rjButtonTime4.Text = time;
 
                 if (myObjects[3].Value == 261)
@@ -1791,6 +1859,7 @@ namespace NurseCalling
                     myStopWatchObjects[3].Start();
                     rough.myRjButton4.Text = "00:00";
                     myStopWatchObjects[3].Reset();
+
                 }
                 else
                 {
@@ -1804,20 +1873,36 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Red;
+
+                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.registerId = "4";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[3].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Orange;
+                    dataModel.registerId = "4";
+                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[3].Value == 261)
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.DarkGreen;
+                    dataModel.registerId = "4";
+                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[3].Value == 264)
                 {
                     rough.rjButton4.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.registerId = "4";
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1829,6 +1914,7 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime5.Text = time;
 
                 if (myObjects[4].Value == 261)
@@ -1850,11 +1936,23 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Red;
+
+                    dataModel.lastCallValue = myObjects[4].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 5";//258
+                    dataModel.registerId = "5";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[4].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Orange;
+
+                    dataModel.lastCallValue = myObjects[4].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 5";//262
+                    dataModel.registerId = "5";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[4].Value == 261)
                 {
@@ -1864,6 +1962,12 @@ namespace NurseCalling
                 else if (myObjects[4].Value == 264)
                 {
                     rough.rjButton5.BackColor = Color.Blue;
+
+                    dataModel.lastCallValue = myObjects[4].Value.ToString();
+                    //dataModel.lastCallStatus = "Call From 5";//258
+                    dataModel.registerId = "5";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1874,7 +1978,9 @@ namespace NurseCalling
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime6.Text = time;
+
 
                 if (myObjects[5].Value == 261)
                 {
@@ -1894,11 +2000,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[5].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 6";//258
+                    dataModel.registerId = "6";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[5].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[5].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 6";//262
+                    dataModel.registerId = "6";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[5].Value == 261)
                 {
@@ -1908,6 +2024,12 @@ namespace NurseCalling
                 else if (myObjects[5].Value == 264)
                 {
                     rough.rjButton6.BackColor = Color.Blue;
+
+                    dataModel.lastCallValue = myObjects[5].Value.ToString();
+                   // dataModel.lastCallStatus = "Care From 6";//262
+                    dataModel.registerId = "6";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1917,7 +2039,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime7.Text = time;
 
                 if (myObjects[6].Value == 261)
@@ -1938,11 +2061,22 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Red;
+
+                    dataModel.lastCallValue = myObjects[6].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 7";//258
+                    dataModel.registerId = "7";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[6].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[6].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 7";//262
+                    dataModel.registerId = "7";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[6].Value == 261)
                 {
@@ -1952,6 +2086,11 @@ namespace NurseCalling
                 else if (myObjects[6].Value == 264)
                 {
                     rough.rjButton7.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[6].Value.ToString();
+                   // dataModel.lastCallStatus = "Call From 7";//258
+                    dataModel.registerId = "7";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -1962,7 +2101,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rjButtonTime8.Text = time;
 
                 if (myObjects[7].Value == 261)
@@ -1983,11 +2123,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[7].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 8";//258
+                    dataModel.registerId = "8";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[7].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[7].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 8";//264
+                    dataModel.registerId = "8";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[7].Value == 261)
                 {
@@ -1997,6 +2147,11 @@ namespace NurseCalling
                 else if (myObjects[7].Value == 264)
                 {
                     rough.rjButton8.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[7].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 8";//258
+                    dataModel.registerId = "8";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2006,7 +2161,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime9.Text = time;
 
                 if (myObjects[8].Value == 261)
@@ -2027,11 +2183,22 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Red;
+
+                    dataModel.lastCallValue = myObjects[8].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 9";//258
+                    dataModel.registerId = "9";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[8].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[8].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 9";//262
+                    dataModel.registerId = "9";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[8].Value == 261)
                 {
@@ -2041,6 +2208,11 @@ namespace NurseCalling
                 else if (myObjects[8].Value == 264)
                 {
                     rough.rjButton9.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[8].Value.ToString();
+                    //dataModel.lastCallStatus = "Call From 9";//258
+                    dataModel.registerId = "9";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2050,7 +2222,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime10.Text = time;
 
                 if (myObjects[9].Value == 261)
@@ -2071,11 +2244,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[9].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 10";//258
+                    dataModel.registerId = "10";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[9].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[9].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 10";//258
+                    dataModel.registerId = "10";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[9].Value == 261)
                 {
@@ -2085,6 +2268,11 @@ namespace NurseCalling
                 else if (myObjects[9].Value == 264)
                 {
                     rough.rjButton10.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[9].Value.ToString();
+                    // dataModel.lastCallStatus = "Care From 10";//258
+                    dataModel.registerId = "10";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2094,7 +2282,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime11.Text = time;
 
                 if (myObjects[10].Value == 261)
@@ -2115,11 +2304,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[10].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 11";//258
+                    dataModel.registerId = "11";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[10].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[10].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 11";//258
+                    dataModel.registerId = "11";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[10].Value == 261)
                 {
@@ -2129,6 +2328,11 @@ namespace NurseCalling
                 else if (myObjects[10].Value == 264)
                 {
                     rough.rjButton11.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[10].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 11";//258
+                    dataModel.registerId = "11";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2138,7 +2342,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime12.Text = time;
 
                 if (myObjects[11].Value == 261)
@@ -2159,11 +2364,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[11].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 12";//258
+                    dataModel.registerId = "12";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[11].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[11].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 12";//262
+                    dataModel.registerId = "12";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[11].Value == 261)
                 {
@@ -2173,6 +2388,11 @@ namespace NurseCalling
                 else if (myObjects[11].Value == 264)
                 {
                     rough.rjButton12.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[11].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 12";//264
+                    dataModel.registerId = "12";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2182,7 +2402,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime13.Text = time;
 
                 if (myObjects[12].Value == 261)
@@ -2203,11 +2424,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[12].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 13";//258
+                    dataModel.registerId = "13";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[12].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[12].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 13";//258
+                    dataModel.registerId = "13";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[12].Value == 261)
                 {
@@ -2217,6 +2448,11 @@ namespace NurseCalling
                 else if (myObjects[12].Value == 264)
                 {
                     rough.rjButton13.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[12].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 12";//258
+                    dataModel.registerId = "13";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2226,7 +2462,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime14.Text = time;
 
                 if (myObjects[13].Value == 261)
@@ -2247,11 +2484,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[13].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 14";//258
+                    dataModel.registerId = "14";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[13].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[13].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 14";//258
+                    dataModel.registerId = "14";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[13].Value == 261)
                 {
@@ -2261,6 +2508,11 @@ namespace NurseCalling
                 else if (myObjects[13].Value == 264)
                 {
                     rough.rjButton14.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[13].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 14";//258
+                    dataModel.registerId = "14";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2271,7 +2523,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime15.Text = time;
 
                 if (myObjects[14].Value == 261)
@@ -2292,11 +2545,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[14].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 15";//258
+                    dataModel.registerId = "15";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[14].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[14].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 15";//258
+                    dataModel.registerId = "15";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[14].Value == 261)
                 {
@@ -2306,6 +2569,11 @@ namespace NurseCalling
                 else if (myObjects[14].Value == 264)
                 {
                     rough.rjButton15.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[14].Value.ToString();
+                    // dataModel.lastCallStatus = "Call From 15";//258
+                    dataModel.registerId = "15";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2315,7 +2583,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime16.Text = time;
 
                 if (myObjects[15].Value == 261)
@@ -2335,11 +2604,21 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[15].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 16";//258
+                    dataModel.registerId = "16";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[15].Value == 262)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[15].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 16";//258
+                    dataModel.registerId = "16";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[15].Value == 261)
                 {
@@ -2349,6 +2628,11 @@ namespace NurseCalling
                 else if (myObjects[15].Value == 264)
                 {
                     rough.rjButton16.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[15].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 16";//258
+                    dataModel.registerId = "16";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                  
             };
@@ -2361,7 +2645,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime1.Text = time;
 
                 if (myObjects[16].Value == 261)
@@ -2405,7 +2690,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime2.Text = time;
 
                 if (myObjects[17].Value == 261)
@@ -2451,7 +2737,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime3.Text = time;
 
                 if (myObjects[18].Value == 261)
@@ -2496,7 +2783,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime4.Text = time;
 
                 if (myObjects[19].Value == 261)
@@ -2542,7 +2830,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime5.Text = time;
 
                 if (myObjects[20].Value == 261)
@@ -2587,7 +2876,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime6.Text = time;
 
                 if (myObjects[21].Value == 261)
@@ -2631,7 +2921,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime7.Text = time;
 
                 if (myObjects[22].Value == 261)
@@ -2676,7 +2967,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime8.Text = time;
 
                 if (myObjects[23].Value == 261)
@@ -2720,7 +3012,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime9.Text = time;
 
                 if (myObjects[24].Value == 261)
@@ -2764,7 +3057,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime10.Text = time;
 
                 if (myObjects[25].Value == 261)
@@ -2808,7 +3102,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime11.Text = time;
 
                 if (myObjects[26].Value == 261)
@@ -2852,7 +3147,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime12.Text = time;
 
                 if (myObjects[27].Value == 261)
@@ -2896,7 +3192,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime13.Text = time;
 
                 if (myObjects[28].Value == 261)
@@ -2940,7 +3237,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime14.Text = time;
 
                 if (myObjects[29].Value == 261)
@@ -2985,7 +3283,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime15.Text = time;
 
                 if (myObjects[30].Value == 261)
@@ -3029,7 +3328,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime16.Text = time;
 
                 if (myObjects[31].Value == 261)
@@ -3073,7 +3373,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime1.Text = time;
 
                 if (myObjects[32].Value == 261)
@@ -3118,7 +3419,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime2.Text = time;
 
                 if (myObjects[33].Value == 261)
@@ -3164,7 +3466,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime3.Text = time;
 
                 if (myObjects[34].Value == 261)
@@ -3209,7 +3512,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime4.Text = time;
 
                 if (myObjects[35].Value == 261)
@@ -3255,7 +3559,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime5.Text = time;
 
                 if (myObjects[36].Value == 261)
@@ -3300,7 +3605,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime6.Text = time;
 
                 if (myObjects[37].Value == 261)
@@ -3344,7 +3650,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime7.Text = time;
 
                 if (myObjects[38].Value == 261)
@@ -3389,7 +3696,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime8.Text = time;
 
                 if (myObjects[39].Value == 261)
@@ -3433,7 +3741,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime9.Text = time;
 
                 if (myObjects[40].Value == 261)
@@ -3477,7 +3786,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime10.Text = time;
 
                 if (myObjects[41].Value == 261)
@@ -3521,7 +3831,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime11.Text = time;
 
                 if (myObjects[42].Value == 261)
@@ -3565,7 +3876,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime12.Text = time;
 
                 if (myObjects[43].Value == 261)
@@ -3609,7 +3921,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime13.Text = time;
 
                 if (myObjects[44].Value == 261)
@@ -3653,7 +3966,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime14.Text = time;
 
                 if (myObjects[45].Value == 261)
@@ -3698,7 +4012,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime15.Text = time;
 
                 if (myObjects[46].Value == 261)
@@ -3742,7 +4057,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime16.Text = time;
 
                 if (myObjects[47].Value == 261)
@@ -3787,7 +4103,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime1.Text = time;
 
                 if (myObjects[48].Value == 261)
@@ -3831,7 +4148,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime2.Text = time;
 
                 if (myObjects[49].Value == 261)
@@ -3877,7 +4195,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime3.Text = time;
 
                 if (myObjects[50].Value == 261)
@@ -3922,7 +4241,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime4.Text = time;
 
                 if (myObjects[51].Value == 261)
@@ -3968,7 +4288,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime5.Text = time;
 
                 if (myObjects[52].Value == 261)
@@ -4013,7 +4334,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime6.Text = time;
 
                 if (myObjects[53].Value == 261)
@@ -4057,7 +4379,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime7.Text = time;
 
                 if (myObjects[54].Value == 261)
@@ -4102,7 +4425,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime8.Text = time;
 
                 if (myObjects[56].Value == 261)
@@ -4146,7 +4470,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime9.Text = time;
 
                 if (myObjects[57].Value == 261)
@@ -4190,7 +4515,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime10.Text = time;
 
                 if (myObjects[58].Value == 261)
@@ -4234,7 +4560,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime11.Text = time;
 
                 if (myObjects[59].Value == 261)
@@ -4278,7 +4605,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime12.Text = time;
 
                 if (myObjects[59].Value == 261)
@@ -4322,7 +4650,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime13.Text = time;
 
                 if (myObjects[60].Value == 261)
@@ -4366,7 +4695,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime14.Text = time;
 
                 if (myObjects[61].Value == 261)
@@ -4411,7 +4741,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime15.Text = time;
 
                 if (myObjects[62].Value == 261)
@@ -4455,7 +4786,8 @@ namespace NurseCalling
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
-                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
+                // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
+                string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime16.Text = time;
 
                 if (myObjects[63].Value == 261)
@@ -4498,6 +4830,12 @@ namespace NurseCalling
         private void rjButton3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rjButton17_Click(object sender, EventArgs e)
+        {
+          Report MyReport = new Report(m_dbConnection);
+          MyReport.Show();
         }
 
         public void StopWatchTimer()

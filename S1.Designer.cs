@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.roundPanelWithoutTitle1 = new NurseCalling.Controls.RoundPanelWithoutTitle();
@@ -146,6 +147,7 @@
             this.rjButton16 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime16 = new NurseCalling.Controls.RJButton();
             this.bButton16 = new NurseCalling.Controls.RJButton();
+            this.exportBtn = new NurseCalling.Controls.RJButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -153,6 +155,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.exportBtn);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -1999,6 +2002,26 @@
             this.bButton16.TextColor = System.Drawing.Color.White;
             this.bButton16.UseVisualStyleBackColor = false;
             // 
+            // exportBtn
+            // 
+            this.exportBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportBtn.BackgroundImage")));
+            this.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exportBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exportBtn.BorderRadius = 0;
+            this.exportBtn.BorderSize = 0;
+            this.exportBtn.FlatAppearance.BorderSize = 0;
+            this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.Location = new System.Drawing.Point(1173, 1001);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.Size = new System.Drawing.Size(52, 40);
+            this.exportBtn.TabIndex = 33;
+            this.exportBtn.TextColor = System.Drawing.Color.White;
+            this.exportBtn.UseVisualStyleBackColor = false;
+            this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
+            // 
             // S1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2137,5 +2160,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle12;
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Controls.RJButton exportBtn;
     }
 }

@@ -30,6 +30,11 @@ namespace NurseCalling
                     SQLiteCommand command = new SQLiteCommand(sql, dbConnection); 
                     command.ExecuteNonQuery();
 
+
+                    string sql1 = "create table call_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, lastCallValue varchar(200), lastCallStatus varchar(200), registerId varchar(200), dateTime varchar(200))";
+                    SQLiteCommand command1 = new SQLiteCommand(sql1, dbConnection);
+                    command1.ExecuteNonQuery();
+
                     try
                     {
                         insert_general_data(dbConnection);
@@ -39,6 +44,8 @@ namespace NurseCalling
                     {
 
                     }
+
+
                     
                     dbConnection.Close();
 
@@ -130,6 +137,32 @@ namespace NurseCalling
             }
 
         }
+
+
+        public void insert_call_data(SQLiteConnection m_dbConnection, DataModel dataModel)
+        {
+
+
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO call_table (lastCallValue, lastCallStatus, registerId, dateTime) VALUES (@lastCallValue, @lastCallStatus, @registerId, @dateTime)", m_dbConnection);
+
+            insertSQL.Parameters.AddWithValue("@lastCallValue", dataModel.lastCallValue);
+            insertSQL.Parameters.AddWithValue("@lastCallStatus", dataModel.lastCallStatus);
+            insertSQL.Parameters.AddWithValue("@registerId", dataModel.registerId);
+            insertSQL.Parameters.AddWithValue("@dateTime", dataModel.dateTime);
+
+            try
+            {
+                insertSQL.ExecuteNonQuery();
+                // AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+
 
     }
 }
