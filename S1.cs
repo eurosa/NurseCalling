@@ -1651,7 +1651,7 @@ namespace NurseCalling
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 rough.rjButtonTime1.Text = time;
 
-                if (myObjects[0].Value == 261)
+                /*if (myObjects[0].Value == 261)
                 {
 
                     myStopWatchObjects[0].Stop();
@@ -1659,12 +1659,12 @@ namespace NurseCalling
                     rough.myRjButton1.Text = "00:00";
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[0].Stop();
                     myStopWatchObjects[0].Reset();
                     rough.myRjButton1.Text = "00:00";
                     myStopWatchObjects[0].Start();
-                }
+                //}
                 if (myObjects[0].Value == 258)
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
@@ -1724,7 +1724,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime2.Text = time;
 
-                if (myObjects[1].Value == 261)
+                /*if (myObjects[1].Value == 261)
                 {
 
                     myStopWatchObjects[1].Start();
@@ -1732,12 +1732,12 @@ namespace NurseCalling
                     myStopWatchObjects[1].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[1].Stop();
                     rough.myRjButton2.Text = "00:00";
                     myStopWatchObjects[1].Reset();
                     myStopWatchObjects[1].Start();
-                }
+                //}
 
                 if (myObjects[1].Value == 258)
                 {
@@ -1789,7 +1789,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime3.Text = time;
 
-                if (myObjects[2].Value == 261)
+                /*if (myObjects[2].Value == 261)
                 {
 
                     myStopWatchObjects[2].Start();
@@ -1797,12 +1797,12 @@ namespace NurseCalling
                     myStopWatchObjects[2].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[2].Stop();
                     rough.myRjButton3.Text = "00:00";
                     myStopWatchObjects[2].Reset();
                     myStopWatchObjects[2].Start();
-                }
+                //}
 
                 if (myObjects[2].Value == 258)
                 {
@@ -1853,7 +1853,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rjButtonTime4.Text = time;
 
-                if (myObjects[3].Value == 261)
+                /*if (myObjects[3].Value == 261)
                 {
 
                     myStopWatchObjects[3].Start();
@@ -1862,12 +1862,12 @@ namespace NurseCalling
 
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[3].Stop();
                     rough.myRjButton4.Text = "00:00";
                     myStopWatchObjects[3].Reset();
                     myStopWatchObjects[3].Start();
-                }
+                //}
 
                 if (myObjects[3].Value == 258)
                 {
@@ -1917,7 +1917,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime5.Text = time;
 
-                if (myObjects[4].Value == 261)
+                /*if (myObjects[4].Value == 261)
                 {
 
                     myStopWatchObjects[4].Start();
@@ -1925,12 +1925,12 @@ namespace NurseCalling
                     myStopWatchObjects[4].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[4].Stop();
                     rough.myRjButton5.Text = "00:00";
                     myStopWatchObjects[4].Reset();
                     myStopWatchObjects[4].Start();
-                }
+                //}
 
                 if (myObjects[4].Value == 258)
                 {
@@ -1982,7 +1982,7 @@ namespace NurseCalling
                 rough.rjButtonTime6.Text = time;
 
 
-                if (myObjects[5].Value == 261)
+                /*if (myObjects[5].Value == 261)
                 {
 
                     myStopWatchObjects[5].Start();
@@ -1990,11 +1990,12 @@ namespace NurseCalling
                     myStopWatchObjects[5].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[5].Stop();
                     rough.myRjButton6.Text = "00:00";
-                    myStopWatchObjects[5].Start();
-                }
+                myStopWatchObjects[5].Reset();
+                myStopWatchObjects[5].Start();
+                //}
 
                 if (myObjects[5].Value == 258)
                 {
@@ -2043,7 +2044,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime7.Text = time;
 
-                if (myObjects[6].Value == 261)
+                /*if (myObjects[6].Value == 261)
                 {
 
                     myStopWatchObjects[6].Start();
@@ -2051,11 +2052,12 @@ namespace NurseCalling
                     myStopWatchObjects[6].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[6].Stop();
                     rough.myRjButton7.Text = "00:00";
-                    myStopWatchObjects[6].Start();
-                }
+                myStopWatchObjects[6].Reset();
+                myStopWatchObjects[6].Start();
+                //}
 
                 if (myObjects[6].Value == 258)
                 {
@@ -2105,7 +2107,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rjButtonTime8.Text = time;
 
-                if (myObjects[7].Value == 261)
+                /*if (myObjects[7].Value == 261)
                 {
 
                     myStopWatchObjects[7].Start();
@@ -2113,11 +2115,12 @@ namespace NurseCalling
                     myStopWatchObjects[7].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[7].Stop();
                     rough.myRjButton8.Text = "00:00";
+                    myStopWatchObjects[7].Reset();
                     myStopWatchObjects[7].Start();
-                }
+                //}
 
                 if (myObjects[7].Value == 258)
                 {
@@ -2165,7 +2168,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime9.Text = time;
 
-                if (myObjects[8].Value == 261)
+                /*if (myObjects[8].Value == 261)
                 {
 
                     myStopWatchObjects[8].Start();
@@ -2173,11 +2176,12 @@ namespace NurseCalling
                     myStopWatchObjects[8].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[8].Stop();
                     rough.myRjButton9.Text = "00:00";
+                    myStopWatchObjects[8].Reset();
                     myStopWatchObjects[8].Start();
-                }
+               // }
 
                 if (myObjects[8].Value == 258)
                 {
@@ -2226,7 +2230,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime10.Text = time;
 
-                if (myObjects[9].Value == 261)
+                /*if (myObjects[9].Value == 261)
                 {
 
                     myStopWatchObjects[9].Start();
@@ -2234,11 +2238,12 @@ namespace NurseCalling
                     myStopWatchObjects[9].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[9].Stop();
                     rough.myRjButton10.Text = "00:00";
+                    myStopWatchObjects[9].Reset();
                     myStopWatchObjects[9].Start();
-                }
+                //}
 
                 if (myObjects[9].Value == 258)
                 {
@@ -2286,7 +2291,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime11.Text = time;
 
-                if (myObjects[10].Value == 261)
+                /*if (myObjects[10].Value == 261)
                 {
 
                     myStopWatchObjects[10].Start();
@@ -2294,11 +2299,12 @@ namespace NurseCalling
                     myStopWatchObjects[10].Reset();
                 }
                 else
-                {
-                    myStopWatchObjects[10].Stop();
-                    rough.myRjButton11.Text = "00:00";
-                    myStopWatchObjects[10].Start();
-                }
+                {*/
+                myStopWatchObjects[10].Stop();
+                rough.myRjButton11.Text = "00:00";
+                myStopWatchObjects[10].Reset();
+                myStopWatchObjects[10].Start();
+                //}
 
                 if (myObjects[10].Value == 258)
                 {
@@ -2346,7 +2352,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime12.Text = time;
 
-                if (myObjects[11].Value == 261)
+                /*if (myObjects[11].Value == 261)
                 {
 
                     myStopWatchObjects[11].Start();
@@ -2354,11 +2360,12 @@ namespace NurseCalling
                     myStopWatchObjects[11].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[11].Stop();
                     rough.myRjButton12.Text = "00:00";
+                    myStopWatchObjects[11].Reset();
                     myStopWatchObjects[11].Start();
-                }
+                //}
 
                 if (myObjects[11].Value == 258)
                 {
@@ -2406,7 +2413,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime13.Text = time;
 
-                if (myObjects[12].Value == 261)
+                /*if (myObjects[12].Value == 261)
                 {
 
                     myStopWatchObjects[12].Start();
@@ -2414,11 +2421,12 @@ namespace NurseCalling
                     myStopWatchObjects[12].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[12].Stop();
                     rough.myRjButton13.Text = "00:00";
-                    myStopWatchObjects[12].Start();
-                }
+                myStopWatchObjects[12].Reset();
+                myStopWatchObjects[12].Start();
+                //}
 
                 if (myObjects[12].Value == 258)
                 {
@@ -2466,7 +2474,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime14.Text = time;
 
-                if (myObjects[13].Value == 261)
+                /*if (myObjects[13].Value == 261)
                 {
 
                     myStopWatchObjects[13].Start();
@@ -2474,11 +2482,12 @@ namespace NurseCalling
                     myStopWatchObjects[13].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[13].Stop();
                     rough.myRjButton14.Text = "00:00";
+                    myStopWatchObjects[13].Reset();
                     myStopWatchObjects[13].Start();
-                }
+                //}
 
                 if (myObjects[13].Value == 258)
                 {
@@ -2527,7 +2536,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime15.Text = time;
 
-                if (myObjects[14].Value == 261)
+                /*if (myObjects[14].Value == 261)
                 {
 
                     myStopWatchObjects[14].Start();
@@ -2535,11 +2544,12 @@ namespace NurseCalling
                     myStopWatchObjects[14].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[14].Stop();
                     rough.myRjButton15.Text = "00:00";
-                    myStopWatchObjects[14].Start();
-                }
+                myStopWatchObjects[14].Reset();
+                myStopWatchObjects[14].Start();
+                //}
 
                 if (myObjects[14].Value == 258)
                 {
@@ -2587,18 +2597,19 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime16.Text = time;
 
-                if (myObjects[15].Value == 261)
+                /*if (myObjects[15].Value == 261)
                 { 
                     myStopWatchObjects[15].Start();
                     rough.myRjButton16.Text = "00:00";
                     myStopWatchObjects[15].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[15].Stop();
                     rough.myRjButton16.Text = "00:00";
-                    myStopWatchObjects[15].Start();
-                }
+                myStopWatchObjects[15].Reset();
+                myStopWatchObjects[15].Start();
+                //}
 
                 if (myObjects[15].Value == 258)
                 {
@@ -2649,7 +2660,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime1.Text = time;
 
-                if (myObjects[16].Value == 261)
+                /*if (myObjects[16].Value == 261)
                 {
 
                     myStopWatchObjects[16].Stop();
@@ -2657,12 +2668,12 @@ namespace NurseCalling
                     rough1.myRjButton1.Text = "00:00";
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[16].Stop();
                     myStopWatchObjects[16].Reset();
-                    rough1.myRjButton1.Text = "00:00";
+                    rough1.myRjButton1.Text = "00:00"; 
                     myStopWatchObjects[16].Start();
-                }
+                //}
                 if (myObjects[16].Value == 258)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
@@ -2694,7 +2705,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime2.Text = time;
 
-                if (myObjects[17].Value == 261)
+                /*if (myObjects[17].Value == 261)
                 {
 
                     myStopWatchObjects[17].Start();
@@ -2702,12 +2713,12 @@ namespace NurseCalling
                     myStopWatchObjects[17].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[17].Stop();
                     rough1.myRjButton2.Text = "00:00";
                     myStopWatchObjects[17].Reset();
                     myStopWatchObjects[17].Start();
-                }
+                //}
 
                 if (myObjects[17].Value == 258)
                 {
@@ -2741,7 +2752,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime3.Text = time;
 
-                if (myObjects[18].Value == 261)
+                /*if (myObjects[18].Value == 261)
                 {
 
                     myStopWatchObjects[18].Start();
@@ -2749,12 +2760,12 @@ namespace NurseCalling
                     myStopWatchObjects[18].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[18].Stop();
                     rough1.myRjButton3.Text = "00:00";
                     myStopWatchObjects[18].Reset();
                     myStopWatchObjects[18].Start();
-                }
+                //}
 
                 if (myObjects[18].Value == 258)
                 {
@@ -2787,7 +2798,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime4.Text = time;
 
-                if (myObjects[19].Value == 261)
+                /*if (myObjects[19].Value == 261)
                 {
 
                     myStopWatchObjects[19].Start();
@@ -2795,12 +2806,12 @@ namespace NurseCalling
                     myStopWatchObjects[19].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[19].Stop();
                     rough1.myRjButton4.Text = "00:00";
                     myStopWatchObjects[19].Reset();
                     myStopWatchObjects[19].Start();
-                }
+                //}
 
                 if (myObjects[19].Value == 258)
                 {
@@ -2834,7 +2845,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime5.Text = time;
 
-                if (myObjects[20].Value == 261)
+                /*if (myObjects[20].Value == 261)
                 {
 
                     myStopWatchObjects[20].Start();
@@ -2842,12 +2853,12 @@ namespace NurseCalling
                     myStopWatchObjects[20].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[20].Stop();
                     rough1.myRjButton5.Text = "00:00";
                     myStopWatchObjects[20].Reset();
                     myStopWatchObjects[4].Start();
-                }
+                //}
 
                 if (myObjects[20].Value == 258)
                 {
@@ -2880,7 +2891,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime6.Text = time;
 
-                if (myObjects[21].Value == 261)
+                /*if (myObjects[21].Value == 261)
                 {
 
                     myStopWatchObjects[21].Start();
@@ -2888,11 +2899,12 @@ namespace NurseCalling
                     myStopWatchObjects[21].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[21].Stop();
                     rough1.myRjButton6.Text = "00:00";
+                    myStopWatchObjects[21].Reset();
                     myStopWatchObjects[21].Start();
-                }
+                //}
 
                 if (myObjects[21].Value == 258)
                 {
@@ -2925,7 +2937,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime7.Text = time;
 
-                if (myObjects[22].Value == 261)
+                /*if (myObjects[22].Value == 261)
                 {
 
                     myStopWatchObjects[22].Start();
@@ -2933,11 +2945,12 @@ namespace NurseCalling
                     myStopWatchObjects[22].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[22].Stop();
                     rough1.myRjButton7.Text = "00:00";
+                    myStopWatchObjects[22].Reset();
                     myStopWatchObjects[22].Start();
-                }
+                //}
 
                 if (myObjects[22].Value == 258)
                 {
@@ -2971,7 +2984,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime8.Text = time;
 
-                if (myObjects[23].Value == 261)
+                /*if (myObjects[23].Value == 261)
                 {
 
                     myStopWatchObjects[23].Start();
@@ -2979,11 +2992,12 @@ namespace NurseCalling
                     myStopWatchObjects[23].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[23].Stop();
                     rough1.myRjButton8.Text = "00:00";
+                    myStopWatchObjects[23].Reset();
                     myStopWatchObjects[23].Start();
-                }
+                //}
 
                 if (myObjects[23].Value == 258)
                 {
@@ -3016,7 +3030,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime9.Text = time;
 
-                if (myObjects[24].Value == 261)
+                /*if (myObjects[24].Value == 261)
                 {
 
                     myStopWatchObjects[24].Start();
@@ -3024,11 +3038,12 @@ namespace NurseCalling
                     myStopWatchObjects[24].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[24].Stop();
                     s2.myRjButton9.Text = "00:00";
+                    myStopWatchObjects[24].Reset();
                     myStopWatchObjects[24].Start();
-                }
+                //}
 
                 if (myObjects[24].Value == 258)
                 {
@@ -3061,7 +3076,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime10.Text = time;
 
-                if (myObjects[25].Value == 261)
+                /*if (myObjects[25].Value == 261)
                 {
 
                     myStopWatchObjects[25].Start();
@@ -3069,11 +3084,12 @@ namespace NurseCalling
                     myStopWatchObjects[25].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[25].Stop();
                     rough1.myRjButton10.Text = "00:00";
+                    myStopWatchObjects[25].Reset();
                     myStopWatchObjects[25].Start();
-                }
+                //}
 
                 if (myObjects[25].Value == 258)
                 {
@@ -3106,7 +3122,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime11.Text = time;
 
-                if (myObjects[26].Value == 261)
+                /*if (myObjects[26].Value == 261)
                 {
                     
                     myStopWatchObjects[26].Start();
@@ -3114,11 +3130,12 @@ namespace NurseCalling
                     myStopWatchObjects[26].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[26].Stop();
                     rough1.myRjButton11.Text = "00:00";
+                    myStopWatchObjects[26].Reset();
                     myStopWatchObjects[26].Start();
-                }
+                //}
 
                 if (myObjects[26].Value == 258)
                 {
@@ -3151,7 +3168,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime12.Text = time;
 
-                if (myObjects[27].Value == 261)
+                /*if (myObjects[27].Value == 261)
                 {
 
                     myStopWatchObjects[27].Start();
@@ -3159,11 +3176,12 @@ namespace NurseCalling
                     myStopWatchObjects[27].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[27].Stop();
                     rough1.myRjButton12.Text = "00:00";
-                    myStopWatchObjects[27].Start();
-                }
+                myStopWatchObjects[27].Reset();
+                myStopWatchObjects[27].Start();
+                //}
 
                 if (myObjects[27].Value == 258)
                 {
@@ -3196,7 +3214,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime13.Text = time;
 
-                if (myObjects[28].Value == 261)
+                /*if (myObjects[28].Value == 261)
                 {
 
                     myStopWatchObjects[28].Start();
@@ -3204,11 +3222,12 @@ namespace NurseCalling
                     myStopWatchObjects[28].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[28].Stop();
                     rough1.myRjButton13.Text = "00:00";
+                    myStopWatchObjects[28].Reset();
                     myStopWatchObjects[28].Start();
-                }
+                //}
 
                 if (myObjects[28].Value == 258)
                 {
@@ -3241,7 +3260,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime14.Text = time;
 
-                if (myObjects[29].Value == 261)
+                /*if (myObjects[29].Value == 261)
                 {
 
                     myStopWatchObjects[29].Start();
@@ -3249,11 +3268,12 @@ namespace NurseCalling
                     myStopWatchObjects[29].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[29].Stop();
                     rough1.myRjButton14.Text = "00:00";
+                    myStopWatchObjects[29].Reset();
                     myStopWatchObjects[29].Start();
-                }
+                //}
 
                 if (myObjects[29].Value == 258)
                 {
@@ -3287,7 +3307,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime15.Text = time;
 
-                if (myObjects[30].Value == 261)
+                /*if (myObjects[30].Value == 261)
                 {
 
                     myStopWatchObjects[30].Start();
@@ -3295,11 +3315,12 @@ namespace NurseCalling
                     myStopWatchObjects[30].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[30].Stop();
                     rough1.myRjButton15.Text = "00:00";
+                    myStopWatchObjects[30].Reset();
                     myStopWatchObjects[30].Start();
-                }
+               // }
 
                 if (myObjects[30].Value == 258)
                 {
@@ -3332,18 +3353,19 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime16.Text = time;
 
-                if (myObjects[31].Value == 261)
+                /*if (myObjects[31].Value == 261)
                 {
                     myStopWatchObjects[31].Start();
                     rough1.myRjButton16.Text = "00:00";
                     myStopWatchObjects[31].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[31].Stop();
                     rough1.myRjButton16.Text = "00:00";
+                    myStopWatchObjects[31].Reset();
                     myStopWatchObjects[31].Start();
-                }
+                //}
 
                 if (myObjects[31].Value == 258)
                 {
@@ -3377,7 +3399,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime1.Text = time;
 
-                if (myObjects[32].Value == 261)
+                /*if (myObjects[32].Value == 261)
                 {
 
                     myStopWatchObjects[32].Stop();
@@ -3385,12 +3407,12 @@ namespace NurseCalling
                     rough2.myRjButton1.Text = "00:00";
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[32].Stop();
                     myStopWatchObjects[32].Reset();
                     rough2.myRjButton1.Text = "00:00";
                     myStopWatchObjects[32].Start();
-                }
+                //}
                 if (myObjects[32].Value == 258)
                 {
                     // This is the last one i have changed ------------------------
@@ -3423,7 +3445,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime2.Text = time;
 
-                if (myObjects[33].Value == 261)
+                /*if (myObjects[33].Value == 261)
                 {
 
                     myStopWatchObjects[33].Start();
@@ -3431,12 +3453,12 @@ namespace NurseCalling
                     myStopWatchObjects[33].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[33].Stop();
                     rough2.myRjButton2.Text = "00:00";
                     myStopWatchObjects[33].Reset();
                     myStopWatchObjects[33].Start();
-                }
+                //}
 
                 if (myObjects[33].Value == 258)
                 {
@@ -3470,7 +3492,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime3.Text = time;
 
-                if (myObjects[34].Value == 261)
+                /*if (myObjects[34].Value == 261)
                 {
 
                     myStopWatchObjects[34].Start();
@@ -3478,12 +3500,12 @@ namespace NurseCalling
                     myStopWatchObjects[34].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[34].Stop();
                     rough2.myRjButton3.Text = "00:00";
                     myStopWatchObjects[34].Reset();
                     myStopWatchObjects[34].Start();
-                }
+                //}
 
                 if (myObjects[34].Value == 258)
                 {
@@ -3516,7 +3538,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime4.Text = time;
 
-                if (myObjects[35].Value == 261)
+                /*if (myObjects[35].Value == 261)
                 {
 
                     myStopWatchObjects[35].Start();
@@ -3524,12 +3546,12 @@ namespace NurseCalling
                     myStopWatchObjects[35].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[35].Stop();
                     rough2.myRjButton4.Text = "00:00";
                     myStopWatchObjects[35].Reset();
                     myStopWatchObjects[35].Start();
-                }
+                //}
 
                 if (myObjects[35].Value == 258)
                 {
@@ -3563,7 +3585,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime5.Text = time;
 
-                if (myObjects[36].Value == 261)
+                /*if (myObjects[36].Value == 261)
                 {
 
                     myStopWatchObjects[36].Start();
@@ -3571,12 +3593,12 @@ namespace NurseCalling
                     myStopWatchObjects[36].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[36].Stop();
                     rough2.myRjButton5.Text = "00:00";
                     myStopWatchObjects[36].Reset();
                     myStopWatchObjects[36].Start();
-                }
+                //}
 
                 if (myObjects[36].Value == 258)
                 {
@@ -3609,7 +3631,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime6.Text = time;
 
-                if (myObjects[37].Value == 261)
+                /*if (myObjects[37].Value == 261)
                 {
 
                     myStopWatchObjects[37].Start();
@@ -3617,11 +3639,12 @@ namespace NurseCalling
                     myStopWatchObjects[37].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[37].Stop();
                     rough2.myRjButton6.Text = "00:00";
+                    myStopWatchObjects[37].Reset();
                     myStopWatchObjects[37].Start();
-                }
+                //}
 
                 if (myObjects[37].Value == 258)
                 {
@@ -3654,7 +3677,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime7.Text = time;
 
-                if (myObjects[38].Value == 261)
+                /*if (myObjects[38].Value == 261)
                 {
 
                     myStopWatchObjects[38].Start();
@@ -3662,11 +3685,12 @@ namespace NurseCalling
                     myStopWatchObjects[38].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[38].Stop();
                     rough2.myRjButton7.Text = "00:00";
+                    myStopWatchObjects[38].Reset();
                     myStopWatchObjects[38].Start();
-                }
+                //}
 
                 if (myObjects[38].Value == 258)
                 {
@@ -3700,7 +3724,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime8.Text = time;
 
-                if (myObjects[39].Value == 261)
+                /*if (myObjects[39].Value == 261)
                 {
 
                     myStopWatchObjects[39].Start();
@@ -3708,11 +3732,12 @@ namespace NurseCalling
                     myStopWatchObjects[39].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[39].Stop();
                     rough2.myRjButton8.Text = "00:00";
+                    myStopWatchObjects[39].Reset();
                     myStopWatchObjects[39].Start();
-                }
+               // }
 
                 if (myObjects[39].Value == 258)
                 {
@@ -3745,7 +3770,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime9.Text = time;
 
-                if (myObjects[40].Value == 261)
+                /*if (myObjects[40].Value == 261)
                 {
 
                     myStopWatchObjects[40].Start();
@@ -3753,11 +3778,12 @@ namespace NurseCalling
                     myStopWatchObjects[40].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[40].Stop();
                     rough2.myRjButton9.Text = "00:00";
+                    myStopWatchObjects[40].Reset();
                     myStopWatchObjects[40].Start();
-                }
+                //}
 
                 if (myObjects[40].Value == 258)
                 {
@@ -3790,7 +3816,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime10.Text = time;
 
-                if (myObjects[41].Value == 261)
+                /*if (myObjects[41].Value == 261)
                 {
 
                     myStopWatchObjects[41].Start();
@@ -3798,11 +3824,12 @@ namespace NurseCalling
                     myStopWatchObjects[41].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[41].Stop();
                     rough2.myRjButton10.Text = "00:00";
+                    myStopWatchObjects[41].Reset();
                     myStopWatchObjects[41].Start();
-                }
+                //}
 
                 if (myObjects[41].Value == 258)
                 {
@@ -3835,7 +3862,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime11.Text = time;
 
-                if (myObjects[42].Value == 261)
+                /*if (myObjects[42].Value == 261)
                 {
 
                     myStopWatchObjects[42].Start();
@@ -3843,11 +3870,12 @@ namespace NurseCalling
                     myStopWatchObjects[42].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[42].Stop();
                     rough2.myRjButton11.Text = "00:00";
+                    myStopWatchObjects[42].Reset();
                     myStopWatchObjects[42].Start();
-                }
+                //}
 
                 if (myObjects[42].Value == 258)
                 {
@@ -3880,7 +3908,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime12.Text = time;
 
-                if (myObjects[43].Value == 261)
+                /*if (myObjects[43].Value == 261)
                 {
 
                     myStopWatchObjects[43].Start();
@@ -3888,11 +3916,12 @@ namespace NurseCalling
                     myStopWatchObjects[43].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[43].Stop();
                     rough2.myRjButton12.Text = "00:00";
+                    myStopWatchObjects[43].Reset();
                     myStopWatchObjects[43].Start();
-                }
+                //}
 
                 if (myObjects[43].Value == 258)
                 {
@@ -3925,7 +3954,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime13.Text = time;
 
-                if (myObjects[44].Value == 261)
+                /*if (myObjects[44].Value == 261)
                 {
 
                     myStopWatchObjects[44].Start();
@@ -3933,11 +3962,12 @@ namespace NurseCalling
                     myStopWatchObjects[44].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[44].Stop();
                     rough2.myRjButton13.Text = "00:00";
+                    myStopWatchObjects[44].Reset();
                     myStopWatchObjects[44].Start();
-                }
+                //}
 
                 if (myObjects[44].Value == 258)
                 {
@@ -3970,7 +4000,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime14.Text = time;
 
-                if (myObjects[45].Value == 261)
+                /*if (myObjects[45].Value == 261)
                 {
 
                     myStopWatchObjects[45].Start();
@@ -3978,11 +4008,12 @@ namespace NurseCalling
                     myStopWatchObjects[45].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[45].Stop();
                     rough2.myRjButton14.Text = "00:00";
+                    myStopWatchObjects[45].Reset();
                     myStopWatchObjects[45].Start();
-                }
+                //}
 
                 if (myObjects[45].Value == 258)
                 {
@@ -4016,7 +4047,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime15.Text = time;
 
-                if (myObjects[46].Value == 261)
+                /*if (myObjects[46].Value == 261)
                 {
 
                     myStopWatchObjects[46].Start();
@@ -4024,11 +4055,12 @@ namespace NurseCalling
                     myStopWatchObjects[46].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[46].Stop();
                     rough2.myRjButton15.Text = "00:00";
+                    myStopWatchObjects[46].Reset();
                     myStopWatchObjects[46].Start();
-                }
+                //}
 
                 if (myObjects[46].Value == 258)
                 {
@@ -4061,18 +4093,19 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime16.Text = time;
 
-                if (myObjects[47].Value == 261)
+                /*if (myObjects[47].Value == 261)
                 {
                     myStopWatchObjects[47].Start();
                     rough2.myRjButton16.Text = "00:00";
                     myStopWatchObjects[47].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[47].Stop();
                     rough2.myRjButton16.Text = "00:00";
+                    myStopWatchObjects[47].Reset();
                     myStopWatchObjects[47].Start();
-                }
+                //}
 
                 if (myObjects[47].Value == 258)
                 {
@@ -4107,7 +4140,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime1.Text = time;
 
-                if (myObjects[48].Value == 261)
+                /*if (myObjects[48].Value == 261)
                 {
 
                     myStopWatchObjects[48].Stop();
@@ -4115,12 +4148,12 @@ namespace NurseCalling
                     rough3.myRjButton1.Text = "00:00";
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[48].Stop();
                     myStopWatchObjects[48].Reset();
                     rough3.myRjButton1.Text = "00:00";
                     myStopWatchObjects[48].Start();
-                }
+                //}
                 if (myObjects[48].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
@@ -4152,7 +4185,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime2.Text = time;
 
-                if (myObjects[49].Value == 261)
+                /*if (myObjects[49].Value == 261)
                 {
 
                     myStopWatchObjects[49].Start();
@@ -4160,12 +4193,12 @@ namespace NurseCalling
                     myStopWatchObjects[49].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[49].Stop();
                     rough3.myRjButton2.Text = "00:00";
                     myStopWatchObjects[49].Reset();
                     myStopWatchObjects[49].Start();
-                }
+               // }
 
                 if (myObjects[49].Value == 258)
                 {
@@ -4199,7 +4232,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime3.Text = time;
 
-                if (myObjects[50].Value == 261)
+                /*if (myObjects[50].Value == 261)
                 {
 
                     myStopWatchObjects[50].Start();
@@ -4207,12 +4240,12 @@ namespace NurseCalling
                     myStopWatchObjects[50].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[50].Stop();
                     rough3.myRjButton3.Text = "00:00";
                     myStopWatchObjects[50].Reset();
                     myStopWatchObjects[50].Start();
-                }
+                //}
 
                 if (myObjects[50].Value == 258)
                 {
@@ -4245,7 +4278,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime4.Text = time;
 
-                if (myObjects[51].Value == 261)
+                /*if (myObjects[51].Value == 261)
                 {
 
                     myStopWatchObjects[51].Start();
@@ -4253,12 +4286,12 @@ namespace NurseCalling
                     myStopWatchObjects[51].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[51].Stop();
                     rough3.myRjButton4.Text = "00:00";
                     myStopWatchObjects[51].Reset();
                     myStopWatchObjects[51].Start();
-                }
+                //}
 
                 if (myObjects[51].Value == 258)
                 {
@@ -4292,7 +4325,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime5.Text = time;
 
-                if (myObjects[52].Value == 261)
+                /*if (myObjects[52].Value == 261)
                 {
 
                     myStopWatchObjects[52].Start();
@@ -4300,12 +4333,12 @@ namespace NurseCalling
                     myStopWatchObjects[52].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[52].Stop();
                     rough3.myRjButton5.Text = "00:00";
                     myStopWatchObjects[52].Reset();
                     myStopWatchObjects[52].Start();
-                }
+                //}
 
                 if (myObjects[52].Value == 258)
                 {
@@ -4338,7 +4371,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime6.Text = time;
 
-                if (myObjects[53].Value == 261)
+                /*if (myObjects[53].Value == 261)
                 {
 
                     myStopWatchObjects[53].Start();
@@ -4346,11 +4379,12 @@ namespace NurseCalling
                     myStopWatchObjects[53].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[53].Stop();
                     rough3.myRjButton6.Text = "00:00";
+                    myStopWatchObjects[53].Reset();
                     myStopWatchObjects[53].Start();
-                }
+                //}
 
                 if (myObjects[53].Value == 258)
                 {
@@ -4383,7 +4417,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime7.Text = time;
 
-                if (myObjects[54].Value == 261)
+                /*if (myObjects[54].Value == 261)
                 {
 
                     myStopWatchObjects[54].Start();
@@ -4391,11 +4425,12 @@ namespace NurseCalling
                     myStopWatchObjects[54].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[54].Stop();
                     rough3.myRjButton7.Text = "00:00";
+                    myStopWatchObjects[54].Reset();
                     myStopWatchObjects[54].Start();
-                }
+                //}
 
                 if (myObjects[55].Value == 258)
                 {
@@ -4429,7 +4464,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime8.Text = time;
 
-                if (myObjects[56].Value == 261)
+                /*if (myObjects[56].Value == 261)
                 {
 
                     myStopWatchObjects[56].Start();
@@ -4437,11 +4472,12 @@ namespace NurseCalling
                     myStopWatchObjects[56].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[56].Stop();
                     rough3.myRjButton8.Text = "00:00";
+                    myStopWatchObjects[56].Reset();
                     myStopWatchObjects[56].Start();
-                }
+                //}
 
                 if (myObjects[56].Value == 258)
                 {
@@ -4474,7 +4510,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime9.Text = time;
 
-                if (myObjects[57].Value == 261)
+                /*if (myObjects[57].Value == 261)
                 {
 
                     myStopWatchObjects[57].Start();
@@ -4482,11 +4518,12 @@ namespace NurseCalling
                     myStopWatchObjects[57].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[57].Stop();
                     rough3.myRjButton9.Text = "00:00";
+                    myStopWatchObjects[57].Reset();
                     myStopWatchObjects[57].Start();
-                }
+                //}
 
                 if (myObjects[57].Value == 258)
                 {
@@ -4519,7 +4556,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime10.Text = time;
 
-                if (myObjects[58].Value == 261)
+                /*if (myObjects[58].Value == 261)
                 {
 
                     myStopWatchObjects[58].Start();
@@ -4527,11 +4564,12 @@ namespace NurseCalling
                     myStopWatchObjects[58].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[58].Stop();
                     rough3.myRjButton10.Text = "00:00";
+                    myStopWatchObjects[58].Reset();
                     myStopWatchObjects[58].Start();
-                }
+                //}
 
                 if (myObjects[58].Value == 258)
                 {
@@ -4564,7 +4602,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime11.Text = time;
 
-                if (myObjects[59].Value == 261)
+                /*if (myObjects[59].Value == 261)
                 {
 
                     myStopWatchObjects[59].Start();
@@ -4572,11 +4610,12 @@ namespace NurseCalling
                     myStopWatchObjects[59].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[59].Stop();
                     rough3.myRjButton11.Text = "00:00";
+                    myStopWatchObjects[59].Reset();
                     myStopWatchObjects[59].Start();
-                }
+                //}
 
                 if (myObjects[59].Value == 258)
                 {
@@ -4609,7 +4648,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime12.Text = time;
 
-                if (myObjects[59].Value == 261)
+                /*if (myObjects[59].Value == 261)
                 {
 
                     myStopWatchObjects[59].Start();
@@ -4617,11 +4656,12 @@ namespace NurseCalling
                     myStopWatchObjects[59].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[59].Stop();
                     rough3.myRjButton12.Text = "00:00";
+                    myStopWatchObjects[59].Reset();
                     myStopWatchObjects[59].Start();
-                }
+                //}
 
                 if (myObjects[59].Value == 258)
                 {
@@ -4654,7 +4694,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime13.Text = time;
 
-                if (myObjects[60].Value == 261)
+                /*if (myObjects[60].Value == 261)
                 {
 
                     myStopWatchObjects[60].Start();
@@ -4662,11 +4702,12 @@ namespace NurseCalling
                     myStopWatchObjects[60].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[60].Stop();
                     rough3.myRjButton13.Text = "00:00";
+                    myStopWatchObjects[60].Reset();
                     myStopWatchObjects[60].Start();
-                }
+                //}
 
                 if (myObjects[60].Value == 258)
                 {
@@ -4699,7 +4740,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime14.Text = time;
 
-                if (myObjects[61].Value == 261)
+                /*if (myObjects[61].Value == 261)
                 {
 
                     myStopWatchObjects[61].Start();
@@ -4707,11 +4748,12 @@ namespace NurseCalling
                     myStopWatchObjects[61].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[61].Stop();
                     rough3.myRjButton14.Text = "00:00";
+                    myStopWatchObjects[61].Reset();
                     myStopWatchObjects[61].Start();
-                }
+                //}
 
                 if (myObjects[61].Value == 258)
                 {
@@ -4745,7 +4787,7 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime15.Text = time;
 
-                if (myObjects[62].Value == 261)
+                /*if (myObjects[62].Value == 261)
                 {
 
                     myStopWatchObjects[62].Start();
@@ -4753,11 +4795,12 @@ namespace NurseCalling
                     myStopWatchObjects[62].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[62].Stop();
                     rough3.myRjButton15.Text = "00:00";
+                    myStopWatchObjects[62].Reset();
                     myStopWatchObjects[62].Start();
-                }
+                //}
 
                 if (myObjects[62].Value == 258)
                 {
@@ -4790,18 +4833,19 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime16.Text = time;
 
-                if (myObjects[63].Value == 261)
+                /*if (myObjects[63].Value == 261)
                 {
                     myStopWatchObjects[63].Start();
                     rough3.myRjButton16.Text = "00:00";
                     myStopWatchObjects[63].Reset();
                 }
                 else
-                {
+                {*/
                     myStopWatchObjects[63].Stop();
                     rough3.myRjButton16.Text = "00:00";
+                    myStopWatchObjects[63].Reset();
                     myStopWatchObjects[63].Start();
-                }
+                //}
 
                 if (myObjects[63].Value == 258)
                 {
