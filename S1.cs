@@ -2678,11 +2678,21 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[16].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 17";//258
+                    dataModel.registerId = "17";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[16].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[16].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 17";//258
+                    dataModel.registerId = "17";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[16].Value == 261)
                 {
@@ -2692,6 +2702,11 @@ namespace NurseCalling
                 else if (myObjects[16].Value == 264)
                 {
                     rough1.rjButton1.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[16].Value.ToString();
+                    //dataModel.lastCallStatus = "Care From 17";//258
+                    dataModel.registerId = "17";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2724,11 +2739,21 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[17].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 18";//258
+                    dataModel.registerId = "18";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[17].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[17].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 18";//258
+                    dataModel.registerId = "18";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[17].Value == 261)
                 {
@@ -2738,6 +2763,11 @@ namespace NurseCalling
                 else if (myObjects[17].Value == 264)
                 {
                     rough1.rjButton2.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[17].Value.ToString();
+                    //dataModel.lastCallStatus = "Care From 18";//258
+                    dataModel.registerId = "18";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
 
             };
@@ -2771,11 +2801,23 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[18].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 19";//258
+                    dataModel.registerId = "19";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[18].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Orange;
+                    dataModel.lastCallValue = myObjects[18].Value.ToString();
+                    dataModel.lastCallStatus = "Care From 19";//258
+                    dataModel.registerId = "19";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
+
+                   // CallValSet("19","Care From 19", myObjects[18].Value.ToString(), dateTime);
                 }
                 else if (myObjects[18].Value == 261)
                 {
@@ -2785,6 +2827,13 @@ namespace NurseCalling
                 else if (myObjects[18].Value == 264)
                 {
                     rough1.rjButton3.BackColor = Color.Blue;
+                    dataModel.lastCallValue = myObjects[18].Value.ToString();
+                    //dataModel.lastCallStatus = "Care From 19";//258
+                    dataModel.registerId = "19";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
+
+                    
                 }
 
             };
@@ -2817,11 +2866,19 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Red;
+                    dataModel.lastCallValue = myObjects[19].Value.ToString();
+                    dataModel.lastCallStatus = "Call From 20";//258
+                    dataModel.registerId = "20";
+                    dataModel.dateTime = dateTime;
+                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
                 else if (myObjects[19].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Orange;
+
+
+                    CallValSet("20", "Care From 19", myObjects[19].Value.ToString(), dateTime);
                 }
                 else if (myObjects[19].Value == 261)
                 {
@@ -2831,6 +2888,7 @@ namespace NurseCalling
                 else if (myObjects[19].Value == 264)
                 {
                     rough1.rjButton4.BackColor = Color.Blue;
+                    CallValSet("20", "", myObjects[19].Value.ToString(), dateTime);
                 }
 
             };
@@ -2864,11 +2922,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle5);
                     rough1.rjButton5.BackColor = Color.Red;
+                    CallValSet("21", "Call From 21", myObjects[20].Value.ToString(), dateTime);
                 }
                 else if (myObjects[20].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle5);
                     rough1.rjButton5.BackColor = Color.Orange;
+                    CallValSet("21", "Care From 21", myObjects[20].Value.ToString(), dateTime);
                 }
                 else if (myObjects[20].Value == 261)
                 {
@@ -2878,6 +2938,7 @@ namespace NurseCalling
                 else if (myObjects[20].Value == 264)
                 {
                     rough1.rjButton5.BackColor = Color.Blue;
+                    CallValSet("21", "", myObjects[20].Value.ToString(), dateTime);
                 }
 
             };
@@ -2910,11 +2971,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.Red;
+                    CallValSet("22", "Call From 22", myObjects[21].Value.ToString(), dateTime);
                 }
                 else if (myObjects[21].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.Orange;
+                    CallValSet("22", "Care From 22", myObjects[21].Value.ToString(), dateTime);
                 }
                 else if (myObjects[21].Value == 261)
                 {
@@ -2924,6 +2987,7 @@ namespace NurseCalling
                 else if (myObjects[21].Value == 264)
                 {
                     rough1.rjButton6.BackColor = Color.Blue;
+                    CallValSet("22", "", myObjects[21].Value.ToString(), dateTime);
                 }
 
             };
@@ -2956,11 +3020,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle7);
                     rough1.rjButton7.BackColor = Color.Red;
+                    CallValSet("23", "Call From 23", myObjects[22].Value.ToString(), dateTime);
                 }
                 else if (myObjects[22].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle7);
                     rough1.rjButton7.BackColor = Color.Orange;
+                    CallValSet("23", "Care From 23", myObjects[22].Value.ToString(), dateTime);
                 }
                 else if (myObjects[22].Value == 261)
                 {
@@ -2970,6 +3036,7 @@ namespace NurseCalling
                 else if (myObjects[22].Value == 264)
                 {
                     rough1.rjButton7.BackColor = Color.Blue;
+                    CallValSet("23", "", myObjects[22].Value.ToString(), dateTime);
                 }
 
             };
@@ -3003,11 +3070,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle8);
                     rough1.rjButton8.BackColor = Color.Red;
+                    CallValSet("24", "Call From 24", myObjects[23].Value.ToString(), dateTime);
                 }
                 else if (myObjects[23].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle8);
                     rough1.rjButton8.BackColor = Color.Orange;
+                    CallValSet("24", "Care From 24", myObjects[23].Value.ToString(), dateTime);
                 }
                 else if (myObjects[23].Value == 261)
                 {
@@ -3017,6 +3086,7 @@ namespace NurseCalling
                 else if (myObjects[23].Value == 264)
                 {
                     rough1.rjButton8.BackColor = Color.Blue;
+                    CallValSet("24", "", myObjects[23].Value.ToString(), dateTime);
                 }
 
             };
@@ -3049,11 +3119,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle9);
                     rough1.rjButton9.BackColor = Color.Red;
+                    CallValSet("25", "Call From 25", myObjects[24].Value.ToString(), dateTime);
                 }
                 else if (myObjects[24].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle9);
                     rough1.rjButton9.BackColor = Color.Orange;
+                    CallValSet("25", "Care From 25", myObjects[24].Value.ToString(), dateTime);
                 }
                 else if (myObjects[24].Value == 261)
                 {
@@ -3063,6 +3135,7 @@ namespace NurseCalling
                 else if (myObjects[24].Value == 264)
                 {
                     rough1.rjButton9.BackColor = Color.Blue;
+                    CallValSet("25", "", myObjects[24].Value.ToString(), dateTime);
                 }
 
             };
@@ -3095,11 +3168,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.Red;
+                    CallValSet("26", "Call From 26", myObjects[25].Value.ToString(), dateTime);
                 }
                 else if (myObjects[25].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.Orange;
+                    CallValSet("26", "Care From 26", myObjects[25].Value.ToString(), dateTime);
                 }
                 else if (myObjects[25].Value == 261)
                 {
@@ -3109,6 +3184,7 @@ namespace NurseCalling
                 else if (myObjects[25].Value == 264)
                 {
                     rough1.rjButton10.BackColor = Color.Blue;
+                    CallValSet("26", "", myObjects[25].Value.ToString(), dateTime);
                 }
 
             };
@@ -3141,11 +3217,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle11);
                     rough1.rjButton11.BackColor = Color.Red;
+                    CallValSet("27", "Call From 27", myObjects[26].Value.ToString(), dateTime);
                 }
                 else if (myObjects[26].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle11);
                     rough1.rjButton11.BackColor = Color.Orange;
+                    CallValSet("27", "Care From 27", myObjects[26].Value.ToString(), dateTime);
                 }
                 else if (myObjects[26].Value == 261)
                 {
@@ -3155,6 +3233,7 @@ namespace NurseCalling
                 else if (myObjects[26].Value == 264)
                 {
                     rough1.rjButton11.BackColor = Color.Blue;
+                    CallValSet("27", "", myObjects[26].Value.ToString(), dateTime);
                 }
 
             };
@@ -3187,11 +3266,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle12);
                     rough1.rjButton12.BackColor = Color.Red;
+                    CallValSet("28", "Call From 28", myObjects[27].Value.ToString(), dateTime);
                 }
                 else if (myObjects[27].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle12);
                     rough1.rjButton12.BackColor = Color.Orange;
+                    CallValSet("28", "Care From 28", myObjects[27].Value.ToString(), dateTime);
                 }
                 else if (myObjects[27].Value == 261)
                 {
@@ -3201,6 +3282,7 @@ namespace NurseCalling
                 else if (myObjects[27].Value == 264)
                 {
                     rough1.rjButton12.BackColor = Color.Blue;
+                    CallValSet("28", "", myObjects[27].Value.ToString(), dateTime);
                 }
 
             };
@@ -3233,11 +3315,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle13);
                     rough1.rjButton13.BackColor = Color.Red;
+                    CallValSet("29", "Call From 29", myObjects[28].Value.ToString(), dateTime);
                 }
                 else if (myObjects[28].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle13);
                     rough1.rjButton13.BackColor = Color.Orange;
+                    CallValSet("29", "Care From 29", myObjects[28].Value.ToString(), dateTime);
                 }
                 else if (myObjects[28].Value == 261)
                 {
@@ -3247,6 +3331,7 @@ namespace NurseCalling
                 else if (myObjects[28].Value == 264)
                 {
                     rough1.rjButton13.BackColor = Color.Blue;
+                    CallValSet("29", "", myObjects[28].Value.ToString(), dateTime);
                 }
 
             };
@@ -3279,11 +3364,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle14);
                     rough1.rjButton14.BackColor = Color.Red;
+                    CallValSet("30", "Call From 30", myObjects[29].Value.ToString(), dateTime);
                 }
                 else if (myObjects[29].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle14);
                     rough1.rjButton14.BackColor = Color.Orange;
+                    CallValSet("30", "Care From 30", myObjects[29].Value.ToString(), dateTime);
                 }
                 else if (myObjects[29].Value == 261)
                 {
@@ -3293,6 +3380,7 @@ namespace NurseCalling
                 else if (myObjects[29].Value == 264)
                 {
                     rough1.rjButton14.BackColor = Color.Blue;
+                    CallValSet("30", "", myObjects[29].Value.ToString(), dateTime);
                 }
 
             };
@@ -3326,11 +3414,13 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle15);
                     rough1.rjButton15.BackColor = Color.Red;
+                    CallValSet("31", "Call From 31", myObjects[30].Value.ToString(), dateTime);
                 }
                 else if (myObjects[30].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle15);
                     rough1.rjButton15.BackColor = Color.Orange;
+                    CallValSet("31", "Care From 31", myObjects[30].Value.ToString(), dateTime);
                 }
                 else if (myObjects[30].Value == 261)
                 {
@@ -3340,6 +3430,7 @@ namespace NurseCalling
                 else if (myObjects[30].Value == 264)
                 {
                     rough1.rjButton15.BackColor = Color.Blue;
+                    CallValSet("31", "", myObjects[30].Value.ToString(), dateTime);
                 }
 
             };
@@ -3371,11 +3462,14 @@ namespace NurseCalling
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle16);
                     rough1.rjButton16.BackColor = Color.Red;
+                    CallValSet("32", "Call From 32", myObjects[31].Value.ToString(), dateTime);
+
                 }
                 else if (myObjects[31].Value == 262)
                 {
                     s2.flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle16);
                     rough1.rjButton16.BackColor = Color.Orange;
+                    CallValSet("32", "Care From 32", myObjects[31].Value.ToString(), dateTime);
                 }
                 else if (myObjects[31].Value == 261)
                 {
@@ -3385,6 +3479,7 @@ namespace NurseCalling
                 else if (myObjects[31].Value == 264)
                 {
                     rough1.rjButton16.BackColor = Color.Blue;
+                    CallValSet("32", "", myObjects[31].Value.ToString(), dateTime);
                 }
 
             };
@@ -3418,11 +3513,13 @@ namespace NurseCalling
                     // This is the last one i have changed ------------------------
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle1);
                     rough2.rjButton1.BackColor = Color.Red;
+                    CallValSet("33", "Call From 33", myObjects[32].Value.ToString(), dateTime);
                 }
                 else if (myObjects[32].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle1);
                     rough2.rjButton1.BackColor = Color.Orange;
+                    CallValSet("33", "Care From 33", myObjects[32].Value.ToString(), dateTime);
                 }
                 else if (myObjects[32].Value == 261)
                 {
@@ -3432,6 +3529,7 @@ namespace NurseCalling
                 else if (myObjects[32].Value == 264)
                 {
                     rough2.rjButton1.BackColor = Color.Blue;
+                    CallValSet("33", "", myObjects[32].Value.ToString(), dateTime);
                 }
 
             };
@@ -3464,11 +3562,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle2);
                     rough2.rjButton2.BackColor = Color.Red;
+                    CallValSet("34", "Call From 34", myObjects[33].Value.ToString(), dateTime);
                 }
                 else if (myObjects[33].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle2);
                     rough2.rjButton2.BackColor = Color.Orange;
+                    CallValSet("34", "Care From 34", myObjects[33].Value.ToString(), dateTime);
                 }
                 else if (myObjects[33].Value == 261)
                 {
@@ -3478,6 +3578,7 @@ namespace NurseCalling
                 else if (myObjects[33].Value == 264)
                 {
                     rough2.rjButton2.BackColor = Color.Blue;
+                    CallValSet("34", "", myObjects[33].Value.ToString(), dateTime);
                 }
 
             };
@@ -3511,11 +3612,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle3);
                     rough2.rjButton3.BackColor = Color.Red;
+                    CallValSet("35", "Call From 35", myObjects[34].Value.ToString(), dateTime);
                 }
                 else if (myObjects[34].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle3);
                     rough2.rjButton3.BackColor = Color.Orange;
+                    CallValSet("35", "Care From 35", myObjects[34].Value.ToString(), dateTime);
                 }
                 else if (myObjects[34].Value == 261)
                 {
@@ -3525,6 +3628,7 @@ namespace NurseCalling
                 else if (myObjects[34].Value == 264)
                 {
                     rough2.rjButton3.BackColor = Color.Blue;
+                    CallValSet("35", "", myObjects[34].Value.ToString(), dateTime);
                 }
 
             };
@@ -3557,11 +3661,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle4);
                     rough2.rjButton4.BackColor = Color.Red;
+                    CallValSet("36", "Call From 36", myObjects[35].Value.ToString(), dateTime);
                 }
                 else if (myObjects[35].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle4);
                     rough2.rjButton4.BackColor = Color.Orange;
+                    CallValSet("36", "Care From 36", myObjects[35].Value.ToString(), dateTime);
                 }
                 else if (myObjects[35].Value == 261)
                 {
@@ -3571,6 +3677,7 @@ namespace NurseCalling
                 else if (myObjects[35].Value == 264)
                 {
                     rough2.rjButton4.BackColor = Color.Blue;
+                    CallValSet("36", "", myObjects[35].Value.ToString(), dateTime);
                 }
 
             };
@@ -3604,11 +3711,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle5);
                     rough2.rjButton5.BackColor = Color.Red;
+                    CallValSet("37", "Call From 37", myObjects[36].Value.ToString(), dateTime);
                 }
                 else if (myObjects[36].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle5);
                     rough2.rjButton5.BackColor = Color.Orange;
+                    CallValSet("37", "Care From 37", myObjects[36].Value.ToString(), dateTime);
                 }
                 else if (myObjects[36].Value == 261)
                 {
@@ -3618,6 +3727,7 @@ namespace NurseCalling
                 else if (myObjects[36].Value == 264)
                 {
                     rough2.rjButton5.BackColor = Color.Blue;
+                    CallValSet("37", "", myObjects[36].Value.ToString(), dateTime);
                 }
 
             };
@@ -3650,11 +3760,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle6);
                     rough2.rjButton6.BackColor = Color.Red;
+                    CallValSet("38", "Call From 38", myObjects[37].Value.ToString(), dateTime);
                 }
                 else if (myObjects[37].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle6);
                     rough2.rjButton6.BackColor = Color.Orange;
+                    CallValSet("38", "Care From 38", myObjects[37].Value.ToString(), dateTime);
                 }
                 else if (myObjects[37].Value == 261)
                 {
@@ -3664,6 +3776,7 @@ namespace NurseCalling
                 else if (myObjects[37].Value == 264)
                 {
                     rough2.rjButton6.BackColor = Color.Blue;
+                    CallValSet("38", "", myObjects[37].Value.ToString(), dateTime);
                 }
 
             };
@@ -3696,11 +3809,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle7);
                     rough2.rjButton7.BackColor = Color.Red;
+                    CallValSet("39", "Call From 39", myObjects[38].Value.ToString(), dateTime);
                 }
                 else if (myObjects[38].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle7);
                     rough2.rjButton7.BackColor = Color.Orange;
+                    CallValSet("39", "Care From 39", myObjects[38].Value.ToString(), dateTime);
                 }
                 else if (myObjects[38].Value == 261)
                 {
@@ -3710,6 +3825,7 @@ namespace NurseCalling
                 else if (myObjects[38].Value == 264)
                 {
                     rough2.rjButton7.BackColor = Color.Blue;
+                    CallValSet("39", "", myObjects[38].Value.ToString(), dateTime);
                 }
 
             };
@@ -3743,11 +3859,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton8.BackColor = Color.Red;
+                    CallValSet("40", "Call From 40", myObjects[39].Value.ToString(), dateTime);
                 }
                 else if (myObjects[39].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle8);
                     rough2.rjButton8.BackColor = Color.Orange;
+                    CallValSet("40", "Care From 40", myObjects[39].Value.ToString(), dateTime);
                 }
                 else if (myObjects[39].Value == 261)
                 {
@@ -3757,6 +3875,7 @@ namespace NurseCalling
                 else if (myObjects[39].Value == 264)
                 {
                     rough2.rjButton8.BackColor = Color.Blue;
+                    CallValSet("40", "", myObjects[39].Value.ToString(), dateTime);
                 }
 
             };
@@ -3789,11 +3908,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle9);
                     rough2.rjButton9.BackColor = Color.Red;
+                    CallValSet("41", "Call From 41", myObjects[40].Value.ToString(), dateTime);
                 }
                 else if (myObjects[40].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle9);
                     rough2.rjButton9.BackColor = Color.Orange;
+                    CallValSet("41", "Care From 41", myObjects[40].Value.ToString(), dateTime);
                 }
                 else if (myObjects[40].Value == 261)
                 {
@@ -3803,6 +3924,7 @@ namespace NurseCalling
                 else if (myObjects[40].Value == 264)
                 {
                     rough2.rjButton9.BackColor = Color.Blue;
+                    CallValSet("41", "", myObjects[40].Value.ToString(), dateTime);
                 }
 
             };
@@ -3835,11 +3957,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle10);
                     rough2.rjButton10.BackColor = Color.Red;
+                    CallValSet("42", "Call From 42", myObjects[41].Value.ToString(), dateTime);
                 }
                 else if (myObjects[41].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle10);
                     rough2.rjButton10.BackColor = Color.Orange;
+                    CallValSet("42", "Care From 42", myObjects[41].Value.ToString(), dateTime);
                 }
                 else if (myObjects[41].Value == 261)
                 {
@@ -3849,6 +3973,7 @@ namespace NurseCalling
                 else if (myObjects[41].Value == 264)
                 {
                     rough2.rjButton10.BackColor = Color.Blue;
+                    CallValSet("42", "", myObjects[41].Value.ToString(), dateTime);
                 }
 
             };
@@ -3881,11 +4006,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle11);
                     rough2.rjButton11.BackColor = Color.Red;
+                    CallValSet("43", "Call From 43", myObjects[42].Value.ToString(), dateTime);
                 }
                 else if (myObjects[42].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle11);
                     rough2.rjButton11.BackColor = Color.Orange;
+                    CallValSet("43", "Care From 43", myObjects[42].Value.ToString(), dateTime);
                 }
                 else if (myObjects[42].Value == 261)
                 {
@@ -3895,6 +4022,7 @@ namespace NurseCalling
                 else if (myObjects[42].Value == 264)
                 {
                     rough2.rjButton11.BackColor = Color.Blue;
+                    CallValSet("43", "", myObjects[42].Value.ToString(), dateTime);
                 }
 
             };
@@ -3927,11 +4055,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle12);
                     rough2.rjButton12.BackColor = Color.Red;
+                    CallValSet("44", "Call From 44", myObjects[43].Value.ToString(), dateTime);
                 }
                 else if (myObjects[43].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle12);
                     rough2.rjButton12.BackColor = Color.Orange;
+                    CallValSet("44", "Care From 44", myObjects[43].Value.ToString(), dateTime);
                 }
                 else if (myObjects[43].Value == 261)
                 {
@@ -3941,6 +4071,7 @@ namespace NurseCalling
                 else if (myObjects[43].Value == 264)
                 {
                     rough2.rjButton12.BackColor = Color.Blue;
+                    CallValSet("44", "", myObjects[43].Value.ToString(), dateTime);
                 }
 
             };
@@ -3973,11 +4104,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle13);
                     rough2.rjButton13.BackColor = Color.Red;
+                    CallValSet("45", "Call From 45", myObjects[44].Value.ToString(), dateTime);
                 }
                 else if (myObjects[44].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle13);
                     rough2.rjButton13.BackColor = Color.Orange;
+                    CallValSet("45", "Care From 45", myObjects[44].Value.ToString(), dateTime);
                 }
                 else if (myObjects[44].Value == 261)
                 {
@@ -3987,6 +4120,7 @@ namespace NurseCalling
                 else if (myObjects[44].Value == 264)
                 {
                     rough2.rjButton13.BackColor = Color.Blue;
+                    CallValSet("45", "", myObjects[44].Value.ToString(), dateTime);
                 }
 
             };
@@ -4019,11 +4153,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle14);
                     rough2.rjButton14.BackColor = Color.Red;
+                    CallValSet("46", "Call From 46", myObjects[45].Value.ToString(), dateTime);
                 }
                 else if (myObjects[45].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle14);
                     rough2.rjButton14.BackColor = Color.Orange;
+                    CallValSet("46", "Care From 46", myObjects[45].Value.ToString(), dateTime);
                 }
                 else if (myObjects[45].Value == 261)
                 {
@@ -4033,6 +4169,7 @@ namespace NurseCalling
                 else if (myObjects[45].Value == 264)
                 {
                     rough2.rjButton14.BackColor = Color.Blue;
+                    CallValSet("46", "", myObjects[45].Value.ToString(), dateTime);
                 }
 
             };
@@ -4066,11 +4203,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle15);
                     rough2.rjButton15.BackColor = Color.Red;
+                    CallValSet("47", "Call From 47", myObjects[46].Value.ToString(), dateTime);
                 }
                 else if (myObjects[46].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle15);
                     rough2.rjButton15.BackColor = Color.Orange;
+                    CallValSet("47", "Care From 47", myObjects[46].Value.ToString(), dateTime);
                 }
                 else if (myObjects[46].Value == 261)
                 {
@@ -4080,6 +4219,7 @@ namespace NurseCalling
                 else if (myObjects[46].Value == 264)
                 {
                     rough2.rjButton15.BackColor = Color.Blue;
+                    CallValSet("47", "", myObjects[46].Value.ToString(), dateTime);
                 }
 
             };
@@ -4111,11 +4251,13 @@ namespace NurseCalling
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle16);
                     rough2.rjButton16.BackColor = Color.Red;
+                    CallValSet("48", "Call From 48", myObjects[47].Value.ToString(), dateTime);
                 }
                 else if (myObjects[47].Value == 262)
                 {
                     s3.flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle16);
                     rough2.rjButton16.BackColor = Color.Orange;
+                    CallValSet("48", "Care From 48", myObjects[47].Value.ToString(), dateTime);
                 }
                 else if (myObjects[47].Value == 261)
                 {
@@ -4125,6 +4267,7 @@ namespace NurseCalling
                 else if (myObjects[47].Value == 264)
                 {
                     rough2.rjButton16.BackColor = Color.Blue;
+                    CallValSet("48", "", myObjects[47].Value.ToString(), dateTime);
                 }
 
             };
@@ -4158,11 +4301,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
                     rough3.rjButton1.BackColor = Color.Red;
+                    CallValSet("49", "Call From 49", myObjects[48].Value.ToString(), dateTime);
                 }
                 else if (myObjects[48].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
                     rough3.rjButton1.BackColor = Color.Orange;
+                    CallValSet("49", "Care From 49", myObjects[48].Value.ToString(), dateTime);
                 }
                 else if (myObjects[48].Value == 261)
                 {
@@ -4172,6 +4317,8 @@ namespace NurseCalling
                 else if (myObjects[48].Value == 264)
                 {
                     rough3.rjButton1.BackColor = Color.Blue;
+                    CallValSet("49", "", myObjects[48].Value.ToString(), dateTime);
+
                 }
 
             };
@@ -4204,11 +4351,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle2);
                     rough3.rjButton2.BackColor = Color.Red;
+                    CallValSet("50", "Call From 50", myObjects[49].Value.ToString(), dateTime);
                 }
                 else if (myObjects[49].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle2);
                     rough3.rjButton2.BackColor = Color.Orange;
+                    CallValSet("50", "Care From 50", myObjects[49].Value.ToString(), dateTime);
                 }
                 else if (myObjects[49].Value == 261)
                 {
@@ -4218,6 +4367,7 @@ namespace NurseCalling
                 else if (myObjects[49].Value == 264)
                 {
                     rough3.rjButton2.BackColor = Color.Blue;
+                    CallValSet("50", "", myObjects[49].Value.ToString(), dateTime);
                 }
 
             };
@@ -4251,11 +4401,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle3);
                     rough3.rjButton3.BackColor = Color.Red;
+                    CallValSet("51", "Call From 51", myObjects[50].Value.ToString(), dateTime);
                 }
                 else if (myObjects[50].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle3);
                     rough3.rjButton3.BackColor = Color.Orange;
+                    CallValSet("51", "Care From 51", myObjects[50].Value.ToString(), dateTime);
                 }
                 else if (myObjects[50].Value == 261)
                 {
@@ -4265,6 +4417,7 @@ namespace NurseCalling
                 else if (myObjects[50].Value == 264)
                 {
                     rough3.rjButton3.BackColor = Color.Blue;
+                    CallValSet("51", "", myObjects[50].Value.ToString(), dateTime);
                 }
 
             };
@@ -4297,11 +4450,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle4);
                     rough3.rjButton4.BackColor = Color.Red;
+                    CallValSet("52", "Call From 52", myObjects[51].Value.ToString(), dateTime);
                 }
                 else if (myObjects[51].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle4);
                     rough3.rjButton4.BackColor = Color.Orange;
+                    CallValSet("52", "Care From 52", myObjects[51].Value.ToString(), dateTime);
                 }
                 else if (myObjects[51].Value == 261)
                 {
@@ -4311,6 +4466,7 @@ namespace NurseCalling
                 else if (myObjects[51].Value == 264)
                 {
                     rough3.rjButton4.BackColor = Color.Blue;
+                    CallValSet("52", "", myObjects[51].Value.ToString(), dateTime);
                 }
 
             };
@@ -4344,11 +4500,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle5);
                     rough3.rjButton5.BackColor = Color.Red;
+                    CallValSet("53", "Call From 53", myObjects[52].Value.ToString(), dateTime);
                 }
                 else if (myObjects[52].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle5);
                     rough3.rjButton5.BackColor = Color.Orange;
+                    CallValSet("53", "Care From 53", myObjects[52].Value.ToString(), dateTime);
                 }
                 else if (myObjects[52].Value == 261)
                 {
@@ -4358,6 +4516,7 @@ namespace NurseCalling
                 else if (myObjects[52].Value == 264)
                 {
                     rough3.rjButton5.BackColor = Color.Blue;
+                    CallValSet("53", "", myObjects[52].Value.ToString(), dateTime);
                 }
 
             };
@@ -4390,11 +4549,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle6);
                     rough3.rjButton6.BackColor = Color.Red;
+                    CallValSet("54", "Call From 54", myObjects[53].Value.ToString(), dateTime);
                 }
                 else if (myObjects[53].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle6);
                     rough3.rjButton6.BackColor = Color.Orange;
+                    CallValSet("54", "Care From 54", myObjects[53].Value.ToString(), dateTime);
                 }
                 else if (myObjects[53].Value == 261)
                 {
@@ -4404,6 +4565,7 @@ namespace NurseCalling
                 else if (myObjects[53].Value == 264)
                 {
                     rough3.rjButton6.BackColor = Color.Blue;
+                    CallValSet("54", "", myObjects[53].Value.ToString(), dateTime);
                 }
 
             };
@@ -4432,31 +4594,34 @@ namespace NurseCalling
                     myStopWatchObjects[54].Start();
                 //}
 
-                if (myObjects[55].Value == 258)
+                if (myObjects[54].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.Red;
+                    CallValSet("55", "Call From 55", myObjects[54].Value.ToString(), dateTime);
                 }
-                else if (myObjects[55].Value == 262)
+                else if (myObjects[54].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.Orange;
+                    CallValSet("55", "Care From 55", myObjects[54].Value.ToString(), dateTime);
                 }
-                else if (myObjects[55].Value == 261)
+                else if (myObjects[54].Value == 261)
                 {
                     s4.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle7);
                     rough3.rjButton7.BackColor = Color.DarkGreen;
                 }
-                else if (myObjects[55].Value == 264)
+                else if (myObjects[54].Value == 264)
                 {
                     rough3.rjButton7.BackColor = Color.Blue;
+                    CallValSet("55", "", myObjects[54].Value.ToString(), dateTime);
                 }
 
             };
 
 
-            myObjects[56].WillChange += () => { Console.WriteLine("will be changed!"); };
-            myObjects[56].DidChange += () => {
+            myObjects[55].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[55].DidChange += () => {
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
@@ -4464,45 +4629,51 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough3.rjButtonTime8.Text = time;
 
-                /*if (myObjects[56].Value == 261)
+                /*if (myObjects[54].Value == 261)
                 {
 
-                    myStopWatchObjects[56].Start();
-                    rough3.myRjButton8.Text = "00:00";
-                    myStopWatchObjects[56].Reset();
+                    myStopWatchObjects[54].Start();
+                    rough3.myRjButton7.Text = "00:00";
+                    myStopWatchObjects[54].Reset();
                 }
                 else
                 {*/
-                    myStopWatchObjects[56].Stop();
-                    rough3.myRjButton8.Text = "00:00";
-                    myStopWatchObjects[56].Reset();
-                    myStopWatchObjects[56].Start();
+                myStopWatchObjects[55].Stop();
+                rough3.myRjButton8.Text = "00:00";
+                myStopWatchObjects[55].Reset();
+                myStopWatchObjects[55].Start();
                 //}
 
-                if (myObjects[56].Value == 258)
+                if (myObjects[55].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.Red;
+                    CallValSet("56", "Call From 56", myObjects[55].Value.ToString(), dateTime);
                 }
-                else if (myObjects[56].Value == 262)
+                else if (myObjects[54].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.Orange;
+                    CallValSet("56", "Care From 56", myObjects[55].Value.ToString(), dateTime);
                 }
-                else if (myObjects[56].Value == 261)
+                else if (myObjects[54].Value == 261)
                 {
                     s4.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle8);
                     rough3.rjButton8.BackColor = Color.DarkGreen;
                 }
-                else if (myObjects[56].Value == 264)
+                else if (myObjects[55].Value == 264)
                 {
                     rough3.rjButton8.BackColor = Color.Blue;
+                    CallValSet("56", "", myObjects[55].Value.ToString(), dateTime);
                 }
 
             };
 
-            myObjects[57].WillChange += () => { Console.WriteLine("will be changed!"); };
-            myObjects[57].DidChange += () => {
+
+           
+
+            myObjects[56].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[56].DidChange += () => {
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
@@ -4525,30 +4696,33 @@ namespace NurseCalling
                     myStopWatchObjects[57].Start();
                 //}
 
-                if (myObjects[57].Value == 258)
+                if (myObjects[56].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.Red;
+                    CallValSet("57", "Call From 57", myObjects[56].Value.ToString(), dateTime);
                 }
-                else if (myObjects[57].Value == 262)
+                else if (myObjects[56].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.Orange;
+                    CallValSet("57", "Care From 57", myObjects[56].Value.ToString(), dateTime);
                 }
-                else if (myObjects[57].Value == 261)
+                else if (myObjects[56].Value == 261)
                 {
                     s4.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle9);
                     rough3.rjButton9.BackColor = Color.DarkGreen;
+                    CallValSet("57", "", myObjects[56].Value.ToString(), dateTime);
                 }
-                else if (myObjects[57].Value == 264)
+                else if (myObjects[56].Value == 264)
                 {
                     rough3.rjButton9.BackColor = Color.Blue;
                 }
 
             };
 
-            myObjects[58].WillChange += () => { Console.WriteLine("will be changed!"); };
-            myObjects[58].DidChange += () => {
+            myObjects[57].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[57].DidChange += () => {
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
@@ -4565,36 +4739,39 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[58].Stop();
+                    myStopWatchObjects[57].Stop();
                     rough3.myRjButton10.Text = "00:00";
-                    myStopWatchObjects[58].Reset();
-                    myStopWatchObjects[58].Start();
+                    myStopWatchObjects[57].Reset();
+                    myStopWatchObjects[57].Start();
                 //}
 
-                if (myObjects[58].Value == 258)
+                if (myObjects[57].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.Red;
+                    CallValSet("58", "Call From 58", myObjects[57].Value.ToString(), dateTime);
                 }
-                else if (myObjects[58].Value == 262)
+                else if (myObjects[57].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.Orange;
+                    CallValSet("58", "Care From 58", myObjects[57].Value.ToString(), dateTime);
                 }
-                else if (myObjects[58].Value == 261)
+                else if (myObjects[57].Value == 261)
                 {
                     s4.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle10);
                     rough3.rjButton10.BackColor = Color.DarkGreen;
                 }
-                else if (myObjects[58].Value == 264)
+                else if (myObjects[57].Value == 264)
                 {
                     rough3.rjButton10.BackColor = Color.Blue;
+                    CallValSet("58", "", myObjects[57].Value.ToString(), dateTime);
                 }
 
             };
 
-            myObjects[59].WillChange += () => { Console.WriteLine("will be changed!"); };
-            myObjects[59].DidChange += () => {
+            myObjects[58].WillChange += () => { Console.WriteLine("will be changed!"); };
+            myObjects[58].DidChange += () => {
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
@@ -4611,30 +4788,33 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[59].Stop();
+                    myStopWatchObjects[58].Stop();
                     rough3.myRjButton11.Text = "00:00";
-                    myStopWatchObjects[59].Reset();
-                    myStopWatchObjects[59].Start();
+                    myStopWatchObjects[58].Reset();
+                    myStopWatchObjects[58].Start();
                 //}
 
-                if (myObjects[59].Value == 258)
+                if (myObjects[58].Value == 258)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.Red;
+                    CallValSet("59", "Call From 59", myObjects[58].Value.ToString(), dateTime);
                 }
-                else if (myObjects[59].Value == 262)
+                else if (myObjects[58].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.Orange;
+                    CallValSet("59", "Care From 59", myObjects[58].Value.ToString(), dateTime);
                 }
-                else if (myObjects[59].Value == 261)
+                else if (myObjects[58].Value == 261)
                 {
                     s4.flowLayoutPanel1.Controls.Remove(rough3.roundPanelWithoutTitle11);
                     rough3.rjButton11.BackColor = Color.DarkGreen;
                 }
-                else if (myObjects[59].Value == 264)
+                else if (myObjects[58].Value == 264)
                 {
                     rough3.rjButton11.BackColor = Color.Blue;
+                    CallValSet("59", "", myObjects[58].Value.ToString(), dateTime);
                 }
 
             };
@@ -4667,11 +4847,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle12);
                     rough3.rjButton12.BackColor = Color.Red;
+                    CallValSet("60", "Call From 60", myObjects[59].Value.ToString(), dateTime);
                 }
                 else if (myObjects[59].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle12);
                     rough3.rjButton12.BackColor = Color.Orange;
+                    CallValSet("60", "Care From 60", myObjects[59].Value.ToString(), dateTime);
                 }
                 else if (myObjects[59].Value == 261)
                 {
@@ -4681,6 +4863,7 @@ namespace NurseCalling
                 else if (myObjects[59].Value == 264)
                 {
                     rough3.rjButton12.BackColor = Color.Blue;
+                    CallValSet("60", "", myObjects[59].Value.ToString(), dateTime);
                 }
 
             };
@@ -4713,11 +4896,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle13);
                     rough3.rjButton13.BackColor = Color.Red;
+                    CallValSet("61", "Call From 61", myObjects[60].Value.ToString(), dateTime);
                 }
                 else if (myObjects[60].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle13);
                     rough3.rjButton13.BackColor = Color.Orange;
+                    CallValSet("61", "Care From 61", myObjects[60].Value.ToString(), dateTime);
                 }
                 else if (myObjects[60].Value == 261)
                 {
@@ -4727,6 +4912,7 @@ namespace NurseCalling
                 else if (myObjects[60].Value == 264)
                 {
                     rough3.rjButton13.BackColor = Color.Blue;
+                    CallValSet("61", "", myObjects[60].Value.ToString(), dateTime);
                 }
 
             };
@@ -4759,11 +4945,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle14);
                     rough3.rjButton14.BackColor = Color.Red;
+                    CallValSet("62", "Call From 62", myObjects[61].Value.ToString(), dateTime);
                 }
                 else if (myObjects[61].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle14);
                     rough3.rjButton14.BackColor = Color.Orange;
+                    CallValSet("62", "Care From 62", myObjects[61].Value.ToString(), dateTime);
                 }
                 else if (myObjects[61].Value == 261)
                 {
@@ -4773,6 +4961,7 @@ namespace NurseCalling
                 else if (myObjects[61].Value == 264)
                 {
                     rough3.rjButton14.BackColor = Color.Blue;
+                    CallValSet("62", "", myObjects[61].Value.ToString(), dateTime);
                 }
 
             };
@@ -4806,11 +4995,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle15);
                     rough3.rjButton15.BackColor = Color.Red;
+                    CallValSet("63", "Call From 63", myObjects[62].Value.ToString(), dateTime);
                 }
                 else if (myObjects[62].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle15);
                     rough3.rjButton15.BackColor = Color.Orange;
+                    CallValSet("63", "Care From 63", myObjects[62].Value.ToString(), dateTime);
                 }
                 else if (myObjects[62].Value == 261)
                 {
@@ -4820,6 +5011,7 @@ namespace NurseCalling
                 else if (myObjects[62].Value == 264)
                 {
                     rough3.rjButton15.BackColor = Color.Blue;
+                    CallValSet("63", "", myObjects[62].Value.ToString(), dateTime);
                 }
 
             };
@@ -4851,11 +5043,13 @@ namespace NurseCalling
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle16);
                     rough3.rjButton16.BackColor = Color.Red;
+                    CallValSet("64", "Call From 64", myObjects[63].Value.ToString(), dateTime);
                 }
                 else if (myObjects[63].Value == 262)
                 {
                     s4.flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle16);
                     rough3.rjButton16.BackColor = Color.Orange;
+                    CallValSet("64", "Care From 64", myObjects[63].Value.ToString(), dateTime);
                 }
                 else if (myObjects[63].Value == 261)
                 {
@@ -4865,10 +5059,21 @@ namespace NurseCalling
                 else if (myObjects[63].Value == 264)
                 {
                     rough3.rjButton16.BackColor = Color.Blue;
+                    CallValSet("64", "", myObjects[63].Value.ToString(), dateTime);
                 }
 
             };
 
+        }
+
+        public void CallValSet(string registerId, string lastCallValue, string lastCallStatus, string dateTime) 
+        {
+           // CallValueSet("19", "Care From 19", myObjects[18].Value.ToString(), dateTime);
+            dataModel.lastCallValue = lastCallValue;// myObjects[18].Value.ToString();
+            dataModel.lastCallStatus = lastCallStatus;// "Care From 19";//258
+            dataModel.registerId = registerId;
+            dataModel.dateTime = dateTime;
+            dbHandlr.insert_call_data(m_dbConnection, dataModel);
         }
 
         private void rjButton3_Click(object sender, EventArgs e)
