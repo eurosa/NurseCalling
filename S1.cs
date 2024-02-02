@@ -61,6 +61,7 @@ namespace NurseCalling
         // StopWatchCshartp[] myStopWatchObjects;
 
         Stopwatch[] myStopWatchObjects;
+        string[] myElapseTime;
         Rough rough;
         Rough1 rough1;
         Rough2 rough2;
@@ -176,6 +177,8 @@ namespace NurseCalling
 
             // Create an array to hold all your objects
             myObjects = new Wrapped<int>[objectsToCreate];
+
+            myElapseTime = new string[objectsToCreate];
 
            // myStopWatchObjects = new StopWatchCshartp[objectsToCreate];
 
@@ -992,7 +995,6 @@ namespace NurseCalling
                 else rough.rjButton16.Visible = false;
             }
 
-
             // ++++++++++++++++++++++++++++++++++++S1++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             if (myObjects[16].Value != 261)
@@ -1651,6 +1653,10 @@ namespace NurseCalling
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 rough.rjButtonTime1.Text = time;
 
+                string regId = "1";
+
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[0], regId);
+
                 /*if (myObjects[0].Value == 261)
                 {
 
@@ -1660,7 +1666,8 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[0].Stop();
+                myElapseTime[0] = "";
+                myStopWatchObjects[0].Stop();
                     myStopWatchObjects[0].Reset();
                     rough.myRjButton1.Text = "00:00";
                     myStopWatchObjects[0].Start();
@@ -1698,7 +1705,7 @@ namespace NurseCalling
                 {
                     rough.rjButton1.BackColor = Color.DarkGreen;
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle1);
-
+                    
                     //dataModel.lastCallValue = myObjects[0].Value.ToString();
                     //dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
@@ -1724,6 +1731,11 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime2.Text = time;
 
+
+                string regId = "2";
+
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[1], regId);
+
                 /*if (myObjects[1].Value == 261)
                 {
 
@@ -1733,7 +1745,8 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[1].Stop();
+                myElapseTime[1] = "";
+                myStopWatchObjects[1].Stop();
                     rough.myRjButton2.Text = "00:00";
                     myStopWatchObjects[1].Reset();
                     myStopWatchObjects[1].Start();
@@ -1764,10 +1777,9 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.DarkGreen;
-                    dataModel.registerId = "2";
-                    dataModel.lastCallValue = myObjects[1].Value.ToString();
-                    dataModel.dateTime = dateTime;
-                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
+
+                    
+                     
                 }
                 else if (myObjects[1].Value == 264)
                 {
@@ -1789,6 +1801,10 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough.rjButtonTime3.Text = time;
 
+                string regId = "3";
+
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[2], regId);
+
                 /*if (myObjects[2].Value == 261)
                 {
 
@@ -1798,7 +1814,8 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[2].Stop();
+                myElapseTime[2] = "";
+                myStopWatchObjects[2].Stop();
                     rough.myRjButton3.Text = "00:00";
                     myStopWatchObjects[2].Reset();
                     myStopWatchObjects[2].Start();
@@ -1828,10 +1845,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.DarkGreen;
-                    dataModel.registerId = "3";
-                    dataModel.lastCallValue = myObjects[2].Value.ToString();
-                    dataModel.dateTime = dateTime;
-                    dbHandlr.insert_call_data(m_dbConnection, dataModel);
+             
+
                 }
                 else if (myObjects[2].Value == 264)
                 {
@@ -2635,6 +2650,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Remove(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.DarkGreen;
+                    string regId = "15";
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[15], regId);
                 }
                 else if (myObjects[15].Value == 264)
                 {
@@ -5093,17 +5110,18 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[0].ElapsedMilliseconds);
                 rough.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[0] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
                 // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
-              //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
+                //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
 
             }
             if (myStopWatchObjects[1].IsRunning)
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[1].ElapsedMilliseconds);
                 rough.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
-
-              //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
+                myElapseTime[1] = objTimeSpan.ToString("mm':'ss");
+                //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
                 // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5111,6 +5129,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[2].ElapsedMilliseconds);
                 rough.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[2] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5118,6 +5137,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[3].ElapsedMilliseconds);
                 rough.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[3] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5125,6 +5145,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[4].ElapsedMilliseconds);
                 rough.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[4] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5132,6 +5153,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[5].ElapsedMilliseconds);
                 rough.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[5] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5139,6 +5161,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[6].ElapsedMilliseconds);
                 rough.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[6] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5146,6 +5169,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[7].ElapsedMilliseconds);
                 rough.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[7] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5153,6 +5177,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[8].ElapsedMilliseconds);
                 rough.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[8] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5160,6 +5185,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[9].ElapsedMilliseconds);
                 rough.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[9] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5167,6 +5193,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[10].ElapsedMilliseconds);
                 rough.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[10] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5174,6 +5201,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[11].ElapsedMilliseconds);
                 rough.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[11] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5181,6 +5209,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[12].ElapsedMilliseconds);
                 rough.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[12] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5188,6 +5217,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[13].ElapsedMilliseconds);
                 rough.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[13] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5195,6 +5225,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[14].ElapsedMilliseconds);
                 rough.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[14] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5202,6 +5233,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[15].ElapsedMilliseconds);
                 rough.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[15] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5212,6 +5244,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[16].ElapsedMilliseconds);
                 rough1.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[16] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
                 // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
                 //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
@@ -5221,7 +5254,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[17].ElapsedMilliseconds);
                 rough1.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
-
+                myElapseTime[17] = objTimeSpan.ToString("mm':'ss");
                 //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
                 // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
@@ -5230,6 +5263,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[18].ElapsedMilliseconds);
                 rough1.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[18] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5237,6 +5271,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[19].ElapsedMilliseconds);
                 rough1.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[19] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5244,6 +5279,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[20].ElapsedMilliseconds);
                 rough1.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[20] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5251,6 +5287,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[21].ElapsedMilliseconds);
                 rough1.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[21] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5258,6 +5295,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[22].ElapsedMilliseconds);
                 rough1.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[22] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5265,6 +5303,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[23].ElapsedMilliseconds);
                 rough1.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[23] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5272,6 +5311,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[24].ElapsedMilliseconds);
                 rough1.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[24] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5279,6 +5319,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[25].ElapsedMilliseconds);
                 rough1.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[25] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5286,6 +5327,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[26].ElapsedMilliseconds);
                 rough1.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[26] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5293,6 +5335,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[27].ElapsedMilliseconds);
                 rough1.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[27] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5300,6 +5343,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[28].ElapsedMilliseconds);
                 rough1.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[28] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5307,6 +5351,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[29].ElapsedMilliseconds);
                 rough1.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[29] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5314,6 +5359,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[30].ElapsedMilliseconds);
                 rough1.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[30] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5321,6 +5367,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[31].ElapsedMilliseconds);
                 rough1.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[31] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5331,6 +5378,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[32].ElapsedMilliseconds);
                 rough1.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[32] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
                 // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
                 //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
@@ -5340,7 +5388,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[33].ElapsedMilliseconds);
                 rough2.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
-
+                myElapseTime[33] = objTimeSpan.ToString("mm':'ss");
                 // Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
                 // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
@@ -5349,6 +5397,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[34].ElapsedMilliseconds);
                 rough2.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[34] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5356,6 +5405,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[35].ElapsedMilliseconds);
                 rough2.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[35] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5363,6 +5413,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[36].ElapsedMilliseconds);
                 rough2.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[36] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5370,6 +5421,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[37].ElapsedMilliseconds);
                 rough2.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[37] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5377,6 +5429,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[38].ElapsedMilliseconds);
                 rough2.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[38] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5384,6 +5437,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[39].ElapsedMilliseconds);
                 rough2.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[39] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5391,6 +5445,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[40].ElapsedMilliseconds);
                 rough2.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[40] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5398,6 +5453,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[41].ElapsedMilliseconds);
                 rough2.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[41] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5405,6 +5461,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[42].ElapsedMilliseconds);
                 rough2.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[42] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5412,6 +5469,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[43].ElapsedMilliseconds);
                 rough2.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[43] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5419,6 +5477,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[44].ElapsedMilliseconds);
                 rough2.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[44] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5426,6 +5485,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[45].ElapsedMilliseconds);
                 rough2.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[45] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5433,6 +5493,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[46].ElapsedMilliseconds);
                 rough2.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[46] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5440,6 +5501,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[47].ElapsedMilliseconds);
                 rough2.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[47] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5450,6 +5512,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[48].ElapsedMilliseconds);
                 rough3.myRjButton1.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[48] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton1.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
                 // Console.WriteLine("Running/Stop: " + stopWatchObj().IsRunning);
                 //  Console.WriteLine("Running/Stop2: " + stopWatchObj2().IsRunning);
@@ -5459,7 +5522,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[49].ElapsedMilliseconds);
                 rough3.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
-
+                myElapseTime[49] = objTimeSpan.ToString("mm':'ss");
                 //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
                 // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
@@ -5468,6 +5531,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[50].ElapsedMilliseconds);
                 rough3.myRjButton3.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[50] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton3.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5475,6 +5539,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[51].ElapsedMilliseconds);
                 rough3.myRjButton4.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[51] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton4.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5482,6 +5547,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[52].ElapsedMilliseconds);
                 rough3.myRjButton5.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[52] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton5.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5489,6 +5555,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[53].ElapsedMilliseconds);
                 rough3.myRjButton6.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[53] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton6.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5496,6 +5563,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[54].ElapsedMilliseconds);
                 rough3.myRjButton7.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[54] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton7.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5503,6 +5571,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[55].ElapsedMilliseconds);
                 rough3.myRjButton8.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[55] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton8.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5510,6 +5579,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[56].ElapsedMilliseconds);
                 rough3.myRjButton9.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[56] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton9.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5517,6 +5587,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[57].ElapsedMilliseconds);
                 rough3.myRjButton10.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[57] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton10.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5524,6 +5595,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[58].ElapsedMilliseconds);
                 rough3.myRjButton11.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[58] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton11.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5531,6 +5603,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[59].ElapsedMilliseconds);
                 rough3.myRjButton12.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[59] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton12.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5538,6 +5611,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[60].ElapsedMilliseconds);
                 rough3.myRjButton13.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[60] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton13.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5545,6 +5619,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[61].ElapsedMilliseconds);
                 rough3.myRjButton14.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[61] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton14.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5552,6 +5627,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[62].ElapsedMilliseconds);
                 rough3.myRjButton15.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[62] = objTimeSpan.ToString("mm':'ss");
                 //form1.myRjButton15.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
@@ -5559,6 +5635,7 @@ namespace NurseCalling
             {
                 TimeSpan objTimeSpan = TimeSpan.FromMilliseconds(myStopWatchObjects[63].ElapsedMilliseconds);
                 rough3.myRjButton16.Text = objTimeSpan.ToString("mm':'ss");
+                myElapseTime[63] = objTimeSpan.ToString("mm':'ss");
                 // form1.myRjButton16.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }

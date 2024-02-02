@@ -33,6 +33,7 @@ namespace NurseCalling
             DT.Columns.Add("Register Id", typeof(string));//it should place in front of the btn column
             DT.Columns.Add("Call Name", typeof(string));
             DT.Columns.Add("Date&Time", typeof(string));
+            DT.Columns.Add("Elapse Time", typeof(string));
 
             using (SQLiteDataReader read = comm.ExecuteReader())
             {
@@ -43,6 +44,7 @@ namespace NurseCalling
                     dr["Register Id"] = read["registerId"].ToString();
                     dr["Call Name"] = read["lastCallStatus"].ToString();
                     dr["Date&Time"] = read["dateTime"].ToString();
+                    dr["Elapse Time"] = read["elapseTime"].ToString();
                     DT.Rows.Add(dr); 
                     dataGridView1.DataSource = DT;
                 }
