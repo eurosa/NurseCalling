@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NurseCalling
 {
@@ -20,15 +22,49 @@ namespace NurseCalling
         {
             InitializeComponent();
             MDbConnection = m_dbConnection;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             LoadData();
+
+            FillSiteNameComboBox();
+            FillCallComboBox();
+
         }
 
         private void LoadData()
         {
-         
-            SQLiteCommand comm = new SQLiteCommand("Select * From call_table where 1", MDbConnection);
+            SQLiteCommand comm;
+
+            string startDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            string endDate = dateTimePicker2.Value.ToString("dd-MM-yyyy");
+
+            if (comboBoxSiteName.SelectedIndex>0) {
+
+                string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
+                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "'", MDbConnection);
+
+            }
+            else if(comboBoxCall.SelectedIndex > 0 )
+            {
+                string keyCallValue = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+                comm = new SQLiteCommand("Select * From call_table where lastCallValue='" + keyCallValue + "'", MDbConnection);
+
+            }
+            else if (comboBoxSiteName.SelectedIndex > 0 && comboBoxCall.SelectedIndex > 0)
+            {
+                string keyCallValue = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+                string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
+                comm = new SQLiteCommand("Select * From call_table where lastCallValue='" + keyCallValue + "' and registerId='" + keyRegisterId + "'", MDbConnection);
+
+            }
+            else {
+
+                comm = new SQLiteCommand("Select * From call_table where 1", MDbConnection);
+
+            }
           
-            string format = "mm:ss";
         
             DataTable table1 = new DataTable();
             table1.Columns.AddRange(new DataColumn[]
@@ -68,6 +104,51 @@ namespace NurseCalling
 
         }
 
+        private void LoadDataBySearch()
+        {
+
+            SQLiteCommand comm = new SQLiteCommand("Select * From call_table where 1", MDbConnection);
+
+            string format = "mm:ss";
+
+            DataTable table1 = new DataTable();
+            table1.Columns.AddRange(new DataColumn[]
+                  {
+                    new DataColumn("Register Id", typeof(System.String)),
+                    new DataColumn("Call Name", typeof(System.String)),
+                    new DataColumn("Date&Time", typeof(System.String)),
+                    new DataColumn("Elapse Time", typeof(System.String)),
+
+                  }
+              );
+
+            using (SQLiteDataReader read = comm.ExecuteReader())
+            {
+                TimeSpan result = new TimeSpan();
+                string elapsedTimeString;
+                while (read.Read())
+                {
+                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallStatus"].ToString(), read["dateTime"].ToString(),
+                    read["elapseTime"].ToString() });
+                    result += TimeSpan.Parse("00:" + read["elapseTime"].ToString());
+
+                }
+                elapsedTimeString = string.Format("{0}:{1}:{2}",
+                                        result.Hours.ToString("00"),
+                                        result.Minutes.ToString("00"),
+                                        result.Seconds.ToString("00"));
+
+                table1.Rows.Add(new Object[] {"","","Total Elapse Time",
+                    elapsedTimeString });
+
+                dataGridView1.DataSource = table1;
+                // dataGridView1.Rows[2].Cells[1].Style.BackColor = Color.Yellow;
+                //   dataGridView1.Rows[6].DefaultCellStyle.BackColor = SystemColors.ControlDarkDark; 
+                //  DataGridViewColorChange(dataGridView1);
+            }
+
+        }
+
 
         public void DataGridViewColorChange(DataGridView dataGridView)
         {
@@ -93,6 +174,73 @@ namespace NurseCalling
                 }
             }
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        void FillSiteNameComboBox()
+        {
+            Dictionary<string, string> test = new Dictionary<string, string>();
+            test.Add("select", "Select a Id");
+
+            //    themeColorComboBox.SelectedIndex = themeColorComboBox.FindStringExact(dataModel.theme_color);
+    
+            SQLiteCommand cmd = new SQLiteCommand("select DISTINCT TRIM(registerId) as registerId  From call_table", MDbConnection);
+            SQLiteDataReader Sdr = cmd.ExecuteReader();
+      
+            while (Sdr.Read())
+            {
+             
+                test.Add(Sdr["registerId"].ToString(), Sdr["registerId"].ToString());
+     
+            }
+            comboBoxSiteName.DataSource = new BindingSource(test, null);
+            comboBoxSiteName.DisplayMember = "Value";
+            comboBoxSiteName.ValueMember = "Key";
+            Sdr.Close();
+            
+
+        }
+
+        void FillCallComboBox()
+        {
+            Dictionary<string, string> test = new Dictionary<string, string>();
+            test.Add("select", "Select a Call Name");
+
+            //    themeColorComboBox.SelectedIndex = themeColorComboBox.FindStringExact(dataModel.theme_color);
+
+            SQLiteCommand cmd = new SQLiteCommand("select DISTINCT lastCallValue, lastCallStatus  From call_table", MDbConnection);
+            SQLiteDataReader Sdr = cmd.ExecuteReader();
+     
+            while (Sdr.Read())
+            {
+                if (!test.ContainsKey(Sdr["lastCallValue"].ToString()))
+                {
+                    test.Add(Sdr["lastCallStatus"].ToString(), Sdr["lastCallStatus"].ToString());
+                }
+           
+            }
+            comboBoxCall.DataSource = new BindingSource(test, null);
+            comboBoxCall.DisplayMember = "Value";
+            comboBoxCall.ValueMember = "Key";
+            Sdr.Close();
+
+
+        }
+
+        private void comboBoxCall_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+            
+        }
+
+        private void comboBoxSiteName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
+   
         }
     }
 }
