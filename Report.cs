@@ -186,7 +186,7 @@ namespace NurseCalling
             Dictionary<string, string> test = new Dictionary<string, string>();
             test.Add("select", "Select a Id");
 
-            //    themeColorComboBox.SelectedIndex = themeColorComboBox.FindStringExact(dataModel.theme_color);
+            // themeColorComboBox.SelectedIndex = themeColorComboBox.FindStringExact(dataModel.theme_color);
     
             SQLiteCommand cmd = new SQLiteCommand("select DISTINCT TRIM(registerId) as registerId  From call_table", MDbConnection);
             SQLiteDataReader Sdr = cmd.ExecuteReader();
