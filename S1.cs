@@ -3062,6 +3062,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime5.Text = time;
 
+                string regId = "21";
+                if (!string.IsNullOrEmpty(myElapseTime[20]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[20], regId);
+                }
+
+                myElapseTime[20] = "00:00";
+
                 /*if (myObjects[20].Value == 261)
                 {
 
@@ -3071,7 +3079,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[20].Stop();
+                myStopWatchObjects[20].Stop();
                     rough1.myRjButton5.Text = "00:00";
                     myStopWatchObjects[20].Reset();
                     myStopWatchObjects[4].Start();
@@ -3111,6 +3119,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime6.Text = time;
 
+                string regId = "22";
+                if(!string.IsNullOrEmpty(myElapseTime[21]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[21], regId);
+                }
+
+                myElapseTime[21] = "00:00";
+
                 /*if (myObjects[21].Value == 261)
                 {
 
@@ -3120,7 +3136,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[21].Stop();
+                myStopWatchObjects[21].Stop();
                     rough1.myRjButton6.Text = "00:00";
                     myStopWatchObjects[21].Reset();
                     myStopWatchObjects[21].Start();
@@ -3160,6 +3176,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime7.Text = time;
 
+                string regId = "23";
+                if (!string.IsNullOrEmpty(myElapseTime[22]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[22], regId);
+                }
+
+                myElapseTime[22] = "00:00";
+
                 /*if (myObjects[22].Value == 261)
                 {
 
@@ -3169,7 +3193,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[22].Stop();
+                myStopWatchObjects[22].Stop();
                     rough1.myRjButton7.Text = "00:00";
                     myStopWatchObjects[22].Reset();
                     myStopWatchObjects[22].Start();
@@ -3210,6 +3234,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime8.Text = time;
 
+                string regId = "24";
+                if (!string.IsNullOrEmpty(myElapseTime[23]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[23], regId);
+                }
+
+                myElapseTime[23] = "00:00";
+
                 /*if (myObjects[23].Value == 261)
                 {
 
@@ -3219,7 +3251,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[23].Stop();
+                myStopWatchObjects[23].Stop();
                     rough1.myRjButton8.Text = "00:00";
                     myStopWatchObjects[23].Reset();
                     myStopWatchObjects[23].Start();
@@ -3259,6 +3291,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime9.Text = time;
 
+                string regId = "25";
+                if (!string.IsNullOrEmpty(myElapseTime[24]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[24], regId);
+                }
+
+                myElapseTime[24] = "00:00";
+
                 /*if (myObjects[24].Value == 261)
                 {
 
@@ -3268,7 +3308,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[24].Stop();
+                myStopWatchObjects[24].Stop();
                     s2.myRjButton9.Text = "00:00";
                     myStopWatchObjects[24].Reset();
                     myStopWatchObjects[24].Start();
@@ -3308,6 +3348,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime10.Text = time;
 
+                string regId = "26";
+                if (!string.IsNullOrEmpty(myElapseTime[25]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[25], regId);
+                }
+
+                myElapseTime[25] = "00:00";
+
                 /*if (myObjects[25].Value == 261)
                 {
 
@@ -3317,7 +3365,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[25].Stop();
+                myStopWatchObjects[25].Stop();
                     rough1.myRjButton10.Text = "00:00";
                     myStopWatchObjects[25].Reset();
                     myStopWatchObjects[25].Start();
@@ -3357,6 +3405,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime11.Text = time;
 
+                string regId = "27";
+                if (!string.IsNullOrEmpty(myElapseTime[26]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[26], regId);
+                }
+
+                myElapseTime[26] = "00:00";
+
                 /*if (myObjects[26].Value == 261)
                 {
                     
@@ -3366,7 +3422,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[26].Stop();
+                myStopWatchObjects[26].Stop();
                     rough1.myRjButton11.Text = "00:00";
                     myStopWatchObjects[26].Reset();
                     myStopWatchObjects[26].Start();
@@ -3406,6 +3462,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime12.Text = time;
 
+                string regId = "28";
+                if (!string.IsNullOrEmpty(myElapseTime[27]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[27], regId);
+                }
+
+                myElapseTime[27] = "00:00";
+
                 /*if (myObjects[27].Value == 261)
                 {
 
@@ -3415,7 +3479,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[27].Stop();
+                myStopWatchObjects[27].Stop();
                     rough1.myRjButton12.Text = "00:00";
                 myStopWatchObjects[27].Reset();
                 myStopWatchObjects[27].Start();
@@ -3455,6 +3519,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime13.Text = time;
 
+                string regId = "29";
+                if (!string.IsNullOrEmpty(myElapseTime[28]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[28], regId);
+                }
+
+                myElapseTime[28] = "00:00";
+
                 /*if (myObjects[28].Value == 261)
                 {
 
@@ -3464,7 +3536,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[28].Stop();
+                myStopWatchObjects[28].Stop();
                     rough1.myRjButton13.Text = "00:00";
                     myStopWatchObjects[28].Reset();
                     myStopWatchObjects[28].Start();
@@ -3504,6 +3576,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime14.Text = time;
 
+                string regId = "30";
+                if (!string.IsNullOrEmpty(myElapseTime[29]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[29], regId);
+                }
+
+                myElapseTime[29] = "00:00";
+
                 /*if (myObjects[29].Value == 261)
                 {
 
@@ -3513,7 +3593,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[29].Stop();
+                myStopWatchObjects[29].Stop();
                     rough1.myRjButton14.Text = "00:00";
                     myStopWatchObjects[29].Reset();
                     myStopWatchObjects[29].Start();
@@ -3554,6 +3634,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime15.Text = time;
 
+                string regId = "31";
+                if (!string.IsNullOrEmpty(myElapseTime[30]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[30], regId);
+                }
+
+                myElapseTime[30] = "00:00";
+
                 /*if (myObjects[30].Value == 261)
                 {
 
@@ -3563,7 +3651,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[30].Stop();
+                myStopWatchObjects[30].Stop();
                     rough1.myRjButton15.Text = "00:00";
                     myStopWatchObjects[30].Reset();
                     myStopWatchObjects[30].Start();
@@ -3603,6 +3691,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough1.rjButtonTime16.Text = time;
 
+                string regId = "32";
+                if (!string.IsNullOrEmpty(myElapseTime[31]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[31], regId);
+                }
+
+                myElapseTime[31] = "00:00";
+
                 /*if (myObjects[31].Value == 261)
                 {
                     myStopWatchObjects[31].Start();
@@ -3611,7 +3707,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[31].Stop();
+                myStopWatchObjects[31].Stop();
                     rough1.myRjButton16.Text = "00:00";
                     myStopWatchObjects[31].Reset();
                     myStopWatchObjects[31].Start();
@@ -3653,6 +3749,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime1.Text = time;
 
+                string regId = "33";
+                if (!string.IsNullOrEmpty(myElapseTime[32]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[32], regId);
+                }
+
+                myElapseTime[32] = "00:00";
+
                 /*if (myObjects[32].Value == 261)
                 {
 
@@ -3662,7 +3766,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[32].Stop();
+                myStopWatchObjects[32].Stop();
                     myStopWatchObjects[32].Reset();
                     rough2.myRjButton1.Text = "00:00";
                     myStopWatchObjects[32].Start();
@@ -3702,6 +3806,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime2.Text = time;
 
+                string regId = "34";
+                if (!string.IsNullOrEmpty(myElapseTime[33]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[33], regId);
+                }
+
+                myElapseTime[33] = "00:00";
+
                 /*if (myObjects[33].Value == 261)
                 {
 
@@ -3711,7 +3823,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[33].Stop();
+                myStopWatchObjects[33].Stop();
                     rough2.myRjButton2.Text = "00:00";
                     myStopWatchObjects[33].Reset();
                     myStopWatchObjects[33].Start();
@@ -3752,6 +3864,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime3.Text = time;
 
+                string regId = "35";
+                if (!string.IsNullOrEmpty(myElapseTime[34]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[34], regId);
+                }
+
+                myElapseTime[34] = "00:00";
+
                 /*if (myObjects[34].Value == 261)
                 {
 
@@ -3761,7 +3881,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[34].Stop();
+                myStopWatchObjects[34].Stop();
                     rough2.myRjButton3.Text = "00:00";
                     myStopWatchObjects[34].Reset();
                     myStopWatchObjects[34].Start();
@@ -3801,6 +3921,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime4.Text = time;
 
+                string regId = "36";
+                if (!string.IsNullOrEmpty(myElapseTime[35]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[35], regId);
+                }
+
+                myElapseTime[35] = "00:00";
+
                 /*if (myObjects[35].Value == 261)
                 {
 
@@ -3810,7 +3938,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[35].Stop();
+                myStopWatchObjects[35].Stop();
                     rough2.myRjButton4.Text = "00:00";
                     myStopWatchObjects[35].Reset();
                     myStopWatchObjects[35].Start();
@@ -3851,6 +3979,13 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime5.Text = time;
 
+                string regId = "37";
+                if (!string.IsNullOrEmpty(myElapseTime[36]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[36], regId);
+                }
+
+                myElapseTime[36] = "00:00";
                 /*if (myObjects[36].Value == 261)
                 {
 
@@ -3900,6 +4035,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime6.Text = time;
 
+                string regId = "38";
+                if (!string.IsNullOrEmpty(myElapseTime[37]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[37], regId);
+                }
+
+                myElapseTime[37] = "00:00";
+
                 /*if (myObjects[37].Value == 261)
                 {
 
@@ -3909,7 +4052,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[37].Stop();
+                myStopWatchObjects[37].Stop();
                     rough2.myRjButton6.Text = "00:00";
                     myStopWatchObjects[37].Reset();
                     myStopWatchObjects[37].Start();
@@ -3949,6 +4092,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime7.Text = time;
 
+                string regId = "39";
+                if (!string.IsNullOrEmpty(myElapseTime[38]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[38], regId);
+                }
+
+                myElapseTime[38] = "00:00";
+
                 /*if (myObjects[38].Value == 261)
                 {
 
@@ -3958,7 +4109,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[38].Stop();
+                myStopWatchObjects[38].Stop();
                     rough2.myRjButton7.Text = "00:00";
                     myStopWatchObjects[38].Reset();
                     myStopWatchObjects[38].Start();
@@ -3999,6 +4150,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime8.Text = time;
 
+                string regId = "40";
+                if (!string.IsNullOrEmpty(myElapseTime[39]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[39], regId);
+                }
+
+                myElapseTime[39] = "00:00";
+
                 /*if (myObjects[39].Value == 261)
                 {
 
@@ -4008,7 +4167,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[39].Stop();
+                myStopWatchObjects[39].Stop();
                     rough2.myRjButton8.Text = "00:00";
                     myStopWatchObjects[39].Reset();
                     myStopWatchObjects[39].Start();
@@ -4048,6 +4207,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime9.Text = time;
 
+                string regId = "41";
+                if (!string.IsNullOrEmpty(myElapseTime[40]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[40], regId);
+                }
+
+                myElapseTime[40] = "00:00";
+
                 /*if (myObjects[40].Value == 261)
                 {
 
@@ -4057,7 +4224,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[40].Stop();
+                myStopWatchObjects[40].Stop();
                     rough2.myRjButton9.Text = "00:00";
                     myStopWatchObjects[40].Reset();
                     myStopWatchObjects[40].Start();
@@ -4097,6 +4264,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime10.Text = time;
 
+                string regId = "42";
+                if (!string.IsNullOrEmpty(myElapseTime[41]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[41], regId);
+                }
+
+                myElapseTime[41] = "00:00";
+
                 /*if (myObjects[41].Value == 261)
                 {
 
@@ -4106,7 +4281,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[41].Stop();
+                myStopWatchObjects[41].Stop();
                     rough2.myRjButton10.Text = "00:00";
                     myStopWatchObjects[41].Reset();
                     myStopWatchObjects[41].Start();
@@ -4146,6 +4321,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime11.Text = time;
 
+                string regId = "43";
+                if (!string.IsNullOrEmpty(myElapseTime[42]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[42], regId);
+                }
+
+                myElapseTime[42] = "00:00";
+
                 /*if (myObjects[42].Value == 261)
                 {
 
@@ -4155,7 +4338,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[42].Stop();
+                myStopWatchObjects[42].Stop();
                     rough2.myRjButton11.Text = "00:00";
                     myStopWatchObjects[42].Reset();
                     myStopWatchObjects[42].Start();
@@ -4195,6 +4378,15 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime12.Text = time;
 
+                string regId = "44";
+                if (!string.IsNullOrEmpty(myElapseTime[43]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[43], regId);
+                }
+
+                myElapseTime[43] = "00:00";
+
+
                 /*if (myObjects[43].Value == 261)
                 {
 
@@ -4204,7 +4396,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[43].Stop();
+                myStopWatchObjects[43].Stop();
                     rough2.myRjButton12.Text = "00:00";
                     myStopWatchObjects[43].Reset();
                     myStopWatchObjects[43].Start();
@@ -4244,6 +4436,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime13.Text = time;
 
+                string regId = "45";
+                if (!string.IsNullOrEmpty(myElapseTime[44]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[44], regId);
+                }
+
+                myElapseTime[44] = "00:00";
+
                 /*if (myObjects[44].Value == 261)
                 {
 
@@ -4253,7 +4453,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[44].Stop();
+                myStopWatchObjects[44].Stop();
                     rough2.myRjButton13.Text = "00:00";
                     myStopWatchObjects[44].Reset();
                     myStopWatchObjects[44].Start();
@@ -4293,6 +4493,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime14.Text = time;
 
+                string regId = "46";
+                if (!string.IsNullOrEmpty(myElapseTime[45]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[45], regId);
+                }
+
+                myElapseTime[45] = "00:00";
+
                 /*if (myObjects[45].Value == 261)
                 {
 
@@ -4302,7 +4510,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[45].Stop();
+                myStopWatchObjects[45].Stop();
                     rough2.myRjButton14.Text = "00:00";
                     myStopWatchObjects[45].Reset();
                     myStopWatchObjects[45].Start();
@@ -4343,6 +4551,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime15.Text = time;
 
+                string regId = "47";
+                if (!string.IsNullOrEmpty(myElapseTime[46]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[46], regId);
+                }
+
+                myElapseTime[46] = "00:00";
+
                 /*if (myObjects[46].Value == 261)
                 {
 
@@ -4352,7 +4568,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[46].Stop();
+                myStopWatchObjects[46].Stop();
                     rough2.myRjButton15.Text = "00:00";
                     myStopWatchObjects[46].Reset();
                     myStopWatchObjects[46].Start();
@@ -4392,6 +4608,14 @@ namespace NurseCalling
                 string dateTime = DateTime.Now.ToString();
                 rough2.rjButtonTime16.Text = time;
 
+                string regId = "48";
+                if (!string.IsNullOrEmpty(myElapseTime[47]))
+                {
+                    dbHandlr.update_call_data(m_dbConnection, myElapseTime[47], regId);
+                }
+
+                myElapseTime[47] = "00:00";
+
                 /*if (myObjects[47].Value == 261)
                 {
                     myStopWatchObjects[47].Start();
@@ -4400,7 +4624,7 @@ namespace NurseCalling
                 }
                 else
                 {*/
-                    myStopWatchObjects[47].Stop();
+                myStopWatchObjects[47].Stop();
                     rough2.myRjButton16.Text = "00:00";
                     myStopWatchObjects[47].Reset();
                     myStopWatchObjects[47].Start();
