@@ -167,7 +167,7 @@ namespace NurseCalling
         public void update_call_data(SQLiteConnection m_dbConnection, string elapseTime, string regId)
         {
             if (elapseTime!="") { 
-            string sql_update = "UPDATE call_table SET elapseTime = @elapseTime Where ID=(SELECT max(ID) FROM call_table where registerId=@registerId)"; 
+            string sql_update = "UPDATE call_table SET elapseTime = @elapseTime Where ID=(SELECT max(ID) FROM call_table where registerId=@registerId) and elapseTime='00:00'"; 
             SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
             command.Parameters.AddWithValue("@elapseTime", elapseTime);
             command.Parameters.AddWithValue("@registerId", regId);
