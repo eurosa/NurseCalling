@@ -5597,6 +5597,11 @@ namespace NurseCalling
           MyReport.Show();
         }
 
+        private void rjSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void StopWatchTimer()
         {
             if (myStopWatchObjects[0].IsRunning)

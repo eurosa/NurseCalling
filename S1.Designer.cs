@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rjSettings = new NurseCalling.Controls.RJButton();
+            this.exportBtn = new NurseCalling.Controls.RJButton();
             this.roundPanelWithoutTitle1 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle2 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle7 = new NurseCalling.Controls.RoundPanelWithoutTitle();
@@ -48,9 +53,6 @@
             this.roundPanelWithoutTitle14 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle15 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle16 = new NurseCalling.Controls.RoundPanelWithoutTitle();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myRjButton1 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator2 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator1 = new NurseCalling.Controls.HorizontalLineSeparator();
@@ -147,7 +149,6 @@
             this.rjButton16 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime16 = new NurseCalling.Controls.RJButton();
             this.bButton16 = new NurseCalling.Controls.RJButton();
-            this.exportBtn = new NurseCalling.Controls.RJButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +156,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.rjSettings);
             this.panel1.Controls.Add(this.exportBtn);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.label2);
@@ -188,6 +190,77 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 886);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1915, 78);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(2, 991);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(1918, 70);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Digiline System Pvt. Ltd.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // rjSettings
+            // 
+            this.rjSettings.BackColor = System.Drawing.Color.Transparent;
+            this.rjSettings.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjSettings.BackgroundImage")));
+            this.rjSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjSettings.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjSettings.BorderRadius = 0;
+            this.rjSettings.BorderSize = 0;
+            this.rjSettings.FlatAppearance.BorderSize = 0;
+            this.rjSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjSettings.ForeColor = System.Drawing.Color.Transparent;
+            this.rjSettings.Location = new System.Drawing.Point(1231, 997);
+            this.rjSettings.Name = "rjSettings";
+            this.rjSettings.Size = new System.Drawing.Size(50, 48);
+            this.rjSettings.TabIndex = 34;
+            this.rjSettings.TextColor = System.Drawing.Color.Transparent;
+            this.rjSettings.UseVisualStyleBackColor = false;
+            this.rjSettings.Click += new System.EventHandler(this.rjSettings_Click);
+            // 
+            // exportBtn
+            // 
+            this.exportBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportBtn.BackgroundImage")));
+            this.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exportBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exportBtn.BorderRadius = 0;
+            this.exportBtn.BorderSize = 0;
+            this.exportBtn.FlatAppearance.BorderSize = 0;
+            this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.Location = new System.Drawing.Point(1173, 1001);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.Size = new System.Drawing.Size(52, 40);
+            this.exportBtn.TabIndex = 33;
+            this.exportBtn.TextColor = System.Drawing.Color.White;
+            this.exportBtn.UseVisualStyleBackColor = false;
+            this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
             // 
             // roundPanelWithoutTitle1
             // 
@@ -445,37 +518,6 @@
             this.roundPanelWithoutTitle16.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle16.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1915, 78);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 991);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(1918, 70);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Digiline System Pvt. Ltd.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // myRjButton1
             // 
@@ -2002,26 +2044,6 @@
             this.bButton16.TextColor = System.Drawing.Color.White;
             this.bButton16.UseVisualStyleBackColor = false;
             // 
-            // exportBtn
-            // 
-            this.exportBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.exportBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.exportBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportBtn.BackgroundImage")));
-            this.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exportBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exportBtn.BorderRadius = 0;
-            this.exportBtn.BorderSize = 0;
-            this.exportBtn.FlatAppearance.BorderSize = 0;
-            this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportBtn.ForeColor = System.Drawing.Color.White;
-            this.exportBtn.Location = new System.Drawing.Point(1173, 1001);
-            this.exportBtn.Name = "exportBtn";
-            this.exportBtn.Size = new System.Drawing.Size(52, 40);
-            this.exportBtn.TabIndex = 33;
-            this.exportBtn.TextColor = System.Drawing.Color.White;
-            this.exportBtn.UseVisualStyleBackColor = false;
-            this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
-            // 
             // S1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2161,5 +2183,6 @@
         public Controls.RoundPanelWithoutTitle roundPanelWithoutTitle16;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Controls.RJButton exportBtn;
+        private Controls.RJButton rjSettings;
     }
 }
