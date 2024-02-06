@@ -26,11 +26,11 @@ namespace NurseCalling
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             dateTimePicker2.CustomFormat = "dd-MM-yyyy";
-            LoadData();
+           
 
             FillSiteNameComboBox();
             FillCallComboBox();
-
+            LoadData();
         }
 
         private void LoadData()
@@ -40,13 +40,17 @@ namespace NurseCalling
             string startDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
             string endDate = dateTimePicker2.Value.ToString("dd-MM-yyyy");
 
+          //  string keyCallValue1 = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+            string keyRegisterId1 = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
+            //Console.WriteLine("keyCallValue1: "+ keyCallValue1+" Register Id: "+ keyRegisterId1);
+
             if (comboBoxSiteName.SelectedIndex>0) {
 
                 string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
                 comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "'", MDbConnection);
 
             }
-            else if(comboBoxCall.SelectedIndex > 0 )
+           /* else if(comboBoxCall.SelectedIndex > 0 )
             {
                 string keyCallValue = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
                 comm = new SQLiteCommand("Select * From call_table where lastCallValue='" + keyCallValue + "'", MDbConnection);
@@ -58,7 +62,7 @@ namespace NurseCalling
                 string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
                 comm = new SQLiteCommand("Select * From call_table where lastCallValue='" + keyCallValue + "' and registerId='" + keyRegisterId + "'", MDbConnection);
 
-            }
+            }*/
             else {
 
                 comm = new SQLiteCommand("Select * From call_table where 1", MDbConnection);
@@ -217,15 +221,15 @@ namespace NurseCalling
      
             while (Sdr.Read())
             {
-                if (!test.ContainsKey(Sdr["lastCallValue"].ToString()))
+                if (!test.ContainsKey(Sdr["lastCallStatus"].ToString()))
                 {
                     test.Add(Sdr["lastCallStatus"].ToString(), Sdr["lastCallStatus"].ToString());
                 }
            
             }
-            comboBoxCall.DataSource = new BindingSource(test, null);
-            comboBoxCall.DisplayMember = "Value";
-            comboBoxCall.ValueMember = "Key";
+       //     comboBoxCall.DataSource = new BindingSource(test, null);
+        //    comboBoxCall.DisplayMember = "Value";
+         ///   comboBoxCall.ValueMember = "Key";
             Sdr.Close();
 
 
@@ -233,7 +237,7 @@ namespace NurseCalling
 
         private void comboBoxCall_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string key = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+          //  string key = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
             
         }
 
