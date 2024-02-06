@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -47,8 +48,8 @@ namespace NurseCalling
             if (comboBoxSiteName.SelectedIndex>0) {
 
                 string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
-                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "'", MDbConnection);
-
+                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "' and date_ >='"+ startDate + "' and date_ <= '"+ endDate + "'", MDbConnection);
+                Console.WriteLine("Select * From call_table where registerId='" + keyRegisterId + "' and date_ >='" + startDate + "' and date_ <= '" + endDate + "'");
             }
            /* else if(comboBoxCall.SelectedIndex > 0 )
             {
@@ -65,7 +66,7 @@ namespace NurseCalling
             }*/
             else {
 
-                comm = new SQLiteCommand("Select * From call_table where 1", MDbConnection);
+                comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
 
             }
           
@@ -245,6 +246,51 @@ namespace NurseCalling
         {
             string key = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
    
+        }
+
+        private void exportAsExcel_Click(object sender, EventArgs e)
+        {
+            // Create a thread
+            Thread backgroundThread = new Thread(new ThreadStart(ExportAsExcel));
+            // Start thread
+            backgroundThread.Start();
+        }
+
+        public void ExportAsExcel()
+        {
+
+            // creating Excel Application  
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            // changing the name of active sheet  
+            worksheet.Name = "Exported from gridview";
+            // storing header part in Excel  
+            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+            }
+            // storing Each row and column value to excel sheet  
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            // save the application  
+            //  workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            // Exit from the application  
+            app.Quit();
+
         }
     }
 }
