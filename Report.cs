@@ -38,8 +38,8 @@ namespace NurseCalling
         {
             SQLiteCommand comm;
 
-            string startDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-            string endDate = dateTimePicker2.Value.ToString("dd-MM-yyyy");
+            string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd");
 
           //  string keyCallValue1 = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
             string keyRegisterId1 = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
@@ -48,8 +48,8 @@ namespace NurseCalling
             if (comboBoxSiteName.SelectedIndex>0) {
 
                 string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
-                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "' and date_ >='"+ startDate + "' and date_ <= '"+ endDate + "'", MDbConnection);
-                Console.WriteLine("Select * From call_table where registerId='" + keyRegisterId + "' and date_ >='" + startDate + "' and date_ <= '" + endDate + "'");
+                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'", MDbConnection);
+                Console.WriteLine("Select * From call_table where registerId='" + keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'");
             }
            /* else if(comboBoxCall.SelectedIndex > 0 )
             {
@@ -66,7 +66,7 @@ namespace NurseCalling
             }*/
             else {
                 Console.WriteLine("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'");
-               // comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
+                // comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
                 comm = new SQLiteCommand("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'", MDbConnection);
 
             }

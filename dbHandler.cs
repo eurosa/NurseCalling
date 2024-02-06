@@ -150,7 +150,7 @@ namespace NurseCalling
             insertSQL.Parameters.AddWithValue("@registerId", dataModel.registerId);
             insertSQL.Parameters.AddWithValue("@dateTime", dataModel.dateTime);
             insertSQL.Parameters.AddWithValue("@elapseTime", "00:00");
-            insertSQL.Parameters.AddWithValue("@date_", DateTime.Parse(dataModel.dateTime.ToString()).ToString("dd-MM-yyyy"));
+            insertSQL.Parameters.AddWithValue("@date_", DateTime.Parse(dataModel.dateTime.ToString()).ToString("yyyy-MM-dd"));
 
             try
             {

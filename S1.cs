@@ -1670,9 +1670,9 @@ namespace NurseCalling
                 {*/
                 myElapseTime[0] = "00:00";
                 myStopWatchObjects[0].Stop();
-                    myStopWatchObjects[0].Reset();
-                    rough.myRjButton1.Text = "00:00";
-                    myStopWatchObjects[0].Start();
+                myStopWatchObjects[0].Reset();
+                rough.myRjButton1.Text = "00:00";
+                myStopWatchObjects[0].Start();
                 //}
                 if (myObjects[0].Value == 258)
                 {
