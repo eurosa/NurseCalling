@@ -65,8 +65,9 @@ namespace NurseCalling
 
             }*/
             else {
-
-                comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
+                Console.WriteLine("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'");
+               // comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
+                comm = new SQLiteCommand("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'", MDbConnection);
 
             }
           

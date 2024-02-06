@@ -48,12 +48,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1316, 625);
+            this.dataGridView1.Size = new System.Drawing.Size(930, 625);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1029, 8);
+            this.btnSearch.Location = new System.Drawing.Point(713, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 31);
             this.btnSearch.TabIndex = 1;
@@ -64,7 +64,7 @@
             // comboBoxSiteName
             // 
             this.comboBoxSiteName.FormattingEnabled = true;
-            this.comboBoxSiteName.Location = new System.Drawing.Point(112, 13);
+            this.comboBoxSiteName.Location = new System.Drawing.Point(7, 13);
             this.comboBoxSiteName.Name = "comboBoxSiteName";
             this.comboBoxSiteName.Size = new System.Drawing.Size(163, 21);
             this.comboBoxSiteName.TabIndex = 91;
@@ -73,7 +73,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(457, 13);
+            this.dateTimePicker1.Location = new System.Drawing.Point(240, 10);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 93;
@@ -82,7 +82,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(807, 13);
+            this.dateTimePicker2.Location = new System.Drawing.Point(507, 10);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 94;
@@ -90,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(381, 17);
+            this.label1.Location = new System.Drawing.Point(182, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 95;
@@ -99,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(735, 17);
+            this.label2.Location = new System.Drawing.Point(449, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 96;
@@ -107,7 +107,7 @@
             // 
             // exportAsExcel
             // 
-            this.exportAsExcel.Location = new System.Drawing.Point(1167, 8);
+            this.exportAsExcel.Location = new System.Drawing.Point(826, 3);
             this.exportAsExcel.Name = "exportAsExcel";
             this.exportAsExcel.Size = new System.Drawing.Size(107, 31);
             this.exportAsExcel.TabIndex = 97;
