@@ -16,8 +16,8 @@ namespace NurseCalling
         {
             InitializeComponent();
 
-            SetPlaceHolder(textBoxRegist1, " Логин ");
-            SetPlaceHolder(textBoxRegist2, " Пароль ");
+          //  SetPlaceHolder(textBoxRegist1, " Логин ");
+           // SetPlaceHolder(textBoxRegist2, " Пароль ");
 
         }
 
@@ -366,6 +366,101 @@ namespace NurseCalling
                     control.Text = PlaceHolderText;
                 }
             };
+        }
+
+        private void applyButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox31_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister13_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister14_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister15_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister16_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister17_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,10 @@ namespace NurseCalling
                     SQLiteCommand command1 = new SQLiteCommand(sql1, dbConnection);
                     command1.ExecuteNonQuery();
 
+                    string sql2 = "create table setting_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, comport_name varchar(60), firstcall_status varchar(60))";
+                    SQLiteCommand command2 = new SQLiteCommand(sql2, dbConnection);
+                    command2.ExecuteNonQuery();
+
                     try
                     {
                         insert_general_data(dbConnection);
