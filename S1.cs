@@ -5599,7 +5599,8 @@ namespace NurseCalling
 
         private void rjSettings_Click(object sender, EventArgs e)
         {
-
+            Settings mySetting = new Settings();
+            mySetting.Show();
         }
 
         public void StopWatchTimer()
