@@ -924,6 +924,7 @@
             this.checkBoxRegister18.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister18.TabIndex = 66;
             this.checkBoxRegister18.UseVisualStyleBackColor = true;
+            this.checkBoxRegister18.CheckedChanged += new System.EventHandler(this.checkBoxRegister18_CheckedChanged);
             // 
             // checkBoxRegister19
             // 
@@ -933,6 +934,7 @@
             this.checkBoxRegister19.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister19.TabIndex = 66;
             this.checkBoxRegister19.UseVisualStyleBackColor = true;
+            this.checkBoxRegister19.CheckedChanged += new System.EventHandler(this.checkBoxRegister19_CheckedChanged);
             // 
             // checkBoxRegister20
             // 
@@ -942,6 +944,7 @@
             this.checkBoxRegister20.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister20.TabIndex = 66;
             this.checkBoxRegister20.UseVisualStyleBackColor = true;
+            this.checkBoxRegister20.CheckedChanged += new System.EventHandler(this.checkBoxRegister20_CheckedChanged);
             // 
             // checkBoxRegister21
             // 
@@ -951,6 +954,7 @@
             this.checkBoxRegister21.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister21.TabIndex = 66;
             this.checkBoxRegister21.UseVisualStyleBackColor = true;
+            this.checkBoxRegister21.CheckedChanged += new System.EventHandler(this.checkBoxRegister21_CheckedChanged);
             // 
             // checkBoxRegister22
             // 
@@ -960,6 +964,7 @@
             this.checkBoxRegister22.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister22.TabIndex = 66;
             this.checkBoxRegister22.UseVisualStyleBackColor = true;
+            this.checkBoxRegister22.CheckedChanged += new System.EventHandler(this.checkBoxRegister22_CheckedChanged);
             // 
             // checkBoxRegister23
             // 
@@ -969,6 +974,7 @@
             this.checkBoxRegister23.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister23.TabIndex = 67;
             this.checkBoxRegister23.UseVisualStyleBackColor = true;
+            this.checkBoxRegister23.CheckedChanged += new System.EventHandler(this.checkBoxRegister23_CheckedChanged);
             // 
             // checkBoxRegister24
             // 
@@ -978,6 +984,7 @@
             this.checkBoxRegister24.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister24.TabIndex = 67;
             this.checkBoxRegister24.UseVisualStyleBackColor = true;
+            this.checkBoxRegister24.CheckedChanged += new System.EventHandler(this.checkBoxRegister24_CheckedChanged);
             // 
             // checkBoxRegister25
             // 
@@ -987,6 +994,7 @@
             this.checkBoxRegister25.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister25.TabIndex = 67;
             this.checkBoxRegister25.UseVisualStyleBackColor = true;
+            this.checkBoxRegister25.CheckedChanged += new System.EventHandler(this.checkBoxRegister25_CheckedChanged);
             // 
             // checkBoxRegister26
             // 
@@ -996,6 +1004,7 @@
             this.checkBoxRegister26.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister26.TabIndex = 67;
             this.checkBoxRegister26.UseVisualStyleBackColor = true;
+            this.checkBoxRegister26.CheckedChanged += new System.EventHandler(this.checkBoxRegister26_CheckedChanged);
             // 
             // checkBoxRegister27
             // 
@@ -1005,6 +1014,7 @@
             this.checkBoxRegister27.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister27.TabIndex = 67;
             this.checkBoxRegister27.UseVisualStyleBackColor = true;
+            this.checkBoxRegister27.CheckedChanged += new System.EventHandler(this.checkBoxRegister27_CheckedChanged);
             // 
             // checkBoxRegister28
             // 
@@ -1014,6 +1024,7 @@
             this.checkBoxRegister28.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister28.TabIndex = 67;
             this.checkBoxRegister28.UseVisualStyleBackColor = true;
+            this.checkBoxRegister28.CheckedChanged += new System.EventHandler(this.checkBoxRegister28_CheckedChanged);
             // 
             // checkBoxRegister29
             // 
@@ -1023,6 +1034,7 @@
             this.checkBoxRegister29.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister29.TabIndex = 67;
             this.checkBoxRegister29.UseVisualStyleBackColor = true;
+            this.checkBoxRegister29.CheckedChanged += new System.EventHandler(this.checkBoxRegister29_CheckedChanged);
             // 
             // checkBoxRegister30
             // 
@@ -1032,6 +1044,7 @@
             this.checkBoxRegister30.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister30.TabIndex = 67;
             this.checkBoxRegister30.UseVisualStyleBackColor = true;
+            this.checkBoxRegister30.CheckedChanged += new System.EventHandler(this.checkBoxRegister30_CheckedChanged);
             // 
             // checkBoxRegister31
             // 
@@ -1051,7 +1064,7 @@
             this.checkBoxRegister32.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister32.TabIndex = 67;
             this.checkBoxRegister32.UseVisualStyleBackColor = true;
-            this.checkBoxRegister32.CheckedChanged += new System.EventHandler(this.checkBox31_CheckedChanged);
+            this.checkBoxRegister32.CheckedChanged += new System.EventHandler(this.checkBoxRegister32_CheckedChanged);
             // 
             // checkBoxRegister33
             // 
@@ -1061,7 +1074,7 @@
             this.checkBoxRegister33.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister33.TabIndex = 67;
             this.checkBoxRegister33.UseVisualStyleBackColor = true;
-            this.checkBoxRegister33.CheckedChanged += new System.EventHandler(this.checkBox31_CheckedChanged);
+            this.checkBoxRegister33.CheckedChanged += new System.EventHandler(this.checkBoxRegister33_CheckedChanged);
             // 
             // checkBoxRegister44
             // 
@@ -1071,6 +1084,7 @@
             this.checkBoxRegister44.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister44.TabIndex = 69;
             this.checkBoxRegister44.UseVisualStyleBackColor = true;
+            this.checkBoxRegister44.CheckedChanged += new System.EventHandler(this.checkBoxRegister44_CheckedChanged);
             // 
             // checkBoxRegister43
             // 
@@ -1080,6 +1094,7 @@
             this.checkBoxRegister43.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister43.TabIndex = 70;
             this.checkBoxRegister43.UseVisualStyleBackColor = true;
+            this.checkBoxRegister43.CheckedChanged += new System.EventHandler(this.checkBoxRegister43_CheckedChanged);
             // 
             // checkBoxRegister42
             // 
@@ -1089,6 +1104,7 @@
             this.checkBoxRegister42.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister42.TabIndex = 71;
             this.checkBoxRegister42.UseVisualStyleBackColor = true;
+            this.checkBoxRegister42.CheckedChanged += new System.EventHandler(this.checkBoxRegister42_CheckedChanged);
             // 
             // checkBoxRegister41
             // 
@@ -1098,6 +1114,7 @@
             this.checkBoxRegister41.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister41.TabIndex = 72;
             this.checkBoxRegister41.UseVisualStyleBackColor = true;
+            this.checkBoxRegister41.CheckedChanged += new System.EventHandler(this.checkBoxRegister41_CheckedChanged);
             // 
             // checkBoxRegister40
             // 
@@ -1107,6 +1124,7 @@
             this.checkBoxRegister40.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister40.TabIndex = 73;
             this.checkBoxRegister40.UseVisualStyleBackColor = true;
+            this.checkBoxRegister40.CheckedChanged += new System.EventHandler(this.checkBoxRegister40_CheckedChanged);
             // 
             // checkBoxRegister39
             // 
@@ -1116,6 +1134,7 @@
             this.checkBoxRegister39.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister39.TabIndex = 74;
             this.checkBoxRegister39.UseVisualStyleBackColor = true;
+            this.checkBoxRegister39.CheckedChanged += new System.EventHandler(this.checkBoxRegister39_CheckedChanged);
             // 
             // checkBoxRegister38
             // 
@@ -1125,6 +1144,7 @@
             this.checkBoxRegister38.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister38.TabIndex = 75;
             this.checkBoxRegister38.UseVisualStyleBackColor = true;
+            this.checkBoxRegister38.CheckedChanged += new System.EventHandler(this.checkBoxRegister38_CheckedChanged);
             // 
             // checkBoxRegister37
             // 
@@ -1134,6 +1154,7 @@
             this.checkBoxRegister37.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister37.TabIndex = 76;
             this.checkBoxRegister37.UseVisualStyleBackColor = true;
+            this.checkBoxRegister37.CheckedChanged += new System.EventHandler(this.checkBoxRegister37_CheckedChanged);
             // 
             // checkBoxRegister36
             // 
@@ -1143,6 +1164,7 @@
             this.checkBoxRegister36.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister36.TabIndex = 77;
             this.checkBoxRegister36.UseVisualStyleBackColor = true;
+            this.checkBoxRegister36.CheckedChanged += new System.EventHandler(this.checkBoxRegister36_CheckedChanged);
             // 
             // checkBoxRegister35
             // 
@@ -1152,6 +1174,7 @@
             this.checkBoxRegister35.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister35.TabIndex = 78;
             this.checkBoxRegister35.UseVisualStyleBackColor = true;
+            this.checkBoxRegister35.CheckedChanged += new System.EventHandler(this.checkBoxRegister35_CheckedChanged);
             // 
             // checkBoxRegister34
             // 
@@ -1161,6 +1184,7 @@
             this.checkBoxRegister34.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister34.TabIndex = 79;
             this.checkBoxRegister34.UseVisualStyleBackColor = true;
+            this.checkBoxRegister34.CheckedChanged += new System.EventHandler(this.checkBoxRegister34_CheckedChanged);
             // 
             // checkBoxRegister55
             // 
@@ -1170,6 +1194,7 @@
             this.checkBoxRegister55.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister55.TabIndex = 80;
             this.checkBoxRegister55.UseVisualStyleBackColor = true;
+            this.checkBoxRegister55.CheckedChanged += new System.EventHandler(this.checkBoxRegister55_CheckedChanged);
             // 
             // checkBoxRegister54
             // 
@@ -1179,6 +1204,7 @@
             this.checkBoxRegister54.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister54.TabIndex = 81;
             this.checkBoxRegister54.UseVisualStyleBackColor = true;
+            this.checkBoxRegister54.CheckedChanged += new System.EventHandler(this.checkBoxRegister54_CheckedChanged);
             // 
             // checkBoxRegister53
             // 
@@ -1188,6 +1214,7 @@
             this.checkBoxRegister53.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister53.TabIndex = 82;
             this.checkBoxRegister53.UseVisualStyleBackColor = true;
+            this.checkBoxRegister53.CheckedChanged += new System.EventHandler(this.checkBoxRegister53_CheckedChanged);
             // 
             // checkBoxRegister52
             // 
@@ -1197,6 +1224,7 @@
             this.checkBoxRegister52.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister52.TabIndex = 83;
             this.checkBoxRegister52.UseVisualStyleBackColor = true;
+            this.checkBoxRegister52.CheckedChanged += new System.EventHandler(this.checkBoxRegister52_CheckedChanged);
             // 
             // checkBoxRegister51
             // 
@@ -1206,6 +1234,7 @@
             this.checkBoxRegister51.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister51.TabIndex = 84;
             this.checkBoxRegister51.UseVisualStyleBackColor = true;
+            this.checkBoxRegister51.CheckedChanged += new System.EventHandler(this.checkBoxRegister51_CheckedChanged);
             // 
             // checkBoxRegister50
             // 
@@ -1215,6 +1244,7 @@
             this.checkBoxRegister50.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister50.TabIndex = 85;
             this.checkBoxRegister50.UseVisualStyleBackColor = true;
+            this.checkBoxRegister50.CheckedChanged += new System.EventHandler(this.checkBoxRegister50_CheckedChanged);
             // 
             // checkBoxRegister49
             // 
@@ -1224,6 +1254,7 @@
             this.checkBoxRegister49.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister49.TabIndex = 86;
             this.checkBoxRegister49.UseVisualStyleBackColor = true;
+            this.checkBoxRegister49.CheckedChanged += new System.EventHandler(this.checkBoxRegister49_CheckedChanged);
             // 
             // checkBoxRegister48
             // 
@@ -1233,6 +1264,7 @@
             this.checkBoxRegister48.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister48.TabIndex = 87;
             this.checkBoxRegister48.UseVisualStyleBackColor = true;
+            this.checkBoxRegister48.CheckedChanged += new System.EventHandler(this.checkBoxRegister48_CheckedChanged);
             // 
             // checkBoxRegister47
             // 
@@ -1242,6 +1274,7 @@
             this.checkBoxRegister47.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister47.TabIndex = 88;
             this.checkBoxRegister47.UseVisualStyleBackColor = true;
+            this.checkBoxRegister47.CheckedChanged += new System.EventHandler(this.checkBoxRegister47_CheckedChanged);
             // 
             // checkBoxRegister46
             // 
@@ -1251,6 +1284,7 @@
             this.checkBoxRegister46.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister46.TabIndex = 89;
             this.checkBoxRegister46.UseVisualStyleBackColor = true;
+            this.checkBoxRegister46.CheckedChanged += new System.EventHandler(this.checkBoxRegister46_CheckedChanged);
             // 
             // checkBoxRegister45
             // 
@@ -1260,6 +1294,7 @@
             this.checkBoxRegister45.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister45.TabIndex = 90;
             this.checkBoxRegister45.UseVisualStyleBackColor = true;
+            this.checkBoxRegister45.CheckedChanged += new System.EventHandler(this.checkBoxRegister45_CheckedChanged);
             // 
             // checkBoxRegister64
             // 
@@ -1269,6 +1304,7 @@
             this.checkBoxRegister64.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister64.TabIndex = 91;
             this.checkBoxRegister64.UseVisualStyleBackColor = true;
+            this.checkBoxRegister64.CheckedChanged += new System.EventHandler(this.checkBoxRegister64_CheckedChanged);
             // 
             // checkBoxRegister63
             // 
@@ -1278,6 +1314,7 @@
             this.checkBoxRegister63.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister63.TabIndex = 92;
             this.checkBoxRegister63.UseVisualStyleBackColor = true;
+            this.checkBoxRegister63.CheckedChanged += new System.EventHandler(this.checkBoxRegister63_CheckedChanged);
             // 
             // checkBoxRegister62
             // 
@@ -1287,6 +1324,7 @@
             this.checkBoxRegister62.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister62.TabIndex = 93;
             this.checkBoxRegister62.UseVisualStyleBackColor = true;
+            this.checkBoxRegister62.CheckedChanged += new System.EventHandler(this.checkBoxRegister62_CheckedChanged);
             // 
             // checkBoxRegister61
             // 
@@ -1296,6 +1334,7 @@
             this.checkBoxRegister61.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister61.TabIndex = 94;
             this.checkBoxRegister61.UseVisualStyleBackColor = true;
+            this.checkBoxRegister61.CheckedChanged += new System.EventHandler(this.checkBoxRegister61_CheckedChanged);
             // 
             // checkBoxRegister60
             // 
@@ -1305,6 +1344,7 @@
             this.checkBoxRegister60.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister60.TabIndex = 95;
             this.checkBoxRegister60.UseVisualStyleBackColor = true;
+            this.checkBoxRegister60.CheckedChanged += new System.EventHandler(this.checkBoxRegister60_CheckedChanged);
             // 
             // checkBoxRegister59
             // 
@@ -1314,6 +1354,7 @@
             this.checkBoxRegister59.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister59.TabIndex = 96;
             this.checkBoxRegister59.UseVisualStyleBackColor = true;
+            this.checkBoxRegister59.CheckedChanged += new System.EventHandler(this.checkBoxRegister59_CheckedChanged);
             // 
             // checkBoxRegister58
             // 
@@ -1323,6 +1364,7 @@
             this.checkBoxRegister58.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister58.TabIndex = 97;
             this.checkBoxRegister58.UseVisualStyleBackColor = true;
+            this.checkBoxRegister58.CheckedChanged += new System.EventHandler(this.checkBoxRegister58_CheckedChanged);
             // 
             // checkBoxRegister57
             // 
@@ -1332,6 +1374,7 @@
             this.checkBoxRegister57.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister57.TabIndex = 98;
             this.checkBoxRegister57.UseVisualStyleBackColor = true;
+            this.checkBoxRegister57.CheckedChanged += new System.EventHandler(this.checkBoxRegister57_CheckedChanged);
             // 
             // checkBoxRegister56
             // 
@@ -1341,6 +1384,7 @@
             this.checkBoxRegister56.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister56.TabIndex = 99;
             this.checkBoxRegister56.UseVisualStyleBackColor = true;
+            this.checkBoxRegister56.CheckedChanged += new System.EventHandler(this.checkBoxRegister56_CheckedChanged);
             // 
             // Settings
             // 

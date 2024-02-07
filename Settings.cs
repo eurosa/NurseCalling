@@ -462,5 +462,235 @@ namespace NurseCalling
         {
 
         }
+
+        private void checkBoxRegister64_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister18_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister19_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister20_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister21_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister22_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister23_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister24_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister25_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister26_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister27_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister28_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister29_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister30_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister32_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister33_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister34_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister35_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister36_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister37_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister38_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister39_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister40_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister41_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister42_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister43_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister44_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister45_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister46_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister47_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister48_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister49_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister50_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister51_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister52_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister53_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister54_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister55_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister56_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister57_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister58_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister59_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister60_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister61_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister62_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxRegister63_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
