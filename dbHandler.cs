@@ -35,7 +35,32 @@ namespace NurseCalling
                     SQLiteCommand command1 = new SQLiteCommand(sql1, dbConnection);
                     command1.ExecuteNonQuery();
 
-                    string sql2 = "create table setting_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, comport_name varchar(60), firstcall_status varchar(60))";
+                    string sql2 = "create table setting_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, textBoxRegist1 varchar(60), textBoxRegist2 varchar(60), textBoxRegist3 varchar(60)" +
+                        ", textBoxRegist4 varchar(60), textBoxRegist5 varchar(60), textBoxRegist6 varchar(60), textBoxRegist7 varchar(60), textBoxRegist8 varchar(60), textBoxRegist9 varchar(60)" +
+                        ", textBoxRegist10 varchar(60), textBoxRegist11 varchar(60), textBoxRegist12 varchar(60), textBoxRegist13 varchar(60), textBoxRegist14 varchar(60)" +
+                        ", textBoxRegist15 varchar(60), textBoxRegist16 varchar(60), textBoxRegist17 varchar(60), textBoxRegist18 varchar(60), textBoxRegist19 varchar(60), textBoxRegist20 varchar(60)" +
+                        ", textBoxRegist21 varchar(60), textBoxRegist22 varchar(60), textBoxRegist23 varchar(60), textBoxRegist24 varchar(60), textBoxRegist25 varchar(60)" +
+                        ", textBoxRegist26 varchar(60), textBoxRegist27 varchar(60), textBoxRegist28 varchar(60), textBoxRegist29 varchar(60), textBoxRegist30 varchar(60)" +
+                        ", textBoxRegist31 varchar(60), textBoxRegist32 varchar(60), textBoxRegist33 varchar(60), textBoxRegist34 varchar(60), textBoxRegist35 varchar(60)" +
+                        ", textBoxRegist36 varchar(60), textBoxRegist37 varchar(60), textBoxRegist38 varchar(60), textBoxRegist39 varchar(60), textBoxRegist40 varchar(60)" +
+                        ", textBoxRegist41 varchar(60), textBoxRegist42 varchar(60), textBoxRegist43 varchar(60), textBoxRegist44 varchar(60), textBoxRegist45 varchar(60)" +
+                        ", textBoxRegist46 varchar(60), textBoxRegist47 varchar(60), textBoxRegist48 varchar(60), textBoxRegist49 varchar(60), textBoxRegist50 varchar(60)" +
+                        ", textBoxRegist51 varchar(60), textBoxRegist52 varchar(60), textBoxRegist53 varchar(60), textBoxRegist54 varchar(60), textBoxRegist55 varchar(60)" +
+                        ", textBoxRegist56 varchar(60), textBoxRegist57 varchar(60), textBoxRegist58 varchar(60), textBoxRegist59 varchar(60), textBoxRegist60 varchar(60)" +
+                        ", textBoxRegist61 varchar(60), textBoxRegist62 varchar(60), textBoxRegist63 varchar(60), textBoxRegist64 varchar(60),checkBoxRegister1 varchar(10)" +
+                        ",checkBoxRegister2 varchar(10),checkBoxRegister3 varchar(10),checkBoxRegister4 varchar(10),checkBoxRegister5 varchar(10),checkBoxRegister6 varchar(10)" +
+                        ",checkBoxRegister7 varchar(10),checkBoxRegister8 varchar(10),checkBoxRegister9 varchar(10),checkBoxRegister10 varchar(10),checkBoxRegister11 varchar(10)" +
+                        ",checkBoxRegister12 varchar(10),checkBoxRegister13 varchar(10),checkBoxRegister14 varchar(10),checkBoxRegister15 varchar(10),checkBoxRegister16 varchar(10)" +
+                        ",checkBoxRegister17 varchar(10),checkBoxRegister18 varchar(10),checkBoxRegister19 varchar(10),checkBoxRegister20 varchar(10),checkBoxRegister21 varchar(10)" +
+                        ",checkBoxRegister22 varchar(10),checkBoxRegister23 varchar(10),checkBoxRegister24 varchar(10),checkBoxRegister25 varchar(10),checkBoxRegister26 varchar(10)" +
+                        ",checkBoxRegister27 varchar(10),checkBoxRegister28 varchar(10),checkBoxRegister29 varchar(10),checkBoxRegister30 varchar(10),checkBoxRegister31 varchar(10)" +
+                        ",checkBoxRegister32 varchar(10),checkBoxRegister33 varchar(10),checkBoxRegister34 varchar(10),checkBoxRegister35 varchar(10),checkBoxRegister36 varchar(10)" +
+                        ",checkBoxRegister37 varchar(10),checkBoxRegister38 varchar(10),checkBoxRegister39 varchar(10),checkBoxRegister40 varchar(10),checkBoxRegister41 varchar(10)" +
+                        ",checkBoxRegister42 varchar(10),checkBoxRegister43 varchar(10),checkBoxRegister44 varchar(10),checkBoxRegister45 varchar(10),checkBoxRegister46 varchar(10)" +
+                        ",checkBoxRegister47 varchar(10),checkBoxRegister48 varchar(10),checkBoxRegister49 varchar(10),checkBoxRegister50 varchar(10),checkBoxRegister51 varchar(10)" +
+                        ",checkBoxRegister52 varchar(10),checkBoxRegister53 varchar(10),checkBoxRegister54 varchar(10),checkBoxRegister55 varchar(10),checkBoxRegister56 varchar(10)" +
+                        ",checkBoxRegister57 varchar(10),checkBoxRegister58 varchar(10),checkBoxRegister59 varchar(10),checkBoxRegister60 varchar(10),checkBoxRegister61 varchar(10)" +
+                        ",checkBoxRegister62 varchar(10),checkBoxRegister33 varchar(10),checkBoxRegister64 varchar(10))";
                     SQLiteCommand command2 = new SQLiteCommand(sql2, dbConnection);
                     command2.ExecuteNonQuery();
 
@@ -48,8 +73,7 @@ namespace NurseCalling
                     {
 
                     }
-
-
+                     
                     
                     dbConnection.Close();
 
