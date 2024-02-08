@@ -318,7 +318,7 @@ namespace NurseCalling
         public void update_setting_table_data(SQLiteConnection m_dbConnection, DataModel modelData)
         {
 
-            string sql_update = "UPDATE setting_table SET   ,textBoxRegist1 = @textBoxRegist1, textBoxRegist2 = @textBoxRegist2 ,textBoxRegist3 = @textBoxRegist3 "+
+            string sql_update = "UPDATE setting_table SET   textBoxRegist1 = @textBoxRegist1, textBoxRegist2 = @textBoxRegist2 ,textBoxRegist3 = @textBoxRegist3 "+
                                 ",textBoxRegist4 = @textBoxRegist4 " +
                                 ",textBoxRegist5 = @textBoxRegist5 " +
                                 ",textBoxRegist6 = @textBoxRegist6 " +

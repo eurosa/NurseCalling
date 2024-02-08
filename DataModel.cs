@@ -81,5 +81,71 @@ namespace NurseCalling
         public string textBoxRegist62 { get; set; }
         public string textBoxRegist63 { get; set; }
         public string textBoxRegist64 { get; set; }
+
+        public bool checkBoxRegister1 { get; set; }
+        public bool checkBoxRegister2 { get; set; }
+        public bool checkBoxRegister3 { get; set; }
+        public bool checkBoxRegister4 { get; set; }
+        public bool checkBoxRegister5 { get; set; }
+        public bool checkBoxRegister6 { get; set; }
+        public bool checkBoxRegister7 { get; set; }
+        public bool checkBoxRegister8 { get; set; }
+        public bool checkBoxRegister9 { get; set; }
+        public bool checkBoxRegister10 { get; set; }
+        public bool checkBoxRegister11 { get; set; }
+        public bool checkBoxRegister12 { get; set; }
+        public bool checkBoxRegister13 { get; set; }
+        public bool checkBoxRegister14 { get; set; }
+        public bool checkBoxRegister15 { get; set; }
+        public bool checkBoxRegister16 { get; set; }
+        public bool checkBoxRegister17 { get; set; }
+        public bool checkBoxRegister18 { get; set; }
+        public bool checkBoxRegister19 { get; set; }
+        public bool checkBoxRegister20 { get; set; }
+        public bool checkBoxRegister21 { get; set; }
+        public bool checkBoxRegister22 { get; set; }
+        public bool checkBoxRegister23 { get; set; }
+        public bool checkBoxRegister24 { get; set; }
+        public bool checkBoxRegister25 { get; set; }
+        public bool checkBoxRegister26 { get; set; }
+        public bool checkBoxRegister27 { get; set; }
+        public bool checkBoxRegister28 { get; set; }
+        public bool checkBoxRegister29 { get; set; }
+        public bool checkBoxRegister30 { get; set; }
+        public bool checkBoxRegister31 { get; set; }
+        public bool checkBoxRegister32 { get; set; }
+        public bool checkBoxRegister33 { get; set; }
+        public bool checkBoxRegister34 { get; set; }
+        public bool checkBoxRegister35 { get; set; }
+        public bool checkBoxRegister36 { get; set; }
+        public bool checkBoxRegister37 { get; set; }
+        public bool checkBoxRegister38 { get; set; }
+        public bool checkBoxRegister39 { get; set; }
+        public bool checkBoxRegister40 { get; set; }
+        public bool checkBoxRegister41 { get; set; }
+        public bool checkBoxRegister42 { get; set; }
+        public bool checkBoxRegister43 { get; set; }
+        public bool checkBoxRegister44 { get; set; }
+        public bool checkBoxRegister45 { get; set; }
+        public bool checkBoxRegister46 { get; set; }
+        public bool checkBoxRegister47 { get; set; }
+        public bool checkBoxRegister48 { get; set; }
+        public bool checkBoxRegister49 { get; set; }
+        public bool checkBoxRegister50 { get; set; }
+        public bool checkBoxRegister51 { get; set; }
+        public bool checkBoxRegister52 { get; set; }
+        public bool checkBoxRegister53 { get; set; }
+        public bool checkBoxRegister54 { get; set; }
+        public bool checkBoxRegister55 { get; set; }
+        public bool checkBoxRegister56 { get; set; }
+        public bool checkBoxRegister57 { get; set; }
+        public bool checkBoxRegister58 { get; set; }
+        public bool checkBoxRegister59 { get; set; }
+        public bool checkBoxRegister60 { get; set; }
+        public bool checkBoxRegister61 { get; set; }
+        public bool checkBoxRegister62 { get; set; }
+        public bool checkBoxRegister63 { get; set; }
+        public bool checkBoxRegister64 { get; set; }
+      
     }
 }

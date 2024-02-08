@@ -22,7 +22,10 @@ namespace NurseCalling
             modelData = dataModel;
             dbHandlr = dbHandr;
             qLiteConnection = sQLite;
-            SetPlaceHolder(textBoxRegist1, "Hub 1");
+
+            dbHandlr.getSettingData(qLiteConnection,modelData);
+
+           /* SetPlaceHolder(textBoxRegist1, "Hub 1");
             SetPlaceHolder(textBoxRegist2, "Hub 2");
             SetPlaceHolder(textBoxRegist3, "Hub 3");
             SetPlaceHolder(textBoxRegist4, "Hub 4");
@@ -85,8 +88,75 @@ namespace NurseCalling
             SetPlaceHolder(textBoxRegist61, "Hub 61");
             SetPlaceHolder(textBoxRegist62, "Hub 62");
             SetPlaceHolder(textBoxRegist63, "Hub 63");
-            SetPlaceHolder(textBoxRegist64, "Hub 64");
+            SetPlaceHolder(textBoxRegist64, "Hub 64");*/
 
+            textBoxRegist1.Text = modelData.textBoxRegist1;
+            textBoxRegist2.Text = modelData.textBoxRegist2;
+            textBoxRegist3.Text = modelData.textBoxRegist3;
+            textBoxRegist4.Text = modelData.textBoxRegist4;
+            textBoxRegist5.Text = modelData.textBoxRegist5;
+            textBoxRegist6.Text = modelData.textBoxRegist6;
+            textBoxRegist7.Text = modelData.textBoxRegist7;
+            textBoxRegist8.Text = modelData.textBoxRegist8;
+            textBoxRegist9.Text = modelData.textBoxRegist9;
+            textBoxRegist10.Text = modelData.textBoxRegist10;
+            textBoxRegist11.Text = modelData.textBoxRegist11;
+            textBoxRegist12.Text = modelData.textBoxRegist12;
+            textBoxRegist13.Text = modelData.textBoxRegist13;
+            textBoxRegist14.Text = modelData.textBoxRegist14;
+            textBoxRegist15.Text = modelData.textBoxRegist15;
+            textBoxRegist16.Text = modelData.textBoxRegist16;
+            textBoxRegist17.Text = modelData.textBoxRegist17;
+            textBoxRegist18.Text = modelData.textBoxRegist18;
+            textBoxRegist19.Text = modelData.textBoxRegist19;
+            textBoxRegist20.Text = modelData.textBoxRegist20;
+            textBoxRegist21.Text = modelData.textBoxRegist21;
+            textBoxRegist22.Text = modelData.textBoxRegist22;
+            textBoxRegist23.Text = modelData.textBoxRegist23;
+            textBoxRegist24.Text = modelData.textBoxRegist24;
+            textBoxRegist25.Text = modelData.textBoxRegist25;
+            textBoxRegist26.Text = modelData.textBoxRegist26;
+            textBoxRegist27.Text = modelData.textBoxRegist27;
+            textBoxRegist28.Text = modelData.textBoxRegist28;
+            textBoxRegist29.Text = modelData.textBoxRegist29;
+            textBoxRegist30.Text = modelData.textBoxRegist30;
+            textBoxRegist31.Text = modelData.textBoxRegist31;
+            textBoxRegist32.Text = modelData.textBoxRegist32;
+            textBoxRegist33.Text = modelData.textBoxRegist33;
+            textBoxRegist34.Text = modelData.textBoxRegist34;
+            textBoxRegist35.Text = modelData.textBoxRegist35;
+            textBoxRegist36.Text = modelData.textBoxRegist36;
+            textBoxRegist37.Text = modelData.textBoxRegist37;
+            textBoxRegist38.Text = modelData.textBoxRegist38;
+            textBoxRegist39.Text = modelData.textBoxRegist39;
+            textBoxRegist40.Text = modelData.textBoxRegist40;
+            textBoxRegist41.Text = modelData.textBoxRegist41;
+            textBoxRegist42.Text = modelData.textBoxRegist42;
+            textBoxRegist43.Text = modelData.textBoxRegist43;
+            textBoxRegist44.Text = modelData.textBoxRegist44;
+            textBoxRegist45.Text = modelData.textBoxRegist45;
+            textBoxRegist46.Text = modelData.textBoxRegist46;
+            textBoxRegist47.Text = modelData.textBoxRegist47;
+            textBoxRegist48.Text = modelData.textBoxRegist48;
+            textBoxRegist49.Text = modelData.textBoxRegist49;
+            textBoxRegist50.Text = modelData.textBoxRegist50;
+            textBoxRegist51.Text = modelData.textBoxRegist51;
+            textBoxRegist52.Text = modelData.textBoxRegist52;
+            textBoxRegist53.Text = modelData.textBoxRegist53;
+            textBoxRegist54.Text = modelData.textBoxRegist54;
+            textBoxRegist55.Text = modelData.textBoxRegist55;
+            textBoxRegist56.Text = modelData.textBoxRegist56;
+            textBoxRegist57.Text = modelData.textBoxRegist57;
+            textBoxRegist58.Text = modelData.textBoxRegist58;
+            textBoxRegist59.Text = modelData.textBoxRegist59;
+            textBoxRegist60.Text = modelData.textBoxRegist60;
+            textBoxRegist61.Text = modelData.textBoxRegist61;
+            textBoxRegist62.Text = modelData.textBoxRegist62;
+            textBoxRegist63.Text = modelData.textBoxRegist63;
+            textBoxRegist64.Text = modelData.textBoxRegist64;
+
+
+           // MessageBox.Show(modelData.textBoxRegist64);
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -161,7 +231,71 @@ namespace NurseCalling
             modelData.textBoxRegist63 = textBoxRegist63.Text;
             modelData.textBoxRegist64 = textBoxRegist64.Text;
 
-            
+            modelData.checkBoxRegister1 = checkBoxRegister1.Checked;
+            modelData.checkBoxRegister2 = checkBoxRegister2.Checked;
+            modelData.checkBoxRegister3 = checkBoxRegister3.Checked;
+            modelData.checkBoxRegister4 = checkBoxRegister4.Checked;
+            modelData.checkBoxRegister5 = checkBoxRegister5.Checked;
+            modelData.checkBoxRegister6 = checkBoxRegister6.Checked;
+            modelData.checkBoxRegister7 = checkBoxRegister7.Checked;
+            modelData.checkBoxRegister8 = checkBoxRegister8.Checked;
+            modelData.checkBoxRegister9 = checkBoxRegister9.Checked;
+            modelData.checkBoxRegister10 = checkBoxRegister10.Checked;
+            modelData.checkBoxRegister11 = checkBoxRegister11.Checked;
+            modelData.checkBoxRegister12 = checkBoxRegister12.Checked;
+            modelData.checkBoxRegister13 = checkBoxRegister13.Checked;
+            modelData.checkBoxRegister14 = checkBoxRegister14.Checked;
+            modelData.checkBoxRegister15 = checkBoxRegister15.Checked;
+            modelData.checkBoxRegister16 = checkBoxRegister16.Checked;
+            modelData.checkBoxRegister17 = checkBoxRegister17.Checked;
+            modelData.checkBoxRegister18 = checkBoxRegister18.Checked;
+            modelData.checkBoxRegister19 = checkBoxRegister19.Checked;
+            modelData.checkBoxRegister20 = checkBoxRegister20.Checked;
+            modelData.checkBoxRegister21 = checkBoxRegister21.Checked;
+            modelData.checkBoxRegister22 = checkBoxRegister22.Checked;
+            modelData.checkBoxRegister23 = checkBoxRegister23.Checked;
+            modelData.checkBoxRegister24 = checkBoxRegister24.Checked;
+            modelData.checkBoxRegister25 = checkBoxRegister25.Checked;
+            modelData.checkBoxRegister26 = checkBoxRegister26.Checked;
+            modelData.checkBoxRegister27 = checkBoxRegister27.Checked;
+            modelData.checkBoxRegister28 = checkBoxRegister28.Checked;
+            modelData.checkBoxRegister29 = checkBoxRegister29.Checked;
+            modelData.checkBoxRegister30 = checkBoxRegister30.Checked;
+            modelData.checkBoxRegister31 = checkBoxRegister31.Checked;
+            modelData.checkBoxRegister32 = checkBoxRegister32.Checked;
+            modelData.checkBoxRegister33 = checkBoxRegister33.Checked;
+            modelData.checkBoxRegister34 = checkBoxRegister34.Checked;
+            modelData.checkBoxRegister35 = checkBoxRegister35.Checked;
+            modelData.checkBoxRegister36 = checkBoxRegister36.Checked;
+            modelData.checkBoxRegister37 = checkBoxRegister37.Checked;
+            modelData.checkBoxRegister38 = checkBoxRegister38.Checked;
+            modelData.checkBoxRegister39 = checkBoxRegister39.Checked;
+            modelData.checkBoxRegister40 = checkBoxRegister40.Checked;
+            modelData.checkBoxRegister41 = checkBoxRegister41.Checked;
+            modelData.checkBoxRegister42 = checkBoxRegister42.Checked;
+            modelData.checkBoxRegister43 = checkBoxRegister43.Checked;
+            modelData.checkBoxRegister44 = checkBoxRegister44.Checked;
+            modelData.checkBoxRegister45 = checkBoxRegister45.Checked;
+            modelData.checkBoxRegister46 = checkBoxRegister46.Checked;
+            modelData.checkBoxRegister47 = checkBoxRegister47.Checked;
+            modelData.checkBoxRegister48 = checkBoxRegister48.Checked;
+            modelData.checkBoxRegister49 = checkBoxRegister49.Checked;
+            modelData.checkBoxRegister50 = checkBoxRegister50.Checked;
+            modelData.checkBoxRegister51 = checkBoxRegister51.Checked;
+            modelData.checkBoxRegister52 = checkBoxRegister52.Checked;
+            modelData.checkBoxRegister53 = checkBoxRegister53.Checked;
+            modelData.checkBoxRegister54 = checkBoxRegister54.Checked;
+            modelData.checkBoxRegister55 = checkBoxRegister55.Checked;
+            modelData.checkBoxRegister56 = checkBoxRegister56.Checked;
+            modelData.checkBoxRegister57 = checkBoxRegister57.Checked;
+            modelData.checkBoxRegister58 = checkBoxRegister58.Checked;
+            modelData.checkBoxRegister59 = checkBoxRegister59.Checked;
+            modelData.checkBoxRegister60 = checkBoxRegister60.Checked;
+            modelData.checkBoxRegister61 = checkBoxRegister61.Checked;
+            modelData.checkBoxRegister62 = checkBoxRegister62.Checked;
+            modelData.checkBoxRegister63 = checkBoxRegister63.Checked;
+            modelData.checkBoxRegister64 = checkBoxRegister64.Checked; 
+
 
             dbHandlr.update_setting_table_data(qLiteConnection, modelData);
         }
