@@ -12,12 +12,75 @@ namespace NurseCalling
 {
     public partial class Settings : Form
     {
-        public Settings()
+        DataModel modelData;
+        public Settings(DataModel dataModel)
         {
             InitializeComponent();
-
-          //  SetPlaceHolder(textBoxRegist1, " Логин ");
-           // SetPlaceHolder(textBoxRegist2, " Пароль ");
+            modelData = dataModel; 
+            SetPlaceHolder(textBoxRegist1, "Hub 1");
+            SetPlaceHolder(textBoxRegist2, "Hub 2");
+            SetPlaceHolder(textBoxRegist3, "Hub 3");
+            SetPlaceHolder(textBoxRegist4, "Hub 4");
+            SetPlaceHolder(textBoxRegist5, "Hub 5");
+            SetPlaceHolder(textBoxRegist6, "Hub 6");
+            SetPlaceHolder(textBoxRegist7, "Hub 7");
+            SetPlaceHolder(textBoxRegist8, "Hub 8");
+            SetPlaceHolder(textBoxRegist9, "Hub 9");
+            SetPlaceHolder(textBoxRegist10, "Hub 10");
+            SetPlaceHolder(textBoxRegist11, "Hub 11");
+            SetPlaceHolder(textBoxRegist12, "Hub 12");
+            SetPlaceHolder(textBoxRegist13, "Hub 13");
+            SetPlaceHolder(textBoxRegist14, "Hub 14");
+            SetPlaceHolder(textBoxRegist15, "Hub 15");
+            SetPlaceHolder(textBoxRegist16, "Hub 16");
+            SetPlaceHolder(textBoxRegist17, "Hub 17");
+            SetPlaceHolder(textBoxRegist18, "Hub 18");
+            SetPlaceHolder(textBoxRegist19, "Hub 19");
+            SetPlaceHolder(textBoxRegist20, "Hub 20");
+            SetPlaceHolder(textBoxRegist21, "Hub 21");
+            SetPlaceHolder(textBoxRegist22, "Hub 22");
+            SetPlaceHolder(textBoxRegist23, "Hub 23");
+            SetPlaceHolder(textBoxRegist24, "Hub 24");
+            SetPlaceHolder(textBoxRegist25, "Hub 25");
+            SetPlaceHolder(textBoxRegist26, "Hub 26");
+            SetPlaceHolder(textBoxRegist27, "Hub 27");
+            SetPlaceHolder(textBoxRegist28, "Hub 28");
+            SetPlaceHolder(textBoxRegist29, "Hub 29");
+            SetPlaceHolder(textBoxRegist30, "Hub 30");
+            SetPlaceHolder(textBoxRegist31, "Hub 31");
+            SetPlaceHolder(textBoxRegist32, "Hub 32");
+            SetPlaceHolder(textBoxRegist33, "Hub 33");
+            SetPlaceHolder(textBoxRegist34, "Hub 34");
+            SetPlaceHolder(textBoxRegist35, "Hub 35");
+            SetPlaceHolder(textBoxRegist36, "Hub 36");
+            SetPlaceHolder(textBoxRegist37, "Hub 37");
+            SetPlaceHolder(textBoxRegist38, "Hub 38");
+            SetPlaceHolder(textBoxRegist39, "Hub 39");
+            SetPlaceHolder(textBoxRegist40, "Hub 40");
+            SetPlaceHolder(textBoxRegist41, "Hub 41");
+            SetPlaceHolder(textBoxRegist42, "Hub 42");
+            SetPlaceHolder(textBoxRegist43, "Hub 43");
+            SetPlaceHolder(textBoxRegist44, "Hub 44");
+            SetPlaceHolder(textBoxRegist45, "Hub 45");
+            SetPlaceHolder(textBoxRegist46, "Hub 46");
+            SetPlaceHolder(textBoxRegist47, "Hub 47");
+            SetPlaceHolder(textBoxRegist48, "Hub 48");
+            SetPlaceHolder(textBoxRegist49, "Hub 49");
+            SetPlaceHolder(textBoxRegist50, "Hub 50");
+            SetPlaceHolder(textBoxRegist51, "Hub 51");
+            SetPlaceHolder(textBoxRegist52, "Hub 52");
+            SetPlaceHolder(textBoxRegist53, "Hub 53");
+            SetPlaceHolder(textBoxRegist54, "Hub 54");
+            SetPlaceHolder(textBoxRegist55, "Hub 55");
+            SetPlaceHolder(textBoxRegist56, "Hub 56");
+            SetPlaceHolder(textBoxRegist57, "Hub 57");
+            SetPlaceHolder(textBoxRegist58, "Hub 58");
+            SetPlaceHolder(textBoxRegist59, "Hub 59");
+            SetPlaceHolder(textBoxRegist60, "Hub 60");
+            SetPlaceHolder(textBoxRegist61, "Hub 61");
+            SetPlaceHolder(textBoxRegist62, "Hub 62");
+            SetPlaceHolder(textBoxRegist63, "Hub 63");
+            SetPlaceHolder(textBoxRegist64, "Hub 64");
 
         }
 
@@ -33,22 +96,22 @@ namespace NurseCalling
 
         private void textBoxRegist1_TextChanged(object sender, EventArgs e)
         {
-
+            modelData.textBoxRegist1 = (string)textBoxRegist1.Text;
         }
 
         private void textBoxRegist2_TextChanged(object sender, EventArgs e)
         {
-
+            modelData.textBoxRegist2 = (string)textBoxRegist2.Text;
         }
 
         private void textBoxRegist3_TextChanged(object sender, EventArgs e)
         {
-
+            modelData.textBoxRegist3 = (string)textBoxRegist3.Text;
         }
 
         private void textBoxRegist4_TextChanged(object sender, EventArgs e)
         {
-
+            modelData.textBoxRegist4 = (string)textBoxRegist4.Text;
         }
 
         private void textBoxRegist5_TextChanged(object sender, EventArgs e)
@@ -380,7 +443,7 @@ namespace NurseCalling
 
         private void checkBoxRegister1_CheckedChanged(object sender, EventArgs e)
         {
-
+            Console.WriteLine("CheckBox1 "+checkBoxRegister1.Checked);
         }
 
         private void checkBoxRegister2_CheckedChanged(object sender, EventArgs e)
