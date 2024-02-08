@@ -5599,7 +5599,7 @@ namespace NurseCalling
 
         private void rjSettings_Click(object sender, EventArgs e)
         {
-            Settings mySetting = new Settings(dataModel);
+            Settings mySetting = new Settings(dataModel, dbHandlr,m_dbConnection);
             mySetting.Show();
         }
 

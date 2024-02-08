@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,15 @@ namespace NurseCalling
 {
     public partial class Settings : Form
     {
+        dbHandler dbHandlr;
         DataModel modelData;
-        public Settings(DataModel dataModel)
+        SQLiteConnection qLiteConnection;
+        public Settings(DataModel dataModel, dbHandler dbHandr, SQLiteConnection sQLite )
         {
             InitializeComponent();
-            modelData = dataModel; 
+            modelData = dataModel;
+            dbHandlr = dbHandr;
+            qLiteConnection = sQLite;
             SetPlaceHolder(textBoxRegist1, "Hub 1");
             SetPlaceHolder(textBoxRegist2, "Hub 2");
             SetPlaceHolder(textBoxRegist3, "Hub 3");
@@ -91,27 +96,94 @@ namespace NurseCalling
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-          
+            modelData.textBoxRegist1 = textBoxRegist1.Text;
+            modelData.textBoxRegist2 = textBoxRegist2.Text;
+            modelData.textBoxRegist3 = textBoxRegist3.Text;
+            modelData.textBoxRegist4 = textBoxRegist4.Text;
+            modelData.textBoxRegist5 = textBoxRegist5.Text;
+            modelData.textBoxRegist6 = textBoxRegist6.Text;
+            modelData.textBoxRegist7 = textBoxRegist7.Text;
+            modelData.textBoxRegist8 = textBoxRegist8.Text;
+            modelData.textBoxRegist9 = textBoxRegist9.Text;
+            modelData.textBoxRegist10 = textBoxRegist10.Text;
+            modelData.textBoxRegist11 = textBoxRegist11.Text;
+            modelData.textBoxRegist12 = textBoxRegist12.Text;
+            modelData.textBoxRegist13 = textBoxRegist13.Text;
+            modelData.textBoxRegist14 = textBoxRegist14.Text;
+            modelData.textBoxRegist15 = textBoxRegist15.Text;
+            modelData.textBoxRegist16 = textBoxRegist16.Text;
+            modelData.textBoxRegist17 = textBoxRegist17.Text;
+            modelData.textBoxRegist18 = textBoxRegist18.Text;
+            modelData.textBoxRegist19 = textBoxRegist19.Text;
+            modelData.textBoxRegist20 = textBoxRegist20.Text;
+            modelData.textBoxRegist21 = textBoxRegist21.Text;
+            modelData.textBoxRegist22 = textBoxRegist22.Text;
+            modelData.textBoxRegist23 = textBoxRegist23.Text;
+            modelData.textBoxRegist24 = textBoxRegist24.Text;
+            modelData.textBoxRegist25 = textBoxRegist25.Text;
+            modelData.textBoxRegist26 = textBoxRegist26.Text;
+            modelData.textBoxRegist27 = textBoxRegist27.Text;
+            modelData.textBoxRegist28 = textBoxRegist28.Text;
+            modelData.textBoxRegist29 = textBoxRegist29.Text;
+            modelData.textBoxRegist30= textBoxRegist30.Text;
+            modelData.textBoxRegist31 = textBoxRegist31.Text;
+            modelData.textBoxRegist32 = textBoxRegist32.Text; 
+            modelData.textBoxRegist33 = textBoxRegist33.Text;
+            modelData.textBoxRegist34 = textBoxRegist34.Text;
+            modelData.textBoxRegist35 = textBoxRegist35.Text;
+            modelData.textBoxRegist36 = textBoxRegist36.Text;
+            modelData.textBoxRegist37 = textBoxRegist37.Text;
+            modelData.textBoxRegist38 = textBoxRegist38.Text;
+            modelData.textBoxRegist39 = textBoxRegist39.Text;
+            modelData.textBoxRegist40 = textBoxRegist40.Text;
+            modelData.textBoxRegist41 = textBoxRegist41.Text;
+            modelData.textBoxRegist42 = textBoxRegist42.Text;
+            modelData.textBoxRegist43 = textBoxRegist43.Text;
+            modelData.textBoxRegist44 = textBoxRegist44.Text;
+            modelData.textBoxRegist45 = textBoxRegist45.Text;
+            modelData.textBoxRegist46 = textBoxRegist46.Text;
+            modelData.textBoxRegist47 = textBoxRegist47.Text;
+            modelData.textBoxRegist48 = textBoxRegist48.Text;
+            modelData.textBoxRegist49 = textBoxRegist49.Text;
+            modelData.textBoxRegist50 = textBoxRegist50.Text;
+            modelData.textBoxRegist51 = textBoxRegist51.Text;
+            modelData.textBoxRegist52 = textBoxRegist52.Text;
+            modelData.textBoxRegist53 = textBoxRegist53.Text;
+            modelData.textBoxRegist54 = textBoxRegist54.Text;
+            modelData.textBoxRegist55 = textBoxRegist55.Text;
+            modelData.textBoxRegist56 = textBoxRegist56.Text;
+            modelData.textBoxRegist57 = textBoxRegist57.Text;
+            modelData.textBoxRegist58 = textBoxRegist58.Text;
+            modelData.textBoxRegist59 = textBoxRegist59.Text;
+            modelData.textBoxRegist60 = textBoxRegist60.Text;
+            modelData.textBoxRegist61 = textBoxRegist61.Text;
+            modelData.textBoxRegist62 = textBoxRegist62.Text;
+            modelData.textBoxRegist63 = textBoxRegist63.Text;
+            modelData.textBoxRegist64 = textBoxRegist64.Text;
+
+            
+
+            dbHandlr.update_setting_table_data(qLiteConnection, modelData);
         }
 
         private void textBoxRegist1_TextChanged(object sender, EventArgs e)
         {
-            modelData.textBoxRegist1 = (string)textBoxRegist1.Text;
+            
         }
 
         private void textBoxRegist2_TextChanged(object sender, EventArgs e)
         {
-            modelData.textBoxRegist2 = (string)textBoxRegist2.Text;
+
         }
 
         private void textBoxRegist3_TextChanged(object sender, EventArgs e)
         {
-            modelData.textBoxRegist3 = (string)textBoxRegist3.Text;
+
         }
 
         private void textBoxRegist4_TextChanged(object sender, EventArgs e)
         {
-            modelData.textBoxRegist4 = (string)textBoxRegist4.Text;
+
         }
 
         private void textBoxRegist5_TextChanged(object sender, EventArgs e)
