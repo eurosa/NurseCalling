@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,8 @@ namespace NurseCalling
         dbHandler dbHandlr;
         DataModel modelData;
         SQLiteConnection qLiteConnection;
+        string backImagePath = null;
+        string twoImagePath = null;
         public Settings(DataModel dataModel, dbHandler dbHandr, SQLiteConnection sQLite )
         {
             InitializeComponent();
@@ -24,6 +28,8 @@ namespace NurseCalling
             qLiteConnection = sQLite;
 
             dbHandlr.getSettingData(qLiteConnection,modelData);
+
+            dbHandr.getImage(qLiteConnection, modelData);
 
            /* SetPlaceHolder(textBoxRegist1, "Hub 1");
             SetPlaceHolder(textBoxRegist2, "Hub 2");
@@ -219,8 +225,26 @@ namespace NurseCalling
             checkBoxRegister62.Checked = modelData.checkBoxRegister62;
             checkBoxRegister63.Checked = modelData.checkBoxRegister63;
             checkBoxRegister64.Checked = modelData.checkBoxRegister64;
-     
-           // MessageBox.Show(modelData.textBoxRegist64);
+
+            // MessageBox.Show(modelData.textBoxRegist64);
+
+            if (!string.IsNullOrEmpty(dataModel.bed_image))
+            {
+                try
+                {
+                    buttonChoose.BackgroundImage = Image.FromFile(@dataModel.bed_image);
+                }
+                catch (Exception ex) { }
+            }
+
+            if (!string.IsNullOrEmpty(dataModel.toilet_image))
+            {
+                try
+                {
+                    buttonTwoImage.BackgroundImage = Image.FromFile(@dataModel.toilet_image);
+                }
+                catch (Exception ex) { }
+            }
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -362,6 +386,49 @@ namespace NurseCalling
 
 
             dbHandlr.update_setting_table_data(qLiteConnection, modelData);
+
+
+            updateImage();
+        }
+
+        public void updateImage() {
+
+            if (!string.IsNullOrEmpty(backImagePath))
+            {
+                modelData.bed_image = backImagePath;
+            }
+
+
+            if (!string.IsNullOrEmpty(modelData.bed_image))
+            {
+
+                dbHandlr.bedImage(qLiteConnection, modelData);
+                try
+                {
+                    buttonChoose.BackgroundImage = Image.FromFile(modelData.bed_image);
+                }
+                catch (Exception ex) { }
+
+            }
+
+            if (!string.IsNullOrEmpty(twoImagePath))
+            {
+                modelData.toilet_image = twoImagePath;
+            }
+
+
+            if (!string.IsNullOrEmpty(modelData.toilet_image))
+            {
+
+                dbHandlr.toiletImage(qLiteConnection, modelData);
+                try
+                {
+                    buttonTwoImage.BackgroundImage = Image.FromFile(modelData.toilet_image);
+                }
+                catch (Exception ex) { }
+
+            }
+
         }
 
         private void textBoxRegist1_TextChanged(object sender, EventArgs e)
@@ -1024,6 +1091,89 @@ namespace NurseCalling
         private void checkBoxRegister63_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonChoose_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Create a new instance of openFileDialog
+                OpenFileDialog res = new OpenFileDialog();
+
+                //Filter
+                res.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
+
+                //When the user select the file
+                if (res.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        //Get the file's path
+                        backImagePath = res.FileName;
+                        // dbHandlr.upDateBackGroundImage();
+                        Debug.WriteLine("Background Image: " + backImagePath);
+                        // Do something
+                        buttonChoose.BackgroundImage = Image.FromFile(@backImagePath);
+                    }
+                    catch (Exception ex) { }
+
+                }
+             
+            }
+            catch (Exception ex) { }
+        }
+
+        private void buttonTwoImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Create a new instance of openFileDialog
+                OpenFileDialog res = new OpenFileDialog();
+
+                //Filter
+                res.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
+
+                //When the user select the file
+                if (res.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        //Get the file's path
+                        twoImagePath = res.FileName;
+                        // dbHandlr.upDateBackGroundImage();
+                        Debug.WriteLine("Background Image: " + twoImagePath);
+                        // Do something
+                        buttonTwoImage.BackgroundImage = Image.FromFile(twoImagePath);
+                    }
+                    catch (Exception ex) { }
+
+                }
+
+            }
+            catch (Exception ex) { }
+        }
+        public void updateLogoImage(SQLiteConnection m_dbConnection, DataModel modelData)
+        {
+
+            string sql_update = "UPDATE image_table SET bed_image = @bed_image,toilet_image = @toilet_image Where ID = @ID";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+            command.Parameters.AddWithValue("@bed_image", modelData.bed_image);
+            command.Parameters.AddWithValue("@toilet_image", modelData.toilet_image);
+            //  command.Parameters.AddWithValue("@logo_enable_disable", modelData.logo_enable_disable);
+            command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

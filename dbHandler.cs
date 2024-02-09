@@ -64,6 +64,10 @@ namespace NurseCalling
                     SQLiteCommand command2 = new SQLiteCommand(sql2, dbConnection);
                     command2.ExecuteNonQuery();
 
+                    string sql3 = "create table image_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, bed_image varchar(200), toilet_image varchar(200))";
+                    SQLiteCommand command3 = new SQLiteCommand(sql3, dbConnection);
+                    command3.ExecuteNonQuery();
+
                     try
                     {
                         insert_general_data(dbConnection);
@@ -77,6 +81,16 @@ namespace NurseCalling
                     try
                     {
                         insert_setting_data(dbConnection);
+
+                    }
+                    catch (Exception Ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        insert_image_path(dbConnection);
 
                     }
                     catch (Exception Ex)
@@ -590,7 +604,67 @@ namespace NurseCalling
 
         }
 
-        public void getSettingData(SQLiteConnection m_dbConnection, DataModel dataModel)
+        public void bedImage(SQLiteConnection m_dbConnection, DataModel modelData)
+        {
+
+            string sql_update = "UPDATE image_table SET bed_image=@bed_image Where ID = @ID";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+            command.Parameters.AddWithValue("@bed_image", modelData.bed_image);
+      
+            command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void toiletImage(SQLiteConnection m_dbConnection, DataModel modelData)
+        {
+
+            string sql_update = "UPDATE image_table SET toilet_image=@toilet_image Where ID = @ID";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+           
+            command.Parameters.AddWithValue("@toilet_image", modelData.toilet_image);
+            command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void getImage(SQLiteConnection m_dbConnection, DataModel dataModel)
+        {
+            //  m_dbConnection.Open();
+            SQLiteCommand cmd = new SQLiteCommand("select * From image_table  where 1 ", m_dbConnection);
+            SQLiteDataReader Sdr = cmd.ExecuteReader();
+            while (Sdr.Read())
+            {
+                dataModel.bed_image = Sdr["bed_image"].ToString();
+                dataModel.toilet_image = Sdr["toilet_image"].ToString();
+            }
+
+            Sdr.Close();
+        }
+
+                public void getSettingData(SQLiteConnection m_dbConnection, DataModel dataModel)
         {
             SQLiteCommand cmd = new SQLiteCommand("select * From setting_table  where 1 ", m_dbConnection);
             SQLiteDataReader Sdr = cmd.ExecuteReader();
@@ -802,6 +876,38 @@ namespace NurseCalling
             {
                 throw new Exception(ex.Message);
             }
+
+        }
+
+        public void insert_image_path(SQLiteConnection m_dbConnection) {
+
+
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO image_table (bed_image, toilet_image) VALUES (@bed_image, @toilet_image)", m_dbConnection);
+            insertSQL.Parameters.AddWithValue("@bed_image", imagePath("bed_image.png")); // white color rgb 
+            insertSQL.Parameters.AddWithValue("@toilet_image", imagePath("toilet_image.png")); // white color rgb
+            try
+            {
+                insertSQL.ExecuteNonQuery();
+                // AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public string imagePath(String image_name)
+        {
+            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string path = (System.IO.Path.GetDirectoryName(executable));
+            //  AppDomain.CurrentDomain.SetData("DataDirectory", path);
+            // string[] filePaths = Directory.GetFiles(@path, "*.mdb",
+            // SearchOption.TopDirectoryOnly);
+            // MessageBox.Show(filePaths[0]);
+            // E:\ShreekrishnaProject\PayrollManagement\PayrollManagement
+            //  return filePaths[0];
+            // Console.WriteLine("file path"+filePaths[0]);
+            return path + "\\images" + "\\" + image_name;
 
         }
 

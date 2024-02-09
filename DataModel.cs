@@ -146,6 +146,11 @@ namespace NurseCalling
         public bool checkBoxRegister62 { get; set; }
         public bool checkBoxRegister63 { get; set; }
         public bool checkBoxRegister64 { get; set; }
-      
+
+
+
+        public string bed_image { get; set; }
+        public string toilet_image { get; set; }
+
     }
 }

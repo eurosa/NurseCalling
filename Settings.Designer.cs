@@ -157,6 +157,8 @@
             this.checkBoxRegister58 = new System.Windows.Forms.CheckBox();
             this.checkBoxRegister57 = new System.Windows.Forms.CheckBox();
             this.checkBoxRegister56 = new System.Windows.Forms.CheckBox();
+            this.buttonChoose = new System.Windows.Forms.Button();
+            this.buttonTwoImage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxRegist1
@@ -738,7 +740,7 @@
             // applyButton
             // 
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyButton.Location = new System.Drawing.Point(1205, 528);
+            this.applyButton.Location = new System.Drawing.Point(718, 597);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(191, 38);
             this.applyButton.TabIndex = 0;
@@ -1386,11 +1388,35 @@
             this.checkBoxRegister56.UseVisualStyleBackColor = true;
             this.checkBoxRegister56.CheckedChanged += new System.EventHandler(this.checkBoxRegister56_CheckedChanged);
             // 
+            // buttonChoose
+            // 
+            this.buttonChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonChoose.Location = new System.Drawing.Point(1205, 488);
+            this.buttonChoose.Name = "buttonChoose";
+            this.buttonChoose.Size = new System.Drawing.Size(191, 74);
+            this.buttonChoose.TabIndex = 100;
+            this.buttonChoose.Text = "Select Bed Image";
+            this.buttonChoose.UseVisualStyleBackColor = true;
+            this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
+            // 
+            // buttonTwoImage
+            // 
+            this.buttonTwoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTwoImage.Location = new System.Drawing.Point(1206, 572);
+            this.buttonTwoImage.Name = "buttonTwoImage";
+            this.buttonTwoImage.Size = new System.Drawing.Size(191, 74);
+            this.buttonTwoImage.TabIndex = 101;
+            this.buttonTwoImage.Text = "Select Toilet Image";
+            this.buttonTwoImage.UseVisualStyleBackColor = true;
+            this.buttonTwoImage.Click += new System.EventHandler(this.buttonTwoImage_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1453, 661);
+            this.Controls.Add(this.buttonTwoImage);
+            this.Controls.Add(this.buttonChoose);
             this.Controls.Add(this.checkBoxRegister64);
             this.Controls.Add(this.checkBoxRegister63);
             this.Controls.Add(this.checkBoxRegister62);
@@ -1659,5 +1685,7 @@
         private System.Windows.Forms.CheckBox checkBoxRegister58;
         private System.Windows.Forms.CheckBox checkBoxRegister57;
         private System.Windows.Forms.CheckBox checkBoxRegister56;
+        private System.Windows.Forms.Button buttonChoose;
+        private System.Windows.Forms.Button buttonTwoImage;
     }
 }
