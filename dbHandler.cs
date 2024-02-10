@@ -31,7 +31,7 @@ namespace NurseCalling
                     command.ExecuteNonQuery();
 
 
-                    string sql1 = "create table call_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, lastCallValue varchar(200), lastCallStatus varchar(200), registerId varchar(200), dateTime varchar(200), elapseTime varchar(200), date_ varchar(200))";
+                    string sql1 = "create table call_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, lastCallValue varchar(200), lastCallStatus varchar(200), registerId varchar(200), dateTime varchar(200), elapseTime varchar(200), date_ varchar(200), totalMinutes varchar(200))";
                     SQLiteCommand command1 = new SQLiteCommand(sql1, dbConnection);
                     command1.ExecuteNonQuery();
 
@@ -858,13 +858,14 @@ namespace NurseCalling
         {
 
 
-            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO call_table (lastCallValue, lastCallStatus, registerId, dateTime, date_,elapseTime) VALUES (@lastCallValue, @lastCallStatus, @registerId, @dateTime, @date_,@elapseTime)", m_dbConnection);
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO call_table (lastCallValue, lastCallStatus, registerId, dateTime, date_,elapseTime,totalMinutes) VALUES (@lastCallValue, @lastCallStatus, @registerId, @dateTime, @date_,@elapseTime,@totalMinutes)", m_dbConnection);
 
             insertSQL.Parameters.AddWithValue("@lastCallValue", dataModel.lastCallValue);
             insertSQL.Parameters.AddWithValue("@lastCallStatus", dataModel.lastCallStatus);
             insertSQL.Parameters.AddWithValue("@registerId", dataModel.registerId);
             insertSQL.Parameters.AddWithValue("@dateTime", dataModel.dateTime);
             insertSQL.Parameters.AddWithValue("@elapseTime", "00:00");
+            insertSQL.Parameters.AddWithValue("@totalMinutes", "0");
             insertSQL.Parameters.AddWithValue("@date_", DateTime.Parse(dataModel.dateTime.ToString()).ToString("yyyy-MM-dd"));
 
             try
@@ -914,9 +915,12 @@ namespace NurseCalling
         public void update_call_data(SQLiteConnection m_dbConnection, string elapseTime, string regId)
         {
             if (elapseTime!="") { 
-            string sql_update = "UPDATE call_table SET elapseTime = @elapseTime Where ID=(SELECT max(ID) FROM call_table where registerId=@registerId) and elapseTime='00:00'"; 
+            string sql_update = "UPDATE call_table SET elapseTime = @elapseTime,totalMinutes=@totalMinutes Where ID=(SELECT max(ID) FROM call_table where registerId=@registerId) and elapseTime='00:00'"; 
             SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+
             command.Parameters.AddWithValue("@elapseTime", elapseTime);
+            command.Parameters.AddWithValue("@totalMinutes", TimeSpan.Parse("00:" + elapseTime).TotalMinutes);
             command.Parameters.AddWithValue("@registerId", regId);
 
             try

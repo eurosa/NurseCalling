@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
@@ -10,18 +11,23 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZedGraph;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NurseCalling
 {
     public partial class Report : Form
     {
+        GraphPane myPane;
         SQLiteConnection MDbConnection;
 
         SQLiteConnection SqlDbConnection;
         public Report(SQLiteConnection m_dbConnection)
         {
             InitializeComponent();
+
+            myPane = zedGraphControl1.GraphPane;
+
             MDbConnection = m_dbConnection;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -32,6 +38,9 @@ namespace NurseCalling
             FillSiteNameComboBox();
             FillCallComboBox();
             LoadData();
+
+            // CreateGraph(zedGraphControl1);
+            CreateGraph(zedGraphControl1, m_dbConnection);
         }
 
         private void LoadData()
@@ -292,6 +301,158 @@ namespace NurseCalling
             // Exit from the application  
             app.Quit();
 
+        }
+
+        private void CreateGraph(ZedGraphControl zg1)
+        {
+            // get a reference to the GraphPane
+            GraphPane myPane = zg1.GraphPane;
+
+            // Set the Titles
+            myPane.Title.Text = "My Test Bar Graph";
+            myPane.XAxis.Title.Text = "Label";
+            myPane.YAxis.Title.Text = "My Y Axis";
+
+            // Make up some random data points
+            string[] labels = { "Panther", "Lion", "Cheetah",
+                      "Cougar", "Tiger", "Leopard" };
+            double[] y = { 100, 115, 75, 22, 98, 40 };
+            double[] y2 = { 90, 100, 95, 35, 80, 35 };
+            double[] y3 = { 80, 110, 65, 15, 54, 67 };
+            double[] y4 = { 120, 125, 100, 40, 105, 75 };
+
+            // Generate a red bar with "Curve 1" in the legend
+            BarItem myBar = myPane.AddBar("Curve 1", null, y,
+                                                        Color.Red);
+            myBar.Bar.Fill = new Fill(Color.Red, Color.White,
+                                                        Color.Red);
+
+            // Generate a blue bar with "Curve 2" in the legend
+            myBar = myPane.AddBar("Curve 2", null, y2, Color.Blue);
+            myBar.Bar.Fill = new Fill(Color.Blue, Color.White,
+                                                        Color.Blue);
+
+            // Generate a green bar with "Curve 3" in the legend
+            myBar = myPane.AddBar("Curve 3", null, y3, Color.Green);
+            myBar.Bar.Fill = new Fill(Color.Green, Color.White,
+                                                        Color.Green);
+
+            // Generate a black line with "Curve 4" in the legend
+            LineItem myCurve = myPane.AddCurve("Curve 4",
+                  null, y4, Color.Black, SymbolType.Circle);
+            myCurve.Line.Fill = new Fill(Color.White,
+                                  Color.LightSkyBlue, -45F);
+
+            // Fix up the curve attributes a little
+            myCurve.Symbol.Size = 8.0F;
+            myCurve.Symbol.Fill = new Fill(Color.White);
+            myCurve.Line.Width = 2.0F;
+
+            // Draw the X tics between the labels instead of 
+            // at the labels
+            myPane.XAxis.MajorTic.IsBetweenLabels = true;
+
+            // Set the XAxis labels
+            myPane.XAxis.Scale.TextLabels = labels;
+            // Set the XAxis to Text type
+            myPane.XAxis.Type = AxisType.Text;
+
+            // Fill the Axis and Pane backgrounds
+            myPane.Chart.Fill = new Fill(Color.White,
+                  Color.FromArgb(255, 255, 166), 90F);
+            myPane.Fill = new Fill(Color.FromArgb(250, 250, 255));
+
+            // Tell ZedGraph to refigure the
+            // axes since the data have changed
+            zg1.AxisChange();
+        }
+
+        public void CreateGraph(ZedGraphControl zg1, SQLiteConnection mbConnection)
+        {
+            zg1.GraphPane.CurveList.Clear();
+            zg1.ZoomOutAll(myPane);
+            zg1.Refresh();
+            Console.WriteLine("Just Click on Humidity");
+            GraphData sd = new GraphData();
+            sd.getGraphData(mbConnection);
+           // zg1.GraphPane.YAxis.Scale.Min = 0;
+           // zg1.GraphPane.YAxis.Scale.Max = 60;
+            //  List<Double> valueList = new List<Double>(sd.dateHumidity.Values);
+            //  List<string> keyList = new List<string>(sd.dateHumidity.Keys);
+
+          
+
+            // get a reference to the GraphPane
+            // GraphPane myPane = zg1.GraphPane;
+            myPane.Title.FontSpec.Size = 8.0f;
+            myPane.YAxis.Title.FontSpec.Size = 9.0f;
+            myPane.XAxis.Title.FontSpec.Size = 9.0f;
+            myPane.XAxis.Scale.FontSpec.Size = 6.0f;
+            myPane.YAxis.Scale.FontSpec.Size = 6.0f;
+
+            zg1.Refresh();
+             
+
+            // Set the title and axis labels
+            myPane.Title.Text = "Total Time Versus Hub Chart";
+            myPane.XAxis.Title.Text = "Hub";
+            myPane.YAxis.Title.Text = "Total Minutes";
+            myPane.XAxis.Scale.FontSpec.Angle = 65;
+            // Make up some random data points
+            BarItem myBar = myPane.AddBar("Bar", null, sd.hubNTime.Values.ToArray(),
+                                                          Color.Red);
+            myBar.Bar.Fill = new Fill(Color.Red, Color.White,
+                                                        Color.Red);
+
+            // Generate a black line with "Curve 4" in the legend
+            LineItem myCurve = myPane.AddCurve("Total Minutes vs Hub",
+                  null, sd.hubNTime.Values.ToArray(), Color.Black, SymbolType.Circle);
+
+           /* LineItem myCurve = myPane.AddCurve("Temperature vs Date Time",
+                null, sd.hubNTime.Values.ToArray(), Color.Black, SymbolType.Circle);*/
+
+            myCurve.Line.Fill = new Fill(Color.White,
+                                  Color.LightSkyBlue, -45F);
+
+            // Fix up the curve attributes a little
+            myCurve.Symbol.Size = 8.0F;
+            myCurve.Symbol.Fill = new Fill(Color.White);
+            myCurve.Line.Width = 2.0F;
+            myCurve.Line.IsSmooth = true;
+
+            myPane.XAxis.Scale.MinorStep = 1;//X-axis small step size 1, which is a small interval
+            myPane.XAxis.Scale.MajorStep = 1;//The large step of the X axis is 5, which is the large interval of the displayed text
+
+            myPane.XAxis.Scale.MajorUnit = DateUnit.Minute;
+            myPane.XAxis.Scale.MinorUnit = DateUnit.Second;
+
+            // Draw the X tics between the labels instead of 
+            // at the labels
+            myPane.XAxis.MajorTic.IsBetweenLabels = false;
+            zg1.IsShowHScrollBar = true;
+            zg1.IsAutoScrollRange = true;
+            zg1.IsShowPointValues = true;
+
+            double xRange = myPane.XAxis.Scale.Max - myPane.XAxis.Scale.Min;
+           /* myPane.XAxis.Scale.Max = sd.dateTemperature.Values.Count() + 1;
+            myPane.XAxis.Scale.Min = (sd.dateTemperature.Values.Count() + 1) - 91;*/
+            //  myPane.XAxis.Scale.Min = myPane.XAxis.Scale.Max - xRange;
+
+            // Set the XAxis labels
+            myPane.XAxis.Scale.TextLabels = sd.hubNTime.Keys.ToArray();
+            // Set the XAxis to Text type
+            myPane.XAxis.Type = AxisType.Text;
+
+            // Fill the Axis and Pane backgrounds
+            myPane.Chart.Fill = new Fill(Color.White,
+                  Color.FromArgb(255, 255, 166), 90F);
+            myPane.Fill = new Fill(Color.FromArgb(250, 250, 255));
+
+
+            // Tell ZedGraph to refigure the
+            // axes since the data have changed
+            zg1.AxisChange();
+            zg1.Refresh();
         }
     }
 }

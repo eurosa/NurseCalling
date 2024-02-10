@@ -72,6 +72,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\Workink21\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\HorizontalLineSeparator.cs">
@@ -91,6 +94,7 @@
     </Compile>
     <Compile Include="DataModel.cs" />
     <Compile Include="dbHandler.cs" />
+    <Compile Include="GraphData.cs" />
     <Compile Include="ModbusRTU.cs" />
     <Compile Include="MyToggle.cs" />
     <Compile Include="Program.cs" />

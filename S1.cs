@@ -18,12 +18,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
+using ZedGraph;
 
 namespace NurseCalling
 {
     
     public partial class S1 : Form
     {
+        GraphPane myPane;
         SQLiteConnection m_dbConnection;
         //S21 s2 = new S21();
         S2 s2 = new S2();
@@ -6686,6 +6688,11 @@ namespace NurseCalling
             }
 
         }
+
+
+       
+
+       
 
     }
 }
