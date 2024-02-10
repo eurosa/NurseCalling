@@ -375,13 +375,10 @@ namespace NurseCalling
             Console.WriteLine("Just Click on Humidity");
             GraphData sd = new GraphData();
             sd.getGraphData(mbConnection);
-           // zg1.GraphPane.YAxis.Scale.Min = 0;
-           // zg1.GraphPane.YAxis.Scale.Max = 60;
-            //  List<Double> valueList = new List<Double>(sd.dateHumidity.Values);
-            //  List<string> keyList = new List<string>(sd.dateHumidity.Keys);
-
-          
-
+            // zg1.GraphPane.YAxis.Scale.Min = 0;
+            // zg1.GraphPane.YAxis.Scale.Max = 60;
+            // List<Double> valueList = new List<Double>(sd.dateHumidity.Values);
+            // List<string> keyList = new List<string>(sd.dateHumidity.Keys);
             // get a reference to the GraphPane
             // GraphPane myPane = zg1.GraphPane;
             myPane.Title.FontSpec.Size = 8.0f;
@@ -391,7 +388,7 @@ namespace NurseCalling
             myPane.YAxis.Scale.FontSpec.Size = 6.0f;
 
             zg1.Refresh();
-             
+            
 
             // Set the title and axis labels
             myPane.Title.Text = "Total Time Versus Hub Chart";
@@ -409,7 +406,7 @@ namespace NurseCalling
                   null, sd.hubNTime.Values.ToArray(), Color.Black, SymbolType.Circle);
 
            /* LineItem myCurve = myPane.AddCurve("Temperature vs Date Time",
-                null, sd.hubNTime.Values.ToArray(), Color.Black, SymbolType.Circle);*/
+                null, sd.hubNTime.Values.ToArray(), Color.Black, SymbolType.Circle); */
 
             myCurve.Line.Fill = new Fill(Color.White,
                                   Color.LightSkyBlue, -45F);
