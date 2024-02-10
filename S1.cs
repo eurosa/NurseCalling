@@ -545,41 +545,297 @@ namespace NurseCalling
 
 
 
-            rough2.bButton1.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton2.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton3.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton4.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton5.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton6.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton7.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton8.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton9.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton10.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton11.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton12.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton13.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton14.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton15.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough2.bButton16.BackgroundImage = Image.FromFile(dataModel.bed_image);
+            if (dataModel.checkBoxRegister33)
+            {
+                rough2.bButton1.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton1.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister34)
+            {
+                rough2.bButton2.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton2.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister35)
+            {
+                rough2.bButton3.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton3.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister36)
+            {
+                rough2.bButton4.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton4.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister37)
+            {
+                rough2.bButton5.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton5.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister38)
+            {
+                rough2.bButton6.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton6.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister39)
+            {
+                rough2.bButton7.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton7.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister40)
+            {
+                rough2.bButton8.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton8.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister41)
+            {
+                rough2.bButton9.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton9.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister42)
+            {
+                rough2.bButton10.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton10.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister43)
+            {
+                rough2.bButton11.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton11.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister44)
+            {
+                rough2.bButton12.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton12.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            if (dataModel.checkBoxRegister45)
+            {
+                rough2.bButton13.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton13.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+             if (dataModel.checkBoxRegister46)
+            {
+                rough2.bButton14.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton14.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+             if (dataModel.checkBoxRegister47)
+            {
+                rough2.bButton15.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton15.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+             if (dataModel.checkBoxRegister48)
+            {
+                rough2.bButton16.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else {
+                rough2.bButton16.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
 
 
 
-            rough3.bButton1.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton2.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton3.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton4.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton5.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton6.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton7.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton8.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton9.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton10.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton11.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton12.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton13.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton14.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton15.BackgroundImage = Image.FromFile(dataModel.bed_image);
-            rough3.bButton16.BackgroundImage = Image.FromFile(dataModel.bed_image);
+            if (dataModel.checkBoxRegister49)
+            {
+                rough3.bButton1.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton1.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister50)
+            {
+                rough3.bButton2.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton2.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister51)
+            {
+                rough3.bButton3.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton3.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister52)
+            {
+                rough3.bButton4.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton4.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister53)
+            {
+                rough3.bButton5.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton5.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister54)
+            {
+                rough3.bButton6.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton6.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister55)
+            {
+                rough3.bButton7.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton7.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister56)
+            {
+                rough3.bButton8.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton8.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister57)
+            {
+                rough3.bButton9.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton9.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister58)
+            {
+                rough3.bButton10.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton10.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister59)
+            {
+                rough3.bButton11.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton11.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister60)
+            {
+                rough3.bButton12.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton12.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister61)
+            {
+                rough3.bButton13.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton13.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister62)
+            {
+                rough3.bButton14.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton14.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister63)
+            {
+                rough3.bButton15.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton15.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+            
+            if (dataModel.checkBoxRegister64)
+            {
+                rough3.bButton16.BackgroundImage = Image.FromFile(dataModel.toilet_image);
+            }
+            else
+            {
+                rough3.bButton16.BackgroundImage = Image.FromFile(dataModel.bed_image);
+
+            }
+ 
         }
 
 
