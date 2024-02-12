@@ -50,7 +50,7 @@ namespace NurseCalling
             string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd");
 
-          //  string keyCallValue1 = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
+            //string keyCallValue1 = ((KeyValuePair<string, string>)comboBoxCall.SelectedItem).Key;
             string keyRegisterId1 = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
             //Console.WriteLine("keyCallValue1: "+ keyCallValue1+" Register Id: "+ keyRegisterId1);
 

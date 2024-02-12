@@ -1438,10 +1438,13 @@ namespace NurseCalling
                 if (ComPort1.IsOpen == false)
                 {
                     ComPort1.Dispose();
+                    ComPort1 = null;
                     connect1();
                 }
             }
-            else { connect1(); }
+            else {
+                ComPort1 = null;
+                connect1(); }
 
           
         }
