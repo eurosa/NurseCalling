@@ -386,6 +386,7 @@ namespace NurseCalling
             // List<string> keyList = new List<string>(sd.dateHumidity.Keys);
             // get a reference to the GraphPane
             // GraphPane myPane = zg1.GraphPane;
+
             myPane.Title.FontSpec.Size = 8.0f;
             myPane.YAxis.Title.FontSpec.Size = 9.0f;
             myPane.XAxis.Title.FontSpec.Size = 9.0f;
