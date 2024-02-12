@@ -1391,22 +1391,22 @@
             // buttonChoose
             // 
             this.buttonChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonChoose.Enabled = false;
             this.buttonChoose.Location = new System.Drawing.Point(1205, 488);
             this.buttonChoose.Name = "buttonChoose";
             this.buttonChoose.Size = new System.Drawing.Size(191, 74);
             this.buttonChoose.TabIndex = 100;
-            this.buttonChoose.Text = "Select Bed Image";
             this.buttonChoose.UseVisualStyleBackColor = true;
             this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
             // 
             // buttonTwoImage
             // 
             this.buttonTwoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTwoImage.Enabled = false;
             this.buttonTwoImage.Location = new System.Drawing.Point(1206, 572);
             this.buttonTwoImage.Name = "buttonTwoImage";
             this.buttonTwoImage.Size = new System.Drawing.Size(191, 74);
             this.buttonTwoImage.TabIndex = 101;
-            this.buttonTwoImage.Text = "Select Toilet Image";
             this.buttonTwoImage.UseVisualStyleBackColor = true;
             this.buttonTwoImage.Click += new System.EventHandler(this.buttonTwoImage_Click);
             // 
