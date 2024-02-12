@@ -24,11 +24,23 @@ namespace NurseCalling
         private string elapseTime;
         private string registerId;
         private string totalMinutes;
-        public void getGraphData(SQLiteConnection mbConnection)
+        SQLiteCommand comm;
+        public void getGraphData(SQLiteConnection mbConnection, string keyregisterId,int comboBoxSiteNameIndex, string startDate, string endDate)
         {
             TimeSpan result = new TimeSpan();
-            SQLiteCommand comm = new SQLiteCommand("Select lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
-                "From call_table GROUP BY registerId ORDER BY dateTime ASC ", mbConnection);
+
+            if (comboBoxSiteNameIndex>0) {
+                comm = new SQLiteCommand("Select lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
+                      " From call_table where registerId='"+ keyregisterId + "' and  date_  between '" + startDate + "' and '" + endDate + "' GROUP BY registerId ORDER BY dateTime ASC ", mbConnection);
+
+            } else {
+
+                comm = new SQLiteCommand("Select lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
+                    "From call_table where  date_  between '" + startDate + "' and '" + endDate + "' GROUP BY registerId ORDER BY dateTime ASC ", mbConnection);
+
+            }
+
+            
 
             reader = comm.ExecuteReader();
 

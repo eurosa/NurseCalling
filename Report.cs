@@ -194,6 +194,7 @@ namespace NurseCalling
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadData();
+            CreateGraph(zedGraphControl1, MDbConnection);
         }
 
         void FillSiteNameComboBox()
@@ -369,12 +370,16 @@ namespace NurseCalling
 
         public void CreateGraph(ZedGraphControl zg1, SQLiteConnection mbConnection)
         {
+            string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
+            string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+
             zg1.GraphPane.CurveList.Clear();
             zg1.ZoomOutAll(myPane);
             zg1.Refresh();
             Console.WriteLine("Just Click on Humidity");
             GraphData sd = new GraphData();
-            sd.getGraphData(mbConnection);
+            sd.getGraphData(mbConnection, keyRegisterId, comboBoxSiteName.SelectedIndex, startDate, endDate);
             // zg1.GraphPane.YAxis.Scale.Min = 0;
             // zg1.GraphPane.YAxis.Scale.Max = 60;
             // List<Double> valueList = new List<Double>(sd.dateHumidity.Values);
