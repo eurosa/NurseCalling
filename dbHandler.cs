@@ -780,7 +780,7 @@ namespace NurseCalling
                 dataModel.checkBoxRegister43 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister43"].ToString())));
                 dataModel.checkBoxRegister44 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister44"].ToString())));
                 dataModel.checkBoxRegister45 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister45"].ToString())));
-                dataModel.checkBoxRegister45 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister45"].ToString())));
+               // dataModel.checkBoxRegister45 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister45"].ToString())));
                 dataModel.checkBoxRegister46 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister46"].ToString())));
                 dataModel.checkBoxRegister47 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister47"].ToString())));
                 dataModel.checkBoxRegister48 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxRegister48"].ToString())));
