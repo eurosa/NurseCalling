@@ -261,10 +261,14 @@ namespace NurseCalling
 
         private void exportAsExcel_Click(object sender, EventArgs e)
         {
-            // Create a thread
-            Thread backgroundThread = new Thread(new ThreadStart(ExportAsExcel));
-            // Start thread
-            backgroundThread.Start();
+            try
+            {
+                // Create a thread
+                Thread backgroundThread = new Thread(new ThreadStart(ExportAsExcel));
+                // Start thread
+                backgroundThread.Start();
+            }
+            catch (Exception ex) { }
         }
 
         public void ExportAsExcel()
