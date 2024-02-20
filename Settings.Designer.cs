@@ -159,11 +159,24 @@
             this.checkBoxRegister56 = new System.Windows.Forms.CheckBox();
             this.buttonChoose = new System.Windows.Forms.Button();
             this.buttonTwoImage = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.portBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBoxHub4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxHub3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxHub2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxHub1 = new System.Windows.Forms.CheckBox();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxRegist1
             // 
-            this.textBoxRegist1.Location = new System.Drawing.Point(24, 27);
+            this.textBoxRegist1.Location = new System.Drawing.Point(6, 8);
             this.textBoxRegist1.Multiline = true;
             this.textBoxRegist1.Name = "textBoxRegist1";
             this.textBoxRegist1.Size = new System.Drawing.Size(191, 38);
@@ -172,7 +185,7 @@
             // 
             // textBoxRegist2
             // 
-            this.textBoxRegist2.Location = new System.Drawing.Point(24, 81);
+            this.textBoxRegist2.Location = new System.Drawing.Point(6, 55);
             this.textBoxRegist2.Multiline = true;
             this.textBoxRegist2.Name = "textBoxRegist2";
             this.textBoxRegist2.Size = new System.Drawing.Size(191, 38);
@@ -181,7 +194,7 @@
             // 
             // textBoxRegist5
             // 
-            this.textBoxRegist5.Location = new System.Drawing.Point(24, 240);
+            this.textBoxRegist5.Location = new System.Drawing.Point(6, 210);
             this.textBoxRegist5.Multiline = true;
             this.textBoxRegist5.Name = "textBoxRegist5";
             this.textBoxRegist5.Size = new System.Drawing.Size(191, 38);
@@ -190,7 +203,7 @@
             // 
             // textBoxRegist4
             // 
-            this.textBoxRegist4.Location = new System.Drawing.Point(24, 188);
+            this.textBoxRegist4.Location = new System.Drawing.Point(6, 150);
             this.textBoxRegist4.Multiline = true;
             this.textBoxRegist4.Name = "textBoxRegist4";
             this.textBoxRegist4.Size = new System.Drawing.Size(191, 38);
@@ -199,7 +212,7 @@
             // 
             // textBoxRegist6
             // 
-            this.textBoxRegist6.Location = new System.Drawing.Point(24, 289);
+            this.textBoxRegist6.Location = new System.Drawing.Point(6, 267);
             this.textBoxRegist6.Multiline = true;
             this.textBoxRegist6.Name = "textBoxRegist6";
             this.textBoxRegist6.Size = new System.Drawing.Size(191, 38);
@@ -208,7 +221,7 @@
             // 
             // textBoxRegist3
             // 
-            this.textBoxRegist3.Location = new System.Drawing.Point(24, 135);
+            this.textBoxRegist3.Location = new System.Drawing.Point(6, 103);
             this.textBoxRegist3.Multiline = true;
             this.textBoxRegist3.Name = "textBoxRegist3";
             this.textBoxRegist3.Size = new System.Drawing.Size(191, 38);
@@ -217,7 +230,7 @@
             // 
             // textBoxRegist12
             // 
-            this.textBoxRegist12.Location = new System.Drawing.Point(254, 27);
+            this.textBoxRegist12.Location = new System.Drawing.Point(226, 8);
             this.textBoxRegist12.Multiline = true;
             this.textBoxRegist12.Name = "textBoxRegist12";
             this.textBoxRegist12.Size = new System.Drawing.Size(191, 38);
@@ -226,7 +239,7 @@
             // 
             // textBoxRegist13
             // 
-            this.textBoxRegist13.Location = new System.Drawing.Point(254, 81);
+            this.textBoxRegist13.Location = new System.Drawing.Point(226, 55);
             this.textBoxRegist13.Multiline = true;
             this.textBoxRegist13.Name = "textBoxRegist13";
             this.textBoxRegist13.Size = new System.Drawing.Size(191, 38);
@@ -235,7 +248,7 @@
             // 
             // textBoxRegist16
             // 
-            this.textBoxRegist16.Location = new System.Drawing.Point(254, 240);
+            this.textBoxRegist16.Location = new System.Drawing.Point(226, 210);
             this.textBoxRegist16.Multiline = true;
             this.textBoxRegist16.Name = "textBoxRegist16";
             this.textBoxRegist16.Size = new System.Drawing.Size(191, 38);
@@ -244,7 +257,7 @@
             // 
             // textBoxRegist15
             // 
-            this.textBoxRegist15.Location = new System.Drawing.Point(254, 188);
+            this.textBoxRegist15.Location = new System.Drawing.Point(226, 150);
             this.textBoxRegist15.Multiline = true;
             this.textBoxRegist15.Name = "textBoxRegist15";
             this.textBoxRegist15.Size = new System.Drawing.Size(191, 38);
@@ -253,7 +266,7 @@
             // 
             // textBoxRegist17
             // 
-            this.textBoxRegist17.Location = new System.Drawing.Point(254, 289);
+            this.textBoxRegist17.Location = new System.Drawing.Point(226, 267);
             this.textBoxRegist17.Multiline = true;
             this.textBoxRegist17.Name = "textBoxRegist17";
             this.textBoxRegist17.Size = new System.Drawing.Size(191, 38);
@@ -262,7 +275,7 @@
             // 
             // textBoxRegist14
             // 
-            this.textBoxRegist14.Location = new System.Drawing.Point(254, 135);
+            this.textBoxRegist14.Location = new System.Drawing.Point(226, 103);
             this.textBoxRegist14.Multiline = true;
             this.textBoxRegist14.Name = "textBoxRegist14";
             this.textBoxRegist14.Size = new System.Drawing.Size(191, 38);
@@ -271,7 +284,7 @@
             // 
             // textBoxRegist23
             // 
-            this.textBoxRegist23.Location = new System.Drawing.Point(491, 27);
+            this.textBoxRegist23.Location = new System.Drawing.Point(463, 8);
             this.textBoxRegist23.Multiline = true;
             this.textBoxRegist23.Name = "textBoxRegist23";
             this.textBoxRegist23.Size = new System.Drawing.Size(191, 38);
@@ -280,7 +293,7 @@
             // 
             // textBoxRegist24
             // 
-            this.textBoxRegist24.Location = new System.Drawing.Point(491, 81);
+            this.textBoxRegist24.Location = new System.Drawing.Point(463, 55);
             this.textBoxRegist24.Multiline = true;
             this.textBoxRegist24.Name = "textBoxRegist24";
             this.textBoxRegist24.Size = new System.Drawing.Size(191, 38);
@@ -289,7 +302,7 @@
             // 
             // textBoxRegist27
             // 
-            this.textBoxRegist27.Location = new System.Drawing.Point(491, 240);
+            this.textBoxRegist27.Location = new System.Drawing.Point(463, 210);
             this.textBoxRegist27.Multiline = true;
             this.textBoxRegist27.Name = "textBoxRegist27";
             this.textBoxRegist27.Size = new System.Drawing.Size(191, 38);
@@ -298,7 +311,7 @@
             // 
             // textBoxRegist26
             // 
-            this.textBoxRegist26.Location = new System.Drawing.Point(491, 188);
+            this.textBoxRegist26.Location = new System.Drawing.Point(463, 150);
             this.textBoxRegist26.Multiline = true;
             this.textBoxRegist26.Name = "textBoxRegist26";
             this.textBoxRegist26.Size = new System.Drawing.Size(191, 38);
@@ -307,7 +320,7 @@
             // 
             // textBoxRegist28
             // 
-            this.textBoxRegist28.Location = new System.Drawing.Point(491, 289);
+            this.textBoxRegist28.Location = new System.Drawing.Point(463, 267);
             this.textBoxRegist28.Multiline = true;
             this.textBoxRegist28.Name = "textBoxRegist28";
             this.textBoxRegist28.Size = new System.Drawing.Size(191, 38);
@@ -316,7 +329,7 @@
             // 
             // textBoxRegist25
             // 
-            this.textBoxRegist25.Location = new System.Drawing.Point(491, 135);
+            this.textBoxRegist25.Location = new System.Drawing.Point(463, 103);
             this.textBoxRegist25.Multiline = true;
             this.textBoxRegist25.Name = "textBoxRegist25";
             this.textBoxRegist25.Size = new System.Drawing.Size(191, 38);
@@ -325,7 +338,7 @@
             // 
             // textBoxRegist34
             // 
-            this.textBoxRegist34.Location = new System.Drawing.Point(718, 27);
+            this.textBoxRegist34.Location = new System.Drawing.Point(702, 8);
             this.textBoxRegist34.Multiline = true;
             this.textBoxRegist34.Name = "textBoxRegist34";
             this.textBoxRegist34.Size = new System.Drawing.Size(191, 38);
@@ -334,7 +347,7 @@
             // 
             // textBoxRegist35
             // 
-            this.textBoxRegist35.Location = new System.Drawing.Point(718, 81);
+            this.textBoxRegist35.Location = new System.Drawing.Point(702, 55);
             this.textBoxRegist35.Multiline = true;
             this.textBoxRegist35.Name = "textBoxRegist35";
             this.textBoxRegist35.Size = new System.Drawing.Size(191, 38);
@@ -343,7 +356,7 @@
             // 
             // textBoxRegist38
             // 
-            this.textBoxRegist38.Location = new System.Drawing.Point(718, 240);
+            this.textBoxRegist38.Location = new System.Drawing.Point(702, 210);
             this.textBoxRegist38.Multiline = true;
             this.textBoxRegist38.Name = "textBoxRegist38";
             this.textBoxRegist38.Size = new System.Drawing.Size(191, 38);
@@ -352,7 +365,7 @@
             // 
             // textBoxRegist37
             // 
-            this.textBoxRegist37.Location = new System.Drawing.Point(718, 188);
+            this.textBoxRegist37.Location = new System.Drawing.Point(702, 150);
             this.textBoxRegist37.Multiline = true;
             this.textBoxRegist37.Name = "textBoxRegist37";
             this.textBoxRegist37.Size = new System.Drawing.Size(191, 38);
@@ -361,7 +374,7 @@
             // 
             // textBoxRegist39
             // 
-            this.textBoxRegist39.Location = new System.Drawing.Point(718, 289);
+            this.textBoxRegist39.Location = new System.Drawing.Point(702, 267);
             this.textBoxRegist39.Multiline = true;
             this.textBoxRegist39.Name = "textBoxRegist39";
             this.textBoxRegist39.Size = new System.Drawing.Size(191, 38);
@@ -370,7 +383,7 @@
             // 
             // textBoxRegist36
             // 
-            this.textBoxRegist36.Location = new System.Drawing.Point(718, 135);
+            this.textBoxRegist36.Location = new System.Drawing.Point(702, 103);
             this.textBoxRegist36.Multiline = true;
             this.textBoxRegist36.Name = "textBoxRegist36";
             this.textBoxRegist36.Size = new System.Drawing.Size(191, 38);
@@ -379,7 +392,7 @@
             // 
             // textBoxRegist7
             // 
-            this.textBoxRegist7.Location = new System.Drawing.Point(24, 338);
+            this.textBoxRegist7.Location = new System.Drawing.Point(6, 321);
             this.textBoxRegist7.Multiline = true;
             this.textBoxRegist7.Name = "textBoxRegist7";
             this.textBoxRegist7.Size = new System.Drawing.Size(191, 38);
@@ -388,7 +401,7 @@
             // 
             // textBoxRegist18
             // 
-            this.textBoxRegist18.Location = new System.Drawing.Point(254, 338);
+            this.textBoxRegist18.Location = new System.Drawing.Point(226, 321);
             this.textBoxRegist18.Multiline = true;
             this.textBoxRegist18.Name = "textBoxRegist18";
             this.textBoxRegist18.Size = new System.Drawing.Size(191, 38);
@@ -397,7 +410,7 @@
             // 
             // textBoxRegist29
             // 
-            this.textBoxRegist29.Location = new System.Drawing.Point(491, 338);
+            this.textBoxRegist29.Location = new System.Drawing.Point(463, 321);
             this.textBoxRegist29.Multiline = true;
             this.textBoxRegist29.Name = "textBoxRegist29";
             this.textBoxRegist29.Size = new System.Drawing.Size(191, 38);
@@ -406,7 +419,7 @@
             // 
             // textBoxRegist40
             // 
-            this.textBoxRegist40.Location = new System.Drawing.Point(718, 338);
+            this.textBoxRegist40.Location = new System.Drawing.Point(702, 321);
             this.textBoxRegist40.Multiline = true;
             this.textBoxRegist40.Name = "textBoxRegist40";
             this.textBoxRegist40.Size = new System.Drawing.Size(191, 38);
@@ -415,7 +428,7 @@
             // 
             // textBoxRegist45
             // 
-            this.textBoxRegist45.Location = new System.Drawing.Point(963, 27);
+            this.textBoxRegist45.Location = new System.Drawing.Point(954, 8);
             this.textBoxRegist45.Multiline = true;
             this.textBoxRegist45.Name = "textBoxRegist45";
             this.textBoxRegist45.Size = new System.Drawing.Size(191, 38);
@@ -424,7 +437,7 @@
             // 
             // textBoxRegist46
             // 
-            this.textBoxRegist46.Location = new System.Drawing.Point(963, 81);
+            this.textBoxRegist46.Location = new System.Drawing.Point(954, 55);
             this.textBoxRegist46.Multiline = true;
             this.textBoxRegist46.Name = "textBoxRegist46";
             this.textBoxRegist46.Size = new System.Drawing.Size(191, 38);
@@ -433,7 +446,7 @@
             // 
             // textBoxRegist49
             // 
-            this.textBoxRegist49.Location = new System.Drawing.Point(963, 240);
+            this.textBoxRegist49.Location = new System.Drawing.Point(954, 210);
             this.textBoxRegist49.Multiline = true;
             this.textBoxRegist49.Name = "textBoxRegist49";
             this.textBoxRegist49.Size = new System.Drawing.Size(191, 38);
@@ -442,7 +455,7 @@
             // 
             // textBoxRegist48
             // 
-            this.textBoxRegist48.Location = new System.Drawing.Point(963, 188);
+            this.textBoxRegist48.Location = new System.Drawing.Point(954, 150);
             this.textBoxRegist48.Multiline = true;
             this.textBoxRegist48.Name = "textBoxRegist48";
             this.textBoxRegist48.Size = new System.Drawing.Size(191, 38);
@@ -451,7 +464,7 @@
             // 
             // textBoxRegist50
             // 
-            this.textBoxRegist50.Location = new System.Drawing.Point(963, 289);
+            this.textBoxRegist50.Location = new System.Drawing.Point(954, 267);
             this.textBoxRegist50.Multiline = true;
             this.textBoxRegist50.Name = "textBoxRegist50";
             this.textBoxRegist50.Size = new System.Drawing.Size(191, 38);
@@ -460,7 +473,7 @@
             // 
             // textBoxRegist47
             // 
-            this.textBoxRegist47.Location = new System.Drawing.Point(963, 135);
+            this.textBoxRegist47.Location = new System.Drawing.Point(954, 103);
             this.textBoxRegist47.Multiline = true;
             this.textBoxRegist47.Name = "textBoxRegist47";
             this.textBoxRegist47.Size = new System.Drawing.Size(191, 38);
@@ -469,7 +482,7 @@
             // 
             // textBoxRegist51
             // 
-            this.textBoxRegist51.Location = new System.Drawing.Point(963, 338);
+            this.textBoxRegist51.Location = new System.Drawing.Point(954, 321);
             this.textBoxRegist51.Multiline = true;
             this.textBoxRegist51.Name = "textBoxRegist51";
             this.textBoxRegist51.Size = new System.Drawing.Size(191, 38);
@@ -478,7 +491,7 @@
             // 
             // textBoxRegist56
             // 
-            this.textBoxRegist56.Location = new System.Drawing.Point(1205, 27);
+            this.textBoxRegist56.Location = new System.Drawing.Point(1175, 8);
             this.textBoxRegist56.Multiline = true;
             this.textBoxRegist56.Name = "textBoxRegist56";
             this.textBoxRegist56.Size = new System.Drawing.Size(191, 38);
@@ -487,7 +500,7 @@
             // 
             // textBoxRegist57
             // 
-            this.textBoxRegist57.Location = new System.Drawing.Point(1205, 81);
+            this.textBoxRegist57.Location = new System.Drawing.Point(1175, 55);
             this.textBoxRegist57.Multiline = true;
             this.textBoxRegist57.Name = "textBoxRegist57";
             this.textBoxRegist57.Size = new System.Drawing.Size(191, 38);
@@ -496,7 +509,7 @@
             // 
             // textBoxRegist60
             // 
-            this.textBoxRegist60.Location = new System.Drawing.Point(1205, 240);
+            this.textBoxRegist60.Location = new System.Drawing.Point(1175, 210);
             this.textBoxRegist60.Multiline = true;
             this.textBoxRegist60.Name = "textBoxRegist60";
             this.textBoxRegist60.Size = new System.Drawing.Size(191, 38);
@@ -505,7 +518,7 @@
             // 
             // textBoxRegist59
             // 
-            this.textBoxRegist59.Location = new System.Drawing.Point(1205, 188);
+            this.textBoxRegist59.Location = new System.Drawing.Point(1175, 150);
             this.textBoxRegist59.Multiline = true;
             this.textBoxRegist59.Name = "textBoxRegist59";
             this.textBoxRegist59.Size = new System.Drawing.Size(191, 38);
@@ -514,7 +527,7 @@
             // 
             // textBoxRegist61
             // 
-            this.textBoxRegist61.Location = new System.Drawing.Point(1205, 289);
+            this.textBoxRegist61.Location = new System.Drawing.Point(1175, 267);
             this.textBoxRegist61.Multiline = true;
             this.textBoxRegist61.Name = "textBoxRegist61";
             this.textBoxRegist61.Size = new System.Drawing.Size(191, 38);
@@ -523,7 +536,7 @@
             // 
             // textBoxRegist58
             // 
-            this.textBoxRegist58.Location = new System.Drawing.Point(1205, 135);
+            this.textBoxRegist58.Location = new System.Drawing.Point(1175, 103);
             this.textBoxRegist58.Multiline = true;
             this.textBoxRegist58.Name = "textBoxRegist58";
             this.textBoxRegist58.Size = new System.Drawing.Size(191, 38);
@@ -532,7 +545,7 @@
             // 
             // textBoxRegist62
             // 
-            this.textBoxRegist62.Location = new System.Drawing.Point(1205, 338);
+            this.textBoxRegist62.Location = new System.Drawing.Point(1175, 321);
             this.textBoxRegist62.Multiline = true;
             this.textBoxRegist62.Name = "textBoxRegist62";
             this.textBoxRegist62.Size = new System.Drawing.Size(191, 38);
@@ -541,7 +554,7 @@
             // 
             // textBoxRegist64
             // 
-            this.textBoxRegist64.Location = new System.Drawing.Point(1205, 437);
+            this.textBoxRegist64.Location = new System.Drawing.Point(1175, 424);
             this.textBoxRegist64.Multiline = true;
             this.textBoxRegist64.Name = "textBoxRegist64";
             this.textBoxRegist64.Size = new System.Drawing.Size(191, 38);
@@ -550,7 +563,7 @@
             // 
             // textBoxRegist8
             // 
-            this.textBoxRegist8.Location = new System.Drawing.Point(24, 388);
+            this.textBoxRegist8.Location = new System.Drawing.Point(6, 374);
             this.textBoxRegist8.Multiline = true;
             this.textBoxRegist8.Name = "textBoxRegist8";
             this.textBoxRegist8.Size = new System.Drawing.Size(191, 38);
@@ -559,7 +572,7 @@
             // 
             // textBoxRegist9
             // 
-            this.textBoxRegist9.Location = new System.Drawing.Point(24, 437);
+            this.textBoxRegist9.Location = new System.Drawing.Point(6, 424);
             this.textBoxRegist9.Multiline = true;
             this.textBoxRegist9.Name = "textBoxRegist9";
             this.textBoxRegist9.Size = new System.Drawing.Size(191, 38);
@@ -568,7 +581,7 @@
             // 
             // textBoxRegist10
             // 
-            this.textBoxRegist10.Location = new System.Drawing.Point(24, 484);
+            this.textBoxRegist10.Location = new System.Drawing.Point(6, 479);
             this.textBoxRegist10.Multiline = true;
             this.textBoxRegist10.Name = "textBoxRegist10";
             this.textBoxRegist10.Size = new System.Drawing.Size(191, 38);
@@ -577,7 +590,7 @@
             // 
             // textBoxRegist19
             // 
-            this.textBoxRegist19.Location = new System.Drawing.Point(254, 388);
+            this.textBoxRegist19.Location = new System.Drawing.Point(226, 374);
             this.textBoxRegist19.Multiline = true;
             this.textBoxRegist19.Name = "textBoxRegist19";
             this.textBoxRegist19.Size = new System.Drawing.Size(191, 38);
@@ -586,7 +599,7 @@
             // 
             // textBoxRegist20
             // 
-            this.textBoxRegist20.Location = new System.Drawing.Point(254, 437);
+            this.textBoxRegist20.Location = new System.Drawing.Point(226, 424);
             this.textBoxRegist20.Multiline = true;
             this.textBoxRegist20.Name = "textBoxRegist20";
             this.textBoxRegist20.Size = new System.Drawing.Size(191, 38);
@@ -595,7 +608,7 @@
             // 
             // textBoxRegist11
             // 
-            this.textBoxRegist11.Location = new System.Drawing.Point(24, 532);
+            this.textBoxRegist11.Location = new System.Drawing.Point(6, 537);
             this.textBoxRegist11.Multiline = true;
             this.textBoxRegist11.Name = "textBoxRegist11";
             this.textBoxRegist11.Size = new System.Drawing.Size(191, 38);
@@ -604,7 +617,7 @@
             // 
             // textBoxRegist30
             // 
-            this.textBoxRegist30.Location = new System.Drawing.Point(491, 388);
+            this.textBoxRegist30.Location = new System.Drawing.Point(463, 374);
             this.textBoxRegist30.Multiline = true;
             this.textBoxRegist30.Name = "textBoxRegist30";
             this.textBoxRegist30.Size = new System.Drawing.Size(191, 38);
@@ -613,7 +626,7 @@
             // 
             // textBoxRegist31
             // 
-            this.textBoxRegist31.Location = new System.Drawing.Point(491, 437);
+            this.textBoxRegist31.Location = new System.Drawing.Point(463, 424);
             this.textBoxRegist31.Multiline = true;
             this.textBoxRegist31.Name = "textBoxRegist31";
             this.textBoxRegist31.Size = new System.Drawing.Size(191, 38);
@@ -622,7 +635,7 @@
             // 
             // textBoxRegist21
             // 
-            this.textBoxRegist21.Location = new System.Drawing.Point(254, 484);
+            this.textBoxRegist21.Location = new System.Drawing.Point(226, 479);
             this.textBoxRegist21.Multiline = true;
             this.textBoxRegist21.Name = "textBoxRegist21";
             this.textBoxRegist21.Size = new System.Drawing.Size(191, 38);
@@ -631,7 +644,7 @@
             // 
             // textBoxRegist41
             // 
-            this.textBoxRegist41.Location = new System.Drawing.Point(718, 388);
+            this.textBoxRegist41.Location = new System.Drawing.Point(702, 374);
             this.textBoxRegist41.Multiline = true;
             this.textBoxRegist41.Name = "textBoxRegist41";
             this.textBoxRegist41.Size = new System.Drawing.Size(191, 38);
@@ -640,7 +653,7 @@
             // 
             // textBoxRegist42
             // 
-            this.textBoxRegist42.Location = new System.Drawing.Point(718, 437);
+            this.textBoxRegist42.Location = new System.Drawing.Point(702, 424);
             this.textBoxRegist42.Multiline = true;
             this.textBoxRegist42.Name = "textBoxRegist42";
             this.textBoxRegist42.Size = new System.Drawing.Size(191, 38);
@@ -649,7 +662,7 @@
             // 
             // textBoxRegist22
             // 
-            this.textBoxRegist22.Location = new System.Drawing.Point(254, 532);
+            this.textBoxRegist22.Location = new System.Drawing.Point(226, 537);
             this.textBoxRegist22.Multiline = true;
             this.textBoxRegist22.Name = "textBoxRegist22";
             this.textBoxRegist22.Size = new System.Drawing.Size(191, 38);
@@ -658,7 +671,7 @@
             // 
             // textBoxRegist52
             // 
-            this.textBoxRegist52.Location = new System.Drawing.Point(963, 388);
+            this.textBoxRegist52.Location = new System.Drawing.Point(954, 374);
             this.textBoxRegist52.Multiline = true;
             this.textBoxRegist52.Name = "textBoxRegist52";
             this.textBoxRegist52.Size = new System.Drawing.Size(191, 38);
@@ -667,7 +680,7 @@
             // 
             // textBoxRegist44
             // 
-            this.textBoxRegist44.Location = new System.Drawing.Point(718, 532);
+            this.textBoxRegist44.Location = new System.Drawing.Point(702, 537);
             this.textBoxRegist44.Multiline = true;
             this.textBoxRegist44.Name = "textBoxRegist44";
             this.textBoxRegist44.Size = new System.Drawing.Size(191, 38);
@@ -676,7 +689,7 @@
             // 
             // textBoxRegist32
             // 
-            this.textBoxRegist32.Location = new System.Drawing.Point(491, 484);
+            this.textBoxRegist32.Location = new System.Drawing.Point(463, 479);
             this.textBoxRegist32.Multiline = true;
             this.textBoxRegist32.Name = "textBoxRegist32";
             this.textBoxRegist32.Size = new System.Drawing.Size(191, 38);
@@ -685,7 +698,7 @@
             // 
             // textBoxRegist54
             // 
-            this.textBoxRegist54.Location = new System.Drawing.Point(963, 484);
+            this.textBoxRegist54.Location = new System.Drawing.Point(954, 479);
             this.textBoxRegist54.Multiline = true;
             this.textBoxRegist54.Name = "textBoxRegist54";
             this.textBoxRegist54.Size = new System.Drawing.Size(191, 38);
@@ -694,7 +707,7 @@
             // 
             // textBoxRegist53
             // 
-            this.textBoxRegist53.Location = new System.Drawing.Point(963, 437);
+            this.textBoxRegist53.Location = new System.Drawing.Point(954, 424);
             this.textBoxRegist53.Multiline = true;
             this.textBoxRegist53.Name = "textBoxRegist53";
             this.textBoxRegist53.Size = new System.Drawing.Size(191, 38);
@@ -703,7 +716,7 @@
             // 
             // textBoxRegist33
             // 
-            this.textBoxRegist33.Location = new System.Drawing.Point(491, 532);
+            this.textBoxRegist33.Location = new System.Drawing.Point(463, 537);
             this.textBoxRegist33.Multiline = true;
             this.textBoxRegist33.Name = "textBoxRegist33";
             this.textBoxRegist33.Size = new System.Drawing.Size(191, 38);
@@ -712,7 +725,7 @@
             // 
             // textBoxRegist63
             // 
-            this.textBoxRegist63.Location = new System.Drawing.Point(1205, 388);
+            this.textBoxRegist63.Location = new System.Drawing.Point(1175, 374);
             this.textBoxRegist63.Multiline = true;
             this.textBoxRegist63.Name = "textBoxRegist63";
             this.textBoxRegist63.Size = new System.Drawing.Size(191, 38);
@@ -721,7 +734,7 @@
             // 
             // textBoxRegist55
             // 
-            this.textBoxRegist55.Location = new System.Drawing.Point(963, 532);
+            this.textBoxRegist55.Location = new System.Drawing.Point(954, 537);
             this.textBoxRegist55.Multiline = true;
             this.textBoxRegist55.Name = "textBoxRegist55";
             this.textBoxRegist55.Size = new System.Drawing.Size(191, 38);
@@ -730,7 +743,7 @@
             // 
             // textBoxRegist43
             // 
-            this.textBoxRegist43.Location = new System.Drawing.Point(718, 484);
+            this.textBoxRegist43.Location = new System.Drawing.Point(702, 479);
             this.textBoxRegist43.Multiline = true;
             this.textBoxRegist43.Name = "textBoxRegist43";
             this.textBoxRegist43.Size = new System.Drawing.Size(191, 38);
@@ -740,7 +753,7 @@
             // applyButton
             // 
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyButton.Location = new System.Drawing.Point(718, 597);
+            this.applyButton.Location = new System.Drawing.Point(690, 612);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(191, 38);
             this.applyButton.TabIndex = 0;
@@ -751,7 +764,7 @@
             // checkBoxRegister1
             // 
             this.checkBoxRegister1.AutoSize = true;
-            this.checkBoxRegister1.Location = new System.Drawing.Point(221, 39);
+            this.checkBoxRegister1.Location = new System.Drawing.Point(203, 20);
             this.checkBoxRegister1.Name = "checkBoxRegister1";
             this.checkBoxRegister1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister1.TabIndex = 65;
@@ -761,7 +774,7 @@
             // checkBoxRegister2
             // 
             this.checkBoxRegister2.AutoSize = true;
-            this.checkBoxRegister2.Location = new System.Drawing.Point(221, 93);
+            this.checkBoxRegister2.Location = new System.Drawing.Point(203, 67);
             this.checkBoxRegister2.Name = "checkBoxRegister2";
             this.checkBoxRegister2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister2.TabIndex = 65;
@@ -771,7 +784,7 @@
             // checkBoxRegister3
             // 
             this.checkBoxRegister3.AutoSize = true;
-            this.checkBoxRegister3.Location = new System.Drawing.Point(221, 147);
+            this.checkBoxRegister3.Location = new System.Drawing.Point(205, 115);
             this.checkBoxRegister3.Name = "checkBoxRegister3";
             this.checkBoxRegister3.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister3.TabIndex = 65;
@@ -781,7 +794,7 @@
             // checkBoxRegister4
             // 
             this.checkBoxRegister4.AutoSize = true;
-            this.checkBoxRegister4.Location = new System.Drawing.Point(221, 200);
+            this.checkBoxRegister4.Location = new System.Drawing.Point(203, 162);
             this.checkBoxRegister4.Name = "checkBoxRegister4";
             this.checkBoxRegister4.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister4.TabIndex = 65;
@@ -791,7 +804,7 @@
             // checkBoxRegister5
             // 
             this.checkBoxRegister5.AutoSize = true;
-            this.checkBoxRegister5.Location = new System.Drawing.Point(221, 252);
+            this.checkBoxRegister5.Location = new System.Drawing.Point(203, 222);
             this.checkBoxRegister5.Name = "checkBoxRegister5";
             this.checkBoxRegister5.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister5.TabIndex = 65;
@@ -801,7 +814,7 @@
             // checkBoxRegister6
             // 
             this.checkBoxRegister6.AutoSize = true;
-            this.checkBoxRegister6.Location = new System.Drawing.Point(221, 301);
+            this.checkBoxRegister6.Location = new System.Drawing.Point(203, 279);
             this.checkBoxRegister6.Name = "checkBoxRegister6";
             this.checkBoxRegister6.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister6.TabIndex = 65;
@@ -811,7 +824,7 @@
             // checkBoxRegister7
             // 
             this.checkBoxRegister7.AutoSize = true;
-            this.checkBoxRegister7.Location = new System.Drawing.Point(221, 350);
+            this.checkBoxRegister7.Location = new System.Drawing.Point(203, 333);
             this.checkBoxRegister7.Name = "checkBoxRegister7";
             this.checkBoxRegister7.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister7.TabIndex = 65;
@@ -821,7 +834,7 @@
             // checkBoxRegister8
             // 
             this.checkBoxRegister8.AutoSize = true;
-            this.checkBoxRegister8.Location = new System.Drawing.Point(221, 400);
+            this.checkBoxRegister8.Location = new System.Drawing.Point(205, 386);
             this.checkBoxRegister8.Name = "checkBoxRegister8";
             this.checkBoxRegister8.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister8.TabIndex = 65;
@@ -831,7 +844,7 @@
             // checkBoxRegister9
             // 
             this.checkBoxRegister9.AutoSize = true;
-            this.checkBoxRegister9.Location = new System.Drawing.Point(221, 449);
+            this.checkBoxRegister9.Location = new System.Drawing.Point(203, 436);
             this.checkBoxRegister9.Name = "checkBoxRegister9";
             this.checkBoxRegister9.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister9.TabIndex = 65;
@@ -841,7 +854,7 @@
             // checkBoxRegister10
             // 
             this.checkBoxRegister10.AutoSize = true;
-            this.checkBoxRegister10.Location = new System.Drawing.Point(221, 496);
+            this.checkBoxRegister10.Location = new System.Drawing.Point(206, 491);
             this.checkBoxRegister10.Name = "checkBoxRegister10";
             this.checkBoxRegister10.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister10.TabIndex = 65;
@@ -851,7 +864,7 @@
             // checkBoxRegister11
             // 
             this.checkBoxRegister11.AutoSize = true;
-            this.checkBoxRegister11.Location = new System.Drawing.Point(221, 544);
+            this.checkBoxRegister11.Location = new System.Drawing.Point(205, 549);
             this.checkBoxRegister11.Name = "checkBoxRegister11";
             this.checkBoxRegister11.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister11.TabIndex = 65;
@@ -861,7 +874,7 @@
             // checkBoxRegister12
             // 
             this.checkBoxRegister12.AutoSize = true;
-            this.checkBoxRegister12.Location = new System.Drawing.Point(451, 39);
+            this.checkBoxRegister12.Location = new System.Drawing.Point(435, 20);
             this.checkBoxRegister12.Name = "checkBoxRegister12";
             this.checkBoxRegister12.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister12.TabIndex = 66;
@@ -871,7 +884,7 @@
             // checkBoxRegister13
             // 
             this.checkBoxRegister13.AutoSize = true;
-            this.checkBoxRegister13.Location = new System.Drawing.Point(451, 93);
+            this.checkBoxRegister13.Location = new System.Drawing.Point(435, 67);
             this.checkBoxRegister13.Name = "checkBoxRegister13";
             this.checkBoxRegister13.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister13.TabIndex = 66;
@@ -881,7 +894,7 @@
             // checkBoxRegister14
             // 
             this.checkBoxRegister14.AutoSize = true;
-            this.checkBoxRegister14.Location = new System.Drawing.Point(451, 147);
+            this.checkBoxRegister14.Location = new System.Drawing.Point(435, 115);
             this.checkBoxRegister14.Name = "checkBoxRegister14";
             this.checkBoxRegister14.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister14.TabIndex = 66;
@@ -891,7 +904,7 @@
             // checkBoxRegister15
             // 
             this.checkBoxRegister15.AutoSize = true;
-            this.checkBoxRegister15.Location = new System.Drawing.Point(451, 200);
+            this.checkBoxRegister15.Location = new System.Drawing.Point(435, 162);
             this.checkBoxRegister15.Name = "checkBoxRegister15";
             this.checkBoxRegister15.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister15.TabIndex = 66;
@@ -901,7 +914,7 @@
             // checkBoxRegister16
             // 
             this.checkBoxRegister16.AutoSize = true;
-            this.checkBoxRegister16.Location = new System.Drawing.Point(451, 252);
+            this.checkBoxRegister16.Location = new System.Drawing.Point(435, 222);
             this.checkBoxRegister16.Name = "checkBoxRegister16";
             this.checkBoxRegister16.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister16.TabIndex = 66;
@@ -911,7 +924,7 @@
             // checkBoxRegister17
             // 
             this.checkBoxRegister17.AutoSize = true;
-            this.checkBoxRegister17.Location = new System.Drawing.Point(451, 301);
+            this.checkBoxRegister17.Location = new System.Drawing.Point(435, 279);
             this.checkBoxRegister17.Name = "checkBoxRegister17";
             this.checkBoxRegister17.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister17.TabIndex = 66;
@@ -921,7 +934,7 @@
             // checkBoxRegister18
             // 
             this.checkBoxRegister18.AutoSize = true;
-            this.checkBoxRegister18.Location = new System.Drawing.Point(451, 350);
+            this.checkBoxRegister18.Location = new System.Drawing.Point(435, 333);
             this.checkBoxRegister18.Name = "checkBoxRegister18";
             this.checkBoxRegister18.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister18.TabIndex = 66;
@@ -931,7 +944,7 @@
             // checkBoxRegister19
             // 
             this.checkBoxRegister19.AutoSize = true;
-            this.checkBoxRegister19.Location = new System.Drawing.Point(451, 400);
+            this.checkBoxRegister19.Location = new System.Drawing.Point(435, 386);
             this.checkBoxRegister19.Name = "checkBoxRegister19";
             this.checkBoxRegister19.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister19.TabIndex = 66;
@@ -941,7 +954,7 @@
             // checkBoxRegister20
             // 
             this.checkBoxRegister20.AutoSize = true;
-            this.checkBoxRegister20.Location = new System.Drawing.Point(451, 449);
+            this.checkBoxRegister20.Location = new System.Drawing.Point(435, 436);
             this.checkBoxRegister20.Name = "checkBoxRegister20";
             this.checkBoxRegister20.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister20.TabIndex = 66;
@@ -951,7 +964,7 @@
             // checkBoxRegister21
             // 
             this.checkBoxRegister21.AutoSize = true;
-            this.checkBoxRegister21.Location = new System.Drawing.Point(451, 496);
+            this.checkBoxRegister21.Location = new System.Drawing.Point(435, 491);
             this.checkBoxRegister21.Name = "checkBoxRegister21";
             this.checkBoxRegister21.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister21.TabIndex = 66;
@@ -961,7 +974,7 @@
             // checkBoxRegister22
             // 
             this.checkBoxRegister22.AutoSize = true;
-            this.checkBoxRegister22.Location = new System.Drawing.Point(451, 544);
+            this.checkBoxRegister22.Location = new System.Drawing.Point(435, 549);
             this.checkBoxRegister22.Name = "checkBoxRegister22";
             this.checkBoxRegister22.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister22.TabIndex = 66;
@@ -971,7 +984,7 @@
             // checkBoxRegister23
             // 
             this.checkBoxRegister23.AutoSize = true;
-            this.checkBoxRegister23.Location = new System.Drawing.Point(688, 39);
+            this.checkBoxRegister23.Location = new System.Drawing.Point(672, 20);
             this.checkBoxRegister23.Name = "checkBoxRegister23";
             this.checkBoxRegister23.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister23.TabIndex = 67;
@@ -981,7 +994,7 @@
             // checkBoxRegister24
             // 
             this.checkBoxRegister24.AutoSize = true;
-            this.checkBoxRegister24.Location = new System.Drawing.Point(688, 93);
+            this.checkBoxRegister24.Location = new System.Drawing.Point(672, 67);
             this.checkBoxRegister24.Name = "checkBoxRegister24";
             this.checkBoxRegister24.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister24.TabIndex = 67;
@@ -991,7 +1004,7 @@
             // checkBoxRegister25
             // 
             this.checkBoxRegister25.AutoSize = true;
-            this.checkBoxRegister25.Location = new System.Drawing.Point(688, 147);
+            this.checkBoxRegister25.Location = new System.Drawing.Point(672, 115);
             this.checkBoxRegister25.Name = "checkBoxRegister25";
             this.checkBoxRegister25.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister25.TabIndex = 67;
@@ -1001,7 +1014,7 @@
             // checkBoxRegister26
             // 
             this.checkBoxRegister26.AutoSize = true;
-            this.checkBoxRegister26.Location = new System.Drawing.Point(688, 200);
+            this.checkBoxRegister26.Location = new System.Drawing.Point(672, 162);
             this.checkBoxRegister26.Name = "checkBoxRegister26";
             this.checkBoxRegister26.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister26.TabIndex = 67;
@@ -1011,7 +1024,7 @@
             // checkBoxRegister27
             // 
             this.checkBoxRegister27.AutoSize = true;
-            this.checkBoxRegister27.Location = new System.Drawing.Point(688, 252);
+            this.checkBoxRegister27.Location = new System.Drawing.Point(672, 222);
             this.checkBoxRegister27.Name = "checkBoxRegister27";
             this.checkBoxRegister27.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister27.TabIndex = 67;
@@ -1021,7 +1034,7 @@
             // checkBoxRegister28
             // 
             this.checkBoxRegister28.AutoSize = true;
-            this.checkBoxRegister28.Location = new System.Drawing.Point(688, 301);
+            this.checkBoxRegister28.Location = new System.Drawing.Point(672, 279);
             this.checkBoxRegister28.Name = "checkBoxRegister28";
             this.checkBoxRegister28.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister28.TabIndex = 67;
@@ -1031,7 +1044,7 @@
             // checkBoxRegister29
             // 
             this.checkBoxRegister29.AutoSize = true;
-            this.checkBoxRegister29.Location = new System.Drawing.Point(688, 350);
+            this.checkBoxRegister29.Location = new System.Drawing.Point(672, 333);
             this.checkBoxRegister29.Name = "checkBoxRegister29";
             this.checkBoxRegister29.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister29.TabIndex = 67;
@@ -1041,7 +1054,7 @@
             // checkBoxRegister30
             // 
             this.checkBoxRegister30.AutoSize = true;
-            this.checkBoxRegister30.Location = new System.Drawing.Point(688, 400);
+            this.checkBoxRegister30.Location = new System.Drawing.Point(672, 386);
             this.checkBoxRegister30.Name = "checkBoxRegister30";
             this.checkBoxRegister30.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister30.TabIndex = 67;
@@ -1051,7 +1064,7 @@
             // checkBoxRegister31
             // 
             this.checkBoxRegister31.AutoSize = true;
-            this.checkBoxRegister31.Location = new System.Drawing.Point(688, 449);
+            this.checkBoxRegister31.Location = new System.Drawing.Point(672, 436);
             this.checkBoxRegister31.Name = "checkBoxRegister31";
             this.checkBoxRegister31.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister31.TabIndex = 67;
@@ -1061,7 +1074,7 @@
             // checkBoxRegister32
             // 
             this.checkBoxRegister32.AutoSize = true;
-            this.checkBoxRegister32.Location = new System.Drawing.Point(688, 496);
+            this.checkBoxRegister32.Location = new System.Drawing.Point(672, 491);
             this.checkBoxRegister32.Name = "checkBoxRegister32";
             this.checkBoxRegister32.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister32.TabIndex = 67;
@@ -1071,7 +1084,7 @@
             // checkBoxRegister33
             // 
             this.checkBoxRegister33.AutoSize = true;
-            this.checkBoxRegister33.Location = new System.Drawing.Point(688, 544);
+            this.checkBoxRegister33.Location = new System.Drawing.Point(672, 549);
             this.checkBoxRegister33.Name = "checkBoxRegister33";
             this.checkBoxRegister33.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister33.TabIndex = 67;
@@ -1081,7 +1094,7 @@
             // checkBoxRegister44
             // 
             this.checkBoxRegister44.AutoSize = true;
-            this.checkBoxRegister44.Location = new System.Drawing.Point(924, 544);
+            this.checkBoxRegister44.Location = new System.Drawing.Point(908, 549);
             this.checkBoxRegister44.Name = "checkBoxRegister44";
             this.checkBoxRegister44.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister44.TabIndex = 69;
@@ -1091,7 +1104,7 @@
             // checkBoxRegister43
             // 
             this.checkBoxRegister43.AutoSize = true;
-            this.checkBoxRegister43.Location = new System.Drawing.Point(924, 496);
+            this.checkBoxRegister43.Location = new System.Drawing.Point(908, 491);
             this.checkBoxRegister43.Name = "checkBoxRegister43";
             this.checkBoxRegister43.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister43.TabIndex = 70;
@@ -1101,7 +1114,7 @@
             // checkBoxRegister42
             // 
             this.checkBoxRegister42.AutoSize = true;
-            this.checkBoxRegister42.Location = new System.Drawing.Point(924, 449);
+            this.checkBoxRegister42.Location = new System.Drawing.Point(908, 436);
             this.checkBoxRegister42.Name = "checkBoxRegister42";
             this.checkBoxRegister42.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister42.TabIndex = 71;
@@ -1111,7 +1124,7 @@
             // checkBoxRegister41
             // 
             this.checkBoxRegister41.AutoSize = true;
-            this.checkBoxRegister41.Location = new System.Drawing.Point(924, 400);
+            this.checkBoxRegister41.Location = new System.Drawing.Point(908, 386);
             this.checkBoxRegister41.Name = "checkBoxRegister41";
             this.checkBoxRegister41.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister41.TabIndex = 72;
@@ -1121,7 +1134,7 @@
             // checkBoxRegister40
             // 
             this.checkBoxRegister40.AutoSize = true;
-            this.checkBoxRegister40.Location = new System.Drawing.Point(924, 350);
+            this.checkBoxRegister40.Location = new System.Drawing.Point(908, 333);
             this.checkBoxRegister40.Name = "checkBoxRegister40";
             this.checkBoxRegister40.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister40.TabIndex = 73;
@@ -1131,7 +1144,7 @@
             // checkBoxRegister39
             // 
             this.checkBoxRegister39.AutoSize = true;
-            this.checkBoxRegister39.Location = new System.Drawing.Point(924, 301);
+            this.checkBoxRegister39.Location = new System.Drawing.Point(908, 279);
             this.checkBoxRegister39.Name = "checkBoxRegister39";
             this.checkBoxRegister39.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister39.TabIndex = 74;
@@ -1141,7 +1154,7 @@
             // checkBoxRegister38
             // 
             this.checkBoxRegister38.AutoSize = true;
-            this.checkBoxRegister38.Location = new System.Drawing.Point(924, 252);
+            this.checkBoxRegister38.Location = new System.Drawing.Point(908, 222);
             this.checkBoxRegister38.Name = "checkBoxRegister38";
             this.checkBoxRegister38.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister38.TabIndex = 75;
@@ -1151,7 +1164,7 @@
             // checkBoxRegister37
             // 
             this.checkBoxRegister37.AutoSize = true;
-            this.checkBoxRegister37.Location = new System.Drawing.Point(924, 200);
+            this.checkBoxRegister37.Location = new System.Drawing.Point(908, 162);
             this.checkBoxRegister37.Name = "checkBoxRegister37";
             this.checkBoxRegister37.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister37.TabIndex = 76;
@@ -1161,7 +1174,7 @@
             // checkBoxRegister36
             // 
             this.checkBoxRegister36.AutoSize = true;
-            this.checkBoxRegister36.Location = new System.Drawing.Point(924, 147);
+            this.checkBoxRegister36.Location = new System.Drawing.Point(908, 115);
             this.checkBoxRegister36.Name = "checkBoxRegister36";
             this.checkBoxRegister36.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister36.TabIndex = 77;
@@ -1171,7 +1184,7 @@
             // checkBoxRegister35
             // 
             this.checkBoxRegister35.AutoSize = true;
-            this.checkBoxRegister35.Location = new System.Drawing.Point(924, 93);
+            this.checkBoxRegister35.Location = new System.Drawing.Point(908, 67);
             this.checkBoxRegister35.Name = "checkBoxRegister35";
             this.checkBoxRegister35.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister35.TabIndex = 78;
@@ -1181,7 +1194,7 @@
             // checkBoxRegister34
             // 
             this.checkBoxRegister34.AutoSize = true;
-            this.checkBoxRegister34.Location = new System.Drawing.Point(924, 39);
+            this.checkBoxRegister34.Location = new System.Drawing.Point(908, 20);
             this.checkBoxRegister34.Name = "checkBoxRegister34";
             this.checkBoxRegister34.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister34.TabIndex = 79;
@@ -1191,7 +1204,7 @@
             // checkBoxRegister55
             // 
             this.checkBoxRegister55.AutoSize = true;
-            this.checkBoxRegister55.Location = new System.Drawing.Point(1170, 544);
+            this.checkBoxRegister55.Location = new System.Drawing.Point(1156, 549);
             this.checkBoxRegister55.Name = "checkBoxRegister55";
             this.checkBoxRegister55.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister55.TabIndex = 80;
@@ -1201,7 +1214,7 @@
             // checkBoxRegister54
             // 
             this.checkBoxRegister54.AutoSize = true;
-            this.checkBoxRegister54.Location = new System.Drawing.Point(1170, 496);
+            this.checkBoxRegister54.Location = new System.Drawing.Point(1156, 491);
             this.checkBoxRegister54.Name = "checkBoxRegister54";
             this.checkBoxRegister54.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister54.TabIndex = 81;
@@ -1211,7 +1224,7 @@
             // checkBoxRegister53
             // 
             this.checkBoxRegister53.AutoSize = true;
-            this.checkBoxRegister53.Location = new System.Drawing.Point(1170, 449);
+            this.checkBoxRegister53.Location = new System.Drawing.Point(1156, 436);
             this.checkBoxRegister53.Name = "checkBoxRegister53";
             this.checkBoxRegister53.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister53.TabIndex = 82;
@@ -1221,7 +1234,7 @@
             // checkBoxRegister52
             // 
             this.checkBoxRegister52.AutoSize = true;
-            this.checkBoxRegister52.Location = new System.Drawing.Point(1170, 400);
+            this.checkBoxRegister52.Location = new System.Drawing.Point(1156, 386);
             this.checkBoxRegister52.Name = "checkBoxRegister52";
             this.checkBoxRegister52.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister52.TabIndex = 83;
@@ -1231,7 +1244,7 @@
             // checkBoxRegister51
             // 
             this.checkBoxRegister51.AutoSize = true;
-            this.checkBoxRegister51.Location = new System.Drawing.Point(1170, 350);
+            this.checkBoxRegister51.Location = new System.Drawing.Point(1156, 333);
             this.checkBoxRegister51.Name = "checkBoxRegister51";
             this.checkBoxRegister51.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister51.TabIndex = 84;
@@ -1241,7 +1254,7 @@
             // checkBoxRegister50
             // 
             this.checkBoxRegister50.AutoSize = true;
-            this.checkBoxRegister50.Location = new System.Drawing.Point(1170, 301);
+            this.checkBoxRegister50.Location = new System.Drawing.Point(1156, 279);
             this.checkBoxRegister50.Name = "checkBoxRegister50";
             this.checkBoxRegister50.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister50.TabIndex = 85;
@@ -1251,7 +1264,7 @@
             // checkBoxRegister49
             // 
             this.checkBoxRegister49.AutoSize = true;
-            this.checkBoxRegister49.Location = new System.Drawing.Point(1170, 252);
+            this.checkBoxRegister49.Location = new System.Drawing.Point(1156, 222);
             this.checkBoxRegister49.Name = "checkBoxRegister49";
             this.checkBoxRegister49.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister49.TabIndex = 86;
@@ -1261,7 +1274,7 @@
             // checkBoxRegister48
             // 
             this.checkBoxRegister48.AutoSize = true;
-            this.checkBoxRegister48.Location = new System.Drawing.Point(1170, 200);
+            this.checkBoxRegister48.Location = new System.Drawing.Point(1156, 162);
             this.checkBoxRegister48.Name = "checkBoxRegister48";
             this.checkBoxRegister48.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister48.TabIndex = 87;
@@ -1271,7 +1284,7 @@
             // checkBoxRegister47
             // 
             this.checkBoxRegister47.AutoSize = true;
-            this.checkBoxRegister47.Location = new System.Drawing.Point(1170, 147);
+            this.checkBoxRegister47.Location = new System.Drawing.Point(1156, 115);
             this.checkBoxRegister47.Name = "checkBoxRegister47";
             this.checkBoxRegister47.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister47.TabIndex = 88;
@@ -1281,7 +1294,7 @@
             // checkBoxRegister46
             // 
             this.checkBoxRegister46.AutoSize = true;
-            this.checkBoxRegister46.Location = new System.Drawing.Point(1170, 93);
+            this.checkBoxRegister46.Location = new System.Drawing.Point(1156, 67);
             this.checkBoxRegister46.Name = "checkBoxRegister46";
             this.checkBoxRegister46.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister46.TabIndex = 89;
@@ -1291,7 +1304,7 @@
             // checkBoxRegister45
             // 
             this.checkBoxRegister45.AutoSize = true;
-            this.checkBoxRegister45.Location = new System.Drawing.Point(1170, 39);
+            this.checkBoxRegister45.Location = new System.Drawing.Point(1156, 20);
             this.checkBoxRegister45.Name = "checkBoxRegister45";
             this.checkBoxRegister45.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister45.TabIndex = 90;
@@ -1301,7 +1314,7 @@
             // checkBoxRegister64
             // 
             this.checkBoxRegister64.AutoSize = true;
-            this.checkBoxRegister64.Location = new System.Drawing.Point(1402, 449);
+            this.checkBoxRegister64.Location = new System.Drawing.Point(1378, 436);
             this.checkBoxRegister64.Name = "checkBoxRegister64";
             this.checkBoxRegister64.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister64.TabIndex = 91;
@@ -1311,7 +1324,7 @@
             // checkBoxRegister63
             // 
             this.checkBoxRegister63.AutoSize = true;
-            this.checkBoxRegister63.Location = new System.Drawing.Point(1402, 400);
+            this.checkBoxRegister63.Location = new System.Drawing.Point(1378, 386);
             this.checkBoxRegister63.Name = "checkBoxRegister63";
             this.checkBoxRegister63.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister63.TabIndex = 92;
@@ -1321,7 +1334,7 @@
             // checkBoxRegister62
             // 
             this.checkBoxRegister62.AutoSize = true;
-            this.checkBoxRegister62.Location = new System.Drawing.Point(1402, 350);
+            this.checkBoxRegister62.Location = new System.Drawing.Point(1378, 333);
             this.checkBoxRegister62.Name = "checkBoxRegister62";
             this.checkBoxRegister62.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister62.TabIndex = 93;
@@ -1331,7 +1344,7 @@
             // checkBoxRegister61
             // 
             this.checkBoxRegister61.AutoSize = true;
-            this.checkBoxRegister61.Location = new System.Drawing.Point(1402, 301);
+            this.checkBoxRegister61.Location = new System.Drawing.Point(1378, 279);
             this.checkBoxRegister61.Name = "checkBoxRegister61";
             this.checkBoxRegister61.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister61.TabIndex = 94;
@@ -1341,7 +1354,7 @@
             // checkBoxRegister60
             // 
             this.checkBoxRegister60.AutoSize = true;
-            this.checkBoxRegister60.Location = new System.Drawing.Point(1402, 252);
+            this.checkBoxRegister60.Location = new System.Drawing.Point(1378, 222);
             this.checkBoxRegister60.Name = "checkBoxRegister60";
             this.checkBoxRegister60.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister60.TabIndex = 95;
@@ -1351,7 +1364,7 @@
             // checkBoxRegister59
             // 
             this.checkBoxRegister59.AutoSize = true;
-            this.checkBoxRegister59.Location = new System.Drawing.Point(1402, 200);
+            this.checkBoxRegister59.Location = new System.Drawing.Point(1378, 162);
             this.checkBoxRegister59.Name = "checkBoxRegister59";
             this.checkBoxRegister59.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister59.TabIndex = 96;
@@ -1361,7 +1374,7 @@
             // checkBoxRegister58
             // 
             this.checkBoxRegister58.AutoSize = true;
-            this.checkBoxRegister58.Location = new System.Drawing.Point(1402, 147);
+            this.checkBoxRegister58.Location = new System.Drawing.Point(1378, 115);
             this.checkBoxRegister58.Name = "checkBoxRegister58";
             this.checkBoxRegister58.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister58.TabIndex = 97;
@@ -1371,7 +1384,7 @@
             // checkBoxRegister57
             // 
             this.checkBoxRegister57.AutoSize = true;
-            this.checkBoxRegister57.Location = new System.Drawing.Point(1402, 93);
+            this.checkBoxRegister57.Location = new System.Drawing.Point(1378, 67);
             this.checkBoxRegister57.Name = "checkBoxRegister57";
             this.checkBoxRegister57.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister57.TabIndex = 98;
@@ -1381,7 +1394,7 @@
             // checkBoxRegister56
             // 
             this.checkBoxRegister56.AutoSize = true;
-            this.checkBoxRegister56.Location = new System.Drawing.Point(1402, 39);
+            this.checkBoxRegister56.Location = new System.Drawing.Point(1378, 20);
             this.checkBoxRegister56.Name = "checkBoxRegister56";
             this.checkBoxRegister56.Size = new System.Drawing.Size(15, 14);
             this.checkBoxRegister56.TabIndex = 99;
@@ -1392,7 +1405,7 @@
             // 
             this.buttonChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonChoose.Enabled = false;
-            this.buttonChoose.Location = new System.Drawing.Point(1205, 488);
+            this.buttonChoose.Location = new System.Drawing.Point(1183, 477);
             this.buttonChoose.Name = "buttonChoose";
             this.buttonChoose.Size = new System.Drawing.Size(191, 74);
             this.buttonChoose.TabIndex = 100;
@@ -1403,154 +1416,273 @@
             // 
             this.buttonTwoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonTwoImage.Enabled = false;
-            this.buttonTwoImage.Location = new System.Drawing.Point(1206, 572);
+            this.buttonTwoImage.Location = new System.Drawing.Point(1183, 557);
             this.buttonTwoImage.Name = "buttonTwoImage";
             this.buttonTwoImage.Size = new System.Drawing.Size(191, 74);
             this.buttonTwoImage.TabIndex = 101;
             this.buttonTwoImage.UseVisualStyleBackColor = true;
             this.buttonTwoImage.Click += new System.EventHandler(this.buttonTwoImage_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 5);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1429, 695);
+            this.tabControl1.TabIndex = 102;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.textBoxRegist1);
+            this.tabPage1.Controls.Add(this.applyButton);
+            this.tabPage1.Controls.Add(this.buttonTwoImage);
+            this.tabPage1.Controls.Add(this.checkBoxRegister1);
+            this.tabPage1.Controls.Add(this.buttonChoose);
+            this.tabPage1.Controls.Add(this.textBoxRegist23);
+            this.tabPage1.Controls.Add(this.checkBoxRegister55);
+            this.tabPage1.Controls.Add(this.checkBoxRegister64);
+            this.tabPage1.Controls.Add(this.checkBoxRegister44);
+            this.tabPage1.Controls.Add(this.checkBoxRegister54);
+            this.tabPage1.Controls.Add(this.checkBoxRegister33);
+            this.tabPage1.Controls.Add(this.textBoxRegist12);
+            this.tabPage1.Controls.Add(this.checkBoxRegister22);
+            this.tabPage1.Controls.Add(this.checkBoxRegister63);
+            this.tabPage1.Controls.Add(this.checkBoxRegister11);
+            this.tabPage1.Controls.Add(this.checkBoxRegister43);
+            this.tabPage1.Controls.Add(this.textBoxRegist55);
+            this.tabPage1.Controls.Add(this.checkBoxRegister12);
+            this.tabPage1.Controls.Add(this.textBoxRegist33);
+            this.tabPage1.Controls.Add(this.checkBoxRegister53);
+            this.tabPage1.Controls.Add(this.textBoxRegist44);
+            this.tabPage1.Controls.Add(this.checkBoxRegister32);
+            this.tabPage1.Controls.Add(this.textBoxRegist22);
+            this.tabPage1.Controls.Add(this.checkBoxRegister62);
+            this.tabPage1.Controls.Add(this.textBoxRegist11);
+            this.tabPage1.Controls.Add(this.checkBoxRegister23);
+            this.tabPage1.Controls.Add(this.checkBoxRegister21);
+            this.tabPage1.Controls.Add(this.checkBoxRegister61);
+            this.tabPage1.Controls.Add(this.checkBoxRegister42);
+            this.tabPage1.Controls.Add(this.checkBoxRegister10);
+            this.tabPage1.Controls.Add(this.checkBoxRegister52);
+            this.tabPage1.Controls.Add(this.textBoxRegist43);
+            this.tabPage1.Controls.Add(this.textBoxRegist34);
+            this.tabPage1.Controls.Add(this.checkBoxRegister60);
+            this.tabPage1.Controls.Add(this.checkBoxRegister31);
+            this.tabPage1.Controls.Add(this.textBoxRegist54);
+            this.tabPage1.Controls.Add(this.checkBoxRegister34);
+            this.tabPage1.Controls.Add(this.textBoxRegist32);
+            this.tabPage1.Controls.Add(this.checkBoxRegister51);
+            this.tabPage1.Controls.Add(this.checkBoxRegister41);
+            this.tabPage1.Controls.Add(this.checkBoxRegister20);
+            this.tabPage1.Controls.Add(this.textBoxRegist21);
+            this.tabPage1.Controls.Add(this.checkBoxRegister59);
+            this.tabPage1.Controls.Add(this.textBoxRegist10);
+            this.tabPage1.Controls.Add(this.textBoxRegist45);
+            this.tabPage1.Controls.Add(this.checkBoxRegister58);
+            this.tabPage1.Controls.Add(this.checkBoxRegister9);
+            this.tabPage1.Controls.Add(this.checkBoxRegister50);
+            this.tabPage1.Controls.Add(this.checkBoxRegister30);
+            this.tabPage1.Controls.Add(this.checkBoxRegister45);
+            this.tabPage1.Controls.Add(this.checkBoxRegister40);
+            this.tabPage1.Controls.Add(this.textBoxRegist53);
+            this.tabPage1.Controls.Add(this.checkBoxRegister57);
+            this.tabPage1.Controls.Add(this.textBoxRegist56);
+            this.tabPage1.Controls.Add(this.checkBoxRegister19);
+            this.tabPage1.Controls.Add(this.checkBoxRegister49);
+            this.tabPage1.Controls.Add(this.checkBoxRegister56);
+            this.tabPage1.Controls.Add(this.textBoxRegist42);
+            this.tabPage1.Controls.Add(this.textBoxRegist2);
+            this.tabPage1.Controls.Add(this.checkBoxRegister29);
+            this.tabPage1.Controls.Add(this.textBoxRegist31);
+            this.tabPage1.Controls.Add(this.checkBoxRegister8);
+            this.tabPage1.Controls.Add(this.checkBoxRegister39);
+            this.tabPage1.Controls.Add(this.textBoxRegist20);
+            this.tabPage1.Controls.Add(this.textBoxRegist13);
+            this.tabPage1.Controls.Add(this.textBoxRegist9);
+            this.tabPage1.Controls.Add(this.checkBoxRegister48);
+            this.tabPage1.Controls.Add(this.textBoxRegist64);
+            this.tabPage1.Controls.Add(this.textBoxRegist63);
+            this.tabPage1.Controls.Add(this.textBoxRegist24);
+            this.tabPage1.Controls.Add(this.textBoxRegist35);
+            this.tabPage1.Controls.Add(this.checkBoxRegister18);
+            this.tabPage1.Controls.Add(this.checkBoxRegister2);
+            this.tabPage1.Controls.Add(this.checkBoxRegister38);
+            this.tabPage1.Controls.Add(this.checkBoxRegister28);
+            this.tabPage1.Controls.Add(this.textBoxRegist52);
+            this.tabPage1.Controls.Add(this.checkBoxRegister47);
+            this.tabPage1.Controls.Add(this.checkBoxRegister13);
+            this.tabPage1.Controls.Add(this.checkBoxRegister7);
+            this.tabPage1.Controls.Add(this.textBoxRegist41);
+            this.tabPage1.Controls.Add(this.checkBoxRegister24);
+            this.tabPage1.Controls.Add(this.checkBoxRegister35);
+            this.tabPage1.Controls.Add(this.checkBoxRegister46);
+            this.tabPage1.Controls.Add(this.textBoxRegist30);
+            this.tabPage1.Controls.Add(this.textBoxRegist57);
+            this.tabPage1.Controls.Add(this.checkBoxRegister17);
+            this.tabPage1.Controls.Add(this.textBoxRegist46);
+            this.tabPage1.Controls.Add(this.textBoxRegist19);
+            this.tabPage1.Controls.Add(this.checkBoxRegister27);
+            this.tabPage1.Controls.Add(this.textBoxRegist3);
+            this.tabPage1.Controls.Add(this.textBoxRegist8);
+            this.tabPage1.Controls.Add(this.textBoxRegist14);
+            this.tabPage1.Controls.Add(this.checkBoxRegister37);
+            this.tabPage1.Controls.Add(this.textBoxRegist25);
+            this.tabPage1.Controls.Add(this.checkBoxRegister6);
+            this.tabPage1.Controls.Add(this.checkBoxRegister36);
+            this.tabPage1.Controls.Add(this.textBoxRegist36);
+            this.tabPage1.Controls.Add(this.checkBoxRegister3);
+            this.tabPage1.Controls.Add(this.checkBoxRegister16);
+            this.tabPage1.Controls.Add(this.checkBoxRegister14);
+            this.tabPage1.Controls.Add(this.checkBoxRegister25);
+            this.tabPage1.Controls.Add(this.textBoxRegist15);
+            this.tabPage1.Controls.Add(this.textBoxRegist4);
+            this.tabPage1.Controls.Add(this.checkBoxRegister26);
+            this.tabPage1.Controls.Add(this.textBoxRegist26);
+            this.tabPage1.Controls.Add(this.textBoxRegist37);
+            this.tabPage1.Controls.Add(this.textBoxRegist62);
+            this.tabPage1.Controls.Add(this.checkBoxRegister5);
+            this.tabPage1.Controls.Add(this.textBoxRegist51);
+            this.tabPage1.Controls.Add(this.checkBoxRegister4);
+            this.tabPage1.Controls.Add(this.textBoxRegist40);
+            this.tabPage1.Controls.Add(this.checkBoxRegister15);
+            this.tabPage1.Controls.Add(this.textBoxRegist29);
+            this.tabPage1.Controls.Add(this.textBoxRegist58);
+            this.tabPage1.Controls.Add(this.textBoxRegist18);
+            this.tabPage1.Controls.Add(this.textBoxRegist7);
+            this.tabPage1.Controls.Add(this.textBoxRegist47);
+            this.tabPage1.Controls.Add(this.textBoxRegist59);
+            this.tabPage1.Controls.Add(this.textBoxRegist48);
+            this.tabPage1.Controls.Add(this.textBoxRegist5);
+            this.tabPage1.Controls.Add(this.textBoxRegist16);
+            this.tabPage1.Controls.Add(this.textBoxRegist27);
+            this.tabPage1.Controls.Add(this.textBoxRegist38);
+            this.tabPage1.Controls.Add(this.textBoxRegist49);
+            this.tabPage1.Controls.Add(this.textBoxRegist60);
+            this.tabPage1.Controls.Add(this.textBoxRegist61);
+            this.tabPage1.Controls.Add(this.textBoxRegist39);
+            this.tabPage1.Controls.Add(this.textBoxRegist6);
+            this.tabPage1.Controls.Add(this.textBoxRegist50);
+            this.tabPage1.Controls.Add(this.textBoxRegist17);
+            this.tabPage1.Controls.Add(this.textBoxRegist28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1421, 669);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.buttonSave);
+            this.tabPage2.Controls.Add(this.buttonRefresh);
+            this.tabPage2.Controls.Add(this.portBox1);
+            this.tabPage2.Controls.Add(this.checkBoxHub4);
+            this.tabPage2.Controls.Add(this.checkBoxHub3);
+            this.tabPage2.Controls.Add(this.checkBoxHub2);
+            this.tabPage2.Controls.Add(this.checkBoxHub1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1421, 669);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(338, 108);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(99, 32);
+            this.buttonSave.TabIndex = 2;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(512, 24);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(99, 32);
+            this.buttonRefresh.TabIndex = 2;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // portBox1
+            // 
+            this.portBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portBox1.FormattingEnabled = true;
+            this.portBox1.Location = new System.Drawing.Point(293, 21);
+            this.portBox1.Name = "portBox1";
+            this.portBox1.Size = new System.Drawing.Size(213, 37);
+            this.portBox1.TabIndex = 1;
+            // 
+            // checkBoxHub4
+            // 
+            this.checkBoxHub4.AutoSize = true;
+            this.checkBoxHub4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxHub4.Location = new System.Drawing.Point(28, 108);
+            this.checkBoxHub4.Name = "checkBoxHub4";
+            this.checkBoxHub4.Size = new System.Drawing.Size(80, 28);
+            this.checkBoxHub4.TabIndex = 0;
+            this.checkBoxHub4.Text = "Hub 4";
+            this.checkBoxHub4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHub3
+            // 
+            this.checkBoxHub3.AutoSize = true;
+            this.checkBoxHub3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxHub3.Location = new System.Drawing.Point(28, 79);
+            this.checkBoxHub3.Name = "checkBoxHub3";
+            this.checkBoxHub3.Size = new System.Drawing.Size(80, 28);
+            this.checkBoxHub3.TabIndex = 0;
+            this.checkBoxHub3.Text = "Hub 3";
+            this.checkBoxHub3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHub2
+            // 
+            this.checkBoxHub2.AutoSize = true;
+            this.checkBoxHub2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxHub2.Location = new System.Drawing.Point(28, 50);
+            this.checkBoxHub2.Name = "checkBoxHub2";
+            this.checkBoxHub2.Size = new System.Drawing.Size(80, 28);
+            this.checkBoxHub2.TabIndex = 0;
+            this.checkBoxHub2.Text = "Hub 2";
+            this.checkBoxHub2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHub1
+            // 
+            this.checkBoxHub1.AutoSize = true;
+            this.checkBoxHub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxHub1.Location = new System.Drawing.Point(28, 21);
+            this.checkBoxHub1.Name = "checkBoxHub1";
+            this.checkBoxHub1.Size = new System.Drawing.Size(80, 28);
+            this.checkBoxHub1.TabIndex = 0;
+            this.checkBoxHub1.Text = "Hub 1";
+            this.checkBoxHub1.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1453, 661);
-            this.Controls.Add(this.buttonTwoImage);
-            this.Controls.Add(this.buttonChoose);
-            this.Controls.Add(this.checkBoxRegister64);
-            this.Controls.Add(this.checkBoxRegister63);
-            this.Controls.Add(this.checkBoxRegister62);
-            this.Controls.Add(this.checkBoxRegister61);
-            this.Controls.Add(this.checkBoxRegister60);
-            this.Controls.Add(this.checkBoxRegister59);
-            this.Controls.Add(this.checkBoxRegister58);
-            this.Controls.Add(this.checkBoxRegister57);
-            this.Controls.Add(this.checkBoxRegister56);
-            this.Controls.Add(this.checkBoxRegister55);
-            this.Controls.Add(this.checkBoxRegister54);
-            this.Controls.Add(this.checkBoxRegister53);
-            this.Controls.Add(this.checkBoxRegister52);
-            this.Controls.Add(this.checkBoxRegister51);
-            this.Controls.Add(this.checkBoxRegister50);
-            this.Controls.Add(this.checkBoxRegister49);
-            this.Controls.Add(this.checkBoxRegister48);
-            this.Controls.Add(this.checkBoxRegister47);
-            this.Controls.Add(this.checkBoxRegister46);
-            this.Controls.Add(this.checkBoxRegister45);
-            this.Controls.Add(this.checkBoxRegister44);
-            this.Controls.Add(this.checkBoxRegister43);
-            this.Controls.Add(this.checkBoxRegister42);
-            this.Controls.Add(this.checkBoxRegister41);
-            this.Controls.Add(this.checkBoxRegister40);
-            this.Controls.Add(this.checkBoxRegister39);
-            this.Controls.Add(this.checkBoxRegister38);
-            this.Controls.Add(this.checkBoxRegister37);
-            this.Controls.Add(this.checkBoxRegister36);
-            this.Controls.Add(this.checkBoxRegister35);
-            this.Controls.Add(this.checkBoxRegister34);
-            this.Controls.Add(this.checkBoxRegister33);
-            this.Controls.Add(this.checkBoxRegister32);
-            this.Controls.Add(this.checkBoxRegister31);
-            this.Controls.Add(this.checkBoxRegister30);
-            this.Controls.Add(this.checkBoxRegister29);
-            this.Controls.Add(this.checkBoxRegister28);
-            this.Controls.Add(this.checkBoxRegister27);
-            this.Controls.Add(this.checkBoxRegister26);
-            this.Controls.Add(this.checkBoxRegister25);
-            this.Controls.Add(this.checkBoxRegister24);
-            this.Controls.Add(this.checkBoxRegister23);
-            this.Controls.Add(this.checkBoxRegister22);
-            this.Controls.Add(this.checkBoxRegister21);
-            this.Controls.Add(this.checkBoxRegister20);
-            this.Controls.Add(this.checkBoxRegister19);
-            this.Controls.Add(this.checkBoxRegister18);
-            this.Controls.Add(this.checkBoxRegister17);
-            this.Controls.Add(this.checkBoxRegister16);
-            this.Controls.Add(this.checkBoxRegister15);
-            this.Controls.Add(this.checkBoxRegister14);
-            this.Controls.Add(this.checkBoxRegister13);
-            this.Controls.Add(this.checkBoxRegister12);
-            this.Controls.Add(this.checkBoxRegister11);
-            this.Controls.Add(this.checkBoxRegister10);
-            this.Controls.Add(this.checkBoxRegister9);
-            this.Controls.Add(this.checkBoxRegister8);
-            this.Controls.Add(this.checkBoxRegister7);
-            this.Controls.Add(this.checkBoxRegister6);
-            this.Controls.Add(this.checkBoxRegister5);
-            this.Controls.Add(this.checkBoxRegister4);
-            this.Controls.Add(this.checkBoxRegister3);
-            this.Controls.Add(this.checkBoxRegister2);
-            this.Controls.Add(this.checkBoxRegister1);
-            this.Controls.Add(this.textBoxRegist43);
-            this.Controls.Add(this.textBoxRegist55);
-            this.Controls.Add(this.textBoxRegist63);
-            this.Controls.Add(this.textBoxRegist33);
-            this.Controls.Add(this.textBoxRegist53);
-            this.Controls.Add(this.textBoxRegist54);
-            this.Controls.Add(this.textBoxRegist32);
-            this.Controls.Add(this.textBoxRegist44);
-            this.Controls.Add(this.textBoxRegist52);
-            this.Controls.Add(this.textBoxRegist22);
-            this.Controls.Add(this.textBoxRegist42);
-            this.Controls.Add(this.textBoxRegist41);
-            this.Controls.Add(this.textBoxRegist21);
-            this.Controls.Add(this.textBoxRegist31);
-            this.Controls.Add(this.textBoxRegist30);
-            this.Controls.Add(this.textBoxRegist11);
-            this.Controls.Add(this.textBoxRegist20);
-            this.Controls.Add(this.textBoxRegist19);
-            this.Controls.Add(this.textBoxRegist10);
-            this.Controls.Add(this.textBoxRegist9);
-            this.Controls.Add(this.textBoxRegist8);
-            this.Controls.Add(this.textBoxRegist64);
-            this.Controls.Add(this.textBoxRegist62);
-            this.Controls.Add(this.textBoxRegist58);
-            this.Controls.Add(this.textBoxRegist61);
-            this.Controls.Add(this.textBoxRegist59);
-            this.Controls.Add(this.textBoxRegist60);
-            this.Controls.Add(this.textBoxRegist57);
-            this.Controls.Add(this.textBoxRegist56);
-            this.Controls.Add(this.textBoxRegist51);
-            this.Controls.Add(this.textBoxRegist47);
-            this.Controls.Add(this.textBoxRegist50);
-            this.Controls.Add(this.textBoxRegist48);
-            this.Controls.Add(this.textBoxRegist49);
-            this.Controls.Add(this.textBoxRegist46);
-            this.Controls.Add(this.textBoxRegist45);
-            this.Controls.Add(this.textBoxRegist40);
-            this.Controls.Add(this.textBoxRegist29);
-            this.Controls.Add(this.textBoxRegist18);
-            this.Controls.Add(this.textBoxRegist7);
-            this.Controls.Add(this.textBoxRegist36);
-            this.Controls.Add(this.textBoxRegist39);
-            this.Controls.Add(this.textBoxRegist37);
-            this.Controls.Add(this.textBoxRegist38);
-            this.Controls.Add(this.textBoxRegist35);
-            this.Controls.Add(this.textBoxRegist34);
-            this.Controls.Add(this.textBoxRegist25);
-            this.Controls.Add(this.textBoxRegist28);
-            this.Controls.Add(this.textBoxRegist26);
-            this.Controls.Add(this.textBoxRegist27);
-            this.Controls.Add(this.textBoxRegist24);
-            this.Controls.Add(this.textBoxRegist23);
-            this.Controls.Add(this.textBoxRegist14);
-            this.Controls.Add(this.textBoxRegist17);
-            this.Controls.Add(this.textBoxRegist15);
-            this.Controls.Add(this.textBoxRegist16);
-            this.Controls.Add(this.textBoxRegist13);
-            this.Controls.Add(this.textBoxRegist12);
-            this.Controls.Add(this.textBoxRegist3);
-            this.Controls.Add(this.textBoxRegist6);
-            this.Controls.Add(this.textBoxRegist4);
-            this.Controls.Add(this.textBoxRegist5);
-            this.Controls.Add(this.textBoxRegist2);
-            this.Controls.Add(this.textBoxRegist1);
-            this.Controls.Add(this.applyButton);
+            this.ClientSize = new System.Drawing.Size(1455, 719);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Settings";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1687,5 +1819,15 @@
         private System.Windows.Forms.CheckBox checkBoxRegister56;
         private System.Windows.Forms.Button buttonChoose;
         private System.Windows.Forms.Button buttonTwoImage;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.CheckBox checkBoxHub4;
+        private System.Windows.Forms.CheckBox checkBoxHub3;
+        private System.Windows.Forms.CheckBox checkBoxHub2;
+        private System.Windows.Forms.CheckBox checkBoxHub1;
+        private System.Windows.Forms.ComboBox portBox1;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,72 +30,91 @@ namespace NurseCalling
 
             dbHandlr.getSettingData(qLiteConnection,modelData);
 
+
+            try
+            {
+                tsuPorts();
+
+            }
+            catch (Exception ex) { }
+
+
+            dbHandlr.getGeneralData(qLiteConnection, modelData);
+
             dbHandr.getImage(qLiteConnection, modelData);
 
-           /* SetPlaceHolder(textBoxRegist1, "Hub 1");
-            SetPlaceHolder(textBoxRegist2, "Hub 2");
-            SetPlaceHolder(textBoxRegist3, "Hub 3");
-            SetPlaceHolder(textBoxRegist4, "Hub 4");
-            SetPlaceHolder(textBoxRegist5, "Hub 5");
-            SetPlaceHolder(textBoxRegist6, "Hub 6");
-            SetPlaceHolder(textBoxRegist7, "Hub 7");
-            SetPlaceHolder(textBoxRegist8, "Hub 8");
-            SetPlaceHolder(textBoxRegist9, "Hub 9");
-            SetPlaceHolder(textBoxRegist10, "Hub 10");
-            SetPlaceHolder(textBoxRegist11, "Hub 11");
-            SetPlaceHolder(textBoxRegist12, "Hub 12");
-            SetPlaceHolder(textBoxRegist13, "Hub 13");
-            SetPlaceHolder(textBoxRegist14, "Hub 14");
-            SetPlaceHolder(textBoxRegist15, "Hub 15");
-            SetPlaceHolder(textBoxRegist16, "Hub 16");
-            SetPlaceHolder(textBoxRegist17, "Hub 17");
-            SetPlaceHolder(textBoxRegist18, "Hub 18");
-            SetPlaceHolder(textBoxRegist19, "Hub 19");
-            SetPlaceHolder(textBoxRegist20, "Hub 20");
-            SetPlaceHolder(textBoxRegist21, "Hub 21");
-            SetPlaceHolder(textBoxRegist22, "Hub 22");
-            SetPlaceHolder(textBoxRegist23, "Hub 23");
-            SetPlaceHolder(textBoxRegist24, "Hub 24");
-            SetPlaceHolder(textBoxRegist25, "Hub 25");
-            SetPlaceHolder(textBoxRegist26, "Hub 26");
-            SetPlaceHolder(textBoxRegist27, "Hub 27");
-            SetPlaceHolder(textBoxRegist28, "Hub 28");
-            SetPlaceHolder(textBoxRegist29, "Hub 29");
-            SetPlaceHolder(textBoxRegist30, "Hub 30");
-            SetPlaceHolder(textBoxRegist31, "Hub 31");
-            SetPlaceHolder(textBoxRegist32, "Hub 32");
-            SetPlaceHolder(textBoxRegist33, "Hub 33");
-            SetPlaceHolder(textBoxRegist34, "Hub 34");
-            SetPlaceHolder(textBoxRegist35, "Hub 35");
-            SetPlaceHolder(textBoxRegist36, "Hub 36");
-            SetPlaceHolder(textBoxRegist37, "Hub 37");
-            SetPlaceHolder(textBoxRegist38, "Hub 38");
-            SetPlaceHolder(textBoxRegist39, "Hub 39");
-            SetPlaceHolder(textBoxRegist40, "Hub 40");
-            SetPlaceHolder(textBoxRegist41, "Hub 41");
-            SetPlaceHolder(textBoxRegist42, "Hub 42");
-            SetPlaceHolder(textBoxRegist43, "Hub 43");
-            SetPlaceHolder(textBoxRegist44, "Hub 44");
-            SetPlaceHolder(textBoxRegist45, "Hub 45");
-            SetPlaceHolder(textBoxRegist46, "Hub 46");
-            SetPlaceHolder(textBoxRegist47, "Hub 47");
-            SetPlaceHolder(textBoxRegist48, "Hub 48");
-            SetPlaceHolder(textBoxRegist49, "Hub 49");
-            SetPlaceHolder(textBoxRegist50, "Hub 50");
-            SetPlaceHolder(textBoxRegist51, "Hub 51");
-            SetPlaceHolder(textBoxRegist52, "Hub 52");
-            SetPlaceHolder(textBoxRegist53, "Hub 53");
-            SetPlaceHolder(textBoxRegist54, "Hub 54");
-            SetPlaceHolder(textBoxRegist55, "Hub 55");
-            SetPlaceHolder(textBoxRegist56, "Hub 56");
-            SetPlaceHolder(textBoxRegist57, "Hub 57");
-            SetPlaceHolder(textBoxRegist58, "Hub 58");
-            SetPlaceHolder(textBoxRegist59, "Hub 59");
-            SetPlaceHolder(textBoxRegist60, "Hub 60");
-            SetPlaceHolder(textBoxRegist61, "Hub 61");
-            SetPlaceHolder(textBoxRegist62, "Hub 62");
-            SetPlaceHolder(textBoxRegist63, "Hub 63");
-            SetPlaceHolder(textBoxRegist64, "Hub 64");*/
+
+            checkBoxHub1.Checked = modelData.checkBoxHub1;
+            checkBoxHub2.Checked = modelData.checkBoxHub2;
+            checkBoxHub3.Checked = modelData.checkBoxHub3;
+            checkBoxHub4.Checked = modelData.checkBoxHub4;
+
+            portBox1.Text = modelData.comport;
+
+            /* SetPlaceHolder(textBoxRegist1, "Hub 1");
+             SetPlaceHolder(textBoxRegist2, "Hub 2");
+             SetPlaceHolder(textBoxRegist3, "Hub 3");
+             SetPlaceHolder(textBoxRegist4, "Hub 4");
+             SetPlaceHolder(textBoxRegist5, "Hub 5");
+             SetPlaceHolder(textBoxRegist6, "Hub 6");
+             SetPlaceHolder(textBoxRegist7, "Hub 7");
+             SetPlaceHolder(textBoxRegist8, "Hub 8");
+             SetPlaceHolder(textBoxRegist9, "Hub 9");
+             SetPlaceHolder(textBoxRegist10, "Hub 10");
+             SetPlaceHolder(textBoxRegist11, "Hub 11");
+             SetPlaceHolder(textBoxRegist12, "Hub 12");
+             SetPlaceHolder(textBoxRegist13, "Hub 13");
+             SetPlaceHolder(textBoxRegist14, "Hub 14");
+             SetPlaceHolder(textBoxRegist15, "Hub 15");
+             SetPlaceHolder(textBoxRegist16, "Hub 16");
+             SetPlaceHolder(textBoxRegist17, "Hub 17");
+             SetPlaceHolder(textBoxRegist18, "Hub 18");
+             SetPlaceHolder(textBoxRegist19, "Hub 19");
+             SetPlaceHolder(textBoxRegist20, "Hub 20");
+             SetPlaceHolder(textBoxRegist21, "Hub 21");
+             SetPlaceHolder(textBoxRegist22, "Hub 22");
+             SetPlaceHolder(textBoxRegist23, "Hub 23");
+             SetPlaceHolder(textBoxRegist24, "Hub 24");
+             SetPlaceHolder(textBoxRegist25, "Hub 25");
+             SetPlaceHolder(textBoxRegist26, "Hub 26");
+             SetPlaceHolder(textBoxRegist27, "Hub 27");
+             SetPlaceHolder(textBoxRegist28, "Hub 28");
+             SetPlaceHolder(textBoxRegist29, "Hub 29");
+             SetPlaceHolder(textBoxRegist30, "Hub 30");
+             SetPlaceHolder(textBoxRegist31, "Hub 31");
+             SetPlaceHolder(textBoxRegist32, "Hub 32");
+             SetPlaceHolder(textBoxRegist33, "Hub 33");
+             SetPlaceHolder(textBoxRegist34, "Hub 34");
+             SetPlaceHolder(textBoxRegist35, "Hub 35");
+             SetPlaceHolder(textBoxRegist36, "Hub 36");
+             SetPlaceHolder(textBoxRegist37, "Hub 37");
+             SetPlaceHolder(textBoxRegist38, "Hub 38");
+             SetPlaceHolder(textBoxRegist39, "Hub 39");
+             SetPlaceHolder(textBoxRegist40, "Hub 40");
+             SetPlaceHolder(textBoxRegist41, "Hub 41");
+             SetPlaceHolder(textBoxRegist42, "Hub 42");
+             SetPlaceHolder(textBoxRegist43, "Hub 43");
+             SetPlaceHolder(textBoxRegist44, "Hub 44");
+             SetPlaceHolder(textBoxRegist45, "Hub 45");
+             SetPlaceHolder(textBoxRegist46, "Hub 46");
+             SetPlaceHolder(textBoxRegist47, "Hub 47");
+             SetPlaceHolder(textBoxRegist48, "Hub 48");
+             SetPlaceHolder(textBoxRegist49, "Hub 49");
+             SetPlaceHolder(textBoxRegist50, "Hub 50");
+             SetPlaceHolder(textBoxRegist51, "Hub 51");
+             SetPlaceHolder(textBoxRegist52, "Hub 52");
+             SetPlaceHolder(textBoxRegist53, "Hub 53");
+             SetPlaceHolder(textBoxRegist54, "Hub 54");
+             SetPlaceHolder(textBoxRegist55, "Hub 55");
+             SetPlaceHolder(textBoxRegist56, "Hub 56");
+             SetPlaceHolder(textBoxRegist57, "Hub 57");
+             SetPlaceHolder(textBoxRegist58, "Hub 58");
+             SetPlaceHolder(textBoxRegist59, "Hub 59");
+             SetPlaceHolder(textBoxRegist60, "Hub 60");
+             SetPlaceHolder(textBoxRegist61, "Hub 61");
+             SetPlaceHolder(textBoxRegist62, "Hub 62");
+             SetPlaceHolder(textBoxRegist63, "Hub 63");
+             SetPlaceHolder(textBoxRegist64, "Hub 64");*/
 
             textBoxRegist1.Text = modelData.textBoxRegist1;
             textBoxRegist2.Text = modelData.textBoxRegist2;
@@ -1174,6 +1194,58 @@ namespace NurseCalling
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("my_value "+ checkBoxHub1.Checked+" "+ checkBoxHub2.Checked+" "+ checkBoxHub3.Checked+" "+checkBoxHub4.Checked);
+            modelData.checkBoxHub1 = checkBoxHub1.Checked;
+            modelData.checkBoxHub2 = checkBoxHub2.Checked;
+            modelData.checkBoxHub3 = checkBoxHub3.Checked;
+            modelData.checkBoxHub4 = checkBoxHub4.Checked; 
+            modelData.comport = portBox1.Text;
+            dbHandlr.UpdateComport(modelData,qLiteConnection);
+        }
+
+        
+
+
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tsuPorts();
+              
+            }
+            catch (Exception ex) { }
+        }
+
+        private void tsuPorts()
+        {
+            try
+            {
+                // Retrieve the list of all COM ports on your Computer
+                string[] ports = SerialPort.GetPortNames();
+                foreach (string port in ports)
+                {
+                    if (!portBox1.Items.Contains(port))
+                    {
+                        portBox1.Items.Add(port);
+                    }
+                }
+            }
+            catch (Exception ex) { }
         }
     }
 }

@@ -26,7 +26,7 @@ namespace NurseCalling
                     SQLiteConnection dbConnection = new SQLiteConnection("Data Source=dscp.sqlite;Version=3;");
 
                     dbConnection.Open();
-                    string sql = "create table general_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, comport_name varchar(60), firstcall_status varchar(60))"; 
+                    string sql = "create table general_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, comport varchar(60) ,checkBoxHub1 varchar(10), checkBoxHub2 varchar(10), checkBoxHub3 varchar(10), checkBoxHub4 varchar(10))"; 
                     SQLiteCommand command = new SQLiteCommand(sql, dbConnection); 
                     command.ExecuteNonQuery();
 
@@ -117,8 +117,11 @@ namespace NurseCalling
             SQLiteDataReader Sdr = cmd.ExecuteReader();
             while (Sdr.Read())
             {
-                dataModel.comport_name = Sdr["comport_name"].ToString();
-                dataModel.firstcall_status = Sdr["firstcall_status"].ToString();
+                dataModel.comport = Sdr["comport"].ToString();
+                dataModel.checkBoxHub1 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxHub1"].ToString())));
+                dataModel.checkBoxHub2 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxHub2"].ToString())));
+                dataModel.checkBoxHub3 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxHub3"].ToString())));
+                dataModel.checkBoxHub4 = Convert.ToBoolean(Convert.ToInt16((Sdr["checkBoxHub4"].ToString())));
             }
             Sdr.Close();
         }
@@ -129,10 +132,13 @@ namespace NurseCalling
         {
  
 
-            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO general_table (comport_name, firstcall_status)", m_dbConnection);
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO general_table (comport, checkBoxHub1, checkBoxHub2, checkBoxHub3, checkBoxHub4) values(@comport, @checkBoxHub1, @checkBoxHub2, @checkBoxHub3, @checkBoxHub4)", m_dbConnection);
 
-            insertSQL.Parameters.AddWithValue("@comport_name", "COM1");
-            insertSQL.Parameters.AddWithValue("@firstcall_status", 1);
+            insertSQL.Parameters.AddWithValue("@comport", "COM3");
+            insertSQL.Parameters.AddWithValue("@checkBoxHub1", 1);
+            insertSQL.Parameters.AddWithValue("@checkBoxHub2", 0);
+            insertSQL.Parameters.AddWithValue("@checkBoxHub3", 0);
+            insertSQL.Parameters.AddWithValue("@checkBoxHub4", 0);
 
             try
             {
@@ -853,6 +859,35 @@ namespace NurseCalling
 
         }
 
+        public void UpdateComport(DataModel modelData, SQLiteConnection m_dbConnection)
+        {
+            //  m_dbConnection.Open();
+
+            string sql_update = "UPDATE general_table SET comport = @comport,checkBoxHub1 = @checkBoxHub1" +
+                " ,checkBoxHub2 = @checkBoxHub2, checkBoxHub3 = @checkBoxHub3,checkBoxHub4 = @checkBoxHub4 Where ID = @ID";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+            command.Parameters.AddWithValue("@comport", modelData.comport);
+            command.Parameters.AddWithValue("@checkBoxHub1", modelData.checkBoxHub1);
+            command.Parameters.AddWithValue("@checkBoxHub2", modelData.checkBoxHub2);
+            command.Parameters.AddWithValue("@checkBoxHub3", modelData.checkBoxHub3);
+            command.Parameters.AddWithValue("@checkBoxHub4", modelData.checkBoxHub4);
+
+            command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+                command.ExecuteNonQuery();
+                //  m_dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+        }
 
         public void insert_call_data(SQLiteConnection m_dbConnection, DataModel dataModel)
         {

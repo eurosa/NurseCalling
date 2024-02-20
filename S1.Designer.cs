@@ -169,6 +169,8 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoScrollMargin = new System.Drawing.Size(3, 3);
             this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle1);
             this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle2);
             this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle7);
@@ -186,32 +188,34 @@
             this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle15);
             this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle16);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 81);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 36);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 886);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 1005);
             this.flowLayoutPanel1.TabIndex = 7;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Location = new System.Drawing.Point(12, -1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1915, 78);
+            this.label2.Size = new System.Drawing.Size(1902, 38);
             this.label2.TabIndex = 7;
             this.label2.Text = "NURSE CALL SYSTEM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 991);
+            this.label3.Location = new System.Drawing.Point(10, 1041);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(1918, 70);
+            this.label3.Size = new System.Drawing.Size(1906, 36);
             this.label3.TabIndex = 32;
             this.label3.Text = "Digiline System Pvt. Ltd.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,9 +238,9 @@
             this.rjSettings.FlatAppearance.BorderSize = 0;
             this.rjSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjSettings.ForeColor = System.Drawing.Color.Transparent;
-            this.rjSettings.Location = new System.Drawing.Point(1231, 997);
+            this.rjSettings.Location = new System.Drawing.Point(1858, 1043);
             this.rjSettings.Name = "rjSettings";
-            this.rjSettings.Size = new System.Drawing.Size(50, 48);
+            this.rjSettings.Size = new System.Drawing.Size(34, 32);
             this.rjSettings.TabIndex = 34;
             this.rjSettings.TextColor = System.Drawing.Color.Transparent;
             this.rjSettings.UseVisualStyleBackColor = false;
@@ -254,9 +258,9 @@
             this.exportBtn.FlatAppearance.BorderSize = 0;
             this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exportBtn.ForeColor = System.Drawing.Color.White;
-            this.exportBtn.Location = new System.Drawing.Point(1173, 1001);
+            this.exportBtn.Location = new System.Drawing.Point(1812, 1047);
             this.exportBtn.Name = "exportBtn";
-            this.exportBtn.Size = new System.Drawing.Size(52, 40);
+            this.exportBtn.Size = new System.Drawing.Size(36, 24);
             this.exportBtn.TabIndex = 33;
             this.exportBtn.TextColor = System.Drawing.Color.White;
             this.exportBtn.UseVisualStyleBackColor = false;
@@ -294,6 +298,7 @@
             this.roundPanelWithoutTitle2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle2.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle2.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle2.Enter += new System.EventHandler(this.roundPanelWithoutTitle2_Enter);
             // 
             // roundPanelWithoutTitle7
             // 
@@ -310,6 +315,7 @@
             this.roundPanelWithoutTitle7.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle7.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle7.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle7.Enter += new System.EventHandler(this.roundPanelWithoutTitle7_Enter);
             // 
             // roundPanelWithoutTitle3
             // 
@@ -326,6 +332,7 @@
             this.roundPanelWithoutTitle3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle3.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle3.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle3.Enter += new System.EventHandler(this.roundPanelWithoutTitle3_Enter);
             // 
             // roundPanelWithoutTitle4
             // 
@@ -342,6 +349,7 @@
             this.roundPanelWithoutTitle4.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle4.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle4.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle4.Enter += new System.EventHandler(this.roundPanelWithoutTitle4_Enter);
             // 
             // roundPanelWithoutTitle5
             // 
@@ -358,6 +366,7 @@
             this.roundPanelWithoutTitle5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle5.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle5.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle5.Enter += new System.EventHandler(this.roundPanelWithoutTitle5_Enter);
             // 
             // roundPanelWithoutTitle6
             // 
@@ -374,6 +383,7 @@
             this.roundPanelWithoutTitle6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle6.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle6.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle6.Enter += new System.EventHandler(this.roundPanelWithoutTitle6_Enter);
             // 
             // roundPanelWithoutTitle8
             // 
@@ -390,6 +400,7 @@
             this.roundPanelWithoutTitle8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle8.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle8.Enter += new System.EventHandler(this.roundPanelWithoutTitle8_Enter);
             // 
             // roundPanelWithoutTitle9
             // 
@@ -406,6 +417,7 @@
             this.roundPanelWithoutTitle9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle9.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle9.Enter += new System.EventHandler(this.roundPanelWithoutTitle9_Enter);
             // 
             // roundPanelWithoutTitle10
             // 
@@ -422,6 +434,7 @@
             this.roundPanelWithoutTitle10.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle10.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle10.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle10.Enter += new System.EventHandler(this.roundPanelWithoutTitle10_Enter);
             // 
             // roundPanelWithoutTitle11
             // 
@@ -438,6 +451,7 @@
             this.roundPanelWithoutTitle11.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle11.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle11.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle11.Enter += new System.EventHandler(this.roundPanelWithoutTitle11_Enter);
             // 
             // roundPanelWithoutTitle12
             // 
@@ -454,6 +468,7 @@
             this.roundPanelWithoutTitle12.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle12.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle12.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle12.Enter += new System.EventHandler(this.roundPanelWithoutTitle12_Enter);
             // 
             // roundPanelWithoutTitle13
             // 
@@ -470,6 +485,7 @@
             this.roundPanelWithoutTitle13.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle13.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle13.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle13.Enter += new System.EventHandler(this.roundPanelWithoutTitle13_Enter);
             // 
             // roundPanelWithoutTitle14
             // 
@@ -486,6 +502,7 @@
             this.roundPanelWithoutTitle14.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle14.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle14.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle14.Enter += new System.EventHandler(this.roundPanelWithoutTitle14_Enter);
             // 
             // roundPanelWithoutTitle15
             // 
@@ -502,6 +519,7 @@
             this.roundPanelWithoutTitle15.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle15.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle15.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle15.Enter += new System.EventHandler(this.roundPanelWithoutTitle15_Enter);
             // 
             // roundPanelWithoutTitle16
             // 
@@ -518,6 +536,7 @@
             this.roundPanelWithoutTitle16.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.roundPanelWithoutTitle16.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
+            this.roundPanelWithoutTitle16.Enter += new System.EventHandler(this.roundPanelWithoutTitle16_Enter);
             // 
             // myRjButton1
             // 
@@ -537,6 +556,7 @@
             this.myRjButton1.Text = "00:00";
             this.myRjButton1.TextColor = System.Drawing.Color.White;
             this.myRjButton1.UseVisualStyleBackColor = false;
+            this.myRjButton1.Click += new System.EventHandler(this.myRjButton1_Click);
             // 
             // horizontalLineSeparator2
             // 
@@ -546,6 +566,7 @@
             this.horizontalLineSeparator2.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator2.TabIndex = 5;
             this.horizontalLineSeparator2.TabStop = false;
+            this.horizontalLineSeparator2.Enter += new System.EventHandler(this.horizontalLineSeparator2_Enter);
             // 
             // horizontalLineSeparator1
             // 
@@ -555,6 +576,7 @@
             this.horizontalLineSeparator1.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator1.TabIndex = 4;
             this.horizontalLineSeparator1.TabStop = false;
+            this.horizontalLineSeparator1.Enter += new System.EventHandler(this.horizontalLineSeparator1_Enter);
             // 
             // rjButton1
             // 
@@ -615,6 +637,7 @@
             this.bButton1.TabIndex = 0;
             this.bButton1.TextColor = System.Drawing.Color.White;
             this.bButton1.UseVisualStyleBackColor = false;
+            this.bButton1.Click += new System.EventHandler(this.bButton1_Click);
             // 
             // myRjButton2
             // 
@@ -634,6 +657,7 @@
             this.myRjButton2.Text = "00:00";
             this.myRjButton2.TextColor = System.Drawing.Color.White;
             this.myRjButton2.UseVisualStyleBackColor = false;
+            this.myRjButton2.Click += new System.EventHandler(this.myRjButton2_Click);
             // 
             // rjButtonTime2
             // 
@@ -663,6 +687,7 @@
             this.horizontalLineSeparator3.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator3.TabIndex = 5;
             this.horizontalLineSeparator3.TabStop = false;
+            this.horizontalLineSeparator3.Enter += new System.EventHandler(this.horizontalLineSeparator3_Enter);
             // 
             // horizontalLineSeparator4
             // 
@@ -672,6 +697,7 @@
             this.horizontalLineSeparator4.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator4.TabIndex = 4;
             this.horizontalLineSeparator4.TabStop = false;
+            this.horizontalLineSeparator4.Enter += new System.EventHandler(this.horizontalLineSeparator4_Enter);
             // 
             // rjButton2
             // 
@@ -712,6 +738,7 @@
             this.bButton2.TabIndex = 0;
             this.bButton2.TextColor = System.Drawing.Color.White;
             this.bButton2.UseVisualStyleBackColor = false;
+            this.bButton2.Click += new System.EventHandler(this.bButton2_Click);
             // 
             // myRjButton7
             // 
@@ -731,6 +758,7 @@
             this.myRjButton7.Text = "00:00";
             this.myRjButton7.TextColor = System.Drawing.Color.White;
             this.myRjButton7.UseVisualStyleBackColor = false;
+            this.myRjButton7.Click += new System.EventHandler(this.myRjButton7_Click);
             // 
             // horizontalLineSeparator13
             // 
@@ -740,6 +768,7 @@
             this.horizontalLineSeparator13.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator13.TabIndex = 5;
             this.horizontalLineSeparator13.TabStop = false;
+            this.horizontalLineSeparator13.Enter += new System.EventHandler(this.horizontalLineSeparator13_Enter);
             // 
             // horizontalLineSeparator14
             // 
@@ -749,6 +778,7 @@
             this.horizontalLineSeparator14.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator14.TabIndex = 4;
             this.horizontalLineSeparator14.TabStop = false;
+            this.horizontalLineSeparator14.Enter += new System.EventHandler(this.horizontalLineSeparator14_Enter);
             // 
             // rjButton7
             // 
@@ -768,6 +798,7 @@
             this.rjButton7.Text = "rjButton20";
             this.rjButton7.TextColor = System.Drawing.Color.White;
             this.rjButton7.UseVisualStyleBackColor = false;
+            this.rjButton7.Click += new System.EventHandler(this.rjButton7_Click);
             // 
             // rjButtonTime7
             // 
@@ -787,6 +818,7 @@
             this.rjButtonTime7.Text = "00:00:00";
             this.rjButtonTime7.TextColor = System.Drawing.Color.White;
             this.rjButtonTime7.UseVisualStyleBackColor = false;
+            this.rjButtonTime7.Click += new System.EventHandler(this.rjButtonTime7_Click);
             // 
             // bButton7
             // 
@@ -807,6 +839,7 @@
             this.bButton7.TabIndex = 0;
             this.bButton7.TextColor = System.Drawing.Color.White;
             this.bButton7.UseVisualStyleBackColor = false;
+            this.bButton7.Click += new System.EventHandler(this.bButton7_Click);
             // 
             // myRjButton3
             // 
@@ -826,6 +859,7 @@
             this.myRjButton3.Text = "00:00";
             this.myRjButton3.TextColor = System.Drawing.Color.White;
             this.myRjButton3.UseVisualStyleBackColor = false;
+            this.myRjButton3.Click += new System.EventHandler(this.myRjButton3_Click);
             // 
             // horizontalLineSeparator5
             // 
@@ -835,6 +869,7 @@
             this.horizontalLineSeparator5.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator5.TabIndex = 5;
             this.horizontalLineSeparator5.TabStop = false;
+            this.horizontalLineSeparator5.Enter += new System.EventHandler(this.horizontalLineSeparator5_Enter);
             // 
             // horizontalLineSeparator6
             // 
@@ -844,6 +879,7 @@
             this.horizontalLineSeparator6.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator6.TabIndex = 4;
             this.horizontalLineSeparator6.TabStop = false;
+            this.horizontalLineSeparator6.Enter += new System.EventHandler(this.horizontalLineSeparator6_Enter);
             // 
             // rjButton3
             // 
@@ -883,6 +919,7 @@
             this.rjButtonTime3.Text = "00:00:00";
             this.rjButtonTime3.TextColor = System.Drawing.Color.White;
             this.rjButtonTime3.UseVisualStyleBackColor = false;
+            this.rjButtonTime3.Click += new System.EventHandler(this.rjButtonTime3_Click);
             // 
             // bButton3
             // 
@@ -903,6 +940,7 @@
             this.bButton3.TabIndex = 0;
             this.bButton3.TextColor = System.Drawing.Color.White;
             this.bButton3.UseVisualStyleBackColor = false;
+            this.bButton3.Click += new System.EventHandler(this.bButton3_Click);
             // 
             // myRjButton4
             // 
@@ -922,6 +960,7 @@
             this.myRjButton4.Text = "00:00";
             this.myRjButton4.TextColor = System.Drawing.Color.White;
             this.myRjButton4.UseVisualStyleBackColor = false;
+            this.myRjButton4.Click += new System.EventHandler(this.myRjButton4_Click);
             // 
             // horizontalLineSeparator7
             // 
@@ -931,6 +970,7 @@
             this.horizontalLineSeparator7.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator7.TabIndex = 5;
             this.horizontalLineSeparator7.TabStop = false;
+            this.horizontalLineSeparator7.Enter += new System.EventHandler(this.horizontalLineSeparator7_Enter);
             // 
             // horizontalLineSeparator8
             // 
@@ -940,6 +980,7 @@
             this.horizontalLineSeparator8.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator8.TabIndex = 4;
             this.horizontalLineSeparator8.TabStop = false;
+            this.horizontalLineSeparator8.Enter += new System.EventHandler(this.horizontalLineSeparator8_Enter);
             // 
             // rjButton4
             // 
@@ -959,6 +1000,7 @@
             this.rjButton4.Text = "rjButton11";
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // rjButtonTime4
             // 
@@ -978,6 +1020,7 @@
             this.rjButtonTime4.Text = "00:00:00";
             this.rjButtonTime4.TextColor = System.Drawing.Color.White;
             this.rjButtonTime4.UseVisualStyleBackColor = false;
+            this.rjButtonTime4.Click += new System.EventHandler(this.rjButtonTime4_Click);
             // 
             // bButton4
             // 
@@ -998,6 +1041,7 @@
             this.bButton4.TabIndex = 0;
             this.bButton4.TextColor = System.Drawing.Color.White;
             this.bButton4.UseVisualStyleBackColor = false;
+            this.bButton4.Click += new System.EventHandler(this.bButton4_Click);
             // 
             // myRjButton5
             // 
@@ -1017,6 +1061,7 @@
             this.myRjButton5.Text = "00:00";
             this.myRjButton5.TextColor = System.Drawing.Color.White;
             this.myRjButton5.UseVisualStyleBackColor = false;
+            this.myRjButton5.Click += new System.EventHandler(this.myRjButton5_Click);
             // 
             // horizontalLineSeparator9
             // 
@@ -1026,6 +1071,7 @@
             this.horizontalLineSeparator9.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator9.TabIndex = 5;
             this.horizontalLineSeparator9.TabStop = false;
+            this.horizontalLineSeparator9.Enter += new System.EventHandler(this.horizontalLineSeparator9_Enter);
             // 
             // horizontalLineSeparator10
             // 
@@ -1035,6 +1081,7 @@
             this.horizontalLineSeparator10.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator10.TabIndex = 4;
             this.horizontalLineSeparator10.TabStop = false;
+            this.horizontalLineSeparator10.Enter += new System.EventHandler(this.horizontalLineSeparator10_Enter);
             // 
             // rjButton5
             // 
@@ -1054,6 +1101,7 @@
             this.rjButton5.Text = "rjButton14";
             this.rjButton5.TextColor = System.Drawing.Color.White;
             this.rjButton5.UseVisualStyleBackColor = false;
+            this.rjButton5.Click += new System.EventHandler(this.rjButton5_Click_1);
             // 
             // rjButtonTime5
             // 
@@ -1073,6 +1121,7 @@
             this.rjButtonTime5.Text = "00:00:00";
             this.rjButtonTime5.TextColor = System.Drawing.Color.White;
             this.rjButtonTime5.UseVisualStyleBackColor = false;
+            this.rjButtonTime5.Click += new System.EventHandler(this.rjButtonTime5_Click);
             // 
             // bButton5
             // 
@@ -1093,6 +1142,7 @@
             this.bButton5.TabIndex = 0;
             this.bButton5.TextColor = System.Drawing.Color.White;
             this.bButton5.UseVisualStyleBackColor = false;
+            this.bButton5.Click += new System.EventHandler(this.bButton5_Click);
             // 
             // myRjButton6
             // 
@@ -1112,6 +1162,7 @@
             this.myRjButton6.Text = "00:00";
             this.myRjButton6.TextColor = System.Drawing.Color.White;
             this.myRjButton6.UseVisualStyleBackColor = false;
+            this.myRjButton6.Click += new System.EventHandler(this.myRjButton6_Click);
             // 
             // horizontalLineSeparator11
             // 
@@ -1121,6 +1172,7 @@
             this.horizontalLineSeparator11.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator11.TabIndex = 5;
             this.horizontalLineSeparator11.TabStop = false;
+            this.horizontalLineSeparator11.Enter += new System.EventHandler(this.horizontalLineSeparator11_Enter);
             // 
             // horizontalLineSeparator12
             // 
@@ -1130,6 +1182,7 @@
             this.horizontalLineSeparator12.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator12.TabIndex = 4;
             this.horizontalLineSeparator12.TabStop = false;
+            this.horizontalLineSeparator12.Enter += new System.EventHandler(this.horizontalLineSeparator12_Enter);
             // 
             // rjButton6
             // 
@@ -1149,6 +1202,7 @@
             this.rjButton6.Text = "rjButton17";
             this.rjButton6.TextColor = System.Drawing.Color.White;
             this.rjButton6.UseVisualStyleBackColor = false;
+            this.rjButton6.Click += new System.EventHandler(this.rjButton6_Click);
             // 
             // rjButtonTime6
             // 
@@ -1168,6 +1222,7 @@
             this.rjButtonTime6.Text = "00:00:00";
             this.rjButtonTime6.TextColor = System.Drawing.Color.White;
             this.rjButtonTime6.UseVisualStyleBackColor = false;
+            this.rjButtonTime6.Click += new System.EventHandler(this.rjButtonTime6_Click);
             // 
             // bButton6
             // 
@@ -1188,6 +1243,7 @@
             this.bButton6.TabIndex = 0;
             this.bButton6.TextColor = System.Drawing.Color.White;
             this.bButton6.UseVisualStyleBackColor = false;
+            this.bButton6.Click += new System.EventHandler(this.bButton6_Click);
             // 
             // myRjButton8
             // 
@@ -1207,6 +1263,7 @@
             this.myRjButton8.Text = "00:00";
             this.myRjButton8.TextColor = System.Drawing.Color.White;
             this.myRjButton8.UseVisualStyleBackColor = false;
+            this.myRjButton8.Click += new System.EventHandler(this.myRjButton8_Click);
             // 
             // horizontalLineSeparator15
             // 
@@ -1216,6 +1273,7 @@
             this.horizontalLineSeparator15.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator15.TabIndex = 5;
             this.horizontalLineSeparator15.TabStop = false;
+            this.horizontalLineSeparator15.Enter += new System.EventHandler(this.horizontalLineSeparator15_Enter);
             // 
             // horizontalLineSeparator16
             // 
@@ -1225,6 +1283,7 @@
             this.horizontalLineSeparator16.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator16.TabIndex = 4;
             this.horizontalLineSeparator16.TabStop = false;
+            this.horizontalLineSeparator16.Enter += new System.EventHandler(this.horizontalLineSeparator16_Enter);
             // 
             // rjButton8
             // 
@@ -1244,6 +1303,7 @@
             this.rjButton8.Text = "rjButton23";
             this.rjButton8.TextColor = System.Drawing.Color.White;
             this.rjButton8.UseVisualStyleBackColor = false;
+            this.rjButton8.Click += new System.EventHandler(this.rjButton8_Click);
             // 
             // rjButtonTime8
             // 
@@ -1263,6 +1323,7 @@
             this.rjButtonTime8.Text = "00:00:00";
             this.rjButtonTime8.TextColor = System.Drawing.Color.White;
             this.rjButtonTime8.UseVisualStyleBackColor = false;
+            this.rjButtonTime8.Click += new System.EventHandler(this.rjButtonTime8_Click);
             // 
             // bButton8
             // 
@@ -1283,6 +1344,7 @@
             this.bButton8.TabIndex = 0;
             this.bButton8.TextColor = System.Drawing.Color.White;
             this.bButton8.UseVisualStyleBackColor = false;
+            this.bButton8.Click += new System.EventHandler(this.bButton8_Click);
             // 
             // myRjButton9
             // 
@@ -1302,6 +1364,7 @@
             this.myRjButton9.Text = "00:00";
             this.myRjButton9.TextColor = System.Drawing.Color.White;
             this.myRjButton9.UseVisualStyleBackColor = false;
+            this.myRjButton9.Click += new System.EventHandler(this.myRjButton9_Click);
             // 
             // horizontalLineSeparator23
             // 
@@ -1311,6 +1374,7 @@
             this.horizontalLineSeparator23.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator23.TabIndex = 5;
             this.horizontalLineSeparator23.TabStop = false;
+            this.horizontalLineSeparator23.Enter += new System.EventHandler(this.horizontalLineSeparator23_Enter);
             // 
             // horizontalLineSeparator24
             // 
@@ -1320,6 +1384,7 @@
             this.horizontalLineSeparator24.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator24.TabIndex = 4;
             this.horizontalLineSeparator24.TabStop = false;
+            this.horizontalLineSeparator24.Enter += new System.EventHandler(this.horizontalLineSeparator24_Enter);
             // 
             // rjButton9
             // 
@@ -1339,6 +1404,7 @@
             this.rjButton9.Text = "rjButton26";
             this.rjButton9.TextColor = System.Drawing.Color.White;
             this.rjButton9.UseVisualStyleBackColor = false;
+            this.rjButton9.Click += new System.EventHandler(this.rjButton9_Click);
             // 
             // rjButtonTime9
             // 
@@ -1358,6 +1424,7 @@
             this.rjButtonTime9.Text = "00:00:00";
             this.rjButtonTime9.TextColor = System.Drawing.Color.White;
             this.rjButtonTime9.UseVisualStyleBackColor = false;
+            this.rjButtonTime9.Click += new System.EventHandler(this.rjButtonTime9_Click);
             // 
             // bButton9
             // 
@@ -1378,6 +1445,7 @@
             this.bButton9.TabIndex = 0;
             this.bButton9.TextColor = System.Drawing.Color.White;
             this.bButton9.UseVisualStyleBackColor = false;
+            this.bButton9.Click += new System.EventHandler(this.bButton9_Click);
             // 
             // myRjButton10
             // 
@@ -1397,6 +1465,7 @@
             this.myRjButton10.Text = "00:00";
             this.myRjButton10.TextColor = System.Drawing.Color.White;
             this.myRjButton10.UseVisualStyleBackColor = false;
+            this.myRjButton10.Click += new System.EventHandler(this.myRjButton10_Click);
             // 
             // horizontalLineSeparator25
             // 
@@ -1406,6 +1475,7 @@
             this.horizontalLineSeparator25.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator25.TabIndex = 5;
             this.horizontalLineSeparator25.TabStop = false;
+            this.horizontalLineSeparator25.Enter += new System.EventHandler(this.horizontalLineSeparator25_Enter);
             // 
             // horizontalLineSeparator26
             // 
@@ -1415,6 +1485,7 @@
             this.horizontalLineSeparator26.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator26.TabIndex = 4;
             this.horizontalLineSeparator26.TabStop = false;
+            this.horizontalLineSeparator26.Enter += new System.EventHandler(this.horizontalLineSeparator26_Enter);
             // 
             // rjButton10
             // 
@@ -1434,6 +1505,7 @@
             this.rjButton10.Text = "rjButton29";
             this.rjButton10.TextColor = System.Drawing.Color.White;
             this.rjButton10.UseVisualStyleBackColor = false;
+            this.rjButton10.Click += new System.EventHandler(this.rjButton10_Click);
             // 
             // rjButtonTime10
             // 
@@ -1453,6 +1525,7 @@
             this.rjButtonTime10.Text = "00:00:00";
             this.rjButtonTime10.TextColor = System.Drawing.Color.White;
             this.rjButtonTime10.UseVisualStyleBackColor = false;
+            this.rjButtonTime10.Click += new System.EventHandler(this.rjButtonTime10_Click);
             // 
             // bButton10
             // 
@@ -1473,6 +1546,7 @@
             this.bButton10.TabIndex = 0;
             this.bButton10.TextColor = System.Drawing.Color.White;
             this.bButton10.UseVisualStyleBackColor = false;
+            this.bButton10.Click += new System.EventHandler(this.bButton10_Click);
             // 
             // myRjButton11
             // 
@@ -1492,6 +1566,7 @@
             this.myRjButton11.Text = "00:00";
             this.myRjButton11.TextColor = System.Drawing.Color.White;
             this.myRjButton11.UseVisualStyleBackColor = false;
+            this.myRjButton11.Click += new System.EventHandler(this.myRjButton11_Click);
             // 
             // horizontalLineSeparator27
             // 
@@ -1501,6 +1576,7 @@
             this.horizontalLineSeparator27.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator27.TabIndex = 5;
             this.horizontalLineSeparator27.TabStop = false;
+            this.horizontalLineSeparator27.Enter += new System.EventHandler(this.horizontalLineSeparator27_Enter);
             // 
             // horizontalLineSeparator28
             // 
@@ -1510,6 +1586,7 @@
             this.horizontalLineSeparator28.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator28.TabIndex = 4;
             this.horizontalLineSeparator28.TabStop = false;
+            this.horizontalLineSeparator28.Enter += new System.EventHandler(this.horizontalLineSeparator28_Enter);
             // 
             // rjButton11
             // 
@@ -1529,6 +1606,7 @@
             this.rjButton11.Text = "rjButton32";
             this.rjButton11.TextColor = System.Drawing.Color.White;
             this.rjButton11.UseVisualStyleBackColor = false;
+            this.rjButton11.Click += new System.EventHandler(this.rjButton11_Click);
             // 
             // rjButtonTime11
             // 
@@ -1548,6 +1626,7 @@
             this.rjButtonTime11.Text = "00:00:00";
             this.rjButtonTime11.TextColor = System.Drawing.Color.White;
             this.rjButtonTime11.UseVisualStyleBackColor = false;
+            this.rjButtonTime11.Click += new System.EventHandler(this.rjButtonTime11_Click);
             // 
             // bButton11
             // 
@@ -1568,6 +1647,7 @@
             this.bButton11.TabIndex = 0;
             this.bButton11.TextColor = System.Drawing.Color.White;
             this.bButton11.UseVisualStyleBackColor = false;
+            this.bButton11.Click += new System.EventHandler(this.bButton11_Click);
             // 
             // myRjButton12
             // 
@@ -1587,6 +1667,7 @@
             this.myRjButton12.Text = "00:00";
             this.myRjButton12.TextColor = System.Drawing.Color.White;
             this.myRjButton12.UseVisualStyleBackColor = false;
+            this.myRjButton12.Click += new System.EventHandler(this.myRjButton12_Click);
             // 
             // horizontalLineSeparator17
             // 
@@ -1596,6 +1677,7 @@
             this.horizontalLineSeparator17.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator17.TabIndex = 5;
             this.horizontalLineSeparator17.TabStop = false;
+            this.horizontalLineSeparator17.Enter += new System.EventHandler(this.horizontalLineSeparator17_Enter);
             // 
             // horizontalLineSeparator18
             // 
@@ -1605,6 +1687,7 @@
             this.horizontalLineSeparator18.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator18.TabIndex = 4;
             this.horizontalLineSeparator18.TabStop = false;
+            this.horizontalLineSeparator18.Enter += new System.EventHandler(this.horizontalLineSeparator18_Enter);
             // 
             // rjButton12
             // 
@@ -1624,6 +1707,7 @@
             this.rjButton12.Text = "rjButton35";
             this.rjButton12.TextColor = System.Drawing.Color.White;
             this.rjButton12.UseVisualStyleBackColor = false;
+            this.rjButton12.Click += new System.EventHandler(this.rjButton12_Click);
             // 
             // rjButtonTime12
             // 
@@ -1643,6 +1727,7 @@
             this.rjButtonTime12.Text = "00:00:00";
             this.rjButtonTime12.TextColor = System.Drawing.Color.White;
             this.rjButtonTime12.UseVisualStyleBackColor = false;
+            this.rjButtonTime12.Click += new System.EventHandler(this.rjButtonTime12_Click);
             // 
             // bButton12
             // 
@@ -1663,6 +1748,7 @@
             this.bButton12.TabIndex = 0;
             this.bButton12.TextColor = System.Drawing.Color.White;
             this.bButton12.UseVisualStyleBackColor = false;
+            this.bButton12.Click += new System.EventHandler(this.bButton12_Click);
             // 
             // myRjButton13
             // 
@@ -1682,6 +1768,7 @@
             this.myRjButton13.Text = "00:00";
             this.myRjButton13.TextColor = System.Drawing.Color.White;
             this.myRjButton13.UseVisualStyleBackColor = false;
+            this.myRjButton13.Click += new System.EventHandler(this.myRjButton13_Click);
             // 
             // horizontalLineSeparator21
             // 
@@ -1691,6 +1778,7 @@
             this.horizontalLineSeparator21.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator21.TabIndex = 5;
             this.horizontalLineSeparator21.TabStop = false;
+            this.horizontalLineSeparator21.Enter += new System.EventHandler(this.horizontalLineSeparator21_Enter);
             // 
             // horizontalLineSeparator22
             // 
@@ -1700,6 +1788,7 @@
             this.horizontalLineSeparator22.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator22.TabIndex = 4;
             this.horizontalLineSeparator22.TabStop = false;
+            this.horizontalLineSeparator22.Enter += new System.EventHandler(this.horizontalLineSeparator22_Enter);
             // 
             // rjButton13
             // 
@@ -1719,6 +1808,7 @@
             this.rjButton13.Text = "rjButton38";
             this.rjButton13.TextColor = System.Drawing.Color.White;
             this.rjButton13.UseVisualStyleBackColor = false;
+            this.rjButton13.Click += new System.EventHandler(this.rjButton13_Click);
             // 
             // rjButtonTime13
             // 
@@ -1738,6 +1828,7 @@
             this.rjButtonTime13.Text = "00:00:00";
             this.rjButtonTime13.TextColor = System.Drawing.Color.White;
             this.rjButtonTime13.UseVisualStyleBackColor = false;
+            this.rjButtonTime13.Click += new System.EventHandler(this.rjButtonTime13_Click);
             // 
             // bButton13
             // 
@@ -1758,6 +1849,7 @@
             this.bButton13.TabIndex = 0;
             this.bButton13.TextColor = System.Drawing.Color.White;
             this.bButton13.UseVisualStyleBackColor = false;
+            this.bButton13.Click += new System.EventHandler(this.bButton13_Click);
             // 
             // myRjButton14
             // 
@@ -1777,6 +1869,7 @@
             this.myRjButton14.Text = "00:00";
             this.myRjButton14.TextColor = System.Drawing.Color.White;
             this.myRjButton14.UseVisualStyleBackColor = false;
+            this.myRjButton14.Click += new System.EventHandler(this.myRjButton14_Click);
             // 
             // horizontalLineSeparator31
             // 
@@ -1786,6 +1879,7 @@
             this.horizontalLineSeparator31.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator31.TabIndex = 5;
             this.horizontalLineSeparator31.TabStop = false;
+            this.horizontalLineSeparator31.Enter += new System.EventHandler(this.horizontalLineSeparator31_Enter);
             // 
             // horizontalLineSeparator32
             // 
@@ -1795,6 +1889,7 @@
             this.horizontalLineSeparator32.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator32.TabIndex = 4;
             this.horizontalLineSeparator32.TabStop = false;
+            this.horizontalLineSeparator32.Enter += new System.EventHandler(this.horizontalLineSeparator32_Enter);
             // 
             // rjButton14
             // 
@@ -1814,6 +1909,7 @@
             this.rjButton14.Text = "rjButton41";
             this.rjButton14.TextColor = System.Drawing.Color.White;
             this.rjButton14.UseVisualStyleBackColor = false;
+            this.rjButton14.Click += new System.EventHandler(this.rjButton14_Click);
             // 
             // rjButtonTime14
             // 
@@ -1833,6 +1929,7 @@
             this.rjButtonTime14.Text = "00:00:00";
             this.rjButtonTime14.TextColor = System.Drawing.Color.White;
             this.rjButtonTime14.UseVisualStyleBackColor = false;
+            this.rjButtonTime14.Click += new System.EventHandler(this.rjButtonTime14_Click);
             // 
             // bButton14
             // 
@@ -1853,6 +1950,7 @@
             this.bButton14.TabIndex = 0;
             this.bButton14.TextColor = System.Drawing.Color.White;
             this.bButton14.UseVisualStyleBackColor = false;
+            this.bButton14.Click += new System.EventHandler(this.bButton14_Click);
             // 
             // myRjButton15
             // 
@@ -1872,6 +1970,7 @@
             this.myRjButton15.Text = "00:00";
             this.myRjButton15.TextColor = System.Drawing.Color.White;
             this.myRjButton15.UseVisualStyleBackColor = false;
+            this.myRjButton15.Click += new System.EventHandler(this.myRjButton15_Click);
             // 
             // horizontalLineSeparator29
             // 
@@ -1881,6 +1980,7 @@
             this.horizontalLineSeparator29.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator29.TabIndex = 5;
             this.horizontalLineSeparator29.TabStop = false;
+            this.horizontalLineSeparator29.Enter += new System.EventHandler(this.horizontalLineSeparator29_Enter);
             // 
             // horizontalLineSeparator30
             // 
@@ -1890,6 +1990,7 @@
             this.horizontalLineSeparator30.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator30.TabIndex = 4;
             this.horizontalLineSeparator30.TabStop = false;
+            this.horizontalLineSeparator30.Enter += new System.EventHandler(this.horizontalLineSeparator30_Enter);
             // 
             // rjButton15
             // 
@@ -1909,6 +2010,7 @@
             this.rjButton15.Text = "rjButton44";
             this.rjButton15.TextColor = System.Drawing.Color.White;
             this.rjButton15.UseVisualStyleBackColor = false;
+            this.rjButton15.Click += new System.EventHandler(this.rjButton15_Click);
             // 
             // rjButtonTime15
             // 
@@ -1928,6 +2030,7 @@
             this.rjButtonTime15.Text = "00:00:00";
             this.rjButtonTime15.TextColor = System.Drawing.Color.White;
             this.rjButtonTime15.UseVisualStyleBackColor = false;
+            this.rjButtonTime15.Click += new System.EventHandler(this.rjButtonTime15_Click);
             // 
             // bButton15
             // 
@@ -1948,6 +2051,7 @@
             this.bButton15.TabIndex = 0;
             this.bButton15.TextColor = System.Drawing.Color.White;
             this.bButton15.UseVisualStyleBackColor = false;
+            this.bButton15.Click += new System.EventHandler(this.bButton15_Click);
             // 
             // myRjButton16
             // 
@@ -1967,6 +2071,7 @@
             this.myRjButton16.Text = "00:00";
             this.myRjButton16.TextColor = System.Drawing.Color.White;
             this.myRjButton16.UseVisualStyleBackColor = false;
+            this.myRjButton16.Click += new System.EventHandler(this.myRjButton16_Click);
             // 
             // horizontalLineSeparator19
             // 
@@ -1976,6 +2081,7 @@
             this.horizontalLineSeparator19.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator19.TabIndex = 5;
             this.horizontalLineSeparator19.TabStop = false;
+            this.horizontalLineSeparator19.Enter += new System.EventHandler(this.horizontalLineSeparator19_Enter);
             // 
             // horizontalLineSeparator20
             // 
@@ -1985,6 +2091,7 @@
             this.horizontalLineSeparator20.Size = new System.Drawing.Size(472, 6);
             this.horizontalLineSeparator20.TabIndex = 4;
             this.horizontalLineSeparator20.TabStop = false;
+            this.horizontalLineSeparator20.Enter += new System.EventHandler(this.horizontalLineSeparator20_Enter);
             // 
             // rjButton16
             // 
@@ -2004,6 +2111,7 @@
             this.rjButton16.Text = "rjButton47";
             this.rjButton16.TextColor = System.Drawing.Color.White;
             this.rjButton16.UseVisualStyleBackColor = false;
+            this.rjButton16.Click += new System.EventHandler(this.rjButton16_Click);
             // 
             // rjButtonTime16
             // 
@@ -2023,6 +2131,7 @@
             this.rjButtonTime16.Text = "00:00:00";
             this.rjButtonTime16.TextColor = System.Drawing.Color.White;
             this.rjButtonTime16.UseVisualStyleBackColor = false;
+            this.rjButtonTime16.Click += new System.EventHandler(this.rjButtonTime16_Click);
             // 
             // bButton16
             // 
@@ -2043,6 +2152,7 @@
             this.bButton16.TabIndex = 0;
             this.bButton16.TextColor = System.Drawing.Color.White;
             this.bButton16.UseVisualStyleBackColor = false;
+            this.bButton16.Click += new System.EventHandler(this.bButton16_Click);
             // 
             // S1
             // 
@@ -2065,8 +2175,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Panel panel1;
         private Controls.HorizontalLineSeparator horizontalLineSeparator1;
         private Controls.HorizontalLineSeparator horizontalLineSeparator2;
@@ -2184,5 +2292,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Controls.RJButton exportBtn;
         private Controls.RJButton rjSettings;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

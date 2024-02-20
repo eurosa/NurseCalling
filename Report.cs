@@ -40,7 +40,10 @@ namespace NurseCalling
             LoadData();
 
             // CreateGraph(zedGraphControl1);
-            CreateGraph(zedGraphControl1, m_dbConnection);
+            try {
+                CreateGraph(zedGraphControl1, m_dbConnection);
+            }
+            catch (Exception ex) { }
         }
 
         private void LoadData()

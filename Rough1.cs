@@ -21,5 +21,15 @@ namespace NurseCalling
         {
 
         }
+
+        private void roundPanelWithoutTitle1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myRjButton16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
