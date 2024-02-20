@@ -1182,6 +1182,8 @@ namespace NurseCalling
 
                         if (dataModel.checkBoxHub3)
                         {
+                            
+
                             switch ((startAddress3 + i))
                             {
                                 case 1:
@@ -1269,6 +1271,8 @@ namespace NurseCalling
                         }
                         if (dataModel.checkBoxHub4)
                         {
+
+                            Console.WriteLine("Register 4 value: " + (int)registers2[i] + " " + myObjects2[i].Value);
                             // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                             switch ((startAddress4 + i))
                             {

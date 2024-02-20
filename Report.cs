@@ -386,7 +386,9 @@ namespace NurseCalling
             zg1.Refresh();
             Console.WriteLine("Just Click on Humidity");
             GraphData sd = new GraphData();
+          //  if (comboBoxSiteName.SelectedIndex > 0) { 
             sd.getGraphData(mbConnection, keyRegisterId, comboBoxSiteName.SelectedIndex, startDate, endDate);
+          //  }
             // zg1.GraphPane.YAxis.Scale.Min = 0;
             // zg1.GraphPane.YAxis.Scale.Max = 60;
             // List<Double> valueList = new List<Double>(sd.dateHumidity.Values);
