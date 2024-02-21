@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace NurseCalling
 {
@@ -45,6 +46,7 @@ namespace NurseCalling
             reader = comm.ExecuteReader();
 
             // -------------This true works for both mysql and ms access--------------------------------------------------------------
+            int uio = 1;
             while (reader.Read())
             {
                 lastCallStatus = reader["lastCallStatus"].ToString();
@@ -57,9 +59,13 @@ namespace NurseCalling
 
                 // x.Add(dateTime);
                 // y.Add(Convert.ToDouble(tempData.Trim()));
-                hubNTime.Add(lastCallStatus, Double.Parse(totalMinutes));
+                if (!hubNTime.ContainsKey(reader["lastCallStatus"].ToString()))
+                {
+                    hubNTime.Add(lastCallStatus, Double.Parse(totalMinutes));
+                }
+             
                 // https://stackoverflow.com/questions/30070913/c-sharp-zedgraph-graphs-jumping
-
+                uio++;
             }
 
              
