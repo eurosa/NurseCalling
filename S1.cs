@@ -91,10 +91,10 @@ namespace NurseCalling
             AutoScroll = true;
             flowLayoutPanel1.AutoScroll = true;
            // flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.MaximumSize.Width, 0);// flowLayoutPanel1.MaximumSize.Width;
-            for (int i = 0; i < 28; i++)
+            for (int i = 0; i < 33; i++)
             {
               //  Button button = new Button() { Height = 241, Width =232 };
-                //flowLayoutPanel1.Controls.Add(button);
+              //  flowLayoutPanel1.Controls.Add(button);
             }
 
             dataModel = new DataModel();
@@ -2037,12 +2037,12 @@ namespace NurseCalling
                 if (flowLayoutPanel1.Controls.Count > 48)
                 {
                   
-                    flowLayoutPanel1.HorizontalScroll.Value = flowLayoutPanel1.HorizontalScroll.Maximum;
+                   // flowLayoutPanel1.HorizontalScroll.Value = flowLayoutPanel1.HorizontalScroll.Maximum;
 
                     if (uio == 15) {
-                        flowLayoutPanel1.HorizontalScroll.Value = 0;
+                    //    flowLayoutPanel1.HorizontalScroll.Value = 0;
                         // Thread.Sleep(6000);
-                        wait(3000);
+                      //  wait(3000);
                         uio = 0;
                     }
                     // flowLayoutPanel1.AutoScrollPosition = new Point(20000, 0); 
@@ -2051,7 +2051,7 @@ namespace NurseCalling
                 }   
                 else {
                       
-                    flowLayoutPanel1.HorizontalScroll.Value = 0;
+                 //   flowLayoutPanel1.HorizontalScroll.Value = 0;
                     // flowLayoutPanel1.AutoScrollPosition = new Point(0, 0);
                 }
 
@@ -2395,11 +2395,23 @@ namespace NurseCalling
 
         }
 
+        public void AutoScrollMax() {
+
+            if (flowLayoutPanel1.Controls.Count > 48)
+            {
+                flowLayoutPanel1.HorizontalScroll.Value = flowLayoutPanel1.HorizontalScroll.Maximum;
+            }
+
+        }
+
         public void checkStatus() 
         {
 
             myObjects[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[0].DidChange += () => {
+
+                AutoScrollMax();
+
                 Console.WriteLine("changed!");
 
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
@@ -2486,7 +2498,7 @@ namespace NurseCalling
             myObjects[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[1].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2561,7 +2573,7 @@ namespace NurseCalling
             myObjects[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[2].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2635,7 +2647,7 @@ namespace NurseCalling
             myObjects[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[3].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2709,7 +2721,7 @@ namespace NurseCalling
             myObjects[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[4].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2785,7 +2797,7 @@ namespace NurseCalling
             myObjects[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[5].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2860,7 +2872,7 @@ namespace NurseCalling
             myObjects[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[6].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -2936,7 +2948,7 @@ namespace NurseCalling
             myObjects[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[7].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3009,7 +3021,7 @@ namespace NurseCalling
             myObjects[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[8].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3083,7 +3095,7 @@ namespace NurseCalling
             myObjects[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[9].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3156,7 +3168,7 @@ namespace NurseCalling
             myObjects[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[10].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3229,6 +3241,7 @@ namespace NurseCalling
             myObjects[11].DidChange += () => {
                 
                 Console.WriteLine("changed!");
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3301,7 +3314,7 @@ namespace NurseCalling
             myObjects[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[12].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3374,7 +3387,7 @@ namespace NurseCalling
             myObjects[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[13].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3448,7 +3461,7 @@ namespace NurseCalling
             myObjects[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[14].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3521,7 +3534,7 @@ namespace NurseCalling
             myObjects[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[15].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3597,7 +3610,7 @@ namespace NurseCalling
             myObjects2[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[0].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3669,7 +3682,7 @@ namespace NurseCalling
             myObjects2[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[1].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3743,7 +3756,7 @@ namespace NurseCalling
             myObjects2[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[2].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3818,7 +3831,7 @@ namespace NurseCalling
             myObjects2[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[3].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3881,7 +3894,7 @@ namespace NurseCalling
             myObjects2[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[4].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3997,7 +4010,7 @@ namespace NurseCalling
             myObjects2[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[6].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4056,7 +4069,7 @@ namespace NurseCalling
             myObjects2[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[7].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4114,7 +4127,7 @@ namespace NurseCalling
             myObjects2[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[8].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4172,7 +4185,7 @@ namespace NurseCalling
             myObjects2[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[9].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4230,7 +4243,7 @@ namespace NurseCalling
             myObjects2[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[10].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4287,7 +4300,7 @@ namespace NurseCalling
             myObjects2[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[11].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4345,7 +4358,7 @@ namespace NurseCalling
             myObjects2[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[12].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4403,7 +4416,7 @@ namespace NurseCalling
             myObjects2[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[13].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4462,7 +4475,7 @@ namespace NurseCalling
             myObjects2[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[14].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4520,7 +4533,7 @@ namespace NurseCalling
             myObjects2[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[15].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4579,7 +4592,7 @@ namespace NurseCalling
             myObjects3[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[0].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4637,7 +4650,7 @@ namespace NurseCalling
             myObjects3[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[1].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4696,7 +4709,7 @@ namespace NurseCalling
             myObjects3[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[2].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4754,7 +4767,7 @@ namespace NurseCalling
             myObjects3[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[3].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4813,7 +4826,7 @@ namespace NurseCalling
             myObjects3[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[4].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4870,7 +4883,7 @@ namespace NurseCalling
             myObjects3[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[5].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4928,7 +4941,7 @@ namespace NurseCalling
             myObjects3[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[6].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4987,7 +5000,7 @@ namespace NurseCalling
             myObjects3[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[7].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5045,7 +5058,7 @@ namespace NurseCalling
             myObjects3[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[8].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5103,7 +5116,7 @@ namespace NurseCalling
             myObjects3[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[9].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5161,7 +5174,7 @@ namespace NurseCalling
             myObjects3[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[10].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5219,7 +5232,7 @@ namespace NurseCalling
             myObjects3[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[11].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5278,7 +5291,7 @@ namespace NurseCalling
             myObjects3[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[12].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5336,7 +5349,7 @@ namespace NurseCalling
             myObjects3[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[13].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5395,7 +5408,7 @@ namespace NurseCalling
             myObjects3[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[14].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5453,7 +5466,7 @@ namespace NurseCalling
             myObjects3[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[15].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5512,7 +5525,7 @@ namespace NurseCalling
             myObjects4[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[0].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5570,7 +5583,7 @@ namespace NurseCalling
             myObjects4[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[1].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5629,7 +5642,7 @@ namespace NurseCalling
             myObjects4[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[2].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5687,7 +5700,7 @@ namespace NurseCalling
             myObjects4[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[3].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5746,7 +5759,7 @@ namespace NurseCalling
             myObjects4[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[4].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5804,7 +5817,7 @@ namespace NurseCalling
             myObjects4[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[5].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5862,7 +5875,7 @@ namespace NurseCalling
             myObjects4[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[6].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5921,7 +5934,7 @@ namespace NurseCalling
             myObjects4[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[7].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5982,7 +5995,7 @@ namespace NurseCalling
             myObjects4[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[8].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6041,7 +6054,7 @@ namespace NurseCalling
             myObjects4[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[9].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6099,7 +6112,7 @@ namespace NurseCalling
             myObjects4[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[10].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6157,7 +6170,7 @@ namespace NurseCalling
             myObjects4[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[11].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6215,7 +6228,7 @@ namespace NurseCalling
             myObjects4[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[12].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6273,7 +6286,7 @@ namespace NurseCalling
             myObjects4[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[13].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6332,7 +6345,7 @@ namespace NurseCalling
             myObjects4[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[14].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6389,7 +6402,7 @@ namespace NurseCalling
             myObjects4[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[15].DidChange += () => {
                 Console.WriteLine("changed!");
-
+                AutoScrollMax();
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
