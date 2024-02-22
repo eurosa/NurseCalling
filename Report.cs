@@ -88,7 +88,7 @@ namespace NurseCalling
             table1.Columns.AddRange(new DataColumn[]
                   {
                     new DataColumn("Register Id", typeof(System.String)),
-                    new DataColumn("Call Name", typeof(System.String)),
+                    new DataColumn("Hub Name", typeof(System.String)),
                     new DataColumn("Date&Time", typeof(System.String)),
                     new DataColumn("Elapse Time", typeof(System.String)),
  
@@ -101,7 +101,7 @@ namespace NurseCalling
                 string elapsedTimeString;
                 while (read.Read())
                 { 
-                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallStatus"].ToString(), read["dateTime"].ToString(),
+                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallValue"].ToString(), read["dateTime"].ToString(),
                     read["elapseTime"].ToString() });
                     result +=  TimeSpan.Parse("00:"+read["elapseTime"].ToString());
                      
@@ -133,7 +133,7 @@ namespace NurseCalling
             table1.Columns.AddRange(new DataColumn[]
                   {
                     new DataColumn("Register Id", typeof(System.String)),
-                    new DataColumn("Call Name", typeof(System.String)),
+                    new DataColumn("Hub Name", typeof(System.String)),
                     new DataColumn("Date&Time", typeof(System.String)),
                     new DataColumn("Elapse Time", typeof(System.String)),
 
@@ -146,7 +146,7 @@ namespace NurseCalling
                 string elapsedTimeString;
                 while (read.Read())
                 {
-                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallStatus"].ToString(), read["dateTime"].ToString(),
+                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallValue"].ToString(), read["dateTime"].ToString(),
                     read["elapseTime"].ToString() });
                     result += TimeSpan.Parse("00:" + read["elapseTime"].ToString());
 

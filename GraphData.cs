@@ -19,7 +19,7 @@ namespace NurseCalling
         public Dictionary<String, Double> dateTemperature = new Dictionary<String, Double>();
         // Dictionary<Double, String> dateTimeArrayList = new Dictionary<Double, String>();
         public Dictionary<String, Double> hubNTime = new Dictionary<String, Double>();
-        private string lastCallStatus;
+        private string lastCallStatus, lastCallValue;
         private string dateTime;
         private string _date;
         private string elapseTime;
@@ -31,12 +31,12 @@ namespace NurseCalling
             TimeSpan result = new TimeSpan();
 
             if (comboBoxSiteNameIndex>0) {
-                comm = new SQLiteCommand("Select lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
+                comm = new SQLiteCommand("Select lastCallValue,lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
                       " From call_table where registerId='"+ keyregisterId + "' and  date_  between '" + startDate + "' and '" + endDate + "' GROUP BY registerId ORDER BY dateTime ASC ", mbConnection);
 
             } else {
 
-                comm = new SQLiteCommand("Select lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
+                comm = new SQLiteCommand("Select lastCallValue,lastCallStatus,date_,dateTime,elapseTime,sum(totalMinutes) as myTime,registerId " +
                     "From call_table where  date_  between '" + startDate + "' and '" + endDate + "' GROUP BY registerId ORDER BY dateTime ASC ", mbConnection);
 
             }
@@ -49,6 +49,7 @@ namespace NurseCalling
             int uio = 1;
             while (reader.Read())
             {
+                lastCallValue = reader["lastCallValue"].ToString();
                 lastCallStatus = reader["lastCallStatus"].ToString();
                 _date = reader["date_"].ToString();
                 dateTime = reader["dateTime"].ToString();
@@ -59,9 +60,9 @@ namespace NurseCalling
 
                 // x.Add(dateTime);
                 // y.Add(Convert.ToDouble(tempData.Trim()));
-                if (!hubNTime.ContainsKey(reader["lastCallStatus"].ToString()))
+                if (!hubNTime.ContainsKey(reader["lastCallValue"].ToString()))
                 {
-                    hubNTime.Add(lastCallStatus, Double.Parse(totalMinutes));
+                    hubNTime.Add(lastCallValue, Double.Parse(totalMinutes));
                 }
              
                 // https://stackoverflow.com/questions/30070913/c-sharp-zedgraph-graphs-jumping
