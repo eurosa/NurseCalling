@@ -2446,10 +2446,10 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
                     
                     rough.rjButton1.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[0].Value.ToString();
+                    dataModel.lastCallValue = dataModel.textBoxRegist1; 
 
                     //  flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
-                    dataModel.lastCallStatus = dataModel.textBoxRegist1;// "Call From 1";//258
+                    dataModel.lastCallStatus = myObjects[0].Value.ToString(); // "Call From 1";//258
                     dataModel.registerId = "1";
                     dataModel.dateTime = dateTime;
                     // flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
@@ -2463,8 +2463,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
                     rough.rjButton1.BackColor = Color.Orange;
 
-                    dataModel.lastCallValue = myObjects[0].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist1;// "Care From 1";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist1; 
+                    dataModel.lastCallStatus = myObjects[0].Value.ToString(); // "Care From 1";//262
                     dataModel.registerId = "1";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2532,8 +2532,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.Red;
 
-                    dataModel.lastCallValue = myObjects[1].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist2;//  "Call From 2";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist2; 
+                    dataModel.lastCallStatus = myObjects[1].Value.ToString(); //  "Call From 2";//258
                     dataModel.registerId = "2";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2542,9 +2542,9 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle2);
                     rough.rjButton2.BackColor = Color.Orange;
-                    dataModel.lastCallStatus = dataModel.textBoxRegist2;// "Care From 2";//262
+                    dataModel.lastCallStatus = myObjects[1].Value.ToString(); // "Care From 2";//262
                     dataModel.registerId = "2";
-                    dataModel.lastCallValue = myObjects[1].Value.ToString();
+                    dataModel.lastCallValue = dataModel.textBoxRegist2;
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
@@ -2605,9 +2605,9 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.Red;
-                    dataModel.lastCallStatus = dataModel.textBoxRegist3;// "Call From 3";// 258
+                    dataModel.lastCallStatus = myObjects[2].Value.ToString(); // "Call From 3";// 258
                     dataModel.registerId = "3";
-                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.lastCallValue = dataModel.textBoxRegist3;
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
@@ -2615,9 +2615,9 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle3);
                     rough.rjButton3.BackColor = Color.Orange;
-                    dataModel.lastCallStatus = dataModel.textBoxRegist3;// "Care From 3";// 262
+                    dataModel.lastCallStatus = myObjects[2].Value.ToString(); // "Care From 3";// 262
                     dataModel.registerId = "3";
-                    dataModel.lastCallValue = myObjects[2].Value.ToString();
+                    dataModel.lastCallValue = dataModel.textBoxRegist3; 
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
@@ -2681,8 +2681,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Red;
-                    dataModel.lastCallStatus = dataModel.textBoxRegist4;// "Call From 4";// 258
-                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.lastCallStatus = myObjects[3].Value.ToString();// "Call From 4";// 258
+                    dataModel.lastCallValue = dataModel.textBoxRegist4;
                     dataModel.registerId = "4";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2692,8 +2692,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle4);
                     rough.rjButton4.BackColor = Color.Orange;
                     dataModel.registerId = "4";
-                    dataModel.lastCallStatus = dataModel.textBoxRegist4;// "Care From 4";// 258
-                    dataModel.lastCallValue = myObjects[3].Value.ToString();
+                    dataModel.lastCallStatus = myObjects[3].Value.ToString(); // "Care From 4";// 258
+                    dataModel.lastCallValue = dataModel.textBoxRegist4; 
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
                 }
@@ -2755,8 +2755,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Red;
 
-                    dataModel.lastCallValue = myObjects[4].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist5;//"Call From 5";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist5;
+                    dataModel.lastCallStatus =  myObjects[4].Value.ToString();//"Call From 5";//258
                     dataModel.registerId = "5";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2766,8 +2766,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle5);
                     rough.rjButton5.BackColor = Color.Orange;
 
-                    dataModel.lastCallValue = myObjects[4].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist5;// "Care From 5";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist5; 
+                    dataModel.lastCallStatus = myObjects[4].Value.ToString(); // "Care From 5";//262
                     dataModel.registerId = "5";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2832,8 +2832,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[5].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist6;// "Call From 6";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist6; 
+                    dataModel.lastCallStatus = myObjects[5].Value.ToString(); // "Call From 6";//258
                     dataModel.registerId = "6";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2842,8 +2842,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle6);
                     rough.rjButton6.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[5].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist6;// "Care From 6";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist6; 
+                    dataModel.lastCallStatus = myObjects[5].Value.ToString(); // "Care From 6";//262
                     dataModel.registerId = "6";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2906,8 +2906,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Red;
 
-                    dataModel.lastCallValue = myObjects[6].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist7;//"Call From 7";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist7; 
+                    dataModel.lastCallStatus = myObjects[6].Value.ToString();//"Call From 7";//258
                     dataModel.registerId = "7";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2916,8 +2916,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle7);
                     rough.rjButton7.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[6].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist7;// "Care From 7";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist7; 
+                    dataModel.lastCallStatus = myObjects[6].Value.ToString(); // "Care From 7";//262
                     dataModel.registerId = "7";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2981,8 +2981,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Red;
-                    dataModel.lastCallValue =  myObjects[7].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist8;//"Call From 8";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist8; 
+                    dataModel.lastCallStatus = myObjects[7].Value.ToString(); //"Call From 8";//258
                     dataModel.registerId = "8";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2991,8 +2991,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
                     rough.rjButton8.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[7].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist8;//"Care From 8";//264
+                    dataModel.lastCallValue = dataModel.textBoxRegist8; 
+                    dataModel.lastCallStatus = myObjects[7].Value.ToString();//"Care From 8";//264
                     dataModel.registerId = "8";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3055,8 +3055,8 @@ namespace NurseCalling
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Red;
 
-                    dataModel.lastCallValue = myObjects[8].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist9;// "Call From 9";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist9; 
+                    dataModel.lastCallStatus = myObjects[8].Value.ToString(); // "Call From 9";//258
                     dataModel.registerId = "9";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3065,8 +3065,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[8].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist9;//"Care From 9";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist9; 
+                    dataModel.lastCallStatus = myObjects[8].Value.ToString(); //"Care From 9";//262
                     dataModel.registerId = "9";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3128,8 +3128,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[9].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist10;// "Call From 10";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist10; 
+                    dataModel.lastCallStatus = myObjects[9].Value.ToString(); // "Call From 10";//258
                     dataModel.registerId = "10";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3138,8 +3138,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle10);
                     rough.rjButton10.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[9].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist10;// "Care From 10";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist10; 
+                    dataModel.lastCallStatus = myObjects[9].Value.ToString(); // "Care From 10";//258
                     dataModel.registerId = "10";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3201,8 +3201,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[10].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist11;//"Call From 11";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist11; 
+                    dataModel.lastCallStatus = myObjects[10].Value.ToString(); //"Call From 11";//258
                     dataModel.registerId = "11";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3211,8 +3211,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[10].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist11;// "Care From 11";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist11; 
+                    dataModel.lastCallStatus = myObjects[10].Value.ToString(); // "Care From 11";//258
                     dataModel.registerId = "11";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3274,8 +3274,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[11].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist12;// "Call From 12";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist12; 
+                    dataModel.lastCallStatus = myObjects[11].Value.ToString(); // "Call From 12";//258
                     dataModel.registerId = "12";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3284,8 +3284,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[11].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist12;// "Care From 12";//262
+                    dataModel.lastCallValue = dataModel.textBoxRegist12; 
+                    dataModel.lastCallStatus = myObjects[11].Value.ToString(); // "Care From 12";//262
                     dataModel.registerId = "12";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3347,8 +3347,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[12].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist13;// "Call From 13";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist13; 
+                    dataModel.lastCallStatus = myObjects[12].Value.ToString(); // "Call From 13";//258
                     dataModel.registerId = "13";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3357,8 +3357,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[12].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist13;//"Care From 13";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist13; 
+                    dataModel.lastCallStatus = myObjects[12].Value.ToString(); //"Care From 13";//258
                     dataModel.registerId = "13";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3420,8 +3420,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[13].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist14;// "Call From 14";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist14; 
+                    dataModel.lastCallStatus = myObjects[13].Value.ToString(); // "Call From 14";//258
                     dataModel.registerId = "14";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3430,8 +3430,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[13].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist14;//"Care From 14";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist14; 
+                    dataModel.lastCallStatus = myObjects[13].Value.ToString(); //"Care From 14";//258
                     dataModel.registerId = "14";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3494,8 +3494,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[14].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist15;//"Call From 15";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist15; 
+                    dataModel.lastCallStatus = myObjects[14].Value.ToString(); //"Call From 15";//258
                     dataModel.registerId = "15";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3504,8 +3504,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[14].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist15;//"Care From 15";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist15; 
+                    dataModel.lastCallStatus = myObjects[14].Value.ToString(); //"Care From 15";//258
                     dataModel.registerId = "15";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3566,8 +3566,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[15].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist16;//"Call From 16";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist16; 
+                    dataModel.lastCallStatus = myObjects[15].Value.ToString(); //"Call From 16";//258
                     dataModel.registerId = "16";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3576,8 +3576,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects[15].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist16;//"Care From 16";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist16; 
+                    dataModel.lastCallStatus = myObjects[15].Value.ToString(); //"Care From 16";//258
                     dataModel.registerId = "16";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3642,8 +3642,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects2[0].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist17;//"Call From 17";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist17; 
+                    dataModel.lastCallStatus = myObjects2[0].Value.ToString(); //"Call From 17";//258
                     dataModel.registerId = "17";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3652,8 +3652,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle1);
                     rough1.rjButton1.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects2[0].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist17;// "Care From 17";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist17; 
+                    dataModel.lastCallStatus = myObjects2[0].Value.ToString(); // "Care From 17";//258
                     dataModel.registerId = "17";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3715,8 +3715,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects2[1].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist18;// "Call From 18";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist18; 
+                    dataModel.lastCallStatus = myObjects2[1].Value.ToString(); // "Call From 18";//258
                     dataModel.registerId = "18";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3725,8 +3725,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects2[1].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist18;//"Care From 18";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist18; 
+                    dataModel.lastCallStatus = myObjects2[1].Value.ToString(); //"Care From 18";//258
                     dataModel.registerId = "18";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3789,8 +3789,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects[2].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist19;// "Call From 19";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist19; 
+                    dataModel.lastCallStatus = myObjects[2].Value.ToString(); // "Call From 19";//258
                     dataModel.registerId = "19";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3799,8 +3799,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Orange;
-                    dataModel.lastCallValue = myObjects2[2].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist19;//"Care From 19";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist19; 
+                    dataModel.lastCallStatus = myObjects2[2].Value.ToString(); //"Care From 19";//258
                     dataModel.registerId = "19";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3864,8 +3864,8 @@ namespace NurseCalling
                 {
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Red;
-                    dataModel.lastCallValue = myObjects2[3].Value.ToString();
-                    dataModel.lastCallStatus = dataModel.textBoxRegist20;//"Call From 20";//258
+                    dataModel.lastCallValue = dataModel.textBoxRegist20; 
+                    dataModel.lastCallStatus = myObjects2[3].Value.ToString(); //"Call From 20";//258
                     dataModel.registerId = "20";
                     dataModel.dateTime = dateTime;
                     dbHandlr.insert_call_data(m_dbConnection, dataModel);
