@@ -162,6 +162,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox1Display = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.portBox1 = new System.Windows.Forms.ComboBox();
@@ -169,7 +170,6 @@
             this.checkBoxHub3 = new System.Windows.Forms.CheckBox();
             this.checkBoxHub2 = new System.Windows.Forms.CheckBox();
             this.checkBoxHub1 = new System.Windows.Forms.CheckBox();
-            this.textBox1Display = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -754,7 +754,7 @@
             // applyButton
             // 
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyButton.Location = new System.Drawing.Point(690, 612);
+            this.applyButton.Location = new System.Drawing.Point(702, 589);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(191, 38);
             this.applyButton.TabIndex = 0;
@@ -1595,6 +1595,16 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // textBox1Display
+            // 
+            this.textBox1Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1Display.Location = new System.Drawing.Point(684, 21);
+            this.textBox1Display.Multiline = true;
+            this.textBox1Display.Name = "textBox1Display";
+            this.textBox1Display.Size = new System.Drawing.Size(721, 83);
+            this.textBox1Display.TabIndex = 3;
+            this.textBox1Display.TextChanged += new System.EventHandler(this.textBox1Display_TextChanged);
+            // 
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1670,21 +1680,11 @@
             this.checkBoxHub1.Text = "Hub 1";
             this.checkBoxHub1.UseVisualStyleBackColor = true;
             // 
-            // textBox1Display
-            // 
-            this.textBox1Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1Display.Location = new System.Drawing.Point(684, 21);
-            this.textBox1Display.Multiline = true;
-            this.textBox1Display.Name = "textBox1Display";
-            this.textBox1Display.Size = new System.Drawing.Size(721, 83);
-            this.textBox1Display.TabIndex = 3;
-            this.textBox1Display.TextChanged += new System.EventHandler(this.textBox1Display_TextChanged);
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1455, 719);
+            this.ClientSize = new System.Drawing.Size(1455, 704);
             this.Controls.Add(this.tabControl1);
             this.Name = "Settings";
             this.Text = "Settings";
