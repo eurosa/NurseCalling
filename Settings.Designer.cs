@@ -169,6 +169,7 @@
             this.checkBoxHub3 = new System.Windows.Forms.CheckBox();
             this.checkBoxHub2 = new System.Windows.Forms.CheckBox();
             this.checkBoxHub1 = new System.Windows.Forms.CheckBox();
+            this.textBox1Display = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1577,6 +1578,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox1Display);
             this.tabPage2.Controls.Add(this.buttonSave);
             this.tabPage2.Controls.Add(this.buttonRefresh);
             this.tabPage2.Controls.Add(this.portBox1);
@@ -1596,7 +1598,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(338, 108);
+            this.buttonSave.Location = new System.Drawing.Point(397, 124);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(99, 32);
             this.buttonSave.TabIndex = 2;
@@ -1667,6 +1669,16 @@
             this.checkBoxHub1.TabIndex = 0;
             this.checkBoxHub1.Text = "Hub 1";
             this.checkBoxHub1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1Display
+            // 
+            this.textBox1Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1Display.Location = new System.Drawing.Point(684, 21);
+            this.textBox1Display.Multiline = true;
+            this.textBox1Display.Name = "textBox1Display";
+            this.textBox1Display.Size = new System.Drawing.Size(721, 83);
+            this.textBox1Display.TabIndex = 3;
+            this.textBox1Display.TextChanged += new System.EventHandler(this.textBox1Display_TextChanged);
             // 
             // Settings
             // 
@@ -1829,5 +1841,6 @@
         private System.Windows.Forms.ComboBox portBox1;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.TextBox textBox1Display;
     }
 }

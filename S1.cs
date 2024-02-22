@@ -304,9 +304,11 @@ namespace NurseCalling
             {
 
             }
-
+            dbHandlr.GetDisplayTxt(m_dbConnection, dataModel);
             dbHandlr.getGeneralData(m_dbConnection, dataModel);
             //  systemClockTimer1 =  new SystemClockTimer(this);
+
+            label3.Text = dataModel.textBox1Display;
 
             blinkLabel();
 

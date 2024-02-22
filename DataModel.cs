@@ -8,6 +8,8 @@ namespace NurseCalling
 {
     public class DataModel
     {
+        public string textBox1Display { get; set; }
+
         public string comport_name { get; set; }
         public string firstcall_status { get; set; }
         public string lastCallValue { get; set; }

@@ -68,6 +68,10 @@ namespace NurseCalling
                     SQLiteCommand command3 = new SQLiteCommand(sql3, dbConnection);
                     command3.ExecuteNonQuery();
 
+                    string sql4 = "create table display_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, textBox1Display varchar(250))";
+                    SQLiteCommand command4 = new SQLiteCommand(sql4, dbConnection);
+                    command4.ExecuteNonQuery();
+
                     try
                     {
                         insert_general_data(dbConnection);
@@ -91,6 +95,16 @@ namespace NurseCalling
                     try
                     {
                         insert_image_path(dbConnection);
+
+                    }
+                    catch (Exception Ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        insert_display_ttxt(dbConnection);
 
                     }
                     catch (Exception Ex)
@@ -930,6 +944,54 @@ namespace NurseCalling
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public void insert_display_ttxt(SQLiteConnection m_dbConnection) {
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO display_table (textBox1Display) VALUES (@textBox1Display)", m_dbConnection);
+            insertSQL.Parameters.AddWithValue("@textBox1Display", "Digiline System Pvt. Ltd."); // white color rgb 
+      
+            try
+            {
+                insertSQL.ExecuteNonQuery();
+                // AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void update_display_table(SQLiteConnection m_dbConnection, DataModel dataModel)
+        {
+            if (dataModel.textBox1Display != "")
+            {
+                string sql_update = "UPDATE display_table SET textBox1Display = @textBox1Display where ID=@ID";
+                SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection); 
+
+                command.Parameters.AddWithValue("@textBox1Display", dataModel.textBox1Display); 
+                command.Parameters.AddWithValue("@ID", 1);
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+        }
+
+        public void GetDisplayTxt(SQLiteConnection m_dbConnection, DataModel dataModel)
+        {
+            SQLiteCommand cmd = new SQLiteCommand("select * From display_table where 1 ", m_dbConnection);
+            SQLiteDataReader Sdr = cmd.ExecuteReader();
+            while (Sdr.Read())
+            {
+                dataModel.textBox1Display = Sdr["textBox1Display"].ToString(); 
+            }
+            Sdr.Close();
         }
 
         public string imagePath(String image_name)

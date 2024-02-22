@@ -41,8 +41,11 @@ namespace NurseCalling
 
             dbHandlr.getGeneralData(qLiteConnection, modelData);
 
+            dbHandlr.GetDisplayTxt(qLiteConnection, modelData);
+
             dbHandr.getImage(qLiteConnection, modelData);
 
+            textBox1Display.Text = modelData.textBox1Display;
 
             checkBoxHub1.Checked = modelData.checkBoxHub1;
             checkBoxHub2.Checked = modelData.checkBoxHub2;
@@ -1214,6 +1217,8 @@ namespace NurseCalling
             modelData.checkBoxHub3 = checkBoxHub3.Checked;
             modelData.checkBoxHub4 = checkBoxHub4.Checked; 
             modelData.comport = portBox1.Text;
+            modelData.textBox1Display = textBox1Display.Text;
+            dbHandlr.update_display_table(qLiteConnection, modelData);
             dbHandlr.UpdateComport(modelData,qLiteConnection);
         }
 
@@ -1246,6 +1251,11 @@ namespace NurseCalling
                 }
             }
             catch (Exception ex) { }
+        }
+
+        private void textBox1Display_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
