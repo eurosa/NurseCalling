@@ -151,8 +151,6 @@
             this.roundPanelWithoutTitle8 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle9 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton9 = new NurseCalling.Controls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundPanelWithoutTitle18 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.rjButton21 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator35 = new NurseCalling.Controls.HorizontalLineSeparator();
@@ -160,6 +158,8 @@
             this.rjButton22 = new NurseCalling.Controls.RJButton();
             this.rjButton23 = new NurseCalling.Controls.RJButton();
             this.rjButton24 = new NurseCalling.Controls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundPanelWithoutTitle12.SuspendLayout();
             this.roundPanelWithoutTitle11.SuspendLayout();
             this.roundPanelWithoutTitle10.SuspendLayout();
@@ -193,7 +193,7 @@
             this.myRjButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton12.ForeColor = System.Drawing.Color.White;
-            this.myRjButton12.Location = new System.Drawing.Point(131, 177);
+            this.myRjButton12.Location = new System.Drawing.Point(131, 179);
             this.myRjButton12.Name = "myRjButton12";
             this.myRjButton12.Size = new System.Drawing.Size(97, 40);
             this.myRjButton12.TabIndex = 6;
@@ -230,7 +230,7 @@
             this.rjButtonTime12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime12.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime12.Location = new System.Drawing.Point(3, 178);
+            this.rjButtonTime12.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime12.Name = "rjButtonTime12";
             this.rjButtonTime12.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime12.TabIndex = 2;
@@ -311,7 +311,7 @@
             // horizontalLineSeparator28
             // 
             this.horizontalLineSeparator28.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator28.Location = new System.Drawing.Point(1, 83);
+            this.horizontalLineSeparator28.Location = new System.Drawing.Point(1, 84);
             this.horizontalLineSeparator28.Name = "horizontalLineSeparator28";
             this.horizontalLineSeparator28.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator28.TabIndex = 4;
@@ -347,7 +347,7 @@
             this.rjButtonTime11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime11.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime11.Location = new System.Drawing.Point(3, 173);
+            this.rjButtonTime11.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime11.Name = "rjButtonTime11";
             this.rjButtonTime11.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime11.TabIndex = 2;
@@ -386,7 +386,7 @@
             this.myRjButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton10.ForeColor = System.Drawing.Color.White;
-            this.myRjButton10.Location = new System.Drawing.Point(131, 172);
+            this.myRjButton10.Location = new System.Drawing.Point(131, 179);
             this.myRjButton10.Name = "myRjButton10";
             this.myRjButton10.Size = new System.Drawing.Size(97, 40);
             this.myRjButton10.TabIndex = 6;
@@ -406,7 +406,7 @@
             // horizontalLineSeparator26
             // 
             this.horizontalLineSeparator26.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator26.Location = new System.Drawing.Point(1, 83);
+            this.horizontalLineSeparator26.Location = new System.Drawing.Point(1, 84);
             this.horizontalLineSeparator26.Name = "horizontalLineSeparator26";
             this.horizontalLineSeparator26.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator26.TabIndex = 4;
@@ -442,7 +442,7 @@
             this.myRjButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton11.ForeColor = System.Drawing.Color.White;
-            this.myRjButton11.Location = new System.Drawing.Point(130, 172);
+            this.myRjButton11.Location = new System.Drawing.Point(130, 179);
             this.myRjButton11.Name = "myRjButton11";
             this.myRjButton11.Size = new System.Drawing.Size(97, 40);
             this.myRjButton11.TabIndex = 6;
@@ -483,7 +483,7 @@
             this.rjButtonTime10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime10.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime10.Location = new System.Drawing.Point(3, 173);
+            this.rjButtonTime10.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime10.Name = "rjButtonTime10";
             this.rjButtonTime10.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime10.TabIndex = 2;
@@ -563,7 +563,7 @@
             this.rjButtonTime9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime9.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime9.Location = new System.Drawing.Point(3, 173);
+            this.rjButtonTime9.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime9.Name = "rjButtonTime9";
             this.rjButtonTime9.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime9.TabIndex = 2;
@@ -602,7 +602,7 @@
             this.myRjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton8.ForeColor = System.Drawing.Color.White;
-            this.myRjButton8.Location = new System.Drawing.Point(131, 172);
+            this.myRjButton8.Location = new System.Drawing.Point(131, 179);
             this.myRjButton8.Name = "myRjButton8";
             this.myRjButton8.Size = new System.Drawing.Size(97, 40);
             this.myRjButton8.TabIndex = 6;
@@ -622,7 +622,7 @@
             // horizontalLineSeparator16
             // 
             this.horizontalLineSeparator16.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator16.Location = new System.Drawing.Point(1, 82);
+            this.horizontalLineSeparator16.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator16.Name = "horizontalLineSeparator16";
             this.horizontalLineSeparator16.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator16.TabIndex = 4;
@@ -658,7 +658,7 @@
             this.rjButtonTime8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime8.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime8.Location = new System.Drawing.Point(3, 173);
+            this.rjButtonTime8.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime8.Name = "rjButtonTime8";
             this.rjButtonTime8.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime8.TabIndex = 2;
@@ -699,7 +699,7 @@
             this.myRjButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton16.ForeColor = System.Drawing.Color.White;
-            this.myRjButton16.Location = new System.Drawing.Point(129, 180);
+            this.myRjButton16.Location = new System.Drawing.Point(129, 179);
             this.myRjButton16.Name = "myRjButton16";
             this.myRjButton16.Size = new System.Drawing.Size(97, 40);
             this.myRjButton16.TabIndex = 6;
@@ -755,7 +755,7 @@
             this.rjButtonTime16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime16.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime16.Location = new System.Drawing.Point(3, 181);
+            this.rjButtonTime16.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime16.Name = "rjButtonTime16";
             this.rjButtonTime16.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime16.TabIndex = 2;
@@ -794,7 +794,7 @@
             this.myRjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton15.ForeColor = System.Drawing.Color.White;
-            this.myRjButton15.Location = new System.Drawing.Point(130, 177);
+            this.myRjButton15.Location = new System.Drawing.Point(130, 179);
             this.myRjButton15.Name = "myRjButton15";
             this.myRjButton15.Size = new System.Drawing.Size(97, 40);
             this.myRjButton15.TabIndex = 6;
@@ -850,7 +850,7 @@
             this.rjButtonTime15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime15.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime15.Location = new System.Drawing.Point(3, 178);
+            this.rjButtonTime15.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime15.Name = "rjButtonTime15";
             this.rjButtonTime15.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime15.TabIndex = 2;
@@ -881,7 +881,7 @@
             // horizontalLineSeparator24
             // 
             this.horizontalLineSeparator24.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator24.Location = new System.Drawing.Point(1, 83);
+            this.horizontalLineSeparator24.Location = new System.Drawing.Point(1, 84);
             this.horizontalLineSeparator24.Name = "horizontalLineSeparator24";
             this.horizontalLineSeparator24.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator24.TabIndex = 4;
@@ -920,7 +920,7 @@
             this.myRjButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton13.ForeColor = System.Drawing.Color.White;
-            this.myRjButton13.Location = new System.Drawing.Point(131, 177);
+            this.myRjButton13.Location = new System.Drawing.Point(131, 179);
             this.myRjButton13.Name = "myRjButton13";
             this.myRjButton13.Size = new System.Drawing.Size(97, 40);
             this.myRjButton13.TabIndex = 6;
@@ -976,7 +976,7 @@
             this.rjButtonTime13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime13.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime13.Location = new System.Drawing.Point(3, 178);
+            this.rjButtonTime13.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime13.Name = "rjButtonTime13";
             this.rjButtonTime13.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime13.TabIndex = 2;
@@ -1015,7 +1015,7 @@
             this.myRjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton14.ForeColor = System.Drawing.Color.White;
-            this.myRjButton14.Location = new System.Drawing.Point(131, 177);
+            this.myRjButton14.Location = new System.Drawing.Point(131, 179);
             this.myRjButton14.Name = "myRjButton14";
             this.myRjButton14.Size = new System.Drawing.Size(97, 40);
             this.myRjButton14.TabIndex = 6;
@@ -1071,7 +1071,7 @@
             this.rjButtonTime14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime14.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime14.Location = new System.Drawing.Point(3, 178);
+            this.rjButtonTime14.Location = new System.Drawing.Point(3, 179);
             this.rjButtonTime14.Name = "rjButtonTime14";
             this.rjButtonTime14.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime14.TabIndex = 2;
@@ -1227,7 +1227,7 @@
             this.myRjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton4.ForeColor = System.Drawing.Color.White;
-            this.myRjButton4.Location = new System.Drawing.Point(131, 186);
+            this.myRjButton4.Location = new System.Drawing.Point(131, 180);
             this.myRjButton4.Name = "myRjButton4";
             this.myRjButton4.Size = new System.Drawing.Size(97, 40);
             this.myRjButton4.TabIndex = 6;
@@ -1274,7 +1274,7 @@
             this.rjButtonTime4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime4.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime4.Location = new System.Drawing.Point(4, 187);
+            this.rjButtonTime4.Location = new System.Drawing.Point(4, 180);
             this.rjButtonTime4.Name = "rjButtonTime4";
             this.rjButtonTime4.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime4.TabIndex = 2;
@@ -1313,7 +1313,7 @@
             this.myRjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton3.ForeColor = System.Drawing.Color.White;
-            this.myRjButton3.Location = new System.Drawing.Point(132, 186);
+            this.myRjButton3.Location = new System.Drawing.Point(132, 180);
             this.myRjButton3.Name = "myRjButton3";
             this.myRjButton3.Size = new System.Drawing.Size(97, 40);
             this.myRjButton3.TabIndex = 6;
@@ -1369,7 +1369,7 @@
             this.rjButtonTime3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime3.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime3.Location = new System.Drawing.Point(5, 187);
+            this.rjButtonTime3.Location = new System.Drawing.Point(5, 180);
             this.rjButtonTime3.Name = "rjButtonTime3";
             this.rjButtonTime3.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime3.TabIndex = 2;
@@ -1430,7 +1430,7 @@
             this.myRjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton2.ForeColor = System.Drawing.Color.White;
-            this.myRjButton2.Location = new System.Drawing.Point(131, 186);
+            this.myRjButton2.Location = new System.Drawing.Point(131, 180);
             this.myRjButton2.Name = "myRjButton2";
             this.myRjButton2.Size = new System.Drawing.Size(97, 40);
             this.myRjButton2.TabIndex = 8;
@@ -1449,7 +1449,7 @@
             this.rjButtonTime2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime2.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime2.Location = new System.Drawing.Point(6, 187);
+            this.rjButtonTime2.Location = new System.Drawing.Point(6, 180);
             this.rjButtonTime2.Name = "rjButtonTime2";
             this.rjButtonTime2.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime2.TabIndex = 7;
@@ -1545,7 +1545,7 @@
             this.myRjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton1.ForeColor = System.Drawing.Color.White;
-            this.myRjButton1.Location = new System.Drawing.Point(131, 186);
+            this.myRjButton1.Location = new System.Drawing.Point(131, 180);
             this.myRjButton1.Name = "myRjButton1";
             this.myRjButton1.Size = new System.Drawing.Size(97, 40);
             this.myRjButton1.TabIndex = 6;
@@ -1601,7 +1601,7 @@
             this.rjButtonTime1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime1.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime1.Location = new System.Drawing.Point(5, 187);
+            this.rjButtonTime1.Location = new System.Drawing.Point(5, 180);
             this.rjButtonTime1.Name = "rjButtonTime1";
             this.rjButtonTime1.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime1.TabIndex = 2;
@@ -1722,7 +1722,7 @@
             this.rjButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton17.ForeColor = System.Drawing.Color.White;
-            this.rjButton17.Location = new System.Drawing.Point(131, 186);
+            this.rjButton17.Location = new System.Drawing.Point(131, 180);
             this.rjButton17.Name = "rjButton17";
             this.rjButton17.Size = new System.Drawing.Size(97, 40);
             this.rjButton17.TabIndex = 6;
@@ -1778,7 +1778,7 @@
             this.rjButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton19.ForeColor = System.Drawing.Color.White;
-            this.rjButton19.Location = new System.Drawing.Point(5, 187);
+            this.rjButton19.Location = new System.Drawing.Point(5, 180);
             this.rjButton19.Name = "rjButton19";
             this.rjButton19.Size = new System.Drawing.Size(128, 40);
             this.rjButton19.TabIndex = 2;
@@ -1839,7 +1839,7 @@
             this.myRjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton5.ForeColor = System.Drawing.Color.White;
-            this.myRjButton5.Location = new System.Drawing.Point(132, 186);
+            this.myRjButton5.Location = new System.Drawing.Point(132, 180);
             this.myRjButton5.Name = "myRjButton5";
             this.myRjButton5.Size = new System.Drawing.Size(97, 40);
             this.myRjButton5.TabIndex = 6;
@@ -1895,7 +1895,7 @@
             this.rjButtonTime5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime5.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime5.Location = new System.Drawing.Point(5, 187);
+            this.rjButtonTime5.Location = new System.Drawing.Point(5, 180);
             this.rjButtonTime5.Name = "rjButtonTime5";
             this.rjButtonTime5.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime5.TabIndex = 2;
@@ -1956,7 +1956,7 @@
             this.myRjButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton6.ForeColor = System.Drawing.Color.White;
-            this.myRjButton6.Location = new System.Drawing.Point(131, 186);
+            this.myRjButton6.Location = new System.Drawing.Point(131, 180);
             this.myRjButton6.Name = "myRjButton6";
             this.myRjButton6.Size = new System.Drawing.Size(97, 40);
             this.myRjButton6.TabIndex = 6;
@@ -2012,7 +2012,7 @@
             this.rjButtonTime6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime6.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime6.Location = new System.Drawing.Point(4, 187);
+            this.rjButtonTime6.Location = new System.Drawing.Point(4, 180);
             this.rjButtonTime6.Name = "rjButtonTime6";
             this.rjButtonTime6.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime6.TabIndex = 2;
@@ -2073,7 +2073,7 @@
             this.myRjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton7.ForeColor = System.Drawing.Color.White;
-            this.myRjButton7.Location = new System.Drawing.Point(131, 186);
+            this.myRjButton7.Location = new System.Drawing.Point(131, 180);
             this.myRjButton7.Name = "myRjButton7";
             this.myRjButton7.Size = new System.Drawing.Size(97, 40);
             this.myRjButton7.TabIndex = 6;
@@ -2129,7 +2129,7 @@
             this.rjButtonTime7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButtonTime7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButtonTime7.ForeColor = System.Drawing.Color.White;
-            this.rjButtonTime7.Location = new System.Drawing.Point(3, 187);
+            this.rjButtonTime7.Location = new System.Drawing.Point(3, 180);
             this.rjButtonTime7.Name = "rjButtonTime7";
             this.rjButtonTime7.Size = new System.Drawing.Size(128, 40);
             this.rjButtonTime7.TabIndex = 2;
@@ -2212,30 +2212,13 @@
             this.myRjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myRjButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myRjButton9.ForeColor = System.Drawing.Color.White;
-            this.myRjButton9.Location = new System.Drawing.Point(131, 172);
+            this.myRjButton9.Location = new System.Drawing.Point(131, 179);
             this.myRjButton9.Name = "myRjButton9";
             this.myRjButton9.Size = new System.Drawing.Size(97, 40);
             this.myRjButton9.TabIndex = 6;
             this.myRjButton9.Text = "00:00";
             this.myRjButton9.TextColor = System.Drawing.Color.White;
             this.myRjButton9.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1915, 78);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
             // 
             // roundPanelWithoutTitle18
             // 
@@ -2270,7 +2253,7 @@
             this.rjButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton21.ForeColor = System.Drawing.Color.White;
-            this.rjButton21.Location = new System.Drawing.Point(131, 174);
+            this.rjButton21.Location = new System.Drawing.Point(131, 179);
             this.rjButton21.Name = "rjButton21";
             this.rjButton21.Size = new System.Drawing.Size(97, 40);
             this.rjButton21.TabIndex = 6;
@@ -2326,7 +2309,7 @@
             this.rjButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton23.ForeColor = System.Drawing.Color.White;
-            this.rjButton23.Location = new System.Drawing.Point(3, 174);
+            this.rjButton23.Location = new System.Drawing.Point(3, 179);
             this.rjButton23.Name = "rjButton23";
             this.rjButton23.Size = new System.Drawing.Size(128, 40);
             this.rjButton23.TabIndex = 2;
@@ -2353,6 +2336,23 @@
             this.rjButton24.TabIndex = 0;
             this.rjButton24.TextColor = System.Drawing.Color.White;
             this.rjButton24.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1915, 78);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
             // 
             // Rough3
             // 

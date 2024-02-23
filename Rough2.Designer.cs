@@ -144,8 +144,6 @@
             this.roundPanelWithoutTitle8 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle9 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.myRjButton9 = new NurseCalling.Controls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundPanelWithoutTitle17 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.rjButton17 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator33 = new NurseCalling.Controls.HorizontalLineSeparator();
@@ -153,6 +151,8 @@
             this.rjButton18 = new NurseCalling.Controls.RJButton();
             this.rjButton19 = new NurseCalling.Controls.RJButton();
             this.rjButton20 = new NurseCalling.Controls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundPanelWithoutTitle12.SuspendLayout();
             this.roundPanelWithoutTitle11.SuspendLayout();
             this.roundPanelWithoutTitle10.SuspendLayout();
@@ -614,7 +614,7 @@
             // horizontalLineSeparator16
             // 
             this.horizontalLineSeparator16.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator16.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator16.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator16.Name = "horizontalLineSeparator16";
             this.horizontalLineSeparator16.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator16.TabIndex = 4;
@@ -1208,7 +1208,7 @@
             // horizontalLineSeparator6
             // 
             this.horizontalLineSeparator6.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator6.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator6.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator6.Name = "horizontalLineSeparator6";
             this.horizontalLineSeparator6.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator6.TabIndex = 4;
@@ -1365,7 +1365,7 @@
             // horizontalLineSeparator4
             // 
             this.horizontalLineSeparator4.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator4.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator4.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator4.Name = "horizontalLineSeparator4";
             this.horizontalLineSeparator4.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator4.TabIndex = 4;
@@ -1441,7 +1441,7 @@
             // horizontalLineSeparator1
             // 
             this.horizontalLineSeparator1.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator1.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator1.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator1.Name = "horizontalLineSeparator1";
             this.horizontalLineSeparator1.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator1.TabIndex = 4;
@@ -1617,7 +1617,7 @@
             // horizontalLineSeparator8
             // 
             this.horizontalLineSeparator8.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator8.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator8.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator8.Name = "horizontalLineSeparator8";
             this.horizontalLineSeparator8.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator8.TabIndex = 4;
@@ -1734,7 +1734,7 @@
             // horizontalLineSeparator10
             // 
             this.horizontalLineSeparator10.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator10.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator10.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator10.Name = "horizontalLineSeparator10";
             this.horizontalLineSeparator10.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator10.TabIndex = 4;
@@ -1851,7 +1851,7 @@
             // horizontalLineSeparator12
             // 
             this.horizontalLineSeparator12.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator12.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator12.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator12.Name = "horizontalLineSeparator12";
             this.horizontalLineSeparator12.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator12.TabIndex = 4;
@@ -1968,7 +1968,7 @@
             // horizontalLineSeparator14
             // 
             this.horizontalLineSeparator14.BackColor = System.Drawing.Color.Chartreuse;
-            this.horizontalLineSeparator14.Location = new System.Drawing.Point(1, 81);
+            this.horizontalLineSeparator14.Location = new System.Drawing.Point(1, 83);
             this.horizontalLineSeparator14.Name = "horizontalLineSeparator14";
             this.horizontalLineSeparator14.Size = new System.Drawing.Size(230, 6);
             this.horizontalLineSeparator14.TabIndex = 4;
@@ -2095,23 +2095,6 @@
             this.myRjButton9.TextColor = System.Drawing.Color.White;
             this.myRjButton9.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1915, 78);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            // 
             // roundPanelWithoutTitle17
             // 
             this.roundPanelWithoutTitle17.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -2228,6 +2211,23 @@
             this.rjButton20.TabIndex = 0;
             this.rjButton20.TextColor = System.Drawing.Color.White;
             this.rjButton20.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1915, 78);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
             // 
             // Rough2
             // 
