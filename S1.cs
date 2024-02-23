@@ -6485,7 +6485,7 @@ namespace NurseCalling
              An item with the same key has already been added.
              */
             Report MyReport = new Report(m_dbConnection);
-          MyReport.Show();
+            MyReport.Show();
         }
 
         private void rjSettings_Click(object sender, EventArgs e)
