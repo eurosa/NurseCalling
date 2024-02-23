@@ -31,12 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rjSettings = new NurseCalling.Controls.RJButton();
             this.exportBtn = new NurseCalling.Controls.RJButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.roundPanelWithoutTitle1 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle2 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle7 = new NurseCalling.Controls.RoundPanelWithoutTitle();
@@ -53,6 +50,9 @@
             this.roundPanelWithoutTitle14 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle15 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle16 = new NurseCalling.Controls.RoundPanelWithoutTitle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myRjButton1 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator2 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator1 = new NurseCalling.Controls.HorizontalLineSeparator();
@@ -167,65 +167,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoScrollMargin = new System.Drawing.Size(3, 3);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle1);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle2);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle7);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle3);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle4);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle5);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle6);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle8);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle9);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle10);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle11);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle12);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle13);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle14);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle15);
-            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle16);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 36);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 1005);
-            this.flowLayoutPanel1.TabIndex = 7;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, -1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1902, 38);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 1041);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(1906, 36);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Digiline System Pvt. Ltd.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // rjSettings
             // 
             this.rjSettings.BackColor = System.Drawing.Color.Transparent;
@@ -265,6 +206,33 @@
             this.exportBtn.TextColor = System.Drawing.Color.White;
             this.exportBtn.UseVisualStyleBackColor = false;
             this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoScrollMargin = new System.Drawing.Size(3, 3);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle1);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle2);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle7);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle3);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle4);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle5);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle6);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle8);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle9);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle10);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle11);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle12);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle13);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle14);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle15);
+            this.flowLayoutPanel1.Controls.Add(this.roundPanelWithoutTitle16);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 36);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 1005);
+            this.flowLayoutPanel1.TabIndex = 7;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // roundPanelWithoutTitle1
             // 
@@ -537,6 +505,38 @@
             this.roundPanelWithoutTitle16.TitleForeColor = System.Drawing.Color.White;
             this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             this.roundPanelWithoutTitle16.Enter += new System.EventHandler(this.roundPanelWithoutTitle16_Enter);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, -1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1902, 38);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 1041);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(1906, 36);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Digiline System Pvt. Ltd.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // myRjButton1
             // 
