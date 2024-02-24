@@ -13,6 +13,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,6 +26,20 @@ namespace NurseCalling
     
     public partial class S1 : Form
     {
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern EXECUTION_STATE SetThreadExecutionState(EXECUTION_STATE esFlags);
+
+        [FlagsAttribute]
+        public enum EXECUTION_STATE : uint
+        {
+            ES_AWAYMODE_REQUIRED = 0x00000040,
+            ES_CONTINUOUS = 0x80000000,
+            ES_DISPLAY_REQUIRED = 0x00000002,
+            ES_SYSTEM_REQUIRED = 0x00000001
+            // Legacy flag, should not be used.
+            // ES_USER_PRESENT = 0x00000004
+        }
+
         GraphPane myPane;
         SQLiteConnection m_dbConnection;
         //S21 s2 = new S21();
@@ -351,6 +366,14 @@ namespace NurseCalling
             }
 
             setImageToButton();
+
+            PreventSleep();
+        }
+
+       public void PreventSleep()
+        {
+            // Prevent Idle-to-Sleep (monitor not affected) (see note above)
+            SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
         }
 
         void MyFormClosed(object sender, FormClosedEventArgs e)
@@ -7299,8 +7322,16 @@ namespace NurseCalling
 
         private void rjBtnCross_Click(object sender, EventArgs e)
         {
-            AutoSaveOnClose();
-            this.Close();
+           
+           
+
+            if (MessageBox.Show("Are You Sure to Exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                AutoSaveOnClose();
+                // Writedata();
+              
+                Application.Exit();
+            }
         }
 
         public void StopWatchTimer()
