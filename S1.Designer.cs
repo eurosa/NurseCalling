@@ -31,9 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rjBtnCross = new NurseCalling.Controls.RJButton();
             this.rjSettings = new NurseCalling.Controls.RJButton();
             this.exportBtn = new NurseCalling.Controls.RJButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.roundPanelWithoutTitle1 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle2 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle7 = new NurseCalling.Controls.RoundPanelWithoutTitle();
@@ -50,104 +54,101 @@
             this.roundPanelWithoutTitle14 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle15 = new NurseCalling.Controls.RoundPanelWithoutTitle();
             this.roundPanelWithoutTitle16 = new NurseCalling.Controls.RoundPanelWithoutTitle();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myRjButton1 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator2 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator1 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton1 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime1 = new NurseCalling.Controls.RJButton();
-            this.bButton1 = new NurseCalling.Controls.RJButton();
             this.myRjButton2 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime2 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator3 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator4 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton2 = new NurseCalling.Controls.RJButton();
-            this.bButton2 = new NurseCalling.Controls.RJButton();
             this.myRjButton7 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator13 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator14 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton7 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime7 = new NurseCalling.Controls.RJButton();
-            this.bButton7 = new NurseCalling.Controls.RJButton();
             this.myRjButton3 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator5 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator6 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton3 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime3 = new NurseCalling.Controls.RJButton();
-            this.bButton3 = new NurseCalling.Controls.RJButton();
             this.myRjButton4 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator7 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator8 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton4 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime4 = new NurseCalling.Controls.RJButton();
-            this.bButton4 = new NurseCalling.Controls.RJButton();
             this.myRjButton5 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator9 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator10 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton5 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime5 = new NurseCalling.Controls.RJButton();
-            this.bButton5 = new NurseCalling.Controls.RJButton();
             this.myRjButton6 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator11 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator12 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton6 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime6 = new NurseCalling.Controls.RJButton();
-            this.bButton6 = new NurseCalling.Controls.RJButton();
             this.myRjButton8 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator15 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator16 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton8 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime8 = new NurseCalling.Controls.RJButton();
-            this.bButton8 = new NurseCalling.Controls.RJButton();
             this.myRjButton9 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator23 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator24 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton9 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime9 = new NurseCalling.Controls.RJButton();
-            this.bButton9 = new NurseCalling.Controls.RJButton();
             this.myRjButton10 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator25 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator26 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton10 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime10 = new NurseCalling.Controls.RJButton();
-            this.bButton10 = new NurseCalling.Controls.RJButton();
             this.myRjButton11 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator27 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator28 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton11 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime11 = new NurseCalling.Controls.RJButton();
-            this.bButton11 = new NurseCalling.Controls.RJButton();
             this.myRjButton12 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator17 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator18 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton12 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime12 = new NurseCalling.Controls.RJButton();
-            this.bButton12 = new NurseCalling.Controls.RJButton();
             this.myRjButton13 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator21 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator22 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton13 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime13 = new NurseCalling.Controls.RJButton();
-            this.bButton13 = new NurseCalling.Controls.RJButton();
             this.myRjButton14 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator31 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator32 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton14 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime14 = new NurseCalling.Controls.RJButton();
-            this.bButton14 = new NurseCalling.Controls.RJButton();
             this.myRjButton15 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator29 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator30 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton15 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime15 = new NurseCalling.Controls.RJButton();
-            this.bButton15 = new NurseCalling.Controls.RJButton();
             this.myRjButton16 = new NurseCalling.Controls.RJButton();
             this.horizontalLineSeparator19 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.horizontalLineSeparator20 = new NurseCalling.Controls.HorizontalLineSeparator();
             this.rjButton16 = new NurseCalling.Controls.RJButton();
             this.rjButtonTime16 = new NurseCalling.Controls.RJButton();
+            this.bButton1 = new NurseCalling.Controls.RJButton();
+            this.bButton2 = new NurseCalling.Controls.RJButton();
+            this.bButton7 = new NurseCalling.Controls.RJButton();
+            this.bButton3 = new NurseCalling.Controls.RJButton();
+            this.bButton4 = new NurseCalling.Controls.RJButton();
+            this.bButton5 = new NurseCalling.Controls.RJButton();
+            this.bButton6 = new NurseCalling.Controls.RJButton();
+            this.bButton8 = new NurseCalling.Controls.RJButton();
+            this.bButton9 = new NurseCalling.Controls.RJButton();
+            this.bButton10 = new NurseCalling.Controls.RJButton();
+            this.bButton11 = new NurseCalling.Controls.RJButton();
+            this.bButton12 = new NurseCalling.Controls.RJButton();
+            this.bButton13 = new NurseCalling.Controls.RJButton();
+            this.bButton14 = new NurseCalling.Controls.RJButton();
+            this.bButton15 = new NurseCalling.Controls.RJButton();
             this.bButton16 = new NurseCalling.Controls.RJButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -156,6 +157,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.rjBtnCross);
             this.panel1.Controls.Add(this.rjSettings);
             this.panel1.Controls.Add(this.exportBtn);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
@@ -166,46 +168,6 @@
             this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // rjSettings
-            // 
-            this.rjSettings.BackColor = System.Drawing.Color.Transparent;
-            this.rjSettings.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjSettings.BackgroundImage")));
-            this.rjSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjSettings.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjSettings.BorderRadius = 0;
-            this.rjSettings.BorderSize = 0;
-            this.rjSettings.FlatAppearance.BorderSize = 0;
-            this.rjSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjSettings.ForeColor = System.Drawing.Color.Transparent;
-            this.rjSettings.Location = new System.Drawing.Point(1858, 1043);
-            this.rjSettings.Name = "rjSettings";
-            this.rjSettings.Size = new System.Drawing.Size(34, 32);
-            this.rjSettings.TabIndex = 34;
-            this.rjSettings.TextColor = System.Drawing.Color.Transparent;
-            this.rjSettings.UseVisualStyleBackColor = false;
-            this.rjSettings.Click += new System.EventHandler(this.rjSettings_Click);
-            // 
-            // exportBtn
-            // 
-            this.exportBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.exportBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.exportBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportBtn.BackgroundImage")));
-            this.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exportBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exportBtn.BorderRadius = 0;
-            this.exportBtn.BorderSize = 0;
-            this.exportBtn.FlatAppearance.BorderSize = 0;
-            this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportBtn.ForeColor = System.Drawing.Color.White;
-            this.exportBtn.Location = new System.Drawing.Point(1812, 1047);
-            this.exportBtn.Name = "exportBtn";
-            this.exportBtn.Size = new System.Drawing.Size(36, 24);
-            this.exportBtn.TabIndex = 33;
-            this.exportBtn.TextColor = System.Drawing.Color.White;
-            this.exportBtn.UseVisualStyleBackColor = false;
-            this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -233,6 +195,98 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1906, 1005);
             this.flowLayoutPanel1.TabIndex = 7;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, -1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1902, 38);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "NURSE CALL SYSTEM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 1041);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(1906, 36);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Digiline System Pvt. Ltd.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // rjBtnCross
+            // 
+            this.rjBtnCross.BackColor = System.Drawing.Color.Transparent;
+            this.rjBtnCross.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjBtnCross.BackgroundImage = global::NurseCalling.Properties.Resources.cross;
+            this.rjBtnCross.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjBtnCross.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjBtnCross.BorderRadius = 0;
+            this.rjBtnCross.BorderSize = 0;
+            this.rjBtnCross.FlatAppearance.BorderSize = 0;
+            this.rjBtnCross.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjBtnCross.ForeColor = System.Drawing.Color.Brown;
+            this.rjBtnCross.Location = new System.Drawing.Point(1880, 1044);
+            this.rjBtnCross.Name = "rjBtnCross";
+            this.rjBtnCross.Size = new System.Drawing.Size(34, 32);
+            this.rjBtnCross.TabIndex = 35;
+            this.rjBtnCross.TextColor = System.Drawing.Color.Brown;
+            this.rjBtnCross.UseVisualStyleBackColor = false;
+            this.rjBtnCross.Click += new System.EventHandler(this.rjBtnCross_Click);
+            // 
+            // rjSettings
+            // 
+            this.rjSettings.BackColor = System.Drawing.Color.Transparent;
+            this.rjSettings.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjSettings.BackgroundImage")));
+            this.rjSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjSettings.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjSettings.BorderRadius = 0;
+            this.rjSettings.BorderSize = 0;
+            this.rjSettings.FlatAppearance.BorderSize = 0;
+            this.rjSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjSettings.ForeColor = System.Drawing.Color.Transparent;
+            this.rjSettings.Location = new System.Drawing.Point(1840, 1044);
+            this.rjSettings.Name = "rjSettings";
+            this.rjSettings.Size = new System.Drawing.Size(34, 32);
+            this.rjSettings.TabIndex = 34;
+            this.rjSettings.TextColor = System.Drawing.Color.Transparent;
+            this.rjSettings.UseVisualStyleBackColor = false;
+            this.rjSettings.Click += new System.EventHandler(this.rjSettings_Click);
+            // 
+            // exportBtn
+            // 
+            this.exportBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.exportBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportBtn.BackgroundImage")));
+            this.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exportBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exportBtn.BorderRadius = 0;
+            this.exportBtn.BorderSize = 0;
+            this.exportBtn.FlatAppearance.BorderSize = 0;
+            this.exportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.Location = new System.Drawing.Point(1798, 1047);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.Size = new System.Drawing.Size(36, 24);
+            this.exportBtn.TabIndex = 33;
+            this.exportBtn.TextColor = System.Drawing.Color.White;
+            this.exportBtn.UseVisualStyleBackColor = false;
+            this.exportBtn.Click += new System.EventHandler(this.rjButton17_Click);
             // 
             // roundPanelWithoutTitle1
             // 
@@ -506,38 +560,6 @@
             this.roundPanelWithoutTitle16.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent60;
             this.roundPanelWithoutTitle16.Enter += new System.EventHandler(this.roundPanelWithoutTitle16_Enter);
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, -1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1902, 38);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "NURSE CALL SYSTEM";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 1041);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(1906, 36);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Digiline System Pvt. Ltd.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // myRjButton1
             // 
             this.myRjButton1.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -617,27 +639,6 @@
             this.rjButtonTime1.TextColor = System.Drawing.Color.White;
             this.rjButtonTime1.UseVisualStyleBackColor = false;
             this.rjButtonTime1.Click += new System.EventHandler(this.rjButton5_Click);
-            // 
-            // bButton1
-            // 
-            this.bButton1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton1.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton1.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton1.BorderRadius = 12;
-            this.bButton1.BorderSize = 0;
-            this.bButton1.FlatAppearance.BorderSize = 0;
-            this.bButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton1.ForeColor = System.Drawing.Color.White;
-            this.bButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton1.Location = new System.Drawing.Point(5, 6);
-            this.bButton1.Name = "bButton1";
-            this.bButton1.Size = new System.Drawing.Size(460, 106);
-            this.bButton1.TabIndex = 0;
-            this.bButton1.TextColor = System.Drawing.Color.White;
-            this.bButton1.UseVisualStyleBackColor = false;
-            this.bButton1.Click += new System.EventHandler(this.bButton1_Click);
             // 
             // myRjButton2
             // 
@@ -719,27 +720,6 @@
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click_1);
             // 
-            // bButton2
-            // 
-            this.bButton2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton2.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton2.BorderRadius = 12;
-            this.bButton2.BorderSize = 0;
-            this.bButton2.FlatAppearance.BorderSize = 0;
-            this.bButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton2.ForeColor = System.Drawing.Color.White;
-            this.bButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton2.Location = new System.Drawing.Point(5, 6);
-            this.bButton2.Name = "bButton2";
-            this.bButton2.Size = new System.Drawing.Size(460, 106);
-            this.bButton2.TabIndex = 0;
-            this.bButton2.TextColor = System.Drawing.Color.White;
-            this.bButton2.UseVisualStyleBackColor = false;
-            this.bButton2.Click += new System.EventHandler(this.bButton2_Click);
-            // 
             // myRjButton7
             // 
             this.myRjButton7.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -819,27 +799,6 @@
             this.rjButtonTime7.TextColor = System.Drawing.Color.White;
             this.rjButtonTime7.UseVisualStyleBackColor = false;
             this.rjButtonTime7.Click += new System.EventHandler(this.rjButtonTime7_Click);
-            // 
-            // bButton7
-            // 
-            this.bButton7.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton7.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton7.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton7.BorderRadius = 12;
-            this.bButton7.BorderSize = 0;
-            this.bButton7.FlatAppearance.BorderSize = 0;
-            this.bButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton7.ForeColor = System.Drawing.Color.White;
-            this.bButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton7.Location = new System.Drawing.Point(3, 6);
-            this.bButton7.Name = "bButton7";
-            this.bButton7.Size = new System.Drawing.Size(460, 106);
-            this.bButton7.TabIndex = 0;
-            this.bButton7.TextColor = System.Drawing.Color.White;
-            this.bButton7.UseVisualStyleBackColor = false;
-            this.bButton7.Click += new System.EventHandler(this.bButton7_Click);
             // 
             // myRjButton3
             // 
@@ -921,27 +880,6 @@
             this.rjButtonTime3.UseVisualStyleBackColor = false;
             this.rjButtonTime3.Click += new System.EventHandler(this.rjButtonTime3_Click);
             // 
-            // bButton3
-            // 
-            this.bButton3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton3.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton3.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton3.BorderRadius = 12;
-            this.bButton3.BorderSize = 0;
-            this.bButton3.FlatAppearance.BorderSize = 0;
-            this.bButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton3.ForeColor = System.Drawing.Color.White;
-            this.bButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton3.Location = new System.Drawing.Point(4, 6);
-            this.bButton3.Name = "bButton3";
-            this.bButton3.Size = new System.Drawing.Size(460, 106);
-            this.bButton3.TabIndex = 0;
-            this.bButton3.TextColor = System.Drawing.Color.White;
-            this.bButton3.UseVisualStyleBackColor = false;
-            this.bButton3.Click += new System.EventHandler(this.bButton3_Click);
-            // 
             // myRjButton4
             // 
             this.myRjButton4.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1021,27 +959,6 @@
             this.rjButtonTime4.TextColor = System.Drawing.Color.White;
             this.rjButtonTime4.UseVisualStyleBackColor = false;
             this.rjButtonTime4.Click += new System.EventHandler(this.rjButtonTime4_Click);
-            // 
-            // bButton4
-            // 
-            this.bButton4.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton4.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton4.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton4.BorderRadius = 12;
-            this.bButton4.BorderSize = 0;
-            this.bButton4.FlatAppearance.BorderSize = 0;
-            this.bButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton4.ForeColor = System.Drawing.Color.White;
-            this.bButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton4.Location = new System.Drawing.Point(4, 6);
-            this.bButton4.Name = "bButton4";
-            this.bButton4.Size = new System.Drawing.Size(460, 106);
-            this.bButton4.TabIndex = 0;
-            this.bButton4.TextColor = System.Drawing.Color.White;
-            this.bButton4.UseVisualStyleBackColor = false;
-            this.bButton4.Click += new System.EventHandler(this.bButton4_Click);
             // 
             // myRjButton5
             // 
@@ -1123,27 +1040,6 @@
             this.rjButtonTime5.UseVisualStyleBackColor = false;
             this.rjButtonTime5.Click += new System.EventHandler(this.rjButtonTime5_Click);
             // 
-            // bButton5
-            // 
-            this.bButton5.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton5.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton5.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton5.BorderRadius = 12;
-            this.bButton5.BorderSize = 0;
-            this.bButton5.FlatAppearance.BorderSize = 0;
-            this.bButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton5.ForeColor = System.Drawing.Color.White;
-            this.bButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton5.Location = new System.Drawing.Point(5, 6);
-            this.bButton5.Name = "bButton5";
-            this.bButton5.Size = new System.Drawing.Size(460, 106);
-            this.bButton5.TabIndex = 0;
-            this.bButton5.TextColor = System.Drawing.Color.White;
-            this.bButton5.UseVisualStyleBackColor = false;
-            this.bButton5.Click += new System.EventHandler(this.bButton5_Click);
-            // 
             // myRjButton6
             // 
             this.myRjButton6.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1223,27 +1119,6 @@
             this.rjButtonTime6.TextColor = System.Drawing.Color.White;
             this.rjButtonTime6.UseVisualStyleBackColor = false;
             this.rjButtonTime6.Click += new System.EventHandler(this.rjButtonTime6_Click);
-            // 
-            // bButton6
-            // 
-            this.bButton6.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton6.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton6.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton6.BorderRadius = 12;
-            this.bButton6.BorderSize = 0;
-            this.bButton6.FlatAppearance.BorderSize = 0;
-            this.bButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton6.ForeColor = System.Drawing.Color.White;
-            this.bButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton6.Location = new System.Drawing.Point(3, 6);
-            this.bButton6.Name = "bButton6";
-            this.bButton6.Size = new System.Drawing.Size(460, 106);
-            this.bButton6.TabIndex = 0;
-            this.bButton6.TextColor = System.Drawing.Color.White;
-            this.bButton6.UseVisualStyleBackColor = false;
-            this.bButton6.Click += new System.EventHandler(this.bButton6_Click);
             // 
             // myRjButton8
             // 
@@ -1325,27 +1200,6 @@
             this.rjButtonTime8.UseVisualStyleBackColor = false;
             this.rjButtonTime8.Click += new System.EventHandler(this.rjButtonTime8_Click);
             // 
-            // bButton8
-            // 
-            this.bButton8.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton8.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton8.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton8.BorderRadius = 12;
-            this.bButton8.BorderSize = 0;
-            this.bButton8.FlatAppearance.BorderSize = 0;
-            this.bButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton8.ForeColor = System.Drawing.Color.White;
-            this.bButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton8.Location = new System.Drawing.Point(3, 6);
-            this.bButton8.Name = "bButton8";
-            this.bButton8.Size = new System.Drawing.Size(460, 106);
-            this.bButton8.TabIndex = 0;
-            this.bButton8.TextColor = System.Drawing.Color.White;
-            this.bButton8.UseVisualStyleBackColor = false;
-            this.bButton8.Click += new System.EventHandler(this.bButton8_Click);
-            // 
             // myRjButton9
             // 
             this.myRjButton9.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1425,27 +1279,6 @@
             this.rjButtonTime9.TextColor = System.Drawing.Color.White;
             this.rjButtonTime9.UseVisualStyleBackColor = false;
             this.rjButtonTime9.Click += new System.EventHandler(this.rjButtonTime9_Click);
-            // 
-            // bButton9
-            // 
-            this.bButton9.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton9.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton9.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton9.BorderRadius = 12;
-            this.bButton9.BorderSize = 0;
-            this.bButton9.FlatAppearance.BorderSize = 0;
-            this.bButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton9.ForeColor = System.Drawing.Color.White;
-            this.bButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton9.Location = new System.Drawing.Point(3, 6);
-            this.bButton9.Name = "bButton9";
-            this.bButton9.Size = new System.Drawing.Size(460, 106);
-            this.bButton9.TabIndex = 0;
-            this.bButton9.TextColor = System.Drawing.Color.White;
-            this.bButton9.UseVisualStyleBackColor = false;
-            this.bButton9.Click += new System.EventHandler(this.bButton9_Click);
             // 
             // myRjButton10
             // 
@@ -1527,27 +1360,6 @@
             this.rjButtonTime10.UseVisualStyleBackColor = false;
             this.rjButtonTime10.Click += new System.EventHandler(this.rjButtonTime10_Click);
             // 
-            // bButton10
-            // 
-            this.bButton10.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton10.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton10.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton10.BorderRadius = 12;
-            this.bButton10.BorderSize = 0;
-            this.bButton10.FlatAppearance.BorderSize = 0;
-            this.bButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton10.ForeColor = System.Drawing.Color.White;
-            this.bButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton10.Location = new System.Drawing.Point(3, 6);
-            this.bButton10.Name = "bButton10";
-            this.bButton10.Size = new System.Drawing.Size(460, 106);
-            this.bButton10.TabIndex = 0;
-            this.bButton10.TextColor = System.Drawing.Color.White;
-            this.bButton10.UseVisualStyleBackColor = false;
-            this.bButton10.Click += new System.EventHandler(this.bButton10_Click);
-            // 
             // myRjButton11
             // 
             this.myRjButton11.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1627,27 +1439,6 @@
             this.rjButtonTime11.TextColor = System.Drawing.Color.White;
             this.rjButtonTime11.UseVisualStyleBackColor = false;
             this.rjButtonTime11.Click += new System.EventHandler(this.rjButtonTime11_Click);
-            // 
-            // bButton11
-            // 
-            this.bButton11.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton11.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton11.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton11.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton11.BorderRadius = 12;
-            this.bButton11.BorderSize = 0;
-            this.bButton11.FlatAppearance.BorderSize = 0;
-            this.bButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton11.ForeColor = System.Drawing.Color.White;
-            this.bButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton11.Location = new System.Drawing.Point(3, 6);
-            this.bButton11.Name = "bButton11";
-            this.bButton11.Size = new System.Drawing.Size(460, 106);
-            this.bButton11.TabIndex = 0;
-            this.bButton11.TextColor = System.Drawing.Color.White;
-            this.bButton11.UseVisualStyleBackColor = false;
-            this.bButton11.Click += new System.EventHandler(this.bButton11_Click);
             // 
             // myRjButton12
             // 
@@ -1729,27 +1520,6 @@
             this.rjButtonTime12.UseVisualStyleBackColor = false;
             this.rjButtonTime12.Click += new System.EventHandler(this.rjButtonTime12_Click);
             // 
-            // bButton12
-            // 
-            this.bButton12.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton12.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton12.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton12.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton12.BorderRadius = 12;
-            this.bButton12.BorderSize = 0;
-            this.bButton12.FlatAppearance.BorderSize = 0;
-            this.bButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton12.ForeColor = System.Drawing.Color.White;
-            this.bButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton12.Location = new System.Drawing.Point(3, 6);
-            this.bButton12.Name = "bButton12";
-            this.bButton12.Size = new System.Drawing.Size(460, 106);
-            this.bButton12.TabIndex = 0;
-            this.bButton12.TextColor = System.Drawing.Color.White;
-            this.bButton12.UseVisualStyleBackColor = false;
-            this.bButton12.Click += new System.EventHandler(this.bButton12_Click);
-            // 
             // myRjButton13
             // 
             this.myRjButton13.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -1829,27 +1599,6 @@
             this.rjButtonTime13.TextColor = System.Drawing.Color.White;
             this.rjButtonTime13.UseVisualStyleBackColor = false;
             this.rjButtonTime13.Click += new System.EventHandler(this.rjButtonTime13_Click);
-            // 
-            // bButton13
-            // 
-            this.bButton13.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton13.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton13.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton13.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton13.BorderRadius = 12;
-            this.bButton13.BorderSize = 0;
-            this.bButton13.FlatAppearance.BorderSize = 0;
-            this.bButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton13.ForeColor = System.Drawing.Color.White;
-            this.bButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton13.Location = new System.Drawing.Point(5, 5);
-            this.bButton13.Name = "bButton13";
-            this.bButton13.Size = new System.Drawing.Size(460, 106);
-            this.bButton13.TabIndex = 0;
-            this.bButton13.TextColor = System.Drawing.Color.White;
-            this.bButton13.UseVisualStyleBackColor = false;
-            this.bButton13.Click += new System.EventHandler(this.bButton13_Click);
             // 
             // myRjButton14
             // 
@@ -1931,27 +1680,6 @@
             this.rjButtonTime14.UseVisualStyleBackColor = false;
             this.rjButtonTime14.Click += new System.EventHandler(this.rjButtonTime14_Click);
             // 
-            // bButton14
-            // 
-            this.bButton14.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton14.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton14.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton14.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton14.BorderRadius = 12;
-            this.bButton14.BorderSize = 0;
-            this.bButton14.FlatAppearance.BorderSize = 0;
-            this.bButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton14.ForeColor = System.Drawing.Color.White;
-            this.bButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton14.Location = new System.Drawing.Point(3, 5);
-            this.bButton14.Name = "bButton14";
-            this.bButton14.Size = new System.Drawing.Size(460, 106);
-            this.bButton14.TabIndex = 0;
-            this.bButton14.TextColor = System.Drawing.Color.White;
-            this.bButton14.UseVisualStyleBackColor = false;
-            this.bButton14.Click += new System.EventHandler(this.bButton14_Click);
-            // 
             // myRjButton15
             // 
             this.myRjButton15.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -2032,27 +1760,6 @@
             this.rjButtonTime15.UseVisualStyleBackColor = false;
             this.rjButtonTime15.Click += new System.EventHandler(this.rjButtonTime15_Click);
             // 
-            // bButton15
-            // 
-            this.bButton15.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton15.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.bButton15.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
-            this.bButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bButton15.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bButton15.BorderRadius = 12;
-            this.bButton15.BorderSize = 0;
-            this.bButton15.FlatAppearance.BorderSize = 0;
-            this.bButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bButton15.ForeColor = System.Drawing.Color.White;
-            this.bButton15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bButton15.Location = new System.Drawing.Point(3, 5);
-            this.bButton15.Name = "bButton15";
-            this.bButton15.Size = new System.Drawing.Size(460, 106);
-            this.bButton15.TabIndex = 0;
-            this.bButton15.TextColor = System.Drawing.Color.White;
-            this.bButton15.UseVisualStyleBackColor = false;
-            this.bButton15.Click += new System.EventHandler(this.bButton15_Click);
-            // 
             // myRjButton16
             // 
             this.myRjButton16.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -2132,6 +1839,321 @@
             this.rjButtonTime16.TextColor = System.Drawing.Color.White;
             this.rjButtonTime16.UseVisualStyleBackColor = false;
             this.rjButtonTime16.Click += new System.EventHandler(this.rjButtonTime16_Click);
+            // 
+            // bButton1
+            // 
+            this.bButton1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton1.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton1.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton1.BorderRadius = 12;
+            this.bButton1.BorderSize = 0;
+            this.bButton1.FlatAppearance.BorderSize = 0;
+            this.bButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton1.ForeColor = System.Drawing.Color.White;
+            this.bButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton1.Location = new System.Drawing.Point(5, 6);
+            this.bButton1.Name = "bButton1";
+            this.bButton1.Size = new System.Drawing.Size(460, 106);
+            this.bButton1.TabIndex = 0;
+            this.bButton1.TextColor = System.Drawing.Color.White;
+            this.bButton1.UseVisualStyleBackColor = false;
+            this.bButton1.Click += new System.EventHandler(this.bButton1_Click);
+            // 
+            // bButton2
+            // 
+            this.bButton2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton2.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton2.BorderRadius = 12;
+            this.bButton2.BorderSize = 0;
+            this.bButton2.FlatAppearance.BorderSize = 0;
+            this.bButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton2.ForeColor = System.Drawing.Color.White;
+            this.bButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton2.Location = new System.Drawing.Point(5, 6);
+            this.bButton2.Name = "bButton2";
+            this.bButton2.Size = new System.Drawing.Size(460, 106);
+            this.bButton2.TabIndex = 0;
+            this.bButton2.TextColor = System.Drawing.Color.White;
+            this.bButton2.UseVisualStyleBackColor = false;
+            this.bButton2.Click += new System.EventHandler(this.bButton2_Click);
+            // 
+            // bButton7
+            // 
+            this.bButton7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton7.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton7.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton7.BorderRadius = 12;
+            this.bButton7.BorderSize = 0;
+            this.bButton7.FlatAppearance.BorderSize = 0;
+            this.bButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton7.ForeColor = System.Drawing.Color.White;
+            this.bButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton7.Location = new System.Drawing.Point(3, 6);
+            this.bButton7.Name = "bButton7";
+            this.bButton7.Size = new System.Drawing.Size(460, 106);
+            this.bButton7.TabIndex = 0;
+            this.bButton7.TextColor = System.Drawing.Color.White;
+            this.bButton7.UseVisualStyleBackColor = false;
+            this.bButton7.Click += new System.EventHandler(this.bButton7_Click);
+            // 
+            // bButton3
+            // 
+            this.bButton3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton3.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton3.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton3.BorderRadius = 12;
+            this.bButton3.BorderSize = 0;
+            this.bButton3.FlatAppearance.BorderSize = 0;
+            this.bButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton3.ForeColor = System.Drawing.Color.White;
+            this.bButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton3.Location = new System.Drawing.Point(4, 6);
+            this.bButton3.Name = "bButton3";
+            this.bButton3.Size = new System.Drawing.Size(460, 106);
+            this.bButton3.TabIndex = 0;
+            this.bButton3.TextColor = System.Drawing.Color.White;
+            this.bButton3.UseVisualStyleBackColor = false;
+            this.bButton3.Click += new System.EventHandler(this.bButton3_Click);
+            // 
+            // bButton4
+            // 
+            this.bButton4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton4.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton4.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton4.BorderRadius = 12;
+            this.bButton4.BorderSize = 0;
+            this.bButton4.FlatAppearance.BorderSize = 0;
+            this.bButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton4.ForeColor = System.Drawing.Color.White;
+            this.bButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton4.Location = new System.Drawing.Point(4, 6);
+            this.bButton4.Name = "bButton4";
+            this.bButton4.Size = new System.Drawing.Size(460, 106);
+            this.bButton4.TabIndex = 0;
+            this.bButton4.TextColor = System.Drawing.Color.White;
+            this.bButton4.UseVisualStyleBackColor = false;
+            this.bButton4.Click += new System.EventHandler(this.bButton4_Click);
+            // 
+            // bButton5
+            // 
+            this.bButton5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton5.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton5.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton5.BorderRadius = 12;
+            this.bButton5.BorderSize = 0;
+            this.bButton5.FlatAppearance.BorderSize = 0;
+            this.bButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton5.ForeColor = System.Drawing.Color.White;
+            this.bButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton5.Location = new System.Drawing.Point(5, 6);
+            this.bButton5.Name = "bButton5";
+            this.bButton5.Size = new System.Drawing.Size(460, 106);
+            this.bButton5.TabIndex = 0;
+            this.bButton5.TextColor = System.Drawing.Color.White;
+            this.bButton5.UseVisualStyleBackColor = false;
+            this.bButton5.Click += new System.EventHandler(this.bButton5_Click);
+            // 
+            // bButton6
+            // 
+            this.bButton6.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton6.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton6.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton6.BorderRadius = 12;
+            this.bButton6.BorderSize = 0;
+            this.bButton6.FlatAppearance.BorderSize = 0;
+            this.bButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton6.ForeColor = System.Drawing.Color.White;
+            this.bButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton6.Location = new System.Drawing.Point(3, 6);
+            this.bButton6.Name = "bButton6";
+            this.bButton6.Size = new System.Drawing.Size(460, 106);
+            this.bButton6.TabIndex = 0;
+            this.bButton6.TextColor = System.Drawing.Color.White;
+            this.bButton6.UseVisualStyleBackColor = false;
+            this.bButton6.Click += new System.EventHandler(this.bButton6_Click);
+            // 
+            // bButton8
+            // 
+            this.bButton8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton8.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton8.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton8.BorderRadius = 12;
+            this.bButton8.BorderSize = 0;
+            this.bButton8.FlatAppearance.BorderSize = 0;
+            this.bButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton8.ForeColor = System.Drawing.Color.White;
+            this.bButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton8.Location = new System.Drawing.Point(3, 6);
+            this.bButton8.Name = "bButton8";
+            this.bButton8.Size = new System.Drawing.Size(460, 106);
+            this.bButton8.TabIndex = 0;
+            this.bButton8.TextColor = System.Drawing.Color.White;
+            this.bButton8.UseVisualStyleBackColor = false;
+            this.bButton8.Click += new System.EventHandler(this.bButton8_Click);
+            // 
+            // bButton9
+            // 
+            this.bButton9.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton9.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton9.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton9.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton9.BorderRadius = 12;
+            this.bButton9.BorderSize = 0;
+            this.bButton9.FlatAppearance.BorderSize = 0;
+            this.bButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton9.ForeColor = System.Drawing.Color.White;
+            this.bButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton9.Location = new System.Drawing.Point(3, 6);
+            this.bButton9.Name = "bButton9";
+            this.bButton9.Size = new System.Drawing.Size(460, 106);
+            this.bButton9.TabIndex = 0;
+            this.bButton9.TextColor = System.Drawing.Color.White;
+            this.bButton9.UseVisualStyleBackColor = false;
+            this.bButton9.Click += new System.EventHandler(this.bButton9_Click);
+            // 
+            // bButton10
+            // 
+            this.bButton10.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton10.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton10.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton10.BorderRadius = 12;
+            this.bButton10.BorderSize = 0;
+            this.bButton10.FlatAppearance.BorderSize = 0;
+            this.bButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton10.ForeColor = System.Drawing.Color.White;
+            this.bButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton10.Location = new System.Drawing.Point(3, 6);
+            this.bButton10.Name = "bButton10";
+            this.bButton10.Size = new System.Drawing.Size(460, 106);
+            this.bButton10.TabIndex = 0;
+            this.bButton10.TextColor = System.Drawing.Color.White;
+            this.bButton10.UseVisualStyleBackColor = false;
+            this.bButton10.Click += new System.EventHandler(this.bButton10_Click);
+            // 
+            // bButton11
+            // 
+            this.bButton11.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton11.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton11.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton11.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton11.BorderRadius = 12;
+            this.bButton11.BorderSize = 0;
+            this.bButton11.FlatAppearance.BorderSize = 0;
+            this.bButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton11.ForeColor = System.Drawing.Color.White;
+            this.bButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton11.Location = new System.Drawing.Point(3, 6);
+            this.bButton11.Name = "bButton11";
+            this.bButton11.Size = new System.Drawing.Size(460, 106);
+            this.bButton11.TabIndex = 0;
+            this.bButton11.TextColor = System.Drawing.Color.White;
+            this.bButton11.UseVisualStyleBackColor = false;
+            this.bButton11.Click += new System.EventHandler(this.bButton11_Click);
+            // 
+            // bButton12
+            // 
+            this.bButton12.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton12.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton12.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton12.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton12.BorderRadius = 12;
+            this.bButton12.BorderSize = 0;
+            this.bButton12.FlatAppearance.BorderSize = 0;
+            this.bButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton12.ForeColor = System.Drawing.Color.White;
+            this.bButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton12.Location = new System.Drawing.Point(3, 6);
+            this.bButton12.Name = "bButton12";
+            this.bButton12.Size = new System.Drawing.Size(460, 106);
+            this.bButton12.TabIndex = 0;
+            this.bButton12.TextColor = System.Drawing.Color.White;
+            this.bButton12.UseVisualStyleBackColor = false;
+            this.bButton12.Click += new System.EventHandler(this.bButton12_Click);
+            // 
+            // bButton13
+            // 
+            this.bButton13.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton13.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton13.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton13.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton13.BorderRadius = 12;
+            this.bButton13.BorderSize = 0;
+            this.bButton13.FlatAppearance.BorderSize = 0;
+            this.bButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton13.ForeColor = System.Drawing.Color.White;
+            this.bButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton13.Location = new System.Drawing.Point(5, 5);
+            this.bButton13.Name = "bButton13";
+            this.bButton13.Size = new System.Drawing.Size(460, 106);
+            this.bButton13.TabIndex = 0;
+            this.bButton13.TextColor = System.Drawing.Color.White;
+            this.bButton13.UseVisualStyleBackColor = false;
+            this.bButton13.Click += new System.EventHandler(this.bButton13_Click);
+            // 
+            // bButton14
+            // 
+            this.bButton14.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton14.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton14.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton14.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton14.BorderRadius = 12;
+            this.bButton14.BorderSize = 0;
+            this.bButton14.FlatAppearance.BorderSize = 0;
+            this.bButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton14.ForeColor = System.Drawing.Color.White;
+            this.bButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton14.Location = new System.Drawing.Point(3, 5);
+            this.bButton14.Name = "bButton14";
+            this.bButton14.Size = new System.Drawing.Size(460, 106);
+            this.bButton14.TabIndex = 0;
+            this.bButton14.TextColor = System.Drawing.Color.White;
+            this.bButton14.UseVisualStyleBackColor = false;
+            this.bButton14.Click += new System.EventHandler(this.bButton14_Click);
+            // 
+            // bButton15
+            // 
+            this.bButton15.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton15.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.bButton15.BackgroundImage = global::NurseCalling.Properties.Resources.transfusion_patient_bed_with_ecg_machine_icon_in_blue_and_gray_color_vector;
+            this.bButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bButton15.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bButton15.BorderRadius = 12;
+            this.bButton15.BorderSize = 0;
+            this.bButton15.FlatAppearance.BorderSize = 0;
+            this.bButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bButton15.ForeColor = System.Drawing.Color.White;
+            this.bButton15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bButton15.Location = new System.Drawing.Point(3, 5);
+            this.bButton15.Name = "bButton15";
+            this.bButton15.Size = new System.Drawing.Size(460, 106);
+            this.bButton15.TabIndex = 0;
+            this.bButton15.TextColor = System.Drawing.Color.White;
+            this.bButton15.UseVisualStyleBackColor = false;
+            this.bButton15.Click += new System.EventHandler(this.bButton15_Click);
             // 
             // bButton16
             // 
@@ -2294,5 +2316,6 @@
         private Controls.RJButton rjSettings;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Controls.RJButton rjBtnCross;
     }
 }

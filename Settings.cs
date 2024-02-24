@@ -54,7 +54,7 @@ namespace NurseCalling
 
             portBox1.Text = modelData.comport;
 
-            /* SetPlaceHolder(textBoxRegist1, "Hub 1");
+             /* SetPlaceHolder(textBoxRegist1, "Hub 1");
              SetPlaceHolder(textBoxRegist2, "Hub 2");
              SetPlaceHolder(textBoxRegist3, "Hub 3");
              SetPlaceHolder(textBoxRegist4, "Hub 4");

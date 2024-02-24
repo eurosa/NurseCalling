@@ -33,7 +33,9 @@ namespace NurseCalling
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             dateTimePicker2.CustomFormat = "dd-MM-yyyy";
-           
+
+            dateTimePicker2.Value = DateTime.Today;
+            dateTimePicker1.Value = DateTime.Today.AddDays(-9);
 
             FillSiteNameComboBox();
             FillCallComboBox();
@@ -168,6 +170,27 @@ namespace NurseCalling
         }
 
 
+        public void DeleteDataYearsBefore(SQLiteConnection m_dbConnection)
+        {
+
+
+            SQLiteCommand deleteRowSQL = new SQLiteCommand("DELETE FROM call_table WHERE date_<= date('now','-3285 day')", m_dbConnection);//3285 9x365
+
+
+            try
+            {
+
+                deleteRowSQL.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
         public void DataGridViewColorChange(DataGridView dataGridView)
         {
 
@@ -196,6 +219,7 @@ namespace NurseCalling
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            DeleteDataYearsBefore(MDbConnection);
             LoadData();
             CreateGraph(zedGraphControl1, MDbConnection);
         }
@@ -207,7 +231,7 @@ namespace NurseCalling
 
             // themeColorComboBox.SelectedIndex = themeColorComboBox.FindStringExact(dataModel.theme_color);
     
-            SQLiteCommand cmd = new SQLiteCommand("select DISTINCT TRIM(registerId) as registerId  From call_table", MDbConnection);
+            SQLiteCommand cmd = new SQLiteCommand("select DISTINCT TRIM(registerId) as registerId  From call_table ORDER BY registerId ASC", MDbConnection);
             SQLiteDataReader Sdr = cmd.ExecuteReader();
       
             while (Sdr.Read())
@@ -281,7 +305,7 @@ namespace NurseCalling
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             // creating new WorkBook within Excel application  
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            // creating new Excelsheet in workbook  
+            // creating new ExcelSheet in workbook  
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
             // see the excel sheet behind the program  
             app.Visible = true;

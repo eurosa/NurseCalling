@@ -79,7 +79,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 93;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 2, 2, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2024, 2, 23, 0, 0, 0, 0);
             // 
             // dateTimePicker2
             // 

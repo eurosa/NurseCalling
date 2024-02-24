@@ -1009,6 +1009,27 @@ namespace NurseCalling
 
         }
 
+        public void DeleteDataYearsBefore(SQLiteConnection m_dbConnection, DataModel dataModel)
+        {
+
+
+            SQLiteCommand deleteRowSQL = new SQLiteCommand("DELETE FROM call_table WHERE date_<= date('now','-1 day')", m_dbConnection);//3285 9x365
+
+
+            try
+            {
+            
+                deleteRowSQL.ExecuteNonQuery();
+          
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+           
+        }
+
         public void update_call_data(SQLiteConnection m_dbConnection, string elapseTime, string regId)
         {
             if (elapseTime!="") { 

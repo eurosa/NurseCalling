@@ -84,10 +84,10 @@ namespace NurseCalling
             rough1 = new Rough1();
             rough2 = new Rough2();
             rough3 = new Rough3();
+            this.FormClosed += MyFormClosed;
+            // modbusClient = new ModbusClient("COM1");
 
-           // modbusClient = new ModbusClient("COM1");
-
-           // Dock = DockStyle.Fill;
+            // Dock = DockStyle.Fill;
             AutoScroll = true;
             flowLayoutPanel1.AutoScroll = true;
            // flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.MaximumSize.Width, 0);// flowLayoutPanel1.MaximumSize.Width;
@@ -353,7 +353,11 @@ namespace NurseCalling
             setImageToButton();
         }
 
-
+        void MyFormClosed(object sender, FormClosedEventArgs e)
+        {
+            AutoSaveOnClose();
+            Console.WriteLine("FormClosed Event");
+        }
         public void setImageToButton() {
             if (dataModel.checkBoxRegister1)
             {
@@ -2404,6 +2408,265 @@ namespace NurseCalling
                 flowLayoutPanel1.HorizontalScroll.Value = flowLayoutPanel1.HorizontalScroll.Maximum;
             }
 
+        }
+
+        public void AutoSaveOnClose() { 
+        if (!string.IsNullOrEmpty(myElapseTime[0])) { 
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[0], "1");
+                }
+            if (!string.IsNullOrEmpty(myElapseTime[1]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[1], "2");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[2]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[2], "3");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[3]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[3], "4");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[4]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[4], "5");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[5]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[5], "6");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[6]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[6], "7");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[7]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[7], "8");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[8]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[8], "9");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[9]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[9], "10");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[10]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[10], "11");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[11]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[11], "12");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[12]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[12], "13");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[13]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[13], "14");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[14]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[14], "15");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[15]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[15], "16");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[16]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[16], "17");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[17]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[17], "18");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[18]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[18], "19");
+
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[19]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[19], "20");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[20]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[20], "21");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[21]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[21], "22");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[22]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[22], "23");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[23]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[23], "24");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[24]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[24], "25");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[25]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[25], "26");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[26]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[26], "27");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[27]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[27], "28");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[28]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[28], "29");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[29]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[29], "30");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[30]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[30], "31");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[31]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[31], "32");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[32]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[32], "33");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[33]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[33], "34");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[34]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[34], "35");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[35]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[35], "36");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[36]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[36], "37");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[37]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[37], "38");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[38]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[38], "39");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[39]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[39], "40");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[40]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[40], "41");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[41]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[41], "42");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[42]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[42], "43");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[43]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[43], "44");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[44]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[44], "45");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[45]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[45], "46");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[46]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[46], "47");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[47]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[47], "48");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[48]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[48], "49");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[49]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[49], "50");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[50]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[50], "51");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[51]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[51], "52");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[52]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[52], "53");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[53]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[53], "54");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[54]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[54], "55");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[55]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[55], "56");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[56]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[56], "57");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[57]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[57], "58");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[58]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[58], "59");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[59]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[59], "60");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[60]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[60], "61");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[61]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[61], "62");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[62]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[62], "63");
+            }
+            if (!string.IsNullOrEmpty(myElapseTime[63]))
+            {
+                dbHandlr.update_call_data(m_dbConnection, myElapseTime[63], "64");
+            }
         }
 
         public void checkStatus() 
@@ -7034,6 +7297,12 @@ namespace NurseCalling
 
         }
 
+        private void rjBtnCross_Click(object sender, EventArgs e)
+        {
+            AutoSaveOnClose();
+            this.Close();
+        }
+
         public void StopWatchTimer()
         {
             if (myStopWatchObjects[0].IsRunning)
@@ -7186,7 +7455,7 @@ namespace NurseCalling
                 rough1.myRjButton2.Text = objTimeSpan.ToString("mm':'ss");
                 myElapseTime[17] = objTimeSpan.ToString("mm':'ss");
                 //  Console.WriteLine("Running/Stop: " + stopWatchObj2().IsRunning);
-                // form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
+                //  form1.myRjButton2.Text = String.Format(CultureInfo.CurrentCulture, "{0:00}:{1:00}:{2:00}", objTimeSpan.Hours, objTimeSpan.Minutes, objTimeSpan.Seconds);
 
             }
             if (myStopWatchObjects[18].IsRunning)
