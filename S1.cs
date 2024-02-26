@@ -325,7 +325,7 @@ namespace NurseCalling
 
             label3.Text = dataModel.textBox1Display;
 
-            blinkLabel();
+           // blinkLabel();
 
             connect1();
 
@@ -987,8 +987,8 @@ namespace NurseCalling
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            if (dataModel.checkBoxHub1 || dataModel.checkBoxHub2 || dataModel.checkBoxHub3 || dataModel.checkBoxHub4)
-            {
+           // if (dataModel.checkBoxHub1 || dataModel.checkBoxHub2 || dataModel.checkBoxHub3 || dataModel.checkBoxHub4)
+           // {
                 try
                 {
                     this.Invoke((MethodInvoker)delegate
@@ -1031,8 +1031,8 @@ namespace NurseCalling
 
                              }*/
 
-                            if (dataModel.checkBoxHub1)
-                            {
+                           // if (dataModel.checkBoxHub1)
+                           // {
 
                                 switch ((startAddress1 + i))
                                 {
@@ -1117,12 +1117,12 @@ namespace NurseCalling
                                         rough.rjButton16.Text = dataModel.textBoxRegist16;// registers1[i].ToString();
                                                                                           //CallValueSet(rough.rjButton16, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist16);
                                         break;
-                                }
+                               // }
 
                             }
 
-                            if (dataModel.checkBoxHub2)
-                            {
+                          //  if (dataModel.checkBoxHub2)
+                           // {
 
                                 Console.WriteLine("My_val 2 " + (int)registers2[i] + " " + myObjects2[i].Value);
                                 // ++++++++++++++++++++++++++++++++++++ s2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1211,11 +1211,11 @@ namespace NurseCalling
 
                                 }
 
-                            }
+                           // }
                             // ++++++++++++++++++++++++++++++++++++ s3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-                            if (dataModel.checkBoxHub3)
-                            {
+                           // if (dataModel.checkBoxHub3)
+                          //  {
 
 
                                 switch ((startAddress3 + i))
@@ -1302,9 +1302,9 @@ namespace NurseCalling
                                         break;
                                 }
 
-                            }
-                            if (dataModel.checkBoxHub4)
-                            {
+                          //  }
+                          //  if (dataModel.checkBoxHub4)
+                            //{
 
                                 Console.WriteLine("Register 4 value: " + (int)registers2[i] + " " + myObjects2[i].Value);
                                 // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1391,7 +1391,7 @@ namespace NurseCalling
                                                                                            //CallValueSet(rough3.rjButton16, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist64);
                                         break;
 
-                                }
+                              //  }
 
                             }
 
@@ -1415,7 +1415,7 @@ namespace NurseCalling
                     Console.WriteLine("serial:" + ex);
 
                 }
-            }
+            //}
         }
 
         public void CallValueSet(RJButton myButton,int myValue,int registerNo, string myStatus) { 
@@ -2155,16 +2155,16 @@ namespace NurseCalling
                 //{
                 //Thread.Sleep(1000);
                     
-                  if((new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(256)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(261)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(262)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(258))
-                  {
-                    Console.WriteLine("my_visible 2");
+                //  if((new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(256)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(261)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(262)|| (new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(258))
+                 // {
+                //    Console.WriteLine("my_visible 2");
                 //    flowLayoutPanel1.Hide();
                   //  s2.flowLayoutPanel1.Show();
                    
 
                     //s3.panel1.Hide();
                     //s4.panel1.Hide();
-                }
+              //  }
                 // Thread.Sleep(500);
                 // timer1.Stop();
                 //   blink_times--;
@@ -2704,7 +2704,7 @@ namespace NurseCalling
             myObjects[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[0].DidChange += () => {
 
-                AutoScrollMax();
+             
 
                 Console.WriteLine("changed!");
 
@@ -2786,13 +2786,13 @@ namespace NurseCalling
                     rough.rjButton1.BackColor = Color.Blue;
                     CallValSet("1", dataModel.textBoxRegist1, myObjects[0].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[1].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2860,14 +2860,14 @@ namespace NurseCalling
                     rough.rjButton2.BackColor = Color.Blue;
                     CallValSet("2", dataModel.textBoxRegist2, myObjects[1].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[2].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -2935,13 +2935,13 @@ namespace NurseCalling
                     rough.rjButton3.BackColor = Color.Blue;
                     CallValSet("3", dataModel.textBoxRegist3, myObjects[2].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[3].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+              
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -3008,14 +3008,14 @@ namespace NurseCalling
                     rough.rjButton4.BackColor = Color.Blue;
                     CallValSet("4", dataModel.textBoxRegist4, myObjects[3].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[4].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+              
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -3085,13 +3085,13 @@ namespace NurseCalling
                     rough.rjButton5.BackColor = Color.Blue;
                     CallValSet("5", dataModel.textBoxRegist5, myObjects[4].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[5].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros 
                 string dateTime = DateTime.Now.ToString();
@@ -3160,13 +3160,13 @@ namespace NurseCalling
                     rough.rjButton6.BackColor = Color.Blue;
                     CallValSet("6", dataModel.textBoxRegist6, myObjects[5].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[6].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3235,14 +3235,14 @@ namespace NurseCalling
                     rough.rjButton7.BackColor = Color.Blue;
                     CallValSet("7", dataModel.textBoxRegist7, myObjects[6].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[7].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3309,13 +3309,13 @@ namespace NurseCalling
                     rough.rjButton8.BackColor = Color.Blue;
                     CallValSet("8", dataModel.textBoxRegist8, myObjects[7].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[8].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3383,13 +3383,13 @@ namespace NurseCalling
                     rough.rjButton9.BackColor = Color.Blue;
                     CallValSet("9", dataModel.textBoxRegist9, myObjects[8].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[9].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+      
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3456,13 +3456,13 @@ namespace NurseCalling
                     rough.rjButton10.BackColor = Color.Blue;
                     CallValSet("10", dataModel.textBoxRegist10, myObjects[9].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[10].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3528,14 +3528,14 @@ namespace NurseCalling
                     rough.rjButton11.BackColor = Color.Blue;
                     CallValSet("11", dataModel.textBoxRegist11, myObjects[10].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[11].DidChange += () => {
                 
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+             
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3602,13 +3602,13 @@ namespace NurseCalling
                     rough.rjButton12.BackColor = Color.Blue;
                     CallValSet("12", dataModel.textBoxRegist12, myObjects[11].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[12].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+             
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3675,13 +3675,13 @@ namespace NurseCalling
                     rough.rjButton13.BackColor = Color.Blue;
                     CallValSet("13", dataModel.textBoxRegist13, myObjects[12].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[13].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3748,14 +3748,14 @@ namespace NurseCalling
                     rough.rjButton14.BackColor = Color.Blue;
                     CallValSet("14", dataModel.textBoxRegist14, myObjects[13].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[14].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3822,13 +3822,13 @@ namespace NurseCalling
                     rough.rjButton15.BackColor = Color.Blue;
                     CallValSet("15", dataModel.textBoxRegist15, myObjects[14].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects[15].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3895,7 +3895,7 @@ namespace NurseCalling
                     rough.rjButton16.BackColor = Color.Blue;
                     CallValSet("16", dataModel.textBoxRegist16, myObjects[15].Value.ToString(), dateTime);
                 }
-                 
+                AutoScrollMax();
             };
 
 
@@ -3904,7 +3904,7 @@ namespace NurseCalling
             myObjects2[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[0].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -3970,13 +3970,13 @@ namespace NurseCalling
                     rough1.rjButton1.BackColor = Color.Blue;
                     CallValSet("17", dataModel.textBoxRegist17, myObjects2[0].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[1].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4043,14 +4043,14 @@ namespace NurseCalling
                     rough1.rjButton2.BackColor = Color.Blue;
                     CallValSet("18", dataModel.textBoxRegist18, myObjects2[1].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects2[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[2].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+              
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4119,13 +4119,13 @@ namespace NurseCalling
                     rough1.rjButton3.BackColor = Color.Blue;
                     CallValSet("19", dataModel.textBoxRegist19, myObjects2[2].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[3].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4181,14 +4181,14 @@ namespace NurseCalling
                     rough1.rjButton4.BackColor = Color.Blue;
                     CallValSet("20", dataModel.textBoxRegist20, myObjects2[3].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects2[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[4].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4240,7 +4240,7 @@ namespace NurseCalling
                     rough1.rjButton5.BackColor = Color.Blue;
                     CallValSet("21", dataModel.textBoxRegist21, myObjects2[4].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[5].WillChange += () => { Console.WriteLine("will be changed!"); };
@@ -4298,13 +4298,13 @@ namespace NurseCalling
                     rough1.rjButton6.BackColor = Color.Blue;
                     CallValSet("22", dataModel.textBoxRegist22, myObjects2[5].Value.ToString(), dateTime);
                 }
-
+                 AutoScrollMax();
             };
 
             myObjects2[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[6].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4356,14 +4356,14 @@ namespace NurseCalling
                     rough1.rjButton7.BackColor = Color.Blue;
                     CallValSet("23", dataModel.textBoxRegist23, myObjects2[6].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects2[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[7].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4415,13 +4415,13 @@ namespace NurseCalling
                     rough1.rjButton8.BackColor = Color.Blue;
                     CallValSet("24", dataModel.textBoxRegist24, myObjects2[7].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[8].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4473,13 +4473,13 @@ namespace NurseCalling
                     rough1.rjButton9.BackColor = Color.Blue;
                     CallValSet("25", dataModel.textBoxRegist25, myObjects2[8].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[9].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4531,13 +4531,13 @@ namespace NurseCalling
                     rough1.rjButton10.BackColor = Color.Blue;
                     CallValSet("26", dataModel.textBoxRegist26, myObjects2[9].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[10].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4588,13 +4588,13 @@ namespace NurseCalling
                     rough1.rjButton11.BackColor = Color.Blue;
                     CallValSet("27", dataModel.textBoxRegist27, myObjects2[10].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[11].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4646,13 +4646,13 @@ namespace NurseCalling
                     rough1.rjButton12.BackColor = Color.Blue;
                     CallValSet("28", dataModel.textBoxRegist28, myObjects2[11].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[12].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4704,13 +4704,13 @@ namespace NurseCalling
                     rough1.rjButton13.BackColor = Color.Blue;
                     CallValSet("29", dataModel.textBoxRegist29, myObjects2[12].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[13].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+            
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4762,14 +4762,14 @@ namespace NurseCalling
                     rough1.rjButton14.BackColor = Color.Blue;
                     CallValSet("30", dataModel.textBoxRegist30, myObjects2[13].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects2[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[14].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4821,13 +4821,13 @@ namespace NurseCalling
                     rough1.rjButton15.BackColor = Color.Blue;
                     CallValSet("31", dataModel.textBoxRegist31, myObjects2[14].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects2[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects2[15].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4879,14 +4879,14 @@ namespace NurseCalling
                     rough1.rjButton16.BackColor = Color.Blue;
                     CallValSet("32", dataModel.textBoxRegist32, myObjects2[15].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++S4+++++++++++++++++++++++++++++++++++++++++++++++++++++++
             myObjects3[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[0].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4938,13 +4938,13 @@ namespace NurseCalling
                     rough2.rjButton1.BackColor = Color.Blue;
                     CallValSet("33", dataModel.textBoxRegist33, myObjects[32].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[1].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -4996,14 +4996,14 @@ namespace NurseCalling
                     rough2.rjButton2.BackColor = Color.Blue;
                     CallValSet("34", dataModel.textBoxRegist34, myObjects3[1].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects3[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[2].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5055,13 +5055,13 @@ namespace NurseCalling
                     rough2.rjButton3.BackColor = Color.Blue;
                     CallValSet("35", dataModel.textBoxRegist35, myObjects3[2].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[3].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5113,14 +5113,14 @@ namespace NurseCalling
                     rough2.rjButton4.BackColor = Color.Blue;
                     CallValSet("36", dataModel.textBoxRegist36, myObjects3[3].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects3[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[4].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5171,13 +5171,13 @@ namespace NurseCalling
                     rough2.rjButton5.BackColor = Color.Blue;
                     CallValSet("37", dataModel.textBoxRegist37, myObjects3[4].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[5].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5229,13 +5229,13 @@ namespace NurseCalling
                     rough2.rjButton6.BackColor = Color.Blue;
                     CallValSet("38", dataModel.textBoxRegist38, myObjects3[5].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[6].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5287,14 +5287,14 @@ namespace NurseCalling
                     rough2.rjButton7.BackColor = Color.Blue;
                     CallValSet("39", dataModel.textBoxRegist39, myObjects3[6].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects3[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[7].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5346,13 +5346,13 @@ namespace NurseCalling
                     rough2.rjButton8.BackColor = Color.Blue;
                     CallValSet("40", dataModel.textBoxRegist40, myObjects3[7].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[8].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5404,13 +5404,13 @@ namespace NurseCalling
                     rough2.rjButton9.BackColor = Color.Blue;
                     CallValSet("41", dataModel.textBoxRegist41, myObjects3[8].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[9].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5462,13 +5462,13 @@ namespace NurseCalling
                     rough2.rjButton10.BackColor = Color.Blue;
                     CallValSet("42", dataModel.textBoxRegist42, myObjects3[9].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[10].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5520,13 +5520,13 @@ namespace NurseCalling
                     rough2.rjButton11.BackColor = Color.Blue;
                     CallValSet("43", dataModel.textBoxRegist43, myObjects3[10].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[11].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5579,13 +5579,13 @@ namespace NurseCalling
                     rough2.rjButton12.BackColor = Color.Blue;
                     CallValSet("44", dataModel.textBoxRegist44, myObjects3[11].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[12].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5637,13 +5637,13 @@ namespace NurseCalling
                     rough2.rjButton13.BackColor = Color.Blue;
                     CallValSet("45", dataModel.textBoxRegist45, myObjects3[12].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[13].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5695,14 +5695,14 @@ namespace NurseCalling
                     rough2.rjButton14.BackColor = Color.Blue;
                     CallValSet("46", dataModel.textBoxRegist46, myObjects3[13].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects3[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[14].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+       
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5754,13 +5754,13 @@ namespace NurseCalling
                     rough2.rjButton15.BackColor = Color.Blue;
                     CallValSet("47", dataModel.textBoxRegist47, myObjects3[14].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects3[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects3[15].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5811,7 +5811,7 @@ namespace NurseCalling
                     rough2.rjButton16.BackColor = Color.Blue;
                     CallValSet("48", dataModel.textBoxRegist48, myObjects3[15].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
@@ -5819,7 +5819,7 @@ namespace NurseCalling
             myObjects4[0].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[0].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5871,13 +5871,13 @@ namespace NurseCalling
                     CallValSet("49", dataModel.textBoxRegist49, myObjects4[0].Value.ToString(), dateTime);
 
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[1].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[1].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+             
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5929,14 +5929,14 @@ namespace NurseCalling
                     rough3.rjButton2.BackColor = Color.Blue;
                     CallValSet("50", dataModel.textBoxRegist50, myObjects4[1].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects4[2].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[2].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+              
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -5988,13 +5988,13 @@ namespace NurseCalling
                     rough3.rjButton3.BackColor = Color.Blue;
                     CallValSet("51", dataModel.textBoxRegist51, myObjects4[2].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[3].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[3].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6047,14 +6047,14 @@ namespace NurseCalling
                     rough3.rjButton4.BackColor = Color.Blue;
                     CallValSet("52", dataModel.textBoxRegist52, myObjects4[3].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects4[4].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[4].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6106,13 +6106,13 @@ namespace NurseCalling
                     rough3.rjButton5.BackColor = Color.Blue;
                     CallValSet("53", dataModel.textBoxRegist53, myObjects4[4].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[5].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[5].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6164,13 +6164,13 @@ namespace NurseCalling
                     rough3.rjButton6.BackColor = Color.Blue;
                     CallValSet("54", dataModel.textBoxRegist54, myObjects4[5].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[6].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[6].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6222,14 +6222,14 @@ namespace NurseCalling
                     rough3.rjButton7.BackColor = Color.Blue;
                     CallValSet("55", dataModel.textBoxRegist55, myObjects4[6].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects4[7].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[7].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6281,7 +6281,7 @@ namespace NurseCalling
                     rough3.rjButton8.BackColor = Color.Blue;
                     CallValSet("56", dataModel.textBoxRegist56, myObjects4[7].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
@@ -6290,7 +6290,7 @@ namespace NurseCalling
             myObjects4[8].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[8].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6343,13 +6343,13 @@ namespace NurseCalling
                     rough3.rjButton9.BackColor = Color.Blue;
                     CallValSet("57", dataModel.textBoxRegist57, myObjects4[8].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[9].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[9].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+          
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6401,13 +6401,13 @@ namespace NurseCalling
                     rough3.rjButton10.BackColor = Color.Blue;
                     CallValSet("58", dataModel.textBoxRegist58, myObjects4[9].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[10].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[10].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6459,13 +6459,13 @@ namespace NurseCalling
                     rough3.rjButton11.BackColor = Color.Blue;
                     CallValSet("59", dataModel.textBoxRegist59, myObjects4[10].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[11].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[11].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6517,13 +6517,13 @@ namespace NurseCalling
                     rough3.rjButton12.BackColor = Color.Blue;
                     CallValSet("60", dataModel.textBoxRegist60, myObjects4[11].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[12].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[12].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6575,13 +6575,13 @@ namespace NurseCalling
                     rough3.rjButton13.BackColor = Color.Blue;
                     CallValSet("61", dataModel.textBoxRegist61, myObjects4[10].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[13].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[13].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+                
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6633,14 +6633,14 @@ namespace NurseCalling
                     rough3.rjButton14.BackColor = Color.Blue;
                     CallValSet("62", dataModel.textBoxRegist62, myObjects4[13].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
 
             myObjects4[14].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[14].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+              
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6691,13 +6691,13 @@ namespace NurseCalling
                     rough3.rjButton15.BackColor = Color.Blue;
                     CallValSet("63", dataModel.textBoxRegist63, myObjects4[14].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             myObjects4[15].WillChange += () => { Console.WriteLine("will be changed!"); };
             myObjects4[15].DidChange += () => {
                 Console.WriteLine("changed!");
-                AutoScrollMax();
+               
                 string time = DateTime.Now.ToString("hh:mm:ss"); // includes leading zeros
                 // string date = DateTime.Now.ToString("dd/MM/yy"); // includes leading zeros
                 string dateTime = DateTime.Now.ToString();
@@ -6748,7 +6748,7 @@ namespace NurseCalling
                     rough3.rjButton16.BackColor = Color.Blue;
                     CallValSet("64", dataModel.textBoxRegist64, myObjects4[15].Value.ToString(), dateTime);
                 }
-
+                AutoScrollMax();
             };
 
             
