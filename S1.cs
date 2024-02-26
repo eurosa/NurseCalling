@@ -26,7 +26,7 @@ namespace NurseCalling
     
     public partial class S1 : Form
     {
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        /*[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern EXECUTION_STATE SetThreadExecutionState(EXECUTION_STATE esFlags);
 
         [FlagsAttribute]
@@ -38,7 +38,7 @@ namespace NurseCalling
             ES_SYSTEM_REQUIRED = 0x00000001
             // Legacy flag, should not be used.
             // ES_USER_PRESENT = 0x00000004
-        }
+        }*/
 
         GraphPane myPane;
         SQLiteConnection m_dbConnection;
@@ -367,13 +367,13 @@ namespace NurseCalling
 
             setImageToButton();
 
-            PreventSleep();
+            // PreventSleep();
         }
 
        public void PreventSleep()
         {
             // Prevent Idle-to-Sleep (monitor not affected) (see note above)
-            SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
+          //  SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
         }
 
         void MyFormClosed(object sender, FormClosedEventArgs e)
@@ -987,429 +987,435 @@ namespace NurseCalling
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            try {
-                this.Invoke((MethodInvoker)delegate {
-
-                    string hex_add = "0x0001";// "0x00A4";
-                    ushort dec_add = Convert.ToUInt16(hex_add, 16);
-                    ushort startAddress1 = dec_add;
-                    ushort startAddress2 = dec_add;
-                    ushort startAddress3 = dec_add;
-                    ushort startAddress4 = dec_add;
-                    ushort numRegisters = 16;
-
-                   
-
-                    for (int i = 0; i < numRegisters; i++)
+            if (dataModel.checkBoxHub1 || dataModel.checkBoxHub2 || dataModel.checkBoxHub3 || dataModel.checkBoxHub4)
+            {
+                try
+                {
+                    this.Invoke((MethodInvoker)delegate
                     {
 
-                        Console.WriteLine("Register {0}={1}", startAddress1 + i, registers1[i]);
-                        // Console.WriteLine("Register {0}={1}", startAddress2 + i, registers1[i]);
-                        // Console.WriteLine("Register {0}={1}", startAddress3 + i, registers1[i]);
-                       // Console.WriteLine("Register {0}={1}", startAddress4 + i, registers1[i]);
+                        string hex_add = "0x0001";// "0x00A4";
+                        ushort dec_add = Convert.ToUInt16(hex_add, 16);
+                        ushort startAddress1 = dec_add;
+                        ushort startAddress2 = dec_add;
+                        ushort startAddress3 = dec_add;
+                        ushort startAddress4 = dec_add;
+                        ushort numRegisters = 16;
 
-                        // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime); 
 
-                        /* if ((startAddress + i) == 1)
-                         {
-                            // Age = (int)registers[i];
-                            // roundPanelWithoutTitle1.Location = new System.Drawing.Point(this.roundPanelWithoutTitle1.Location.X, this.roundPanelWithoutTitle1.Location.Y);
-                            myObjects[i].Value = (int)registers1[i];
-                            rough.rjButton1.Text = registers1[i].ToString();
 
-                         
-                         }
-                         if ((startAddress + i) == 2)
-                         {
-                             // Age = (int)registers[i];
-                             myObjects[i].Value = (int)registers1[i];
-                             rough.rjButton2.Text = registers1[i].ToString();
-                             
-                         }*/
-
-                        if (dataModel.checkBoxHub1) {
-
-                        switch ((startAddress1 + i))
+                        for (int i = 0; i < numRegisters; i++)
                         {
 
-                            case 1:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton1.Text = dataModel.textBoxRegist1;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton1, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist1);
-                                break;
-                            case 2:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton2.Text = dataModel.textBoxRegist2;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton2, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist2);
-                                break;
-                            case 3:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton3.Text = dataModel.textBoxRegist3;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton3, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist3);
-                                break;
-                            case 4:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton4.Text = dataModel.textBoxRegist4;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton4, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist4);
-                                break;
-                            case 5:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton5.Text = dataModel.textBoxRegist5;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton5, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist5);
-                                break;
-                            case 6:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton6.Text = dataModel.textBoxRegist6;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton6, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist6);
-                                break;
-                            case 7:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton7.Text = dataModel.textBoxRegist7;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton7, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist7);
-                                break;
-                            case 8:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton8.Text = dataModel.textBoxRegist8;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton8, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist8);
-                                break;
-                            case 9:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton9.Text = dataModel.textBoxRegist9;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton9, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist9);
-                                break;
-                            case 10:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton10.Text = dataModel.textBoxRegist10;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton10, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist10);
-                                break;
-                            case 11:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton11.Text = dataModel.textBoxRegist11;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton11, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist11);
-                                break;
-                            case 12:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton12.Text = dataModel.textBoxRegist12;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton12, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist12);
-                                break;
-                            case 13:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton13.Text = dataModel.textBoxRegist13;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton13, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist13);
-                                break;
-                            case 14:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton14.Text = dataModel.textBoxRegist14;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton14, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist14);
-                                break;
-                            case 15:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton15.Text = dataModel.textBoxRegist15;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton15, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist15);
-                                break;
-                            case 16:
-                                myObjects[i].Value = (int)registers1[i];
-                                rough.rjButton16.Text = dataModel.textBoxRegist16;// registers1[i].ToString();
-                                //CallValueSet(rough.rjButton16, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist16);
-                                break;
-                        }
+                            Console.WriteLine("Register {0}={1}", startAddress1 + i, registers1[i]);
+                            // Console.WriteLine("Register {0}={1}", startAddress2 + i, registers1[i]);
+                            // Console.WriteLine("Register {0}={1}", startAddress3 + i, registers1[i]);
+                            // Console.WriteLine("Register {0}={1}", startAddress4 + i, registers1[i]);
 
-                        }
+                            // Console.WriteLine("Welcome New User " + Properties.Settings.Default.FirstCallTime); 
 
-                        if (dataModel.checkBoxHub2)
-                        {
+                            /* if ((startAddress + i) == 1)
+                             {
+                                // Age = (int)registers[i];
+                                // roundPanelWithoutTitle1.Location = new System.Drawing.Point(this.roundPanelWithoutTitle1.Location.X, this.roundPanelWithoutTitle1.Location.Y);
+                                myObjects[i].Value = (int)registers1[i];
+                                rough.rjButton1.Text = registers1[i].ToString();
 
-                            Console.WriteLine("My_val 2 "+ (int)registers2[i]+" " + myObjects2[i].Value);
-                            // ++++++++++++++++++++++++++++++++++++ s2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                            switch ((startAddress2 + i))
+
+                             }
+                             if ((startAddress + i) == 2)
+                             {
+                                 // Age = (int)registers[i];
+                                 myObjects[i].Value = (int)registers1[i];
+                                 rough.rjButton2.Text = registers1[i].ToString();
+
+                             }*/
+
+                            if (dataModel.checkBoxHub1)
                             {
-                                case 1:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton1.Text = dataModel.textBoxRegist17;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton1, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist17);
-                                    break;
-                                case 2:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton2.Text = dataModel.textBoxRegist18;// registers2[i].ToString();
-                                   // CallValueSet(rough1.rjButton2, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist18);
-                                    break;
-                                case 3:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton3.Text = dataModel.textBoxRegist19;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton3, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist19);
-                                    break;
-                                case 4:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton4.Text = dataModel.textBoxRegist20;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton4, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist20);
-                                    break;
-                                case 5:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton5.Text = dataModel.textBoxRegist21;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton5, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist21);
-                                    break;
-                                case 6:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton6.Text = dataModel.textBoxRegist22;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton6, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist22);
-                                    break;
-                                case 7:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton7.Text = dataModel.textBoxRegist23;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton7, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist23);
-                                    break;
-                                case 8:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton8.Text = dataModel.textBoxRegist24;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton8, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist24);
-                                    break;
-                                case 9:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton9.Text = dataModel.textBoxRegist25;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton9, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist25);
-                                    break;
-                                case 10:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton10.Text = dataModel.textBoxRegist26;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton10, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist26);
-                                    break;
-                                case 11:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton11.Text = dataModel.textBoxRegist27;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton11, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist27);
-                                    break;
-                                case 12:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton12.Text = dataModel.textBoxRegist28;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton12, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist28);
-                                    break;
-                                case 13:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton13.Text = dataModel.textBoxRegist29;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton13, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist29);
-                                    break;
-                                case 14:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton14.Text = dataModel.textBoxRegist30;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton14, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist30);
-                                    break;
-                                case 15:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton15.Text = dataModel.textBoxRegist31;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton15, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist31);
-                                    break;
-                                case 16:
-                                    myObjects2[i].Value = (int)registers2[i];
-                                    rough1.rjButton16.Text = dataModel.textBoxRegist32;// registers2[i].ToString();
-                                    //CallValueSet(rough1.rjButton16, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist32);
-                                    break;
+
+                                switch ((startAddress1 + i))
+                                {
+
+                                    case 1:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton1.Text = dataModel.textBoxRegist1;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton1, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist1);
+                                        break;
+                                    case 2:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton2.Text = dataModel.textBoxRegist2;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton2, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist2);
+                                        break;
+                                    case 3:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton3.Text = dataModel.textBoxRegist3;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton3, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist3);
+                                        break;
+                                    case 4:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton4.Text = dataModel.textBoxRegist4;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton4, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist4);
+                                        break;
+                                    case 5:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton5.Text = dataModel.textBoxRegist5;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton5, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist5);
+                                        break;
+                                    case 6:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton6.Text = dataModel.textBoxRegist6;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton6, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist6);
+                                        break;
+                                    case 7:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton7.Text = dataModel.textBoxRegist7;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton7, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist7);
+                                        break;
+                                    case 8:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton8.Text = dataModel.textBoxRegist8;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton8, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist8);
+                                        break;
+                                    case 9:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton9.Text = dataModel.textBoxRegist9;// registers1[i].ToString();
+                                                                                        //CallValueSet(rough.rjButton9, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist9);
+                                        break;
+                                    case 10:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton10.Text = dataModel.textBoxRegist10;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton10, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist10);
+                                        break;
+                                    case 11:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton11.Text = dataModel.textBoxRegist11;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton11, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist11);
+                                        break;
+                                    case 12:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton12.Text = dataModel.textBoxRegist12;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton12, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist12);
+                                        break;
+                                    case 13:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton13.Text = dataModel.textBoxRegist13;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton13, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist13);
+                                        break;
+                                    case 14:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton14.Text = dataModel.textBoxRegist14;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton14, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist14);
+                                        break;
+                                    case 15:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton15.Text = dataModel.textBoxRegist15;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton15, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist15);
+                                        break;
+                                    case 16:
+                                        myObjects[i].Value = (int)registers1[i];
+                                        rough.rjButton16.Text = dataModel.textBoxRegist16;// registers1[i].ToString();
+                                                                                          //CallValueSet(rough.rjButton16, (int)registers1[i], (startAddress1 + i), dataModel.textBoxRegist16);
+                                        break;
+                                }
+
+                            }
+
+                            if (dataModel.checkBoxHub2)
+                            {
+
+                                Console.WriteLine("My_val 2 " + (int)registers2[i] + " " + myObjects2[i].Value);
+                                // ++++++++++++++++++++++++++++++++++++ s2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                switch ((startAddress2 + i))
+                                {
+                                    case 1:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton1.Text = dataModel.textBoxRegist17;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton1, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist17);
+                                        break;
+                                    case 2:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton2.Text = dataModel.textBoxRegist18;// registers2[i].ToString();
+                                                                                          // CallValueSet(rough1.rjButton2, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist18);
+                                        break;
+                                    case 3:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton3.Text = dataModel.textBoxRegist19;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton3, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist19);
+                                        break;
+                                    case 4:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton4.Text = dataModel.textBoxRegist20;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton4, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist20);
+                                        break;
+                                    case 5:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton5.Text = dataModel.textBoxRegist21;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton5, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist21);
+                                        break;
+                                    case 6:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton6.Text = dataModel.textBoxRegist22;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton6, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist22);
+                                        break;
+                                    case 7:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton7.Text = dataModel.textBoxRegist23;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton7, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist23);
+                                        break;
+                                    case 8:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton8.Text = dataModel.textBoxRegist24;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton8, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist24);
+                                        break;
+                                    case 9:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton9.Text = dataModel.textBoxRegist25;// registers2[i].ToString();
+                                                                                          //CallValueSet(rough1.rjButton9, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist25);
+                                        break;
+                                    case 10:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton10.Text = dataModel.textBoxRegist26;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton10, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist26);
+                                        break;
+                                    case 11:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton11.Text = dataModel.textBoxRegist27;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton11, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist27);
+                                        break;
+                                    case 12:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton12.Text = dataModel.textBoxRegist28;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton12, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist28);
+                                        break;
+                                    case 13:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton13.Text = dataModel.textBoxRegist29;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton13, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist29);
+                                        break;
+                                    case 14:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton14.Text = dataModel.textBoxRegist30;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton14, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist30);
+                                        break;
+                                    case 15:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton15.Text = dataModel.textBoxRegist31;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton15, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist31);
+                                        break;
+                                    case 16:
+                                        myObjects2[i].Value = (int)registers2[i];
+                                        rough1.rjButton16.Text = dataModel.textBoxRegist32;// registers2[i].ToString();
+                                                                                           //CallValueSet(rough1.rjButton16, (int)registers2[i], (startAddress2 + i), dataModel.textBoxRegist32);
+                                        break;
+
+                                }
+
+                            }
+                            // ++++++++++++++++++++++++++++++++++++ s3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                            if (dataModel.checkBoxHub3)
+                            {
+
+
+                                switch ((startAddress3 + i))
+                                {
+                                    case 1:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton1.Text = dataModel.textBoxRegist33;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton1, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist33);
+                                        break;
+                                    case 2:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton2.Text = dataModel.textBoxRegist34;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton2, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist34);
+                                        break;
+                                    case 3:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton3.Text = dataModel.textBoxRegist35;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton3, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist35);
+                                        break;
+                                    case 4:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton4.Text = dataModel.textBoxRegist36;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton4, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist36);
+                                        break;
+                                    case 5:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton5.Text = dataModel.textBoxRegist37;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton5, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist37);
+                                        break;
+                                    case 6:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton6.Text = dataModel.textBoxRegist38;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton6, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist38);
+                                        break;
+                                    case 7:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton7.Text = dataModel.textBoxRegist39;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton7, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist39);
+                                        break;
+                                    case 8:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton8.Text = dataModel.textBoxRegist40;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton8, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist40);
+                                        break;
+                                    case 9:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton9.Text = dataModel.textBoxRegist41;// registers3[i].ToString();
+                                                                                          //CallValueSet(rough2.rjButton9, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist41);
+                                        break;
+                                    case 10:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton10.Text = dataModel.textBoxRegist42;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton10, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist42);
+                                        break;
+                                    case 11:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton11.Text = dataModel.textBoxRegist43;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton11, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist43);
+                                        break;
+                                    case 12:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton12.Text = dataModel.textBoxRegist44;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton12, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist44);
+                                        break;
+                                    case 13:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton13.Text = dataModel.textBoxRegist45;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton13, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist45);
+                                        break;
+                                    case 14:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton14.Text = dataModel.textBoxRegist46;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton14, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist46);
+                                        break;
+                                    case 15:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton15.Text = dataModel.textBoxRegist47;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton15, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist47);
+                                        break;
+                                    case 16:
+                                        myObjects3[i].Value = (int)registers3[i];
+                                        rough2.rjButton16.Text = dataModel.textBoxRegist48;// registers3[i].ToString();
+                                                                                           //CallValueSet(rough2.rjButton16, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist48);
+                                        break;
+                                }
+
+                            }
+                            if (dataModel.checkBoxHub4)
+                            {
+
+                                Console.WriteLine("Register 4 value: " + (int)registers2[i] + " " + myObjects2[i].Value);
+                                // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                switch ((startAddress4 + i))
+                                {
+                                    case 1:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton1.Text = dataModel.textBoxRegist49;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton1, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist49);
+                                        break;
+                                    case 2:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton2.Text = dataModel.textBoxRegist50;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton2, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist50);
+                                        break;
+                                    case 3:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton3.Text = dataModel.textBoxRegist51;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton3, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist51);
+                                        break;
+                                    case 4:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton4.Text = dataModel.textBoxRegist52;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton4, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist52);
+                                        break;
+                                    case 5:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton5.Text = dataModel.textBoxRegist53;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton5, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist53);
+                                        break;
+                                    case 6:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton6.Text = dataModel.textBoxRegist54;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton6, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist54);
+                                        break;
+                                    case 7:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton7.Text = dataModel.textBoxRegist55;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton7, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist55);
+                                        break;
+                                    case 8:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton8.Text = dataModel.textBoxRegist56;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton8, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist56);
+                                        break;
+                                    case 9:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton9.Text = dataModel.textBoxRegist57;// registers4[i].ToString();
+                                                                                          //CallValueSet(rough3.rjButton9, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist57);
+                                        break;
+                                    case 10:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton10.Text = dataModel.textBoxRegist58;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton10, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist58);
+                                        break;
+                                    case 11:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton11.Text = dataModel.textBoxRegist59;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton11, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist59);
+                                        break;
+                                    case 12:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton12.Text = dataModel.textBoxRegist60;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton12, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist60);
+                                        break;
+                                    case 13:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton13.Text = dataModel.textBoxRegist61;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton13, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist61);
+                                        break;
+                                    case 14:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton14.Text = dataModel.textBoxRegist62;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton14, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist62);
+                                        break;
+                                    case 15:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton15.Text = dataModel.textBoxRegist63;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton15, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist63);
+                                        break;
+                                    case 16:
+                                        myObjects4[i].Value = (int)registers4[i];
+                                        rough3.rjButton16.Text = dataModel.textBoxRegist64;// registers4[i].ToString();
+                                                                                           //CallValueSet(rough3.rjButton16, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist64);
+                                        break;
+
+                                }
 
                             }
 
                         }
-                        // ++++++++++++++++++++++++++++++++++++ s3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-                        if (dataModel.checkBoxHub3)
+                        sec++;
+                        if (sec >= 1)
                         {
-                            
-
-                            switch ((startAddress3 + i))
-                            {
-                                case 1:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton1.Text = dataModel.textBoxRegist33;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton1, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist33);
-                                    break;
-                                case 2:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton2.Text = dataModel.textBoxRegist34;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton2, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist34);
-                                    break;
-                                case 3:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton3.Text = dataModel.textBoxRegist35;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton3, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist35);
-                                    break;
-                                case 4:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton4.Text = dataModel.textBoxRegist36;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton4, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist36);
-                                    break;
-                                case 5:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton5.Text = dataModel.textBoxRegist37;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton5, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist37);
-                                    break;
-                                case 6:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton6.Text = dataModel.textBoxRegist38;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton6, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist38);
-                                    break;
-                                case 7:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton7.Text = dataModel.textBoxRegist39;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton7, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist39);
-                                    break;
-                                case 8:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton8.Text = dataModel.textBoxRegist40;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton8, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist40);
-                                    break;
-                                case 9:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton9.Text = dataModel.textBoxRegist41;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton9, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist41);
-                                    break;
-                                case 10:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton10.Text = dataModel.textBoxRegist42;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton10, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist42);
-                                    break;
-                                case 11:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton11.Text = dataModel.textBoxRegist43;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton11, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist43);
-                                    break;
-                                case 12:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton12.Text = dataModel.textBoxRegist44;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton12, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist44);
-                                    break;
-                                case 13:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton13.Text = dataModel.textBoxRegist45;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton13, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist45);
-                                    break;
-                                case 14:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton14.Text = dataModel.textBoxRegist46;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton14, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist46);
-                                    break;
-                                case 15:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton15.Text = dataModel.textBoxRegist47;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton15, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist47);
-                                    break;
-                                case 16:
-                                    myObjects3[i].Value = (int)registers3[i];
-                                    rough2.rjButton16.Text = dataModel.textBoxRegist48;// registers3[i].ToString();
-                                    //CallValueSet(rough2.rjButton16, (int)registers3[i], (startAddress3 + i), dataModel.textBoxRegist48);
-                                    break;
-                            }
-
-                        }
-                        if (dataModel.checkBoxHub4)
-                        {
-
-                            Console.WriteLine("Register 4 value: " + (int)registers2[i] + " " + myObjects2[i].Value);
-                            // ++++++++++++++++++++++++++++++++++++ s4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                            switch ((startAddress4 + i))
-                            {
-                                case 1:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton1.Text = dataModel.textBoxRegist49;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton1, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist49);
-                                    break;
-                                case 2:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton2.Text = dataModel.textBoxRegist50;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton2, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist50);
-                                    break;
-                                case 3:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton3.Text = dataModel.textBoxRegist51;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton3, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist51);
-                                    break;
-                                case 4:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton4.Text = dataModel.textBoxRegist52;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton4, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist52);
-                                    break;
-                                case 5:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton5.Text = dataModel.textBoxRegist53;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton5, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist53);
-                                    break;
-                                case 6:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton6.Text = dataModel.textBoxRegist54;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton6, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist54);
-                                    break;
-                                case 7:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton7.Text = dataModel.textBoxRegist55;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton7, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist55);
-                                    break;
-                                case 8:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton8.Text = dataModel.textBoxRegist56;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton8, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist56);
-                                    break;
-                                case 9:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton9.Text = dataModel.textBoxRegist57;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton9, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist57);
-                                    break;
-                                case 10:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton10.Text = dataModel.textBoxRegist58;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton10, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist58);
-                                    break;
-                                case 11:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton11.Text = dataModel.textBoxRegist59;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton11, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist59);
-                                    break;
-                                case 12:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton12.Text = dataModel.textBoxRegist60;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton12, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist60);
-                                    break;
-                                case 13:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton13.Text = dataModel.textBoxRegist61;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton13, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist61);
-                                    break;
-                                case 14:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton14.Text = dataModel.textBoxRegist62;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton14, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist62);
-                                    break;
-                                case 15:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton15.Text = dataModel.textBoxRegist63;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton15, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist63);
-                                    break;
-                                case 16:
-                                    myObjects4[i].Value = (int)registers4[i];
-                                    rough3.rjButton16.Text = dataModel.textBoxRegist64;// registers4[i].ToString();
-                                    //CallValueSet(rough3.rjButton16, (int)registers4[i], (startAddress4 + i), dataModel.textBoxRegist64);
-                                    break;
-
-                            }
+                            sec = 0;
+                            if (toggle == true) toggle = false;          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
+                            else toggle = true;                          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
+                            checkDigitalInputs();                        // GAS ALARM FUNCTION AFTER EVERY 500 MSEC
 
                         }
 
-                    }
+                    });
+                }
+                catch (Exception ex)
+                {
 
-                    sec++;
-                    if (sec >= 1)
-                    {
-                        sec = 0;
-                        if (toggle == true) toggle = false;          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
-                        else toggle = true;                          // FOR ALARM BLINKING AFTER EVERY 500 MSEC
-                        checkDigitalInputs();                        // GAS ALARM FUNCTION AFTER EVERY 500 MSEC
+                    Console.WriteLine("serial:" + ex);
 
-                    }
-
-                });
+                }
             }
-            catch (Exception ex) {
-
-                Console.WriteLine("serial:"+ex);
-            
-            }
-
         }
 
         public void CallValueSet(RJButton myButton,int myValue,int registerNo, string myStatus) { 
@@ -1468,11 +1474,11 @@ namespace NurseCalling
                             byte slaveId = 1;
                             // read five registers
                             registers1 = master.ReadHoldingRegisters(slaveId, 0, numRegisters);
-                           
+                            wait(500);
                         }
                         // if (dataModel.checkBoxHub1 && dataModel.checkBoxHub2) {
                         /// Thread.Sleep(500);
-                        wait(500);
+                        
                        // }
 
                         if (dataModel.checkBoxHub2) 
@@ -1481,12 +1487,12 @@ namespace NurseCalling
                             byte slaveId = 2;
                             // read five registers
                             registers2 = master.ReadHoldingRegisters(slaveId, 0, numRegisters);
-
+                            wait(500);
                         }
 
                         // if (dataModel.checkBoxHub2 && dataModel.checkBoxHub3)
                         // {
-                        wait(500);
+                        
                            // Thread.Sleep(500);
                            //     }
 
@@ -1497,9 +1503,9 @@ namespace NurseCalling
                             byte slaveId = 3;
                             // read five registers
                             registers3 = master.ReadHoldingRegisters(slaveId, 0, numRegisters);
-
+                            wait(500);
                         }
-                        wait(500);
+                        
                        // if (dataModel.checkBoxHub3 && dataModel.checkBoxHub4)
                        // {
                        //Thread.Sleep(500);
@@ -1511,11 +1517,11 @@ namespace NurseCalling
                             byte slaveId = 4;
                             // read five registers
                             registers4 = master.ReadHoldingRegisters(slaveId, 0, numRegisters);
-
+                            wait(500);
                         }
                         // Thread.Sleep(500);
 
-                        wait(500);
+                        
                         // master.Transport.ReadTimeout = 1000; // Set your desired timeout
 
                         try
@@ -4208,7 +4214,7 @@ namespace NurseCalling
                 myStopWatchObjects[20].Stop();
                     rough1.myRjButton5.Text = "00:00";
                     myStopWatchObjects[20].Reset();
-                    myStopWatchObjects[4].Start();
+                    myStopWatchObjects[20].Start();
                 //}
 
                 if (myObjects2[4].Value == 258)
