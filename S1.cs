@@ -349,7 +349,7 @@ namespace NurseCalling
 
             
 
-    
+            
             dbHandlr.getSettingData(m_dbConnection, dataModel);
 
             dbHandlr.getImage(m_dbConnection, dataModel);
