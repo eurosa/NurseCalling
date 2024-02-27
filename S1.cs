@@ -952,7 +952,7 @@ namespace NurseCalling
         void timer_Elapsed1(object sender, System.Timers.ElapsedEventArgs e)
         {
             
-            BytesToRead();
+           /// BytesToRead();
              
         }
 
