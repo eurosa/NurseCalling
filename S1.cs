@@ -26,7 +26,7 @@ namespace NurseCalling
     
     public partial class S1 : Form
     {
-        /*[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern EXECUTION_STATE SetThreadExecutionState(EXECUTION_STATE esFlags);
 
         [FlagsAttribute]
@@ -38,7 +38,7 @@ namespace NurseCalling
             ES_SYSTEM_REQUIRED = 0x00000001
             // Legacy flag, should not be used.
             // ES_USER_PRESENT = 0x00000004
-        }*/
+        }
 
         GraphPane myPane;
         SQLiteConnection m_dbConnection;
@@ -105,7 +105,7 @@ namespace NurseCalling
             // Dock = DockStyle.Fill;
             AutoScroll = true;
             flowLayoutPanel1.AutoScroll = true;
-           // flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.MaximumSize.Width, 0);// flowLayoutPanel1.MaximumSize.Width;
+            // flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.MaximumSize.Width, 0);// flowLayoutPanel1.MaximumSize.Width;
             for (int i = 0; i < 30; i++)
             {
                 // Button button = new Button() { Height = 241, Width =232 };
@@ -367,13 +367,13 @@ namespace NurseCalling
 
             setImageToButton();
 
-            // PreventSleep();
+            PreventSleep();
         }
 
        public void PreventSleep()
         {
             // Prevent Idle-to-Sleep (monitor not affected) (see note above)
-          //  SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
+            SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_AWAYMODE_REQUIRED | EXECUTION_STATE.ES_DISPLAY_REQUIRED | EXECUTION_STATE.ES_SYSTEM_REQUIRED);
         }
 
         void MyFormClosed(object sender, FormClosedEventArgs e)
