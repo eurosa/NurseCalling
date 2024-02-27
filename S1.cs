@@ -340,7 +340,7 @@ namespace NurseCalling
             worker.ProgressChanged += backgroundWorker1_ProgressChanged;
             worker.RunWorkerAsync();
             worker.WorkerReportsProgress = true;
-            System.Timers.Timer timer1 = new System.Timers.Timer(1000);
+            System.Timers.Timer timer1 = new System.Timers.Timer(500);
             timer1.Elapsed += timer_Elapsed;
             timer1.Start();
 
