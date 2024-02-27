@@ -106,10 +106,10 @@ namespace NurseCalling
             AutoScroll = true;
             flowLayoutPanel1.AutoScroll = true;
            // flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.MaximumSize.Width, 0);// flowLayoutPanel1.MaximumSize.Width;
-            for (int i = 0; i < 33; i++)
+            for (int i = 0; i < 30; i++)
             {
-              //  Button button = new Button() { Height = 241, Width =232 };
-              //  flowLayoutPanel1.Controls.Add(button);
+                // Button button = new Button() { Height = 241, Width =232 };
+                // flowLayoutPanel1.Controls.Add(button);
             }
 
             dataModel = new DataModel();
