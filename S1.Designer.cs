@@ -150,6 +150,7 @@
             this.bButton14 = new NurseCalling.Controls.RJButton();
             this.bButton15 = new NurseCalling.Controls.RJButton();
             this.bButton16 = new NurseCalling.Controls.RJButton();
+            this.rjBtnSpeaker = new NurseCalling.Controls.RJButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -157,6 +158,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.rjBtnSpeaker);
             this.panel1.Controls.Add(this.rjBtnCross);
             this.panel1.Controls.Add(this.rjSettings);
             this.panel1.Controls.Add(this.exportBtn);
@@ -2176,6 +2178,26 @@
             this.bButton16.UseVisualStyleBackColor = false;
             this.bButton16.Click += new System.EventHandler(this.bButton16_Click);
             // 
+            // rjBtnSpeaker
+            // 
+            this.rjBtnSpeaker.BackColor = System.Drawing.Color.Transparent;
+            this.rjBtnSpeaker.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjBtnSpeaker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjBtnSpeaker.BackgroundImage")));
+            this.rjBtnSpeaker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjBtnSpeaker.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjBtnSpeaker.BorderRadius = 0;
+            this.rjBtnSpeaker.BorderSize = 0;
+            this.rjBtnSpeaker.FlatAppearance.BorderSize = 0;
+            this.rjBtnSpeaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjBtnSpeaker.ForeColor = System.Drawing.Color.Transparent;
+            this.rjBtnSpeaker.Location = new System.Drawing.Point(1756, 1046);
+            this.rjBtnSpeaker.Name = "rjBtnSpeaker";
+            this.rjBtnSpeaker.Size = new System.Drawing.Size(36, 26);
+            this.rjBtnSpeaker.TabIndex = 36;
+            this.rjBtnSpeaker.TextColor = System.Drawing.Color.Transparent;
+            this.rjBtnSpeaker.UseVisualStyleBackColor = false;
+            this.rjBtnSpeaker.Click += new System.EventHandler(this.rjBtnSpeaker_Click);
+            // 
             // S1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2317,5 +2339,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Controls.RJButton rjBtnCross;
+        private Controls.RJButton rjBtnSpeaker;
     }
 }

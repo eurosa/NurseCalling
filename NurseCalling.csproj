@@ -247,6 +247,24 @@
   <ItemGroup>
     <None Include="icon\cross.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\speaker-off-white_912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\speaker-on-white_912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\blue_code_female.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\blue_code_male.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

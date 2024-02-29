@@ -71,6 +71,24 @@ namespace NurseCalling.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream blue_code_female {
+            get {
+                return ResourceManager.GetStream("blue_code_female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream blue_code_male {
+            get {
+                return ResourceManager.GetStream("blue_code_male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cross {
@@ -97,6 +115,35 @@ namespace NurseCalling.Properties {
         internal static System.Drawing.Bitmap pngtree_medical_hospital_vector_icon_with_patient_bed_10_png_image_8582080 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-medical-hospital-vector-icon-with-patient-bed-10-png-image_8582080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream sound {
+            get {
+                return ResourceManager.GetStream("sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap speaker_off_white_912 {
+            get {
+                object obj = ResourceManager.GetObject("speaker_off_white_912", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap speaker_on_white_912 {
+            get {
+                object obj = ResourceManager.GetObject("speaker_on_white_912", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
