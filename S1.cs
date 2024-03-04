@@ -1637,7 +1637,7 @@ namespace NurseCalling
             if (flowLayoutPanel1.Controls.Count <= 16)
             {
                // playerMale.Stop();
-               //  playerFemale.Stop();
+               // playerFemale.Stop();
                StopSound();
             }
       //      if (!(new[] { myObjects[0].Value, myObjects[1].Value, myObjects[2].Value, myObjects[3].Value, myObjects[4].Value, myObjects[5].Value, myObjects[6].Value, myObjects[7].Value, myObjects[8].Value, myObjects[9].Value, myObjects[10].Value, myObjects[11].Value, myObjects[12].Value, myObjects[13].Value, myObjects[14].Value, myObjects[15].Value }).Contains(264)|| !(new[] { myObjects2[0].Value, myObjects2[1].Value, myObjects2[2].Value, myObjects2[3].Value, myObjects2[4].Value, myObjects2[5].Value, myObjects2[6].Value, myObjects2[7].Value, myObjects2[8].Value, myObjects2[9].Value, myObjects2[10].Value, myObjects2[11].Value, myObjects2[12].Value, myObjects2[13].Value, myObjects2[14].Value, myObjects2[15].Value }).Contains(264)||!(new[] { myObjects3[0].Value, myObjects3[1].Value, myObjects3[2].Value, myObjects3[3].Value, myObjects3[4].Value, myObjects3[5].Value, myObjects3[6].Value, myObjects3[7].Value, myObjects3[8].Value, myObjects3[9].Value, myObjects3[10].Value, myObjects3[11].Value, myObjects3[12].Value, myObjects3[13].Value, myObjects3[14].Value, myObjects3[15].Value }).Contains(264) || !(new[] { myObjects4[0].Value, myObjects4[1].Value, myObjects4[2].Value, myObjects4[3].Value, myObjects4[4].Value, myObjects4[5].Value, myObjects4[6].Value, myObjects4[7].Value, myObjects4[8].Value, myObjects4[9].Value, myObjects4[10].Value, myObjects4[11].Value, myObjects4[12].Value, myObjects4[13].Value, myObjects4[14].Value, myObjects4[15].Value }).Contains(264)) 
