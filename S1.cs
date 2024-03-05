@@ -52,6 +52,8 @@ namespace NurseCalling
         int sec=0;
         bool toggle = true;
 
+        int blueCodeFlage = 0;
+
         dbHandler dbHandlr;
         DataModel dataModel;
 
@@ -1636,7 +1638,7 @@ namespace NurseCalling
             Console.WriteLine("Number of Control: "+ flowLayoutPanel1.Controls.Count);
             if (flowLayoutPanel1.Controls.Count <= 16)
             {
-               // playerMale.Stop();
+                //playerMale.Stop();
                // playerFemale.Stop();
                 StopSound();
             }
@@ -2802,6 +2804,8 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     PlayingSound();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:1 "+ blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle1);
                     rough.rjButton1.BackColor = Color.Blue;
@@ -2878,6 +2882,8 @@ namespace NurseCalling
                 else if (myObjects[1].Value == 264)
                 {
                     PlayingSound();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:2 " + blueCodeFlage);
                     // rough.rjButton2.BackColor = Color.Blue;
                     // dataModel.lastCallValue = myObjects[1].Value.ToString();
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -2954,6 +2960,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[2].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:3 " + blueCodeFlage);
                     // rough.rjButton3.BackColor = Color.Blue;
                     // dataModel.registerId = "3";
                     // dataModel.lastCallValue = myObjects[2].Value.ToString();
@@ -3034,6 +3042,9 @@ namespace NurseCalling
                 else if (myObjects[3].Value == 264)
                 {
                     PlayingSound();
+                    
+                    blueCodeFlage =1;
+                    Console.WriteLine("BlueCode:4 " + blueCodeFlage);
                     // rough.rjButton4.BackColor = Color.Blue;
                     // dataModel.lastCallValue = myObjects[3].Value.ToString();
                     // dataModel.registerId = "4";
@@ -3114,9 +3125,10 @@ namespace NurseCalling
                 else if (myObjects[4].Value == 264)
                 {
                     //  rough.rjButton5.BackColor = Color.Blue;
-
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:5 " + blueCodeFlage);
                     // dataModel.lastCallValue = myObjects[4].Value.ToString();
-                    //dataModel.lastCallStatus = "Call From 5";//258
+                    // dataModel.lastCallStatus = "Call From 5";//258
                     // dataModel.registerId = "5";
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
@@ -3194,6 +3206,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[5].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:6 " + blueCodeFlage);
                     PlayingSound();
                     // rough.rjButton6.BackColor = Color.Blue; 
                     // dataModel.lastCallValue = myObjects[5].Value.ToString();
@@ -3273,6 +3287,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[6].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:7 " + blueCodeFlage);
                     // rough.rjButton7.BackColor = Color.Blue;
                     // dataModel.lastCallValue = myObjects[6].Value.ToString();
                     // dataModel.lastCallStatus = "Call From 7";//258
@@ -3358,6 +3374,8 @@ namespace NurseCalling
                     // dataModel.registerId = "8";
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:8 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle8);
@@ -3438,6 +3456,8 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTimePlayingSound();
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:9 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle9);
                     rough.rjButton9.BackColor = Color.Blue;
@@ -3509,6 +3529,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[9].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:10 " + blueCodeFlage);
                     // rough.rjButton10.BackColor = Color.Blue;
                     // dataModel.lastCallValue = myObjects[9].Value.ToString();
                     // dataModel.lastCallStatus = "Care From 10";//258
@@ -3594,6 +3616,9 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     //PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:11 " + blueCodeFlage);
+
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle11);
                     rough.rjButton11.BackColor = Color.Blue;
@@ -3673,6 +3698,9 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:12 " + blueCodeFlage);
+
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle12);
                     rough.rjButton12.BackColor = Color.Blue;
@@ -3751,6 +3779,8 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:13 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle13);
                     rough.rjButton13.BackColor = Color.Blue;
@@ -3829,6 +3859,9 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:14 " + blueCodeFlage);
+
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle14);
                     rough.rjButton14.BackColor = Color.Blue;
@@ -3908,6 +3941,8 @@ namespace NurseCalling
                     // dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:15 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle15);
                     rough.rjButton15.BackColor = Color.Blue;
@@ -3986,6 +4021,8 @@ namespace NurseCalling
                     //dataModel.dateTime = dateTime;
                     //dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:16 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough.roundPanelWithoutTitle16);
                     rough.rjButton16.BackColor = Color.Blue;
@@ -4059,6 +4096,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[0].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:17 " + blueCodeFlage);
                     // rough1.rjButton1.BackColor = Color.Blue;
                     // dataModel.lastCallValue = myObjects2[0].Value.ToString();
                     // dataModel.lastCallStatus = "Care From 17";//258
@@ -4144,6 +4183,8 @@ namespace NurseCalling
                     //  dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:18 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle2);
                     rough1.rjButton2.BackColor = Color.Blue;
@@ -4225,6 +4266,8 @@ namespace NurseCalling
                     //  dataModel.dateTime = dateTime;
                     // dbHandlr.insert_call_data(m_dbConnection, dataModel);
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:19 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle3);
                     rough1.rjButton3.BackColor = Color.Blue;
@@ -4292,6 +4335,8 @@ namespace NurseCalling
                 else if (myObjects2[3].Value == 264)
                 {
                     //PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:20 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle4);
                     rough1.rjButton4.BackColor = Color.Blue;
@@ -4354,6 +4399,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[4].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:21 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle5);
@@ -4417,6 +4464,8 @@ namespace NurseCalling
                 else if (myObjects2[5].Value == 264)
                 {
                     //PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:22 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle6);
                     rough1.rjButton6.BackColor = Color.Blue;
@@ -4478,6 +4527,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[6].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:23 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle7);
@@ -4541,6 +4592,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[7].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:24 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle8);
@@ -4603,6 +4656,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[8].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:25 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle9);
@@ -4666,6 +4721,8 @@ namespace NurseCalling
                 else if (myObjects2[9].Value == 264)
                 {
                     // PlayingSoundBlueCodeFemale();
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:26 " + blueCodeFlage);
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle10);
                     rough1.rjButton10.BackColor = Color.Blue;
@@ -4726,6 +4783,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[10].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:27 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle11);
@@ -4788,6 +4847,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[27].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:28 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle12);
@@ -4850,6 +4911,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[12].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:29 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle13);
@@ -4912,6 +4975,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[13].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:30 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle14);
@@ -4975,6 +5040,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[14].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:31 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle15);
@@ -5037,6 +5104,8 @@ namespace NurseCalling
                 }
                 else if (myObjects2[15].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:32 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough1.roundPanelWithoutTitle16);
@@ -5100,6 +5169,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[0].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:33 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle1);
@@ -5162,6 +5233,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[1].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:34 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle2);
@@ -5225,6 +5298,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[2].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:35 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle3);
@@ -5287,6 +5362,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[3].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:36 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle4);
@@ -5349,6 +5426,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[4].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:37 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle5);
@@ -5411,6 +5490,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[5].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:38 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle6);
@@ -5473,6 +5554,8 @@ namespace NurseCalling
                 }
                 else if (myObjects[38].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:39 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle7);
@@ -5536,6 +5619,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[7].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:40 " + blueCodeFlage);
                     //PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle8);
@@ -5598,6 +5683,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[8].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:41 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle9);
@@ -5660,6 +5747,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[9].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:42 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle10);
@@ -5722,6 +5811,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[10].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:43 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle11);
@@ -5785,6 +5876,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[11].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:44 " + blueCodeFlage);
                     // PlayingSoundBlueCodeFemale();
                     PlayingSound();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle12);
@@ -5847,6 +5940,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[12].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:45 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle13);
@@ -5909,6 +6004,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[13].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:46 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle14);
@@ -5972,6 +6069,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[14].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:47 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle15);
@@ -6033,6 +6132,8 @@ namespace NurseCalling
                 }
                 else if (myObjects3[15].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:48 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough2.roundPanelWithoutTitle16);
@@ -6096,6 +6197,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[0].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:49 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle1);
@@ -6159,6 +6262,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[1].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:50 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle2);
@@ -6222,6 +6327,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[2].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:51 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle3);
@@ -6284,6 +6391,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[3].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:52 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     Console.WriteLine("MY_DATA: "+dataModel.textBoxRegist52);
@@ -6348,6 +6457,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[4].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:53 " + blueCodeFlage);
                     PlayingSound();
                     // PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle5);
@@ -6410,6 +6521,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[5].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:54 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle6);
@@ -6472,6 +6585,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[6].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:55 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle7);
@@ -6535,6 +6650,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[7].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:56 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle8);
@@ -6601,6 +6718,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[8].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:57 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle9);
@@ -6663,6 +6782,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[9].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:58 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle10);
@@ -6725,6 +6846,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[10].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:59 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle11);
@@ -6787,6 +6910,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[11].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:60 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle12);
@@ -6849,6 +6974,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[12].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:61 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle13);
@@ -6911,6 +7038,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[13].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:62 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle14);
@@ -6973,6 +7102,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[14].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:63 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle15);
@@ -7034,6 +7165,8 @@ namespace NurseCalling
                 }
                 else if (myObjects4[15].Value == 264)
                 {
+                    blueCodeFlage=1;
+                    Console.WriteLine("BlueCode:64 " + blueCodeFlage);
                     PlayingSound();
                     //PlayingSoundBlueCodeFemale();
                     flowLayoutPanel1.Controls.Add(rough3.roundPanelWithoutTitle16);
