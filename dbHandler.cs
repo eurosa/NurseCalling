@@ -72,6 +72,20 @@ namespace NurseCalling
                     SQLiteCommand command4 = new SQLiteCommand(sql4, dbConnection);
                     command4.ExecuteNonQuery();
 
+                    string sql5 = "create table hub_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, hub_name varchar(250))";
+                    SQLiteCommand command5 = new SQLiteCommand(sql5, dbConnection);
+                    command5.ExecuteNonQuery();
+
+                    try
+                    {
+                        hub_data(dbConnection);
+
+                    }
+                    catch (Exception Ex)
+                    {
+
+                    }
+
                     try
                     {
                         insert_general_data(dbConnection);
@@ -141,7 +155,37 @@ namespace NurseCalling
         }
 
 
-         
+
+        public void hub_data(SQLiteConnection m_dbConnection)
+        {
+
+
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO hub_table (hub_name) values(@hub_name)", m_dbConnection);
+            int i = 1;
+            while (i<65)
+            {
+
+
+                insertSQL.Parameters.AddWithValue("@hub_name", "Hub "+i);
+
+                try
+                {
+                    insertSQL.ExecuteNonQuery();
+                    // AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
+                i++;
+            }
+      
+           
+
+        }
+
+
         public void insert_general_data(SQLiteConnection m_dbConnection)
         {
  
@@ -622,6 +666,95 @@ namespace NurseCalling
                 throw new Exception(ex.Message);
             }
 
+        }
+
+
+        public void hub_data_update(SQLiteConnection m_dbConnection, DataModel modelData)
+        {
+
+            string sql_update = "UPDATE hub_table SET hub_name = CASE ID " +
+                " WHEN '1' THEN '"+ modelData.textBoxRegist1+"' " +
+                " WHEN '2' THEN '"+ modelData.textBoxRegist2+"' " +
+                " WHEN '3' THEN '"+ modelData.textBoxRegist3+"' " +
+                " WHEN '4' THEN '"+ modelData.textBoxRegist4+"' " +
+                " WHEN '5' THEN '"+ modelData.textBoxRegist5+"' " +
+                " WHEN '6' THEN '"+ modelData.textBoxRegist6+"' " +
+                " WHEN '7' THEN '"+ modelData.textBoxRegist7+"' " +
+                " WHEN '8' THEN '"+ modelData.textBoxRegist8+"' " +
+                " WHEN '9' THEN '"+ modelData.textBoxRegist9+"' " +
+                " WHEN '10' THEN '"+ modelData.textBoxRegist10+"' " +
+                " WHEN '11' THEN '"+ modelData.textBoxRegist11+"' " +
+                " WHEN '12' THEN '"+ modelData.textBoxRegist12+"' " +
+                " WHEN '13' THEN '"+ modelData.textBoxRegist13+"' " +
+                " WHEN '14' THEN '"+ modelData.textBoxRegist14+"' " +
+                " WHEN '15' THEN '"+ modelData.textBoxRegist15+"' " +
+                " WHEN '16' THEN '"+ modelData.textBoxRegist16+"' " +
+                " WHEN '17' THEN '"+ modelData.textBoxRegist17+"' " +
+                " WHEN '18' THEN '"+ modelData.textBoxRegist18+"' " +
+                " WHEN '19' THEN '"+ modelData.textBoxRegist19+"' " +
+                " WHEN '20' THEN '"+ modelData.textBoxRegist20+"' " +
+                " WHEN '21' THEN '"+ modelData.textBoxRegist21+"' " +
+                " WHEN '22' THEN '"+ modelData.textBoxRegist22+"' " +
+                " WHEN '23' THEN '"+ modelData.textBoxRegist23+"' " +
+                " WHEN '24' THEN '"+ modelData.textBoxRegist24+"' " +
+                " WHEN '25' THEN '"+ modelData.textBoxRegist25+"' " +
+                " WHEN '26' THEN '"+ modelData.textBoxRegist26+"' " +
+                " WHEN '27' THEN '"+ modelData.textBoxRegist27+"' " +
+                " WHEN '28' THEN '"+ modelData.textBoxRegist28+"' " +
+                " WHEN '29' THEN '"+ modelData.textBoxRegist29+"' " +
+                " WHEN '30' THEN '"+ modelData.textBoxRegist30+"' " +
+                " WHEN '31' THEN '"+ modelData.textBoxRegist31+"' " +
+                " WHEN '32' THEN '"+ modelData.textBoxRegist32+"' " +
+                " WHEN '33' THEN '"+ modelData.textBoxRegist33+"' " +
+                " WHEN '34' THEN '"+ modelData.textBoxRegist34+"' " +
+                " WHEN '35' THEN '"+ modelData.textBoxRegist35+"' " +
+                " WHEN '36' THEN '"+ modelData.textBoxRegist36+"' " +
+                " WHEN '37' THEN '"+ modelData.textBoxRegist37+"' " +
+                " WHEN '38' THEN '"+ modelData.textBoxRegist38+"' " +
+                " WHEN '39' THEN '"+ modelData.textBoxRegist39+"' " +
+                " WHEN '40' THEN '"+ modelData.textBoxRegist40+"' " +
+                " WHEN '41' THEN '"+ modelData.textBoxRegist41+"' " +
+                " WHEN '42' THEN '"+ modelData.textBoxRegist42+"' " +
+                " WHEN '43' THEN '"+ modelData.textBoxRegist43+"' " +
+                " WHEN '44' THEN '"+ modelData.textBoxRegist44+"' " +
+                " WHEN '45' THEN '"+ modelData.textBoxRegist45+"' " +
+                " WHEN '46' THEN '"+ modelData.textBoxRegist46+"' " +
+                " WHEN '47' THEN '"+ modelData.textBoxRegist47+"' " +
+                " WHEN '48' THEN '"+ modelData.textBoxRegist48+"' " +
+                " WHEN '49' THEN '"+ modelData.textBoxRegist49+"' " +
+                " WHEN '50' THEN '"+ modelData.textBoxRegist50+"' " +
+                " WHEN '51' THEN '"+ modelData.textBoxRegist51+"' " +
+                " WHEN '52' THEN '"+ modelData.textBoxRegist52+"' " +
+                " WHEN '53' THEN '"+ modelData.textBoxRegist53+"' " +
+                " WHEN '54' THEN '"+ modelData.textBoxRegist54+"' " +
+                " WHEN '55' THEN '"+ modelData.textBoxRegist55+"' " +
+                " WHEN '56' THEN '"+ modelData.textBoxRegist56+"' " +
+                " WHEN '57' THEN '"+ modelData.textBoxRegist57+"' " +
+                " WHEN '58' THEN '"+ modelData.textBoxRegist58+"' " +
+                " WHEN '59' THEN '"+ modelData.textBoxRegist59+"' " +
+                " WHEN '60' THEN '"+ modelData.textBoxRegist60+"' " +
+                " WHEN '61' THEN '"+ modelData.textBoxRegist61+"' " +
+                " WHEN '62' THEN '"+ modelData.textBoxRegist62+"' " +
+                " WHEN '63' THEN '"+ modelData.textBoxRegist63+"' " +
+                " WHEN '64' THEN '"+ modelData.textBoxRegist64+"' " +
+                "END;";
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+           // command.Parameters.AddWithValue("@bed_image", modelData.bed_image);
+
+          //  command.Parameters.AddWithValue("@ID", 1);
+
+            try
+            {
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void bedImage(SQLiteConnection m_dbConnection, DataModel modelData)

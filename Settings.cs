@@ -409,7 +409,7 @@ namespace NurseCalling
 
 
             dbHandlr.update_setting_table_data(qLiteConnection, modelData);
-
+            dbHandlr.hub_data_update(qLiteConnection, modelData);
 
             updateImage();
         }

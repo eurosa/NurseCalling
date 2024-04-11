@@ -62,8 +62,8 @@ namespace NurseCalling
             if (comboBoxSiteName.SelectedIndex>0) {
 
                 string keyRegisterId = ((KeyValuePair<string, string>)comboBoxSiteName.SelectedItem).Key;
-                comm = new SQLiteCommand("Select * From call_table where registerId='"+ keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'", MDbConnection);
-                Console.WriteLine("Select * From call_table where registerId='" + keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'");
+                comm = new SQLiteCommand("Select ct.registerId ,ht.hub_name,ct.dateTime,ct.elapseTime  From call_table ct left join hub_table ht on ht.ID=ct.registerId  where registerId='" + keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'", MDbConnection);
+                Console.WriteLine("Select ct.registerId,ht.hub_name,ct.dateTime,ct.elapseTime  From call_table ct left join hub_table ht on ht.ID=ct.registerId where registerId='" + keyRegisterId + "' and date_ between '" + startDate + "' and '" + endDate + "'");
             }
            /* else if(comboBoxCall.SelectedIndex > 0 )
             {
@@ -79,9 +79,9 @@ namespace NurseCalling
 
             }*/
             else {
-                Console.WriteLine("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'");
+                Console.WriteLine("Select ct.registerId,ht.hub_name,ct.dateTime,ct.elapseTime  From call_table ct left join hub_table ht on ht.ID=ct.registerId  where   date_  between '" + startDate + "' and '" + endDate + "'");
                 // comm = new SQLiteCommand("Select * From call_table where  date_ >='" + startDate + "' and date_ <= '" + endDate + "'", MDbConnection);
-                comm = new SQLiteCommand("Select * From call_table where  date_  between '" + startDate + "' and '" + endDate + "'", MDbConnection);
+                comm = new SQLiteCommand("Select ct.registerId,ht.hub_name,ct.dateTime,ct.elapseTime  From call_table ct left join hub_table ht on ht.ID=ct.registerId  where   date_  between '" + startDate + "' and '" + endDate + "'", MDbConnection);
 
             }
           
@@ -103,7 +103,7 @@ namespace NurseCalling
                 string elapsedTimeString;
                 while (read.Read())
                 { 
-                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["lastCallValue"].ToString(), read["dateTime"].ToString(),
+                    table1.Rows.Add(new Object[] {read["registerId"].ToString(), read["hub_name"].ToString(), read["dateTime"].ToString(),
                     read["elapseTime"].ToString() });
                     result +=  TimeSpan.Parse("00:"+read["elapseTime"].ToString());
                      
